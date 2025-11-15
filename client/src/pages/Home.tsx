@@ -1,3 +1,4 @@
+import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import AISection from '@/components/AISection';
@@ -12,6 +13,8 @@ import ThemeToggle from '@/components/ThemeToggle';
 export default function Home() {
   return (
     <div className="min-h-screen">
+      <Navigation />
+      
       <div className="fixed top-6 right-6 z-50">
         <ThemeToggle />
       </div>
