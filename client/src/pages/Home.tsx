@@ -8,26 +8,33 @@ import PortfolioSection from '@/components/PortfolioSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
-import ThemeToggle from '@/components/ThemeToggle';
+import CustomCursor from '@/components/CustomCursor';
+import ScrollProgress from '@/components/ScrollProgress';
+import SectionDivider from '@/components/SectionDivider';
 
 export default function Home() {
   return (
     <div className="min-h-screen">
+      <CustomCursor />
+      <ScrollProgress />
       <Navigation />
-      
-      <div className="fixed top-6 right-6 z-50">
-        <ThemeToggle />
-      </div>
 
       <HeroSection />
+      <SectionDivider variant="wave" />
       <AboutSection />
+      <SectionDivider variant="curve" flip />
       <AISection />
+      <SectionDivider variant="wave" />
       <ServicesSection />
+      <SectionDivider variant="curve" flip />
       <WhyChooseSection />
+      <SectionDivider variant="wave" />
       <PortfolioSection />
+      <SectionDivider variant="curve" flip />
       <ContactSection />
       <Footer />
       <ScrollToTop />
     </div>
   );
 }
+

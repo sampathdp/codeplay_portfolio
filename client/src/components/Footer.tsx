@@ -44,14 +44,14 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            {socialLinks.map((social, index) => {
+          {socialLinks.map((social, index) => {
               const Icon = social.icon;
               return (
                 <motion.a
                   key={index}
                   href={social.href}
                   aria-label={social.label}
-                  className="h-10 w-10 rounded-md bg-secondary flex items-center justify-center hover-elevate transition-all duration-300 group"
+                  className="h-10 w-10 rounded-md bg-primary/10 border border-primary/20 flex items-center justify-center hover-elevate transition-all duration-300 group hover:bg-primary hover:border-primary"
                   data-testid={`link-social-${social.label.toLowerCase()}`}
                   whileHover={{
                     scale: 1.1,
@@ -59,7 +59,7 @@ export default function Footer() {
                   }}
                   transition={{ duration: 0.3 }}
                 >
-                  <Icon className="h-5 w-5" />
+                  <Icon className="h-5 w-5 text-foreground group-hover:text-white" />
                 </motion.a>
               );
             })}

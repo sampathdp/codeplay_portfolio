@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { motion, useScroll, useMotionValue, useSpring } from 'framer-motion';
+import { Menu, X, Moon, Sun } from 'lucide-react';
 
 const navItems = [
   { label: 'Home', href: '#home' },
@@ -14,17 +14,27 @@ export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
   const { scrollY } = useScroll();
+  
+  // Track scroll position for background opacity
+  const bgOpacity = useMotionValue(0);
+  const bgOpacitySpring = useSpring(bgOpacity, { stiffness: 100, damping: 30 });
 
-  const navBackground = useTransform(
-    scrollY,
-    [0, 100],
-    ['rgba(222, 47%, 8%, 0)', 'rgba(0, 0, 0, 0.8)']
-  );
+  useEffect(() => {
+    // Initialize theme
+    const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+    setTheme(initialTheme);
+    document.documentElement.classList.toggle('dark', initialTheme === 'dark');
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      const scrolled = window.scrollY > 50;
+      setIsScrolled(scrolled);
+      bgOpacity.set(scrolled ? 0.95 : 0);
 
       const sections = navItems.map(item => item.href.substring(1));
       const currentSection = sections.find(section => {
@@ -45,23 +55,31 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const toggleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+    document.documentElement.classList.toggle('dark', newTheme === 'dark');
+  };
+
   const scrollToSection = (href: string) => {
     const element = document.getElementById(href.substring(1));
     element?.scrollIntoView({ behavior: 'smooth' });
     setIsMobileMenuOpen(false);
-    console.log('Navigating to:', href);
   };
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     setIsMobileMenuOpen(false);
-    console.log('Scrolling to top');
   };
 
   return (
     <motion.nav
-      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md"
-      style={{ backgroundColor: navBackground }}
+      className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md transition-colors duration-300 ${
+        isScrolled 
+          ? 'bg-background/95 border-b border-border/50 shadow-sm' 
+          : 'bg-gradient-to-b from-black/50 to-transparent'
+      }`}
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
@@ -76,7 +94,7 @@ export default function Navigation() {
               <div className="h-8 w-8 rounded-md bg-gradient-to-br from-primary to-accent flex items-center justify-center">
                 <span className="text-white font-bold text-sm">CP</span>
               </div>
-              <span className="text-lg font-bold hidden sm:inline">CodePlay Studios</span>
+              <span className={`text-lg font-bold hidden sm:inline ${isScrolled ? '' : 'text-white'}`}>CodePlay Studios</span>
             </div>
           </motion.div>
 
@@ -93,7 +111,11 @@ export default function Navigation() {
                 >
                   <span
                     className={`transition-colors ${
-                      isActive ? 'text-primary' : 'text-foreground hover:text-primary'
+                      isActive 
+                        ? 'text-primary' 
+                        : isScrolled 
+                          ? 'text-foreground hover:text-primary' 
+                          : 'text-white/90 hover:text-white'
                     }`}
                   >
                     {item.label}
@@ -108,16 +130,54 @@ export default function Navigation() {
                 </motion.button>
               );
             })}
+            
+            {/* Theme Toggle */}
+            <motion.button
+              onClick={toggleTheme}
+              className={`p-2 rounded-full border transition-colors ${
+                isScrolled 
+                  ? 'glass border-border hover:border-primary/50' 
+                  : 'bg-white/10 border-white/20 hover:bg-white/20'
+              }`}
+              whileHover={{ scale: 1.1, rotate: 180 }}
+              whileTap={{ scale: 0.9 }}
+              data-testid="button-theme-toggle"
+            >
+              {theme === 'light' ? (
+                <Moon className={`h-4 w-4 ${isScrolled ? '' : 'text-white'}`} />
+              ) : (
+                <Sun className={`h-4 w-4 ${isScrolled ? '' : 'text-white'}`} />
+              )}
+            </motion.button>
           </div>
 
-          <motion.button
-            className="md:hidden p-2"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            whileTap={{ scale: 0.9 }}
-            data-testid="button-mobile-menu"
-          >
-            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </motion.button>
+          {/* Mobile menu button and theme toggle */}
+          <div className="flex items-center gap-2 md:hidden">
+            <motion.button
+              onClick={toggleTheme}
+              className={`p-2 rounded-full border transition-colors ${
+                isScrolled 
+                  ? 'glass border-border' 
+                  : 'bg-white/10 border-white/20'
+              }`}
+              whileTap={{ scale: 0.9 }}
+              data-testid="button-theme-toggle-mobile"
+            >
+              {theme === 'light' ? (
+                <Moon className={`h-5 w-5 ${isScrolled ? '' : 'text-white'}`} />
+              ) : (
+                <Sun className={`h-5 w-5 ${isScrolled ? '' : 'text-white'}`} />
+              )}
+            </motion.button>
+            <motion.button
+              className={`p-2 ${isScrolled ? '' : 'text-white'}`}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              whileTap={{ scale: 0.9 }}
+              data-testid="button-mobile-menu"
+            >
+              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </motion.button>
+          </div>
         </div>
       </div>
 
