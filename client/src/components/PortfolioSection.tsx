@@ -1,332 +1,198 @@
-import { ExternalLink, ArrowUpRight, Eye } from 'lucide-react';
-import { motion, useMotionValue, AnimatePresence } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import { useRef, useState } from 'react';
-import schoolSystem from '@assets/generated_images/School_system_mockup_5bc4568f.png';
-import erpSystem from '@assets/generated_images/Enterprise_ERP_system_mockup_480d7812.png';
-import mobileApp from '@assets/generated_images/Mobile_app_mockup_preview_b1e7a9f7.png';
+import { motion } from "framer-motion";
+import { ArrowUpRight, Github, ExternalLink } from "lucide-react";
+import { Button } from "./ui/button";
+import { useState } from "react";
 
-const projects = [
-  {
-    title: 'School Management System',
-    description: 'Complete student, staff, and academic management platform with real-time analytics',
-    image: schoolSystem,
-    tags: ['Education', 'Dashboard', 'Analytics'],
-    category: 'enterprise',
-    color: 'from-blue-500 to-cyan-400',
-  },
-  {
-    title: 'ERP & Payroll System',
-    description: 'Enterprise resource planning with integrated payroll processing and HR modules',
-    image: erpSystem,
-    tags: ['Enterprise', 'Finance', 'HR'],
-    category: 'enterprise',
-    color: 'from-purple-500 to-pink-400',
-  },
-  {
-    title: 'Mobile Apps & Games',
-    description: 'Cross-platform mobile applications with engaging UX and gamification',
-    image: mobileApp,
-    tags: ['Mobile', 'Gaming', 'UX'],
-    category: 'mobile',
-    color: 'from-green-500 to-emerald-400',
-  },
-  {
-    title: 'Hotel Booking Platform',
-    description: 'Reservation system with real-time availability, payments, and guest management',
-    image: erpSystem,
-    tags: ['Hospitality', 'Booking', 'Payments'],
-    category: 'web',
-    color: 'from-orange-500 to-amber-400',
-  },
-  {
-    title: 'Medical Center System',
-    description: 'Patient management, appointments, medical records, and billing integration',
-    image: schoolSystem,
-    tags: ['Healthcare', 'Records', 'Scheduling'],
-    category: 'enterprise',
-    color: 'from-red-500 to-rose-400',
-  },
-  {
-    title: 'Sales & Distribution',
-    description: 'Inventory, order management, and sales analytics platform with AI insights',
-    image: mobileApp,
-    tags: ['Sales', 'Inventory', 'Analytics'],
-    category: 'enterprise',
-    color: 'from-indigo-500 to-violet-400',
-  },
-];
-
-const categories = [
-  { id: 'all', label: 'All Projects' },
-  { id: 'enterprise', label: 'Enterprise' },
-  { id: 'web', label: 'Web Apps' },
-  { id: 'mobile', label: 'Mobile' },
-];
-
-interface ProjectCardProps {
-  project: typeof projects[0];
-  index: number;
-  isInView: boolean;
-}
-
-function ProjectCard({ project, index, isInView }: ProjectCardProps) {
-  const [isHovered, setIsHovered] = useState(false);
-  const [isFlipped, setIsFlipped] = useState(false);
-  const cardRef = useRef<HTMLDivElement>(null);
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!cardRef.current) return;
-    const rect = cardRef.current.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width - 0.5;
-    const y = (e.clientY - rect.top) / rect.height - 0.5;
-    mouseX.set(x * 20);
-    mouseY.set(y * -20);
-  };
-
-  const handleMouseLeave = () => {
-    mouseX.set(0);
-    mouseY.set(0);
-    setIsHovered(false);
-  };
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      style={{ perspective: 1500 }}
+const ProjectCard = ({ project, index }) => (
+  <motion.div
+    initial={{ opacity: 0, scale: 0.9 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.5, delay: index * 0.1 }}
+    viewport={{ once: true }}
+    className="group relative rounded-3xl overflow-hidden bg-background border border-border/50 hover:border-primary/50 transition-colors duration-500"
+  >
+    {/* Image Placeholder with Gradient */}
+    <div
+      className={`h-64 w-full bg-gradient-to-br ${project.gradient} relative overflow-hidden group-hover:scale-105 transition-transform duration-700`}
     >
-      <motion.div
-        ref={cardRef}
-        className="relative h-[400px] cursor-pointer"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={handleMouseLeave}
-        onMouseMove={handleMouseMove}
-        onClick={() => setIsFlipped(!isFlipped)}
-        style={{
-          rotateX: mouseY,
-          rotateY: mouseX,
-          transformStyle: 'preserve-3d',
-        }}
-        data-testid={`card-portfolio-${index}`}
-      >
-        {/* Front of card */}
-        <motion.div
-          className="absolute inset-0 rounded-2xl glass overflow-hidden backface-hidden"
-          animate={{ rotateY: isFlipped ? 180 : 0 }}
-          transition={{ duration: 0.6 }}
-          style={{ backfaceVisibility: 'hidden' }}
+      <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors" />
+
+      {/* Overlay Buttons */}
+      <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+        <Button
+          size="icon"
+          variant="secondary"
+          className="rounded-full shadow-lg h-10 w-10"
         >
-          {/* Image */}
-          <div className="relative h-48 overflow-hidden">
-            <motion.img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-full object-cover"
-              animate={isHovered ? { scale: 1.1 } : { scale: 1 }}
-              transition={{ duration: 0.4 }}
-            />
-            {/* Overlay gradient */}
-            <motion.div
-              className={`absolute inset-0 bg-gradient-to-br ${project.color} mix-blend-overlay`}
-              animate={isHovered ? { opacity: 0.5 } : { opacity: 0.2 }}
-            />
-            {/* View indicator */}
-            <motion.div
-              className="absolute inset-0 flex items-center justify-center bg-background/50 backdrop-blur-sm"
-              initial={{ opacity: 0 }}
-              animate={isHovered ? { opacity: 1 } : { opacity: 0 }}
-            >
-              <motion.div
-                className="flex items-center gap-2 px-4 py-2 rounded-full glass border border-white/30"
-                initial={{ scale: 0.8 }}
-                animate={isHovered ? { scale: 1 } : { scale: 0.8 }}
-              >
-                <Eye className="h-4 w-4 text-white" />
-                <span className="text-white text-sm font-medium">Click to view details</span>
-              </motion.div>
-            </motion.div>
-          </div>
+          <Github className="w-5 h-5" />
+        </Button>
+        <Button size="icon" className="rounded-full shadow-lg h-10 w-10">
+          <ExternalLink className="w-5 h-5" />
+        </Button>
+      </div>
+    </div>
 
-          {/* Content */}
-          <div className="p-6">
-            <motion.h3
-              className="text-xl font-bold mb-2"
-              animate={isHovered ? { color: 'hsl(217 91% 60%)' } : {}}
-            >
-              {project.title}
-            </motion.h3>
-            <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
-              {project.description}
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {project.tags.map((tag, tagIndex) => (
-                <motion.span
-                  key={tagIndex}
-                  className="text-xs px-3 py-1 rounded-full glass border border-primary/20 text-primary"
-                  whileHover={{ scale: 1.05, borderColor: 'hsl(217 91% 60%)' }}
-                  initial={{ opacity: 0, x: -10 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ delay: 0.5 + tagIndex * 0.1 }}
-                >
-                  {tag}
-                </motion.span>
-              ))}
-            </div>
-          </div>
-
-          {/* Animated border */}
-          <motion.div
-            className="absolute inset-0 rounded-2xl pointer-events-none"
-            style={{
-              background: 'linear-gradient(135deg, hsl(217 91% 60% / 0.3), transparent 50%, hsl(262 83% 57% / 0.3))',
-              opacity: 0,
-            }}
-            animate={isHovered ? { opacity: 1 } : { opacity: 0 }}
-          />
-        </motion.div>
-
-        {/* Back of card */}
-        <motion.div
-          className="absolute inset-0 rounded-2xl glass overflow-hidden p-6 flex flex-col justify-between backface-hidden"
-          animate={{ rotateY: isFlipped ? 0 : -180 }}
-          transition={{ duration: 0.6 }}
-          style={{ backfaceVisibility: 'hidden' }}
-        >
-          <div>
-            <div className={`w-16 h-1 rounded-full bg-gradient-to-r ${project.color} mb-4`} />
-            <h3 className="text-2xl font-bold mb-3 text-gradient">{project.title}</h3>
-            <p className="text-muted-foreground mb-4">{project.description}</p>
-            <div className="space-y-2">
-              <p className="text-sm font-medium">Key Features:</p>
-              <ul className="text-sm text-muted-foreground space-y-1">
-                <li className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                  Real-time analytics dashboard
-                </li>
-                <li className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                  Multi-user role management
-                </li>
-                <li className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                  API integrations
-                </li>
-              </ul>
-            </div>
-          </div>
-          <motion.button
-            className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-gradient-to-r from-primary to-accent text-white font-medium"
-            whileHover={{ scale: 1.02, boxShadow: '0 0 20px hsl(217 91% 60% / 0.4)' }}
-            whileTap={{ scale: 0.98 }}
-          >
-            View Case Study
-            <ArrowUpRight className="h-4 w-4" />
-          </motion.button>
-        </motion.div>
-      </motion.div>
-    </motion.div>
-  );
-}
-
-export default function PortfolioSection() {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
-
-  const filteredProjects = activeCategory === 'all' 
-    ? projects 
-    : projects.filter(p => p.category === activeCategory);
-
-  return (
-    <section id="portfolio" className="py-24 px-6 bg-background relative overflow-hidden" ref={ref}>
-      {/* Background elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <motion.div
-          className="absolute w-[500px] h-[500px] rounded-full blur-3xl opacity-5"
-          style={{
-            background: 'radial-gradient(circle, hsl(217 91% 60%), transparent)',
-            top: '0',
-            left: '50%',
-            transform: 'translateX(-50%)',
-          }}
-          animate={{
-            scale: [1, 1.2, 1],
-          }}
-          transition={{ duration: 10, repeat: Infinity }}
-        />
+    <div className="p-8">
+      <div className="flex justify-between items-start mb-4">
+        <div>
+          <span className="text-xs font-bold text-primary tracking-wider uppercase mb-2 block">
+            {project.subtitle}
+          </span>
+          <h3 className="text-2xl font-bold group-hover:text-primary transition-colors">
+            {project.title}
+          </h3>
+        </div>
+        <ArrowUpRight className="w-6 h-6 text-muted-foreground group-hover:text-primary group-hover:rotate-45 transition-all" />
       </div>
 
-      <div className="container mx-auto max-w-6xl relative z-10">
-        <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-        >
+      <p className="text-muted-foreground mb-6 line-clamp-2">
+        {project.description}
+      </p>
+
+      <div className="flex flex-wrap gap-2">
+        {project.tags.map((tag, i) => (
+          <span
+            key={i}
+            className="px-3 py-1 rounded-full bg-secondary/50 text-xs font-medium text-secondary-foreground border border-transparent group-hover:border-primary/20 transition-colors"
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
+    </div>
+  </motion.div>
+);
+
+export default function PortfolioSection() {
+  const [activeTab, setActiveTab] = useState("All");
+  const categories = ["All", "Web App", "Mobile", "Enterprise"];
+
+  const projects = [
+    {
+      title: "FinTech Dashboard",
+      subtitle: "Financial Analytics",
+      description:
+        "A comprehensive dashboard for tracking real-time market data, portfolio performance, and predictive analytics.",
+      gradient: "from-blue-600 to-indigo-400",
+      tags: ["React", "D3.js", "Node.js"],
+      category: "Web App",
+    },
+    {
+      title: "HealthCore App",
+      subtitle: "Telemedicine Platform",
+      description:
+        "Secure patient-doctor video consultation app with integrated prescription management and health tracking.",
+      gradient: "from-emerald-500 to-teal-300",
+      tags: ["Flutter", "WebRTC", "Firebase"],
+      category: "Mobile",
+    },
+    {
+      title: "E-Commerce Pro",
+      subtitle: "Retail Solution",
+      description:
+        "Scalable headless e-commerce solution with AI-driven product recommendations and inventory management.",
+      gradient: "from-purple-500 to-pink-400",
+      tags: ["Next.js", "Stripe", "Sanity"],
+      category: "Web App",
+    },
+    {
+      title: "EduLearn System",
+      subtitle: "LMS Platform",
+      description:
+        "Enterprise learning management system helping universities manage curriculum and student progress.",
+      gradient: "from-orange-500 to-amber-300",
+      tags: ["Vue.js", "Python", "PostgreSQL"],
+      category: "Enterprise",
+    },
+    {
+      title: "TravelGo",
+      subtitle: "Booking Engine",
+      description:
+        "Flight and hotel booking aggregator with interactive maps and smart itinerary planning.",
+      gradient: "from-sky-500 to-cyan-300",
+      tags: ["React", "Google Maps", "Express"],
+      category: "Web App",
+    },
+    {
+      title: "SmartHome Hub",
+      subtitle: "IoT Controller",
+      description:
+        "Centralized control interface for modern smart homes, integrating various IoT protocols.",
+      gradient: "from-slate-600 to-zinc-400",
+      tags: ["React Native", "MQTT", "Node-RED"],
+      category: "Mobile",
+    },
+  ];
+
+  const filteredProjects =
+    activeTab === "All"
+      ? projects
+      : projects.filter((p) => p.category === activeTab);
+
+  return (
+    <section id="portfolio" className="py-32 bg-background">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
           <motion.span
-            className="inline-block px-4 py-1 rounded-full glass border border-accent/30 text-sm text-accent mb-4"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ delay: 0.2 }}
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-primary font-medium tracking-wide uppercase text-sm"
           >
-            Featured Work
+            Selected Works
           </motion.span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">Our Portfolio</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Delivering innovative solutions across industries
-          </p>
-        </motion.div>
-
-        {/* Category filter */}
-        <motion.div
-          className="flex flex-wrap justify-center gap-3 mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.3 }}
-        >
-          {categories.map((category) => (
-            <motion.button
-              key={category.id}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
-                activeCategory === category.id
-                  ? 'bg-gradient-to-r from-primary to-accent text-white glow-primary'
-                  : 'glass border border-border hover:border-primary/50'
-              }`}
-              onClick={() => setActiveCategory(category.id)}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {category.label}
-            </motion.button>
-          ))}
-        </motion.div>
-
-        {/* Projects grid */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeCategory}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl font-bold mt-4 mb-6"
           >
-            {filteredProjects.map((project, index) => (
-              <ProjectCard
-                key={project.title}
-                project={project}
-                index={index}
-                isInView={isInView}
-              />
+            Our{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+              Portfolio
+            </span>
+          </motion.h2>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            viewport={{ once: true }}
+            className="flex flex-wrap justify-center gap-2 mt-8"
+          >
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActiveTab(cat)}
+                className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  activeTab === cat
+                    ? "bg-primary text-primary-foreground shadow-lg shadow-primary/25"
+                    : "bg-secondary/50 text-muted-foreground hover:bg-secondary"
+                }`}
+              >
+                {cat}
+              </button>
             ))}
           </motion.div>
-        </AnimatePresence>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredProjects.map((project, index) => (
+            <ProjectCard key={project.title} project={project} index={index} />
+          ))}
+        </div>
+
+        <div className="text-center mt-16">
+          <Button
+            variant="outline"
+            size="lg"
+            className="rounded-full px-8 border-2"
+          >
+            View All Case Studies
+          </Button>
+        </div>
       </div>
     </section>
   );
 }
-

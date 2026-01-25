@@ -1,68 +1,69 @@
-import { CheckCircle2 } from 'lucide-react';
-import { SiReact, SiNextdotjs, SiNodedotjs, SiFirebase, SiAmazon, SiMysql } from 'react-icons/si';
+import { motion } from "framer-motion";
+import { ShieldCheck, Zap, Heart, LayoutGrid } from "lucide-react";
 
-const reasons = [
-  'Flexible, client-focused development process',
-  'Cutting-edge technologies and modern frameworks',
-  'Scalable architecture & clean, optimized code',
-  'AI-powered insights for smarter business decisions',
-];
-
-const techStack = [
-  { icon: SiReact, name: 'React' },
-  { icon: SiNextdotjs, name: 'Next.js' },
-  { icon: SiNodedotjs, name: 'Node.js' },
-  { icon: SiFirebase, name: 'Firebase' },
-  { icon: SiAmazon, name: 'AWS' },
-  { icon: SiMysql, name: 'MySQL' },
-];
+const FeatureBox = ({ icon: Icon, title, description, index }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ delay: index * 0.1 }}
+    viewport={{ once: true }}
+    className="p-8 rounded-3xl bg-card border border-border/50 hover:shadow-2xl hover:shadow-primary/5 hover:border-primary/20 transition-all duration-500"
+  >
+    <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+      <Icon className="h-6 w-6 text-primary" />
+    </div>
+    <h3 className="text-xl font-bold mb-4">{title}</h3>
+    <p className="text-muted-foreground leading-relaxed">{description}</p>
+  </motion.div>
+);
 
 export default function WhyChooseSection() {
   return (
-    <section className="py-24 px-6 bg-gradient-to-b from-card/30 to-background">
-      <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Why Choose Us</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We combine expertise, innovation, and dedication to deliver exceptional results
+    <section className="py-32 bg-muted/30 relative">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-20 max-w-2xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl font-bold mb-6"
+          >
+            Why Global Brands <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+              Trust Us
+            </span>
+          </motion.h2>
+          <p className="text-muted-foreground text-lg">
+            We don't just write code; we engineer success. Here is what sets us
+            apart from the competition.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            {reasons.map((reason, index) => (
-              <div
-                key={index}
-                className="flex items-start gap-4 animate-in fade-in slide-in-from-left duration-500"
-                style={{ animationDelay: `${index * 100}ms` }}
-                data-testid={`reason-${index}`}
-              >
-                <div className="h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
-                  <CheckCircle2 className="h-4 w-4 text-primary" />
-                </div>
-                <p className="text-lg">{reason}</p>
-              </div>
-            ))}
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-bold mb-6 text-center">Our Tech Stack</h3>
-            <div className="grid grid-cols-3 gap-6">
-              {techStack.map((tech, index) => {
-                const Icon = tech.icon;
-                return (
-                  <div
-                    key={index}
-                    className="flex flex-col items-center gap-3 p-4 rounded-lg bg-card border border-card-border hover-elevate transition-all duration-300 group"
-                    data-testid={`tech-${tech.name.toLowerCase()}`}
-                  >
-                    <Icon className="h-10 w-10 group-hover:scale-110 transition-transform" />
-                    <span className="text-sm font-medium text-center">{tech.name}</span>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <FeatureBox
+            index={0}
+            icon={ShieldCheck}
+            title="Security First"
+            description="Enterprise-grade security baked into every layer of your application from day one."
+          />
+          <FeatureBox
+            index={1}
+            icon={Zap}
+            title="Blazing Fast"
+            description="Performance is not an afterthought. We optimize for speed and efficiency at every step."
+          />
+          <FeatureBox
+            index={2}
+            icon={LayoutGrid}
+            title="Scalable Core"
+            description="Architectures designed to grow with you, handling millions of users without breaking a sweat."
+          />
+          <FeatureBox
+            index={3}
+            icon={Heart}
+            title="User Loved"
+            description="We craft intuitive experiences that users love, driving higher engagement and retention."
+          />
         </div>
       </div>
     </section>

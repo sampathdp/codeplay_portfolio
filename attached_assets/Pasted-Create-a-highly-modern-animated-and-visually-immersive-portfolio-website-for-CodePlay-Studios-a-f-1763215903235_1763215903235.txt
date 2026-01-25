@@ -1,0 +1,115 @@
+Create a highly modern, animated, and visually immersive portfolio website for CodePlay Studios, a full-stack software company building AI-powered business systems, web apps, mobile solutions, and games.
+
+Brand & Style Guidelines:
+
+Company Name: CodePlay Studios
+
+Tagline: Coding Your Vision
+
+Secondary Line: Smart Software. Real Solutions.
+
+Tone: Innovative, futuristic, trustworthy
+
+Style: Minimalist yet tech-inspired, with animated gradients, parallax scrolling, particle effects, and subtle AI visualizations
+
+Color Palette: Use colors from the attached logo — deep navy, electric blue, soft purple; generate complementary accent colors for buttons, highlights, and backgrounds
+
+Fonts: Modern, sleek (Poppins, Inter, or Roboto)
+
+Layout: One-page scroll with fade-in, slide, hover, and micro-interactions
+
+Feel: Futuristic, immersive, and highly professional, suitable for a next-gen software studio
+
+Sections & Features:
+
+Hero Section:
+
+Headline: “Building Smart, Scalable, and AI-Driven Software Solutions.”
+
+Subtext: “We design intelligent systems that solve real business challenges — from ERPs to mobile apps.”
+
+Buttons: “Get a Quote” & “Explore Our Work” with hover animations
+
+Background: Animated tech particles, AI circuits, or futuristic gradients
+
+Include AI-generated background images/icons matching brand colors
+
+About Section:
+
+Text: “CodePlay Studios is a full-stack software company specializing in web systems, mobile apps, and games. We deliver real solutions, not just products. Every system is client-focused and tailored to your needs.”
+
+Highlight Quote: “We don’t just build software — we build solutions that work.”
+
+Include animated SVG illustrations matching AI/tech theme
+
+AI & Innovation Section:
+
+Headline: “Empowering Businesses with AI Insights & Prediction Bots.”
+
+Text: “Our AI systems forecast trends, analyze performance, and automate decisions. From sales predictions to smart analytics, we give you the power to stay ahead.”
+
+Visuals: Glowing AI network, futuristic data visualizations, animated graphs
+
+Services / What We Do:
+
+Display interactive 3D or animated service cards:
+
+Web Systems & Portals
+
+Enterprise Solutions (ERP, Payroll, Sales, Hotel, School Systems)
+
+Mobile Apps & Games
+
+AI Insights & Prediction Bots
+
+Cloud & Data Integration
+
+Hover animations with color shifts matching brand palette
+
+Why Choose Us:
+
+Text bullets with subtle entrance animations:
+
+Flexible, client-focused development process
+
+Cutting-edge technologies: React, Next.js, Node.js, Firebase, AWS, MySQL
+
+Scalable architecture & clean, optimized code
+
+AI-powered insights for smarter business decisions
+
+Portfolio Preview:
+
+Include mockup placeholders with subtle animation/hover effects
+
+Generate AI-style previews/screenshots matching brand colors
+
+Projects: School Management System, ERP & Payroll, Hotel Booking, Medical Center System, Sales & Distribution System
+
+Contact Section:
+
+Headline: “Let’s Build Something Extraordinary.”
+
+Subtext: “Ready to turn your idea into an intelligent system? Let’s create your digital future.”
+
+Include animated contact form: Name, Email, Message + Submit button with hover/glow effect
+
+Footer:
+
+Company Name & Tagline: “© CodePlay Studios — Coding Your Vision”
+
+Social links with animated icons (GitHub, LinkedIn, Facebook, Instagram)
+
+Extra Features & Animation:
+
+Smooth scrolling with parallax effects
+
+Animated gradient backgrounds
+
+Subtle particle systems in hero and sections
+
+Hover effects on buttons, cards, and portfolio previews
+
+AI-generated icons and illustrations that match your logo and system theme
+
+Fully responsive, mobile-first design

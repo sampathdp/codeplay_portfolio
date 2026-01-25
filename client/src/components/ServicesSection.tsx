@@ -1,228 +1,179 @@
-import { Globe, Building2, Smartphone, Brain, Cloud } from 'lucide-react';
-import { motion, useMotionValue } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { motion } from "framer-motion";
+import {
+  Monitor,
+  Smartphone,
+  Brain,
+  Globe,
+  String,
+  Layout,
+  ArrowRight,
+  Code2,
+  Rocket,
+} from "lucide-react";
+import { Button } from "./ui/button";
 
-const services = [
-  {
-    icon: Globe,
-    title: 'Web Systems & Portals',
-    description: 'Custom web applications, dashboards, and enterprise portals built with modern frameworks',
-    gradient: 'from-blue-500 to-cyan-400',
-  },
-  {
-    icon: Building2,
-    title: 'Enterprise Solutions',
-    description: 'ERP, Payroll, Sales, Hotel, and School Management Systems tailored to your business',
-    gradient: 'from-purple-500 to-pink-400',
-  },
-  {
-    icon: Smartphone,
-    title: 'Mobile Apps & Games',
-    description: 'Native and cross-platform mobile applications with engaging user experiences',
-    gradient: 'from-green-500 to-emerald-400',
-  },
-  {
-    icon: Brain,
-    title: 'AI Insights & Prediction Bots',
-    description: 'Machine learning models and intelligent bots for forecasting and automation',
-    gradient: 'from-orange-500 to-amber-400',
-  },
-  {
-    icon: Cloud,
-    title: 'Cloud & Data Integration',
-    description: 'Scalable cloud infrastructure and seamless third-party API integrations',
-    gradient: 'from-indigo-500 to-violet-400',
-  },
-];
+const ServiceCard = ({ service, index }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5, delay: index * 0.1 }}
+    viewport={{ once: true }}
+    className="group relative p-8 rounded-3xl bg-secondary/30 border border-white/10 dark:border-white/5 overflow-hidden hover:bg-secondary/50 transition-colors duration-500"
+  >
+    <div
+      className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${service.gradient} opacity-10 blur-3xl group-hover:opacity-20 transition-opacity duration-500`}
+    />
 
-interface ServiceCardProps {
-  service: typeof services[0];
-  index: number;
-  isInView: boolean;
-}
-
-function ServiceCard({ service, index, isInView }: ServiceCardProps) {
-  const [isHovered, setIsHovered] = useState(false);
-  const cardRef = useRef<HTMLDivElement>(null);
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!cardRef.current) return;
-    const rect = cardRef.current.getBoundingClientRect();
-    mouseX.set(e.clientX - rect.left);
-    mouseY.set(e.clientY - rect.top);
-  };
-
-  const Icon = service.icon;
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 50, rotateX: -15 }}
-      animate={isInView ? { opacity: 1, y: 0, rotateX: 0 } : {}}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      style={{ perspective: 1000 }}
-    >
-      <motion.div
-        ref={cardRef}
-        className="relative p-6 rounded-xl glass overflow-hidden group cursor-pointer h-full"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        onMouseMove={handleMouseMove}
-        whileHover={{
-          y: -10,
-          rotateY: 5,
-          rotateX: 5,
-          transition: { duration: 0.3 },
-        }}
-        style={{ transformStyle: 'preserve-3d' }}
-        data-testid={`card-service-${index}`}
+    <div className="relative z-10">
+      <div
+        className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${service.gradient} p-3 mb-6 text-white shadow-lg`}
       >
-        {/* Animated gradient border */}
-        <motion.div
-          className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-          style={{
-            background: `linear-gradient(135deg, transparent, hsl(217 91% 60% / 0.3), hsl(262 83% 57% / 0.3), transparent)`,
-            backgroundSize: '200% 200%',
-          }}
-          animate={isHovered ? {
-            backgroundPosition: ['0% 0%', '100% 100%', '0% 0%'],
-          } : {}}
-          transition={{ duration: 3, repeat: Infinity }}
-        />
-
-        {/* Spotlight effect */}
-        <motion.div
-          className="absolute pointer-events-none w-40 h-40 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          style={{
-            background: 'radial-gradient(circle, hsl(217 91% 60% / 0.15), transparent 70%)',
-            x: mouseX,
-            y: mouseY,
-            translateX: '-50%',
-            translateY: '-50%',
-          }}
-        />
-
-        {/* Content */}
-        <div className="relative z-10">
-          <motion.div
-            className={`h-14 w-14 rounded-xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-4 shadow-lg`}
-            animate={isHovered ? { 
-              rotate: 360, 
-              scale: 1.1,
-              boxShadow: '0 0 30px hsl(217 91% 60% / 0.5)',
-            } : { 
-              rotate: 0, 
-              scale: 1,
-              boxShadow: '0 4px 15px rgba(0,0,0,0.2)',
-            }}
-            transition={{ duration: 0.5 }}
-          >
-            <Icon className="h-7 w-7 text-white" />
-          </motion.div>
-
-          <motion.h3 
-            className="text-xl font-bold mb-2 transition-colors"
-            animate={isHovered ? { color: 'hsl(217 91% 60%)' } : {}}
-          >
-            {service.title}
-          </motion.h3>
-          
-          <p className="text-muted-foreground">{service.description}</p>
-
-          {/* Animated underline */}
-          <motion.div
-            className="h-0.5 bg-gradient-to-r from-primary to-accent mt-4 rounded-full"
-            initial={{ width: 0 }}
-            animate={isHovered ? { width: '100%' } : { width: 0 }}
-            transition={{ duration: 0.3 }}
-          />
-        </div>
-
-        {/* Corner decorations */}
-        <motion.div
-          className="absolute top-2 right-2 w-8 h-8 border-t-2 border-r-2 border-primary/20 rounded-tr-lg"
-          animate={isHovered ? { borderColor: 'hsl(217 91% 60% / 0.5)' } : {}}
-        />
-        <motion.div
-          className="absolute bottom-2 left-2 w-8 h-8 border-b-2 border-l-2 border-accent/20 rounded-bl-lg"
-          animate={isHovered ? { borderColor: 'hsl(262 83% 57% / 0.5)' } : {}}
-        />
-      </motion.div>
-    </motion.div>
-  );
-}
-
-export default function ServicesSection() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
-
-  return (
-    <section id="services" className="py-24 px-6 bg-background relative overflow-hidden" ref={ref}>
-      {/* Background decoration */}
-      <div className="absolute inset-0 pointer-events-none">
-        <motion.div
-          className="absolute w-96 h-96 rounded-full blur-3xl opacity-10"
-          style={{
-            background: 'linear-gradient(135deg, hsl(217 91% 60%), hsl(262 83% 57%))',
-            top: '10%',
-            right: '-10%',
-          }}
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.1, 0.15, 0.1],
-          }}
-          transition={{ duration: 8, repeat: Infinity }}
-        />
-        <motion.div
-          className="absolute w-80 h-80 rounded-full blur-3xl opacity-10"
-          style={{
-            background: 'linear-gradient(135deg, hsl(262 83% 57%), hsl(217 91% 60%))',
-            bottom: '10%',
-            left: '-10%',
-          }}
-          animate={{
-            scale: [1.2, 1, 1.2],
-            opacity: [0.15, 0.1, 0.15],
-          }}
-          transition={{ duration: 8, repeat: Infinity }}
-        />
+        {service.icon}
       </div>
 
-      <div className="container mx-auto max-w-6xl relative z-10">
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-        >
-          <motion.span
-            className="inline-block px-4 py-1 rounded-full glass border border-primary/30 text-sm text-primary mb-4"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ delay: 0.2 }}
-          >
-            Our Expertise
-          </motion.span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">What We Do</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive software solutions powered by cutting-edge technology
-          </p>
-        </motion.div>
+      <h3 className="text-2xl font-semibold mb-3 tracking-tight">
+        {service.title}
+      </h3>
+      <p className="text-muted-foreground leading-relaxed mb-6">
+        {service.description}
+      </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
-            <ServiceCard
-              key={index}
-              service={service}
-              index={index}
-              isInView={isInView}
+      <ul className="space-y-2 mb-8">
+        {service.features.map((feature, i) => (
+          <li
+            key={i}
+            className="flex items-center gap-2 text-sm text-foreground/80"
+          >
+            <div
+              className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${service.gradient}`}
             />
+            {feature}
+          </li>
+        ))}
+      </ul>
+
+      <Button
+        variant="ghost"
+        className="group/btn pl-0 hover:pl-2 transition-all"
+      >
+        Learn more <ArrowRight className="ml-2 w-4 h-4" />
+      </Button>
+    </div>
+  </motion.div>
+);
+
+export default function ServicesSection() {
+  const services = [
+    {
+      icon: <Monitor className="w-full h-full" />,
+      title: "Web Engineering",
+      description:
+        "We build pixel-perfect, performant web applications that scale with your business needs.",
+      gradient: "from-blue-500 to-cyan-400",
+      features: [
+        "Next.js & React",
+        "Progressive Web Apps",
+        "Performance Optimization",
+      ],
+    },
+    {
+      icon: <Smartphone className="w-full h-full" />,
+      title: "Mobile Development",
+      description:
+        "Native-quality cross-platform mobile apps that deliver seamless experiences on iOS and Android.",
+      gradient: "from-violet-500 to-purple-400",
+      features: [
+        "React Native / Flutter",
+        "Offline-first Architecture",
+        "App Store Optimization",
+      ],
+    },
+    {
+      icon: <Brain className="w-full h-full" />,
+      title: "AI & Automation",
+      description:
+        "Leverage the power of Artificial Intelligence to automate workflows and gain data insights.",
+      gradient: "from-emerald-500 to-teal-400",
+      features: [
+        "Predictive Analytics",
+        "Chatbots & LLMs",
+        "Process Automation",
+      ],
+    },
+    {
+      icon: <Layout className="w-full h-full" />,
+      title: "Product Design",
+      description:
+        "User-centric UI/UX design that transforms complex problems into intuitive solutions.",
+      gradient: "from-orange-500 to-amber-400",
+      features: ["Design Systems", "User Research", "Interactive Prototyping"],
+    },
+    {
+      icon: <Globe className="w-full h-full" />,
+      title: "Digital Marketing",
+      description:
+        "Data-driven strategies to increase your online visibility and drive conversion.",
+      gradient: "from-pink-500 to-rose-400",
+      features: ["SEO & SEM", "Content Strategy", "Growth Hacking"],
+    },
+    {
+      icon: <Rocket className="w-full h-full" />,
+      title: "MVP Development",
+      description:
+        "Rapid prototyping and development to get your startup idea to market fast.",
+      gradient: "from-indigo-500 to-blue-400",
+      features: [
+        "Rapid Prototyping",
+        "Scalable Foundation",
+        "Go-to-Market Support",
+      ],
+    },
+  ];
+
+  return (
+    <section id="services" className="py-32 bg-background relative">
+      <div className="container mx-auto px-6">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+          <div className="max-w-2xl">
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-primary font-medium tracking-wide uppercase text-sm"
+            >
+              Our Expertise
+            </motion.span>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              viewport={{ once: true }}
+              className="text-4xl md:text-5xl font-bold mt-4 tracking-tight"
+            >
+              Holistic Digital{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+                Solutions
+              </span>
+            </motion.h2>
+          </div>
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+            <p className="text-muted-foreground text-lg max-w-md">
+              We combine creative design with technical engineering to build
+              products that stand out.
+            </p>
+          </motion.div>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <ServiceCard key={index} service={service} index={index} />
           ))}
         </div>
       </div>
     </section>
   );
 }
-

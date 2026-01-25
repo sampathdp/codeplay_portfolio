@@ -1,213 +1,205 @@
-import { useState, useEffect } from 'react';
-import { motion, useScroll, useMotionValue, useSpring } from 'framer-motion';
-import { Menu, X, Moon, Sun } from 'lucide-react';
-
-const navItems = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'Portfolio', href: '#portfolio' },
-  { label: 'Contact', href: '#contact' },
-];
+import { useState, useEffect } from "react";
+import { Link } from "wouter";
+import { Menu, X, Instagram, Twitter, Linkedin, Github } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Button } from "./ui/button";
+import { ModeToggle } from "./mode-toggle";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
-  const { scrollY } = useScroll();
-  
-  // Track scroll position for background opacity
-  const bgOpacity = useMotionValue(0);
-  const bgOpacitySpring = useSpring(bgOpacity, { stiffness: 100, damping: 30 });
-
-  useEffect(() => {
-    // Initialize theme
-    const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
-    setTheme(initialTheme);
-    document.documentElement.classList.toggle('dark', initialTheme === 'dark');
-  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrolled = window.scrollY > 50;
-      setIsScrolled(scrolled);
-      bgOpacity.set(scrolled ? 0.95 : 0);
-
-      const sections = navItems.map(item => item.href.substring(1));
-      const currentSection = sections.find(section => {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          return rect.top <= 150 && rect.bottom >= 150;
-        }
-        return false;
-      });
-
-      if (currentSection) {
-        setActiveSection(currentSection);
-      }
+      setIsScrolled(window.scrollY > 40);
     };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
-    document.documentElement.classList.toggle('dark', newTheme === 'dark');
-  };
+  const links = [
+    { href: "#about", label: "About" },
+    { href: "#services", label: "Services" },
+    { href: "#portfolio", label: "Work" },
+    { href: "#contact", label: "Contact" },
+  ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.getElementById(href.substring(1));
-    element?.scrollIntoView({ behavior: 'smooth' });
-    setIsMobileMenuOpen(false);
-  };
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    setIsMobileMenuOpen(false);
-  };
+  const socialLinks = [
+    { icon: <Twitter className="w-5 h-5" />, href: "#" },
+    { icon: <Instagram className="w-5 h-5" />, href: "#" },
+    { icon: <Linkedin className="w-5 h-5" />, href: "#" },
+    { icon: <Github className="w-5 h-5" />, href: "#" },
+  ];
 
   return (
-    <motion.nav
-      className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md transition-colors duration-300 ${
-        isScrolled 
-          ? 'bg-background/95 border-b border-border/50 shadow-sm' 
-          : 'bg-gradient-to-b from-black/50 to-transparent'
-      }`}
-    >
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
-          <motion.div
-            className="flex items-center cursor-pointer"
-            onClick={scrollToTop}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            data-testid="logo-link"
-          >
-            <div className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-md bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                <span className="text-white font-bold text-sm">CP</span>
-              </div>
-              <span className={`text-lg font-bold hidden sm:inline ${isScrolled ? '' : 'text-white'}`}>CodePlay Studios</span>
-            </div>
-          </motion.div>
+    <>
+      <motion.nav
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 flex justify-center items-center pointer-events-none
+          ${isScrolled ? "pt-4" : "pt-0"}`}
+      >
+        <div
+          className={`container mx-auto px-8 h-full flex items-center justify-between transition-all duration-700 pointer-events-auto
+            ${
+              isScrolled
+                ? "h-16 max-w-5xl glass rounded-full border border-white/10 shadow-2xl"
+                : "h-20 max-w-[95%] bg-white/5 backdrop-blur-md rounded-2xl border border-white/5 mt-4 shadow-sm"
+            }
+          `}
+        >
+          {/* Logo */}
+          <Link href="/">
+            <a className="text-3xl font-bold tracking-tighter group flex items-center gap-1">
+              <span className="bg-primary text-primary-foreground w-10 h-10 rounded-lg flex items-center justify-center font-black rotate-3 group-hover:rotate-0 transition-transform">
+                C
+              </span>
+              <span className="group-hover:text-primary transition-colors text-foreground">
+                codeplay
+              </span>
+            </a>
+          </Link>
 
-          <div className="hidden md:flex items-center gap-8">
-            {navItems.map((item, index) => {
-              const isActive = activeSection === item.href.substring(1);
-              return (
-                <motion.button
-                  key={index}
-                  onClick={() => scrollToSection(item.href)}
-                  className="relative text-sm font-medium transition-colors group"
-                  data-testid={`nav-${item.label.toLowerCase()}`}
-                  whileHover={{ y: -2 }}
-                >
-                  <span
-                    className={`transition-colors ${
-                      isActive 
-                        ? 'text-primary' 
-                        : isScrolled 
-                          ? 'text-foreground hover:text-primary' 
-                          : 'text-white/90 hover:text-white'
-                    }`}
-                  >
-                    {item.label}
-                  </span>
-                  <motion.div
-                    className="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary to-accent"
-                    initial={{ width: 0 }}
-                    animate={{ width: isActive ? '100%' : 0 }}
-                    whileHover={{ width: '100%' }}
-                    transition={{ duration: 0.3 }}
-                  />
-                </motion.button>
-              );
-            })}
-            
-            {/* Theme Toggle */}
-            <motion.button
-              onClick={toggleTheme}
-              className={`p-2 rounded-full border transition-colors ${
-                isScrolled 
-                  ? 'glass border-border hover:border-primary/50' 
-                  : 'bg-white/10 border-white/20 hover:bg-white/20'
-              }`}
-              whileHover={{ scale: 1.1, rotate: 180 }}
-              whileTap={{ scale: 0.9 }}
-              data-testid="button-theme-toggle"
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center space-x-1">
+            <div
+              className={`flex items-center transition-all duration-500 rounded-full px-2 py-1 ${!isScrolled ? "bg-white/5" : ""}`}
             >
-              {theme === 'light' ? (
-                <Moon className={`h-4 w-4 ${isScrolled ? '' : 'text-white'}`} />
-              ) : (
-                <Sun className={`h-4 w-4 ${isScrolled ? '' : 'text-white'}`} />
-              )}
-            </motion.button>
+              {links.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className={`px-6 py-2 text-base font-semibold transition-colors relative group
+                        ${isScrolled ? "text-foreground/80 hover:text-primary" : "text-white/90 hover:text-white"}
+                    `}
+                >
+                  {link.label}
+                  <span className="absolute bottom-0 left-6 right-6 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-center" />
+                </a>
+              ))}
+            </div>
+
+            <div className="h-6 w-[1px] bg-white/10 mx-6" />
+
+            <ModeToggle />
+
+            <Button
+              variant="default"
+              className="rounded-full px-10 ml-6 h-12 text-base font-bold shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all group overflow-hidden relative"
+            >
+              <span className="relative z-10 flex items-center">
+                Start Project
+                <motion.span
+                  className="ml-2"
+                  animate={{ x: [0, 4, 0] }}
+                  transition={{ repeat: Infinity, duration: 1.5 }}
+                >
+                  →
+                </motion.span>
+              </span>
+            </Button>
           </div>
 
-          {/* Mobile menu button and theme toggle */}
-          <div className="flex items-center gap-2 md:hidden">
-            <motion.button
-              onClick={toggleTheme}
-              className={`p-2 rounded-full border transition-colors ${
-                isScrolled 
-                  ? 'glass border-border' 
-                  : 'bg-white/10 border-white/20'
-              }`}
-              whileTap={{ scale: 0.9 }}
-              data-testid="button-theme-toggle-mobile"
+          {/* Mobile Toggle */}
+          <div className="flex items-center gap-4 md:hidden">
+            <ModeToggle />
+            <button
+              className="w-12 h-12 rounded-full flex items-center justify-center bg-white/10 backdrop-blur hover:bg-white/20 transition-all"
+              onClick={() => setIsMobileMenuOpen(true)}
             >
-              {theme === 'light' ? (
-                <Moon className={`h-5 w-5 ${isScrolled ? '' : 'text-white'}`} />
-              ) : (
-                <Sun className={`h-5 w-5 ${isScrolled ? '' : 'text-white'}`} />
-              )}
-            </motion.button>
-            <motion.button
-              className={`p-2 ${isScrolled ? '' : 'text-white'}`}
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              whileTap={{ scale: 0.9 }}
-              data-testid="button-mobile-menu"
-            >
-              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </motion.button>
+              <Menu className="w-6 h-6 text-white" />
+            </button>
           </div>
         </div>
-      </div>
+      </motion.nav>
 
-      {isMobileMenuOpen && (
-        <motion.div
-          className="md:hidden bg-background/95 backdrop-blur-lg border-t border-border"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-        >
-          <div className="container mx-auto px-6 py-4 space-y-4">
-            {navItems.map((item, index) => {
-              const isActive = activeSection === item.href.substring(1);
-              return (
-                <motion.button
-                  key={index}
-                  onClick={() => scrollToSection(item.href)}
-                  className={`block w-full text-left py-2 transition-colors ${
-                    isActive ? 'text-primary' : 'text-foreground hover:text-primary'
-                  }`}
-                  data-testid={`nav-mobile-${item.label.toLowerCase()}`}
-                  whileTap={{ scale: 0.98 }}
+      {/* Full-Screen Mobile Menu */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ type: "spring", damping: 25, stiffness: 200 }}
+            className="fixed inset-0 z-[60] bg-background/95 backdrop-blur-2xl md:hidden overflow-hidden flex flex-col"
+          >
+            {/* Header */}
+            <div className="h-24 px-6 flex items-center justify-between border-b border-border/50">
+              <Link href="/">
+                <a
+                  className="text-2xl font-bold tracking-tighter"
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  {item.label}
-                </motion.button>
-              );
-            })}
-          </div>
-        </motion.div>
-      )}
-    </motion.nav>
+                  code<span className="text-primary">play</span>
+                </a>
+              </Link>
+              <button
+                className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+
+            {/* Links Section */}
+            <div className="flex-1 flex flex-col justify-center px-10">
+              <div className="space-y-8">
+                {links.map((link, i) => (
+                  <motion.div
+                    key={link.label}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.1 * i }}
+                  >
+                    <a
+                      href={link.href}
+                      className="text-5xl font-bold hover:text-primary transition-colors inline-block"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {link.label}
+                    </a>
+                  </motion.div>
+                ))}
+              </div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 }}
+                className="mt-16"
+              >
+                <Button
+                  size="lg"
+                  className="w-full rounded-2xl h-16 text-xl shadow-xl shadow-primary/20"
+                >
+                  Start Project
+                </Button>
+              </motion.div>
+            </div>
+
+            {/* Footer */}
+            <div className="p-10 border-t border-border/50 bg-secondary/30">
+              <p className="text-sm font-medium text-muted-foreground uppercase tracking-widest mb-6">
+                Socials
+              </p>
+              <div className="flex gap-6">
+                {socialLinks.map((social, i) => (
+                  <motion.a
+                    key={i}
+                    href={social.href}
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.7 + i * 0.1 }}
+                    className="w-12 h-12 rounded-full bg-background flex items-center justify-center text-foreground/70 hover:bg-primary hover:text-white transition-all shadow-sm"
+                  >
+                    {social.icon}
+                  </motion.a>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 }
