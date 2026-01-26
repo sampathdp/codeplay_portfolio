@@ -1,15 +1,5 @@
 import { useEffect, useRef } from 'react';
 
-interface Particle {
-  x: number;
-  y: number;
-  vx: number;
-  vy: number;
-  size: number;
-  pulse: number;
-  pulseSpeed: number;
-}
-
 export default function ParticleBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -20,115 +10,100 @@ export default function ParticleBackground() {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    const setCanvasSize = () => {
+    let particles: Particle[] = [];
+    let animationFrameId: number;
+
+    const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
-    setCanvasSize();
 
-    const particles: Particle[] = [];
-    const particleCount = 80;
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
 
-    for (let i = 0; i < particleCount; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.3,
-        vy: (Math.random() - 0.5) * 0.3,
-        size: Math.random() * 2.5 + 1,
-        pulse: Math.random() * Math.PI * 2,
-        pulseSpeed: 0.02 + Math.random() * 0.02,
-      });
+    class Particle {
+      x: number;
+      y: number;
+      directionX: number;
+      directionY: number;
+      size: number;
+      color: string;
+
+      constructor() {
+        this.x = Math.random() * (canvas?.width || 0);
+        this.y = Math.random() * (canvas?.height || 0);
+        this.directionX = (Math.random() - 0.5) * 1; // Speed
+        this.directionY = (Math.random() - 0.5) * 1;
+        this.size = Math.random() * 2 + 1;
+        this.color = 'rgba(100, 255, 218, 0.5)'; // Cyan-ish
+      }
+
+      update() {
+        if (!canvas) return;
+        if (this.x > canvas.width || this.x < 0) {
+          this.directionX = -this.directionX;
+        }
+        if (this.y > canvas.height || this.y < 0) {
+          this.directionY = -this.directionY;
+        }
+        this.x += this.directionX;
+        this.y += this.directionY;
+      }
+
+      draw() {
+        if (!ctx) return;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+      }
     }
 
-    let animationFrameId: number;
-    let time = 0;
+    const init = () => {
+      particles = [];
+      const numberOfParticles = (canvas.width * canvas.height) / 15000;
+      for (let i = 0; i < numberOfParticles; i++) {
+        particles.push(new Particle());
+      }
+    };
 
     const animate = () => {
+      if (!canvas || !ctx) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      time += 0.01;
 
-      particles.forEach((particle, i) => {
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-        particle.pulse += particle.pulseSpeed;
-
-        if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
-        if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
-
-        const pulseSize = particle.size * (1 + Math.sin(particle.pulse) * 0.3);
-        const pulseOpacity = 0.5 + Math.sin(particle.pulse) * 0.3;
-
-        const gradient = ctx.createRadialGradient(
-          particle.x, particle.y, 0,
-          particle.x, particle.y, pulseSize * 2
-        );
-        gradient.addColorStop(0, `rgba(96, 165, 250, ${pulseOpacity})`);
-        gradient.addColorStop(1, 'rgba(96, 165, 250, 0)');
-
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, pulseSize * 2, 0, Math.PI * 2);
-        ctx.fillStyle = gradient;
-        ctx.fill();
-
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, pulseSize, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(147, 51, 234, ${pulseOpacity * 0.8})`;
-        ctx.fill();
-
-        particles.forEach((otherParticle, j) => {
-          if (i === j) return;
-          const dx = particle.x - otherParticle.x;
-          const dy = particle.y - otherParticle.y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-
-          if (distance < 150) {
-            const opacity = 0.15 * (1 - distance / 150);
-            const flowOffset = Math.sin(time + i * 0.1) * 0.5 + 0.5;
-            
-            ctx.beginPath();
-            ctx.moveTo(particle.x, particle.y);
-            ctx.lineTo(otherParticle.x, otherParticle.y);
-            
-            const gradient = ctx.createLinearGradient(
-              particle.x, particle.y,
-              otherParticle.x, otherParticle.y
-            );
-            gradient.addColorStop(0, `rgba(96, 165, 250, ${opacity * flowOffset})`);
-            gradient.addColorStop(0.5, `rgba(147, 51, 234, ${opacity})`);
-            gradient.addColorStop(1, `rgba(96, 165, 250, ${opacity * (1 - flowOffset)})`);
-            
-            ctx.strokeStyle = gradient;
-            ctx.lineWidth = 1.5;
-            ctx.stroke();
-
-            if (distance < 100) {
-              const dotProgress = (Math.sin(time * 2 + distance) + 1) / 2;
-              const dotX = particle.x + (otherParticle.x - particle.x) * dotProgress;
-              const dotY = particle.y + (otherParticle.y - particle.y) * dotProgress;
-              
-              ctx.beginPath();
-              ctx.arc(dotX, dotY, 2, 0, Math.PI * 2);
-              ctx.fillStyle = `rgba(147, 51, 234, ${opacity * 2})`;
-              ctx.fill();
-            }
-          }
-        });
-      });
-
+      for (let i = 0; i < particles.length; i++) {
+        particles[i].update();
+        particles[i].draw();
+      }
+      connect();
       animationFrameId = requestAnimationFrame(animate);
     };
 
+    const connect = () => {
+      if (!canvas || !ctx) return;
+      let opacityValue = 1;
+      for (let a = 0; a < particles.length; a++) {
+        for (let b = a; b < particles.length; b++) {
+          let distance = ((particles[a].x - particles[b].x) * (particles[a].x - particles[b].x)) +
+            ((particles[a].y - particles[b].y) * (particles[a].y - particles[b].y));
+          if (distance < (canvas.width / 7) * (canvas.height / 7)) {
+            opacityValue = 1 - (distance / 20000);
+            ctx.strokeStyle = `rgba(100, 255, 218, ${opacityValue})`;
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(particles[a].x, particles[a].y);
+            ctx.lineTo(particles[b].x, particles[b].y);
+            ctx.stroke();
+          }
+        }
+      }
+    }
+
+    init();
     animate();
 
-    const handleResize = () => {
-      setCanvasSize();
-    };
-
-    window.addEventListener('resize', handleResize);
-
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('resize', resizeCanvas);
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
@@ -136,8 +111,7 @@ export default function ParticleBackground() {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 pointer-events-none"
-      style={{ opacity: 0.5 }}
+      className="fixed top-0 left-0 w-full h-full pointer-events-none z-0 opacity-30"
     />
   );
 }
