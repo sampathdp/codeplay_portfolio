@@ -105,6 +105,7 @@ export default function ServicesSection() {
         "Offline-first Architecture",
         "App Store Optimization",
       ],
+      link: "/mobile-development",
     },
     {
       icon: <Brain className="w-full h-full" />,
@@ -117,6 +118,7 @@ export default function ServicesSection() {
         "Chatbots & LLMs",
         "Process Automation",
       ],
+      link: "/ai-development",
     },
     {
       icon: <Layout className="w-full h-full" />,
