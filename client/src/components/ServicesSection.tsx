@@ -4,21 +4,37 @@ import {
   Smartphone,
   Brain,
   Globe,
-  String,
   Layout,
   ArrowRight,
   Code2,
   Rocket,
 } from "lucide-react";
 import { Button } from "./ui/button";
+import { useLocation } from "wouter";
 
-const ServiceCard = ({ service, index }) => (
+interface Service {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  gradient: string;
+  features: string[];
+  link?: string;
+}
+
+interface ServiceCardProps {
+  service: Service;
+  index: number;
+  setLocation: (path: string) => void;
+}
+
+const ServiceCard = ({ service, index, setLocation }: ServiceCardProps) => (
   <motion.div
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5, delay: index * 0.1 }}
     viewport={{ once: true }}
-    className="group relative p-8 rounded-3xl bg-secondary/30 border border-white/10 dark:border-white/5 overflow-hidden hover:bg-secondary/50 transition-colors duration-500"
+    className={`group relative p-8 rounded-3xl bg-secondary/30 border border-white/10 dark:border-white/5 overflow-hidden hover:bg-secondary/50 transition-colors duration-500 ${service.link ? 'cursor-pointer' : ''}`}
+    onClick={() => service.link && setLocation(service.link)}
   >
     <div
       className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${service.gradient} opacity-10 blur-3xl group-hover:opacity-20 transition-opacity duration-500`}
@@ -63,6 +79,7 @@ const ServiceCard = ({ service, index }) => (
 );
 
 export default function ServicesSection() {
+  const [, setLocation] = useLocation();
   const services = [
     {
       icon: <Monitor className="w-full h-full" />,
@@ -75,6 +92,7 @@ export default function ServicesSection() {
         "Progressive Web Apps",
         "Performance Optimization",
       ],
+      link: "/web-development",
     },
     {
       icon: <Smartphone className="w-full h-full" />,
@@ -170,7 +188,7 @@ export default function ServicesSection() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <ServiceCard key={index} service={service} index={index} />
+            <ServiceCard key={index} service={service} index={index} setLocation={setLocation} />
           ))}
         </div>
       </div>
