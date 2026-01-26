@@ -18,6 +18,7 @@ export default function Navigation() {
   }, []);
 
   const links = [
+    { href: "/", label: "Home" },
     { href: "#about", label: "About" },
     { href: "#services", label: "Services" },
     { href: "#portfolio", label: "Work" },
@@ -41,10 +42,9 @@ export default function Navigation() {
       >
         <div
           className={`container mx-auto px-8 h-full flex items-center justify-between transition-all duration-700 pointer-events-auto
-            ${
-              isScrolled
-                ? "h-16 max-w-5xl glass rounded-full border border-white/10 shadow-2xl"
-                : "h-20 max-w-[95%] bg-white/5 backdrop-blur-md rounded-2xl border border-white/5 mt-4 shadow-sm"
+            ${isScrolled
+              ? "h-16 max-w-5xl glass rounded-full border border-white/10 shadow-2xl"
+              : "h-20 max-w-[95%] bg-white/5 backdrop-blur-md rounded-2xl border border-white/5 mt-4 shadow-sm"
             }
           `}
         >

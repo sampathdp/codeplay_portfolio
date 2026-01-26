@@ -8,6 +8,7 @@ import {
   ArrowRight,
   Code2,
   Rocket,
+  Gamepad2,
 } from "lucide-react";
 import { Button } from "./ui/button";
 import { useLocation } from "wouter";
@@ -122,31 +123,30 @@ export default function ServicesSection() {
     },
     {
       icon: <Layout className="w-full h-full" />,
-      title: "Product Design",
+      title: "Admin Panels",
       description:
-        "User-centric UI/UX design that transforms complex problems into intuitive solutions.",
+        "Powerful and intuitive dashboards that provide full visibility and control over business operations.",
       gradient: "from-orange-500 to-amber-400",
-      features: ["Design Systems", "User Research", "Interactive Prototyping"],
+      features: ["Custom Dashboards", "Role-Based Access", "Data Management"],
+      link: "/admin-panels",
     },
     {
-      icon: <Globe className="w-full h-full" />,
-      title: "Digital Marketing",
+      icon: <Gamepad2 className="w-full h-full" />,
+      title: "Unity Game Development",
       description:
-        "Data-driven strategies to increase your online visibility and drive conversion.",
-      gradient: "from-pink-500 to-rose-400",
-      features: ["SEO & SEM", "Content Strategy", "Growth Hacking"],
+        "Full-cycle development of visually stunning 2D and 3D games across platforms.",
+      gradient: "from-red-500 to-rose-500",
+      features: ["2D & 3D Games", "Cross-Platform", "Interactive Learning"],
+      link: "/unity-game-development",
     },
     {
       icon: <Rocket className="w-full h-full" />,
       title: "MVP Development",
       description:
-        "Rapid prototyping and development to get your startup idea to market fast.",
-      gradient: "from-indigo-500 to-blue-400",
-      features: [
-        "Rapid Prototyping",
-        "Scalable Foundation",
-        "Go-to-Market Support",
-      ],
+        "Rapid prototyping and development to validate your ideas and launch quickly.",
+      gradient: "from-fuchsia-500 to-pink-500",
+      features: ["Rapid Prototyping", "Scalable Architecture", "Market Launch"],
+      link: "/mvp-development",
     },
   ];
 

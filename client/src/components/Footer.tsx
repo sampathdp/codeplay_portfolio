@@ -35,6 +35,10 @@ export default function Footer() {
             <h3 className="text-2xl font-bold mb-2">CodePlay Studios</h3>
             <p className="text-muted-foreground">Coding Your Vision</p>
             <p className="text-sm text-muted-foreground mt-1">Smart Software. Real Solutions.</p>
+            <div className="mt-4 space-y-1 text-sm text-gray-400">
+              <p>Panadura, Sri Lanka</p>
+              <p>075 445 3334</p>
+            </div>
           </motion.div>
 
           <motion.div
@@ -44,7 +48,7 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-          {socialLinks.map((social, index) => {
+            {socialLinks.map((social, index) => {
               const Icon = social.icon;
               return (
                 <motion.a

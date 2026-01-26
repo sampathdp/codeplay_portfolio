@@ -6,6 +6,9 @@ import Home from "@/pages/Home";
 import WebDevelopment from "@/pages/WebDevelopment";
 import MobileDevelopment from "@/pages/MobileDevelopment";
 import AiDevelopment from "@/pages/AiDevelopment";
+import AdminPanels from "@/pages/AdminPanels";
+import UnityDevelopment from "@/pages/UnityDevelopment";
+import MvpDevelopment from "@/pages/MvpDevelopment";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -15,6 +18,9 @@ function Router() {
       <Route path="/web-development" component={WebDevelopment} />
       <Route path="/mobile-development" component={MobileDevelopment} />
       <Route path="/ai-development" component={AiDevelopment} />
+      <Route path="/admin-panels" component={AdminPanels} />
+      <Route path="/unity-game-development" component={UnityDevelopment} />
+      <Route path="/mvp-development" component={MvpDevelopment} />
       <Route component={NotFound} />
     </Switch>
   );
