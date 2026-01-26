@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
+import AISection from "@/components/AISection";
 import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
 import WhyChooseSection from "@/components/WhyChooseSection";
@@ -12,6 +13,7 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden selection:bg-primary/20">
       <Navigation />
       <HeroSection />
+      <AISection />
       <AboutSection />
       <ServicesSection />
       <WhyChooseSection />

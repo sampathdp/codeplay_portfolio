@@ -2,7 +2,7 @@ import { Brain, TrendingUp, Zap, BarChart3 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import aiVisualization from '@assets/generated_images/AI_analytics_visualization_be61eb13.png';
+import aiVisualization from '@assets/generated_images/hero_code_visualization_1769361567545.png';
 
 export default function AISection() {
   const ref = useRef(null);
@@ -70,7 +70,7 @@ export default function AISection() {
               Empowering Businesses with AI Insights & Prediction Bots
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Our AI systems forecast trends, analyze performance, and automate decisions. 
+              Our AI systems forecast trends, analyze performance, and automate decisions.
               From sales predictions to smart analytics, we give you the power to stay ahead.
             </p>
 
