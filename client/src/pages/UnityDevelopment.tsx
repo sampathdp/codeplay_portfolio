@@ -11,7 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import HolographicHUD from "@/components/HolographicHUD";
+import GameMetrics from "@/components/metrics/GameMetrics";
 import DigitalHorizon from "@/components/DigitalHorizon";
 import futuristicUnity from "@assets/generated_images/futuristic_unity_game_dev.png";
 
@@ -199,7 +199,7 @@ export default function UnityDevelopment() {
                                 </p>
                             </div>
 
-                            <HolographicHUD />
+                            <GameMetrics />
                         </motion.div>
 
                         {/* What We Deliver Grid */}

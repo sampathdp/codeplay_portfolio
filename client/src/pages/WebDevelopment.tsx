@@ -11,7 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import HolographicHUD from "@/components/HolographicHUD";
+import WebMetrics from "@/components/metrics/WebMetrics";
 import DigitalHorizon from "@/components/DigitalHorizon";
 import futuristicDev from "@assets/generated_images/futuristic_web_dev.png";
 
@@ -204,7 +204,7 @@ export default function WebDevelopment() {
                                 </p>
                             </div>
 
-                            <HolographicHUD />
+                            <WebMetrics />
                         </motion.div>
 
                         {/* What We Deliver Grid */}

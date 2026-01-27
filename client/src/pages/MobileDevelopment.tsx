@@ -11,7 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import HolographicHUD from "@/components/HolographicHUD";
+import MobileMetrics from "@/components/metrics/MobileMetrics";
 import DigitalHorizon from "@/components/DigitalHorizon";
 import futuristicMobileDev from "@assets/generated_images/futuristic_mobile_dev.png";
 
@@ -200,7 +200,7 @@ export default function MobileDevelopment() {
                                 </p>
                             </div>
 
-                            <HolographicHUD />
+                            <MobileMetrics />
                         </motion.div>
 
                         {/* What We Deliver Grid */}

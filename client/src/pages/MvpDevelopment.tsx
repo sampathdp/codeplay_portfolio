@@ -11,7 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import HolographicHUD from "@/components/HolographicHUD";
+import MvpMetrics from "@/components/metrics/MvpMetrics";
 import DigitalHorizon from "@/components/DigitalHorizon";
 import futuristicMvp from "@assets/generated_images/futuristic_mvp_launch.png";
 
@@ -200,7 +200,7 @@ export default function MvpDevelopment() {
                                 </p>
                             </div>
 
-                            <HolographicHUD />
+                            <MvpMetrics />
                         </motion.div>
 
                         {/* What We Deliver Grid */}

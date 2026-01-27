@@ -11,7 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import HolographicHUD from "@/components/HolographicHUD";
+import AdminMetrics from "@/components/metrics/AdminMetrics";
 import DigitalHorizon from "@/components/DigitalHorizon";
 import futuristicAdmin from "@assets/generated_images/futuristic_admin_dashboard.png";
 
@@ -200,7 +200,7 @@ export default function AdminPanels() {
                                 </p>
                             </div>
 
-                            <HolographicHUD />
+                            <AdminMetrics />
                         </motion.div>
 
                         {/* What We Deliver Grid */}

@@ -11,7 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import HolographicHUD from "@/components/HolographicHUD";
+import AiMetrics from "@/components/metrics/AiMetrics";
 import DigitalHorizon from "@/components/DigitalHorizon";
 import futuristicAi from "@assets/generated_images/futuristic_ai_concept.png";
 
@@ -201,7 +201,7 @@ export default function AiDevelopment() {
                                 </p>
                             </div>
 
-                            <HolographicHUD />
+                            <AiMetrics />
                         </motion.div>
 
                         {/* What We Deliver Grid */}
