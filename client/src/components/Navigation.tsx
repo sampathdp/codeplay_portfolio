@@ -41,21 +41,26 @@ export default function Navigation() {
       >
         <div
           className={`container mx-auto px-8 h-full flex items-center justify-between transition-all duration-700 pointer-events-auto
-            ${isScrolled
-              ? "h-16 max-w-5xl glass rounded-full border border-white/10 shadow-2xl"
-              : "h-20 max-w-[95%] bg-white/5 backdrop-blur-md rounded-2xl border border-white/5 mt-4 shadow-sm"
+            ${
+              isScrolled
+                ? "h-16 max-w-5xl glass rounded-full border border-white/10 shadow-2xl"
+                : "h-20 max-w-[95%] bg-white/5 backdrop-blur-md rounded-2xl border border-white/5 mt-4 shadow-sm"
             }
           `}
         >
           {/* Logo */}
           <Link href="/">
-            <a className="text-3xl font-bold tracking-tighter group flex items-center gap-1">
-              <span className="bg-primary text-primary-foreground w-10 h-10 rounded-lg flex items-center justify-center font-black rotate-3 group-hover:rotate-0 transition-transform">
-                C
-              </span>
-              <span className="group-hover:text-primary transition-colors text-foreground">
-                codeplay
-              </span>
+            <a className="flex items-center gap-2 group">
+              <img
+                src="/assets/logo_trans.png"
+                alt="CodePlay Studios"
+                className="h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="hidden sm:flex items-center gap-1.5 font-['Outfit']">
+                <span className="font-bold text-2xl tracking-tight bg-gradient-to-r from-white via-primary to-purple-400 bg-clip-text text-transparent group-hover:bg-gradient-to-l transition-all duration-500">
+                  CodePlay Studios
+                </span>
+              </div>
             </a>
           </Link>
 
@@ -79,8 +84,6 @@ export default function Navigation() {
             </div>
 
             <div className="h-6 w-[1px] bg-white/10 mx-6" />
-
-
           </div>
 
           {/* Mobile Toggle */}
@@ -109,10 +112,19 @@ export default function Navigation() {
             <div className="h-24 px-6 flex items-center justify-between border-b border-border/50">
               <Link href="/">
                 <a
-                  className="text-2xl font-bold tracking-tighter"
+                  className="flex items-center gap-3"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  code<span className="text-primary">play</span>
+                  <img
+                    src="/assets/logo_trans.png"
+                    alt="CodePlay Studios"
+                    className="h-12 w-auto object-contain"
+                  />
+                  <div className="flex items-center font-['Outfit']">
+                    <span className="font-bold text-2xl tracking-tight bg-gradient-to-r from-white via-primary to-purple-400 bg-clip-text text-transparent">
+                      CodePlay Studios
+                    </span>
+                  </div>
                 </a>
               </Link>
               <button
@@ -143,8 +155,6 @@ export default function Navigation() {
                   </motion.div>
                 ))}
               </div>
-
-
             </div>
 
             {/* Footer */}

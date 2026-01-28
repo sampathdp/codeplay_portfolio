@@ -116,7 +116,7 @@ export default function AboutSection() {
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
           <StatsCard
             icon={Users}
             value="50+"
@@ -129,7 +129,7 @@ export default function AboutSection() {
             label="Projects Done"
             delay={0.2}
           />
-          <StatsCard icon={Trophy} value="15+" label="Awards Won" delay={0.3} />
+
           <StatsCard
             icon={Clock}
             value="5+"
