@@ -2,7 +2,7 @@ import { Brain, TrendingUp, Zap, BarChart3 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import aiVisualization from "@assets/generated_images/hero_code_visualization_1769361567545.png";
+import aiVisualization from "@assets/generated_images/ai_prediction_bot_visualization_1769626261437.png";
 
 export default function AISection() {
   const ref = useRef(null);
@@ -38,19 +38,7 @@ export default function AISection() {
       ref={ref}
     >
       <div className="absolute inset-0 opacity-10">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `repeating-linear-gradient(
-            45deg,
-            transparent,
-            transparent 10px,
-            hsl(var(--primary)) 10px,
-            hsl(var(--primary)) 11px
-          )`,
-            animation: "gridMove 20s linear infinite",
-          }}
-        />
+        {/* Grid lines removed as per user request */}
       </div>
 
       <div className="container mx-auto max-w-6xl relative">
@@ -137,17 +125,17 @@ export default function AISection() {
               data-testid="img-ai-visualization"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
+              style={{
+                filter: "drop-shadow(0 0 40px #06b6d480)",
+                maskImage:
+                  "radial-gradient(circle at center, black 60%, transparent 100%)",
+                WebkitMaskImage:
+                  "radial-gradient(circle at center, black 60%, transparent 100%)",
+              }}
             />
           </motion.div>
         </div>
       </div>
-
-      <style>{`
-        @keyframes gridMove {
-          0% { transform: translateX(0) translateY(0); }
-          100% { transform: translateX(10px) translateY(10px); }
-        }
-      `}</style>
     </section>
   );
 }
