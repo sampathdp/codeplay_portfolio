@@ -9,9 +9,12 @@ import AiDevelopment from "@/pages/AiDevelopment";
 import AdminPanels from "@/pages/AdminPanels";
 import UnityDevelopment from "@/pages/UnityDevelopment";
 import MvpDevelopment from "@/pages/MvpDevelopment";
+import { useScrollToTopOnNavigate } from "@/hooks/useScrollToTopOnNavigate";
 import NotFound from "@/pages/not-found";
 
 function Router() {
+  useScrollToTopOnNavigate();
+
   return (
     <Switch>
       <Route path="/" component={Home} />
@@ -28,7 +31,7 @@ function Router() {
 
 function App() {
   return (
-    <ThemeProvider defaultTheme="system" enableSystem attribute="class">
+    <ThemeProvider defaultTheme="dark" enableSystem={false} attribute="class">
       <TooltipProvider>
         <Toaster />
         <Router />

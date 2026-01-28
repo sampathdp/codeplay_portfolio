@@ -42,7 +42,7 @@ export default function ContactSection() {
                   <p className="text-sm font-medium text-muted-foreground">
                     Email Us
                   </p>
-                  <h4 className="text-lg font-semibold">hello@codeplay.io</h4>
+                  <h4 className="text-lg font-semibold">info@codeplaystudios.com</h4>
                 </div>
               </div>
 
@@ -54,7 +54,7 @@ export default function ContactSection() {
                   <p className="text-sm font-medium text-muted-foreground">
                     Call Us
                   </p>
-                  <h4 className="text-lg font-semibold">+1 (555) 123-4567</h4>
+                  <h4 className="text-lg font-semibold">075 445 3334</h4>
                 </div>
               </div>
 
@@ -67,7 +67,7 @@ export default function ContactSection() {
                     Visit Us
                   </p>
                   <h4 className="text-lg font-semibold">
-                    123 Tech Avenue, Silicon Valley
+                    115/A, Gagabada rd, hirana panadura
                   </h4>
                 </div>
               </div>

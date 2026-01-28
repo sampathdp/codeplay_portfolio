@@ -1,7 +1,18 @@
 import { useEffect, useRef } from 'react';
+import { useTheme } from 'next-themes';
+
+interface Particle {
+    x: number;
+    y: number;
+    vx: number;
+    vy: number;
+    radius: number;
+    opacity: number;
+}
 
 export default function DigitalHorizon() {
     const canvasRef = useRef<HTMLCanvasElement>(null);
+    const { resolvedTheme } = useTheme();
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -11,130 +22,155 @@ export default function DigitalHorizon() {
         if (!ctx) return;
 
         let animationFrameId: number;
-        let time = 0;
+        const isDark = resolvedTheme === 'dark';
+        const particles: Particle[] = [];
+        const particleCount = 80;
+        const connectionDistance = 150;
+        let mouseX = -1000;
+        let mouseY = -1000;
 
         const resizeCanvas = () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
         };
 
-        window.addEventListener('resize', resizeCanvas);
-        resizeCanvas();
+        const createParticles = () => {
+            particles.length = 0;
+            for (let i = 0; i < particleCount; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 0.5,
+                    vy: (Math.random() - 0.5) * 0.5,
+                    radius: Math.random() * 2 + 1,
+                    opacity: Math.random() * 0.5 + 0.2,
+                });
+            }
+        };
 
-        const drawGrid = () => {
+        const updateParticles = () => {
+            particles.forEach(p => {
+                p.x += p.vx;
+                p.y += p.vy;
+
+                // Bounce off edges
+                if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+                // Slight attraction to mouse
+                const dx = mouseX - p.x;
+                const dy = mouseY - p.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < 200 && dist > 10) {
+                    p.vx += dx * 0.00005;
+                    p.vy += dy * 0.00005;
+                }
+
+                // Limit velocity
+                const maxSpeed = 1;
+                const speed = Math.sqrt(p.vx * p.vx + p.vy * p.vy);
+                if (speed > maxSpeed) {
+                    p.vx = (p.vx / speed) * maxSpeed;
+                    p.vy = (p.vy / speed) * maxSpeed;
+                }
+            });
+        };
+
+        const drawParticles = () => {
             if (!ctx || !canvas) return;
 
             const width = canvas.width;
             const height = canvas.height;
 
-            // Clear with valid gradient
-            const gradient = ctx.createLinearGradient(0, 0, 0, height);
-            gradient.addColorStop(0, '#050505');
-            gradient.addColorStop(1, '#0a0f1e');
+            // Clear canvas with theme-aware background
+            const gradient = ctx.createRadialGradient(width / 2, height / 2, 0, width / 2, height / 2, width * 0.7);
+            if (isDark) {
+                gradient.addColorStop(0, '#0f172a');
+                gradient.addColorStop(1, '#020617');
+            } else {
+                gradient.addColorStop(0, '#f1f5f9');
+                gradient.addColorStop(1, '#e2e8f0');
+            }
             ctx.fillStyle = gradient;
             ctx.fillRect(0, 0, width, height);
 
-            const cx = width / 2;
-            const cy = height / 2;
-            const horizonY = height * 0.4;
-            const fov = 300;
+            // Colors
+            const particleColor = isDark ? '0, 200, 255' : '59, 130, 246';
+            const lineColor = isDark ? '0, 200, 255' : '59, 130, 246';
 
-            // Grid settings
-            const speed = 2; // Movement speed
-            time += speed;
-            const gridSize = 40; // Gap between lines
-
-            ctx.strokeStyle = 'rgba(0, 255, 255, 0.15)'; // Cyan
+            // Draw connections
             ctx.lineWidth = 1;
-            ctx.beginPath();
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
 
-            // Vertical lines (perspective)
-            for (let x = -width; x < width * 2; x += gridSize) {
-                // Simple perspective projection logic
-                // We draw lines radiating from vanish point (approx)
-                // Actually, let's do a floor plane projection
-
-                // Simpler approach: Radiating lines from center horizon
-                // x-coord relative to center
-                const dx = x - cx;
-
-                // We only draw the bottom half (floor)
-                ctx.moveTo(x, height);
-                ctx.lineTo(cx + dx * 0.1, horizonY); // Converge towards horizon
+                    if (distance < connectionDistance) {
+                        const opacity = (1 - distance / connectionDistance) * 0.3;
+                        ctx.strokeStyle = `rgba(${lineColor}, ${opacity})`;
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                    }
+                }
             }
 
-            // Horizontal lines (moving towards camera)
-            // Z-depth simulation
-            const offset = time % gridSize;
+            // Draw particles
+            particles.forEach(p => {
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(${particleColor}, ${p.opacity})`;
+                ctx.fill();
 
-            // Draw horizontal lines with exponential spacing to simulate depth
-            for (let z = 0; z < height; z += 5) { // Step in screen space for simplicity or Z space?
-                // Let's use Z-space iteration
-                // z goes from near (large y) to far (horizonY)
-            }
-
-            // Alternative: Just draw parallel lines that get closer together towards horizon
-            // Linear interpolation for Y
-
-            for (let i = 0; i < 40; i++) {
-                // Perspective math: Y = H / (Z)
-                // Z moves with time
-
-                let z = i * 20 - (time % 20); // Moving Z
-                if (z < 1) z = 1;
-
-                // Map Z to Screen Y
-                // Near = Height, Far = HorizonY
-                // Inverse relationship
-
-                const depthFactor = 500 / (z + 50); // fake depth scaling
-                const screenY = horizonY + depthFactor * (height - horizonY) * 0.5;
-
-                if (screenY > height) continue;
-
-                ctx.moveTo(0, screenY);
-                ctx.lineTo(width, screenY);
-
-                // Add glow effect near camera
-                const alpha = Math.min(1, Math.pow(screenY / height, 3));
-                ctx.strokeStyle = `rgba(0, 255, 255, ${alpha * 0.3})`;
-                ctx.stroke();
-                ctx.beginPath(); // reset for next line style
-            }
-
-            // Re-draw Vertical lines with correct perspective based on the horizontal logic? 
-            // Keep simple radiating lines for now, but fade them out at horizon
-            ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
-            ctx.beginPath();
-            for (let i = -20; i <= 20; i++) {
-                const x = cx + i * 100; // world x
-                // simple projection: x_screen =  (x_world - cx) / z + cx ??
-
-                ctx.moveTo(cx + i * fov * 20, height * 2);
-                ctx.lineTo(cx, horizonY);
-            }
-            ctx.stroke();
+                // Subtle glow
+                const glowGradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.radius * 4);
+                glowGradient.addColorStop(0, `rgba(${particleColor}, ${p.opacity * 0.3})`);
+                glowGradient.addColorStop(1, 'transparent');
+                ctx.fillStyle = glowGradient;
+                ctx.fillRect(p.x - p.radius * 4, p.y - p.radius * 4, p.radius * 8, p.radius * 8);
+            });
 
             // Vignette
-            const radialGrad = ctx.createRadialGradient(cx, cy, height * 0.4, cx, cy, height);
-            radialGrad.addColorStop(0, 'transparent');
-            radialGrad.addColorStop(1, '#000000');
-            ctx.fillStyle = radialGrad;
+            const vignette = ctx.createRadialGradient(width / 2, height / 2, height * 0.3, width / 2, height / 2, height);
+            vignette.addColorStop(0, 'transparent');
+            vignette.addColorStop(1, isDark ? 'rgba(0, 0, 0, 0.5)' : 'rgba(255, 255, 255, 0.3)');
+            ctx.fillStyle = vignette;
             ctx.fillRect(0, 0, width, height);
         };
 
         const animate = () => {
-            drawGrid();
+            updateParticles();
+            drawParticles();
             animationFrameId = requestAnimationFrame(animate);
         };
 
+        const handleMouseMove = (e: MouseEvent) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        };
+
+        const handleMouseLeave = () => {
+            mouseX = -1000;
+            mouseY = -1000;
+        };
+
+        window.addEventListener('resize', resizeCanvas);
+        window.addEventListener('mousemove', handleMouseMove);
+        window.addEventListener('mouseleave', handleMouseLeave);
+
+        resizeCanvas();
+        createParticles();
         animate();
 
         return () => {
             window.removeEventListener('resize', resizeCanvas);
+            window.removeEventListener('mousemove', handleMouseMove);
+            window.removeEventListener('mouseleave', handleMouseLeave);
             cancelAnimationFrame(animationFrameId);
         };
-    }, []);
+    }, [resolvedTheme]);
 
     return (
         <canvas

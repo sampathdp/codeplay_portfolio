@@ -5,35 +5,28 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "./ui/button";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 
-// Final Premium Set: High-Resolution 3D Minimalist Renders with even better Slide 1
+// New Slides Data with generated assets
 const slides = [
   {
-    image:
-      "https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=3870&auto=format&fit=crop", // Ultra-Premium Gold & Glass Abstract
-    title: "Crafting Digital Serenity",
-    subtitle: "Minimalist solutions for complex problems.",
-    align: "left",
+    image: "/assets/hero_web_dev_cartoon.png",
+    title: "Web Development", // For alt text
+    gradient: "from-blue-600/20 to-cyan-500/20",
+    accent: "text-cyan-400",
+    bgGlow: "bg-blue-500/30"
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=3864&auto=format&fit=crop", // Sharp 3D Abstract Glass
-    title: "Crystal Clarity",
-    subtitle: "Transparent processes, solid results.",
-    align: "right",
+    image: "/assets/hero_mobile_dev_cartoon.png",
+    title: "Mobile Apps",
+    gradient: "from-purple-600/20 to-pink-500/20",
+    accent: "text-purple-400",
+    bgGlow: "bg-purple-500/30"
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?q=80&w=3874&auto=format&fit=crop", // Sharp 3D Minimalist Architecture
-    title: "Structured Serenity",
-    subtitle: "Building spaces that breathe.",
-    align: "left",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=3870&auto=format&fit=crop", // Sharp 3D Liquid Flow
-    title: "Fluid Dynamics",
-    subtitle: "Adapting to change with effortless grace.",
-    align: "right",
+    image: "/assets/hero_creative_dev_cartoon.png",
+    title: "Creative Design",
+    gradient: "from-orange-500/20 to-amber-500/20",
+    accent: "text-orange-400",
+    bgGlow: "bg-orange-500/30"
   },
 ];
 
@@ -64,115 +57,102 @@ export default function HeroSection() {
 
   return (
     <section className="relative w-full h-screen overflow-hidden bg-background">
-      <div className="absolute inset-0" ref={emblaRef}>
-        <div className="flex h-full">
-          {slides.map((slide, index) => (
-            <div
-              className="relative flex-[0_0_100%] h-full min-w-0"
-              key={index}
-            >
-              {/* Background Image */}
-              <div
-                className="absolute inset-0 bg-cover bg-center"
-                style={{ backgroundImage: `url(${slide.image})` }}
-              />
-              {/* Overlay - NO BLUR */}
-              <div className="absolute inset-0 bg-black/40 dark:bg-black/60" />
+      <div className="container mx-auto h-full px-6">
+        <div className="grid lg:grid-cols-2 h-full gap-8">
 
-              {/* Content */}
-              <div className="relative z-10 container mx-auto h-full flex items-center px-6">
-                {/* Alignment Logic */}
-                <div
-                  className={`w-full max-w-4xl px-4 
-                    ${slide.align === "center" ? "mx-auto text-center" : ""}
-                    ${slide.align === "right" ? "ml-auto text-right" : ""}
-                 `}
+          {/* LEFT: Static Text Content */}
+          <div className="flex flex-col justify-center z-20 order-2 lg:order-1 relative">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <span className="inline-block px-4 py-1.5 rounded-full glass border border-primary/20 text-primary text-sm font-medium mb-6 backdrop-blur-md">
+                Welcome to CodePlay Studios
+              </span>
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+                Crafting Digital <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+                  Serenity
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-muted-foreground mb-10 font-light max-w-lg leading-relaxed">
+                Minimalist solutions for complex problems. We build transparent processes and solid results that breathe life into your ideas.
+              </p>
+              <div className="flex gap-4">
+                <Button
+                  size="lg"
+                  className="rounded-full bg-primary hover:bg-primary/90 text-white border-none h-14 px-8 text-lg shadow-lg shadow-primary/20"
                 >
-                  <AnimatePresence mode="wait">
-                    {selectedIndex === index && (
-                      <motion.div
-                        key={index}
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
-                      >
-                        <span className="inline-block px-4 py-1.5 rounded-full glass border border-white/20 text-white text-sm font-medium mb-6 backdrop-blur-md">
-                          Welcome to CodePlay Studios
-                        </span>
-                        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
-                          {slide.title}
-                        </h1>
-                        <p
-                          className={`text-xl md:text-2xl text-gray-200 mb-10 font-light max-w-2xl drop-shadow-md
-                                     ${slide.align === "center" ? "mx-auto" : ""}
-                                     ${slide.align === "right" ? "ml-auto" : ""}
-                                `}
-                        >
-                          {slide.subtitle}
-                        </p>
-                        <div
-                          className={`flex gap-4 
-                                    ${slide.align === "center" ? "justify-center" : ""}
-                                    ${slide.align === "right" ? "justify-end" : ""}
-                                `}
-                        >
-                          <Button
-                            size="lg"
-                            className="rounded-full bg-primary hover:bg-primary/90 text-white border-none h-14 px-8 text-lg shadow-lg shadow-primary/20"
-                          >
-                            Start Project
-                            <ArrowRight className="ml-2 h-5 w-5" />
-                          </Button>
-                          <Button
-                            size="lg"
-                            variant="outline"
-                            className="rounded-full border-white/30 text-white hover:bg-white/10 hover:text-white h-14 px-8 text-lg backdrop-blur-sm"
-                          >
-                            View Portfolio
-                          </Button>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
+                  Start Project
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="rounded-full border-white/10 text-white hover:bg-white/5 h-14 px-8 text-lg backdrop-blur-sm"
+                >
+                  View Portfolio
+                </Button>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* RIGHT: Image Slider */}
+          <div className="relative h-full flex items-center justify-center order-1 lg:order-2 overflow-hidden">
+            {/* Slider container */}
+            <div className="w-full h-full absolute inset-0" ref={emblaRef}>
+              <div className="flex h-full">
+                {slides.map((slide, index) => (
+                  <div className="relative flex-[0_0_100%] h-full flex items-center justify-center" key={index}>
+                    {/* Dynamic Background Blob/Glow */}
+                    <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full blur-[100px] ${slide.bgGlow} transition-colors duration-1000`} />
+
+                    {/* Slide Gradient Background (Subtle) */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${slide.gradient} opacity-20`} />
+
+                    {/* Character Image */}
+                    <div className="relative z-10 w-full h-full flex items-center justify-center p-8">
+                      <motion.img
+                        key={selectedIndex}
+                        initial={{ scale: 0.8, opacity: 0, y: 20 }}
+                        animate={{
+                          scale: selectedIndex === index ? 1 : 0.8,
+                          opacity: selectedIndex === index ? 1 : 0,
+                          y: selectedIndex === index ? 0 : 20
+                        }}
+                        transition={{ duration: 0.8 }}
+                        src={slide.image}
+                        alt={slide.title}
+                        className="max-h-[80%] max-w-full object-contain drop-shadow-2xl"
+                      />
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-          ))}
-        </div>
-      </div>
 
-      {/* Navigation Controls */}
-      <div className="absolute bottom-10 left-0 right-0 z-20 container mx-auto px-6 flex justify-between items-end pointer-events-none">
-        {/* Indicators */}
-        <div className="flex gap-3 pointer-events-auto">
-          {slides.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => emblaApi && emblaApi.scrollTo(i)}
-              className={`h-1.5 rounded-full transition-all duration-500 ${selectedIndex === i ? "w-8 bg-primary" : "w-2 bg-white/40 hover:bg-white/60"}`}
-            />
-          ))}
-        </div>
+            {/* Slider Navigation (Optional corner controls) */}
+            <div className="absolute bottom-12 right-0 flex gap-2 z-30">
+              <Button
+                size="icon"
+                variant="outline"
+                onClick={scrollPrev}
+                className="rounded-full h-10 w-10 border-white/10 bg-black/20 text-white hover:bg-black/40 backdrop-blur-sm"
+              >
+                <ChevronLeft className="h-5 w-5" />
+              </Button>
+              <Button
+                size="icon"
+                variant="outline"
+                onClick={scrollNext}
+                className="rounded-full h-10 w-10 border-white/10 bg-black/20 text-white hover:bg-black/40 backdrop-blur-sm"
+              >
+                <ChevronRight className="h-5 w-5" />
+              </Button>
+            </div>
+          </div>
 
-        {/* Arrows */}
-        <div className="flex gap-2 pointer-events-auto">
-          <Button
-            size="icon"
-            variant="outline"
-            onClick={scrollPrev}
-            className="rounded-full h-12 w-12 border-white/20 bg-black/20 text-white hover:bg-black/40 hover:scale-110 transition-all backdrop-blur-sm"
-          >
-            <ChevronLeft className="h-6 w-6" />
-          </Button>
-          <Button
-            size="icon"
-            variant="outline"
-            onClick={scrollNext}
-            className="rounded-full h-12 w-12 border-white/20 bg-black/20 text-white hover:bg-black/40 hover:scale-110 transition-all backdrop-blur-sm"
-          >
-            <ChevronRight className="h-6 w-6" />
-          </Button>
         </div>
       </div>
     </section>

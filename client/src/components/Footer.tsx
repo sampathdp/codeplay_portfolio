@@ -36,8 +36,9 @@ export default function Footer() {
             <p className="text-muted-foreground">Coding Your Vision</p>
             <p className="text-sm text-muted-foreground mt-1">Smart Software. Real Solutions.</p>
             <div className="mt-4 space-y-1 text-sm text-gray-400">
-              <p>Panadura, Sri Lanka</p>
+              <p>115/A, Gagabada rd, hirana panadura</p>
               <p>075 445 3334</p>
+              <p>info@codeplaystudios.com</p>
             </div>
           </motion.div>
 

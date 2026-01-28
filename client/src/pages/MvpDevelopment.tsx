@@ -94,7 +94,7 @@ export default function MvpDevelopment() {
 
             <main className="pt-24 pb-16 relative z-10">
                 {/* Generative Background */}
-                <div className="fixed inset-0 z-0 h-full w-full bg-[#050005]">
+                <div className="fixed inset-0 z-0 h-full w-full bg-background dark:bg-[#050005]">
                     <div className="absolute inset-0 bg-gradient-to-tr from-fuchsia-900/10 via-transparent to-pink-900/10 opacity-40"></div>
                     <DigitalHorizon />
                 </div>

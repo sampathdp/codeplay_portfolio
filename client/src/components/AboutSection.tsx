@@ -1,7 +1,14 @@
 import { motion } from "framer-motion";
 import { Check, Users, Trophy, Code, Clock } from "lucide-react";
 
-const StatsCard = ({ icon: Icon, value, label, delay }) => (
+interface StatsCardProps {
+  icon: any;
+  value: string;
+  label: string;
+  delay: number;
+}
+
+const StatsCard = ({ icon: Icon, value, label, delay }: StatsCardProps) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -93,9 +100,9 @@ export default function AboutSection() {
               transition={{ delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <div className="glass p-6 rounded-3xl bg-primary text-primary-foreground">
-                <h4 className="font-bold text-lg mb-2">Vision</h4>
-                <p className="text-sm opacity-90">
+              <div className="glass p-6 rounded-3xl bg-primary">
+                <h4 className="font-bold text-lg mb-2 text-white">Vision</h4>
+                <p className="text-sm text-white/90">
                   Building the digital infrastructure of tomorrow, today.
                 </p>
               </div>

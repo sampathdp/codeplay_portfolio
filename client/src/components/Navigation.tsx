@@ -3,7 +3,6 @@ import { Link } from "wouter";
 import { Menu, X, Instagram, Twitter, Linkedin, Github } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "./ui/button";
-import { ModeToggle } from "./mode-toggle";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -81,28 +80,11 @@ export default function Navigation() {
 
             <div className="h-6 w-[1px] bg-white/10 mx-6" />
 
-            <ModeToggle />
 
-            <Button
-              variant="default"
-              className="rounded-full px-10 ml-6 h-12 text-base font-bold shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all group overflow-hidden relative"
-            >
-              <span className="relative z-10 flex items-center">
-                Start Project
-                <motion.span
-                  className="ml-2"
-                  animate={{ x: [0, 4, 0] }}
-                  transition={{ repeat: Infinity, duration: 1.5 }}
-                >
-                  →
-                </motion.span>
-              </span>
-            </Button>
           </div>
 
           {/* Mobile Toggle */}
           <div className="flex items-center gap-4 md:hidden">
-            <ModeToggle />
             <button
               className="w-12 h-12 rounded-full flex items-center justify-center bg-white/10 backdrop-blur hover:bg-white/20 transition-all"
               onClick={() => setIsMobileMenuOpen(true)}
@@ -162,19 +144,7 @@ export default function Navigation() {
                 ))}
               </div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 }}
-                className="mt-16"
-              >
-                <Button
-                  size="lg"
-                  className="w-full rounded-2xl h-16 text-xl shadow-xl shadow-primary/20"
-                >
-                  Start Project
-                </Button>
-              </motion.div>
+
             </div>
 
             {/* Footer */}
