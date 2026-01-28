@@ -8,7 +8,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="py-32 bg-background relative overflow-hidden"
+      className="py-32 bg-transparent relative overflow-hidden"
     >
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16">
@@ -42,7 +42,9 @@ export default function ContactSection() {
                   <p className="text-sm font-medium text-muted-foreground">
                     Email Us
                   </p>
-                  <h4 className="text-lg font-semibold">info@codeplaystudios.com</h4>
+                  <h4 className="text-lg font-semibold">
+                    info@codeplaystudios.com
+                  </h4>
                 </div>
               </div>
 

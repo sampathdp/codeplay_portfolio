@@ -24,9 +24,12 @@ const StatsCard = ({ icon: Icon, value, label, delay }: StatsCardProps) => (
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-32 bg-muted/20 relative overflow-hidden">
+    <section
+      id="about"
+      className="py-32 bg-transparent relative overflow-hidden"
+    >
       {/* Decorative BG */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-secondary/30 to-transparent pointer-events-none" />
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-secondary/10 to-transparent pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">

@@ -75,9 +75,8 @@ export default function HeroSection() {
   );
 
   return (
-    <section className="relative w-full h-screen overflow-hidden bg-background">
-      <MatrixRain />
-      <div className="absolute inset-0 bg-background/30 z-0 pointer-events-none" />{" "}
+    <section className="relative w-full h-screen overflow-hidden bg-transparent">
+      {/* MatrixRain is now global in Home.tsx */}
       {/* Overlay to ensuring text readability */}
       <div className="container mx-auto h-full px-6 relative z-10">
         <div className="grid lg:grid-cols-2 h-full gap-8">

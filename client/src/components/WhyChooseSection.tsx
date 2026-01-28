@@ -1,7 +1,19 @@
 import { motion } from "framer-motion";
 import { ShieldCheck, Zap, Heart, LayoutGrid } from "lucide-react";
 
-const FeatureBox = ({ icon: Icon, title, description, index }) => (
+interface FeatureBoxProps {
+  icon: any; // Using any for icon component prop as quick fix or specific type if known
+  title: string;
+  description: string;
+  index: number;
+}
+
+const FeatureBox = ({
+  icon: Icon,
+  title,
+  description,
+  index,
+}: FeatureBoxProps) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -19,7 +31,7 @@ const FeatureBox = ({ icon: Icon, title, description, index }) => (
 
 export default function WhyChooseSection() {
   return (
-    <section className="py-32 bg-muted/30 relative">
+    <section className="py-32 bg-transparent relative">
       <div className="container mx-auto px-6">
         <div className="text-center mb-20 max-w-2xl mx-auto">
           <motion.h2

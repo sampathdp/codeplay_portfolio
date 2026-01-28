@@ -34,7 +34,7 @@ const ServiceCard = ({ service, index, setLocation }: ServiceCardProps) => (
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5, delay: index * 0.1 }}
     viewport={{ once: true }}
-    className={`group relative p-8 rounded-3xl bg-secondary/30 border border-white/10 dark:border-white/5 overflow-hidden hover:bg-secondary/50 transition-colors duration-500 ${service.link ? 'cursor-pointer' : ''}`}
+    className={`group relative p-8 rounded-3xl bg-secondary/30 border border-white/10 dark:border-white/5 overflow-hidden hover:bg-secondary/50 transition-colors duration-500 ${service.link ? "cursor-pointer" : ""}`}
     onClick={() => service.link && setLocation(service.link)}
   >
     <div
@@ -151,7 +151,7 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section id="services" className="py-32 bg-background relative">
+    <section id="services" className="py-32 bg-black/40 relative">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
           <div className="max-w-2xl">
@@ -190,7 +190,12 @@ export default function ServicesSection() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <ServiceCard key={index} service={service} index={index} setLocation={setLocation} />
+            <ServiceCard
+              key={index}
+              service={service}
+              index={index}
+              setLocation={setLocation}
+            />
           ))}
         </div>
       </div>

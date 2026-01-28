@@ -7,19 +7,26 @@ import WhyChooseSection from "@/components/WhyChooseSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import MatrixRain from "@/components/MatrixRain";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden selection:bg-primary/20">
-      <Navigation />
-      <HeroSection />
-      <AISection />
-      <AboutSection />
-      <ServicesSection />
-      <WhyChooseSection />
-      <PortfolioSection />
-      <ContactSection />
-      <Footer />
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden selection:bg-primary/20 relative">
+      <div className="fixed inset-0 z-0 h-full w-full bg-background pointer-events-none">
+        <MatrixRain />
+        <div className="absolute inset-0 bg-background/60 z-0" />
+      </div>
+      <div className="relative z-10">
+        <Navigation />
+        <HeroSection />
+        <AISection />
+        <AboutSection />
+        <ServicesSection />
+        <WhyChooseSection />
+        <PortfolioSection />
+        <ContactSection />
+        <Footer />
+      </div>
     </div>
   );
 }

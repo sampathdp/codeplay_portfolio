@@ -1,8 +1,8 @@
-import { Brain, TrendingUp, Zap, BarChart3 } from 'lucide-react';
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
-import aiVisualization from '@assets/generated_images/hero_code_visualization_1769361567545.png';
+import { Brain, TrendingUp, Zap, BarChart3 } from "lucide-react";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import aiVisualization from "@assets/generated_images/hero_code_visualization_1769361567545.png";
 
 export default function AISection() {
   const ref = useRef(null);
@@ -11,37 +11,46 @@ export default function AISection() {
   const features = [
     {
       icon: TrendingUp,
-      title: 'Predictive Analytics',
-      description: 'Forecast sales trends and market opportunities with machine learning models',
-      color: 'primary',
+      title: "Predictive Analytics",
+      description:
+        "Forecast sales trends and market opportunities with machine learning models",
+      color: "primary",
     },
     {
       icon: Zap,
-      title: 'Automated Decision Making',
-      description: 'Intelligent bots that analyze data and provide actionable recommendations',
-      color: 'accent',
+      title: "Automated Decision Making",
+      description:
+        "Intelligent bots that analyze data and provide actionable recommendations",
+      color: "accent",
     },
     {
       icon: BarChart3,
-      title: 'Performance Insights',
-      description: 'Real-time dashboards that transform complex data into clear insights',
-      color: 'chart-3',
+      title: "Performance Insights",
+      description:
+        "Real-time dashboards that transform complex data into clear insights",
+      color: "chart-3",
     },
   ];
 
   return (
-    <section className="py-24 px-6 bg-gradient-to-b from-background to-card/30 relative overflow-hidden" ref={ref}>
+    <section
+      className="py-24 px-6 relative overflow-hidden bg-black/40"
+      ref={ref}
+    >
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `repeating-linear-gradient(
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `repeating-linear-gradient(
             45deg,
             transparent,
             transparent 10px,
             hsl(var(--primary)) 10px,
             hsl(var(--primary)) 11px
           )`,
-          animation: 'gridMove 20s linear infinite',
-        }} />
+            animation: "gridMove 20s linear infinite",
+          }}
+        />
       </div>
 
       <div className="container mx-auto max-w-6xl relative">
@@ -63,15 +72,18 @@ export default function AISection() {
               >
                 <Brain className="h-4 w-4 text-accent" />
               </motion.div>
-              <span className="text-sm font-medium text-accent">AI Innovation</span>
+              <span className="text-sm font-medium text-accent">
+                AI Innovation
+              </span>
             </motion.div>
 
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Empowering Businesses with AI Insights & Prediction Bots
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Our AI systems forecast trends, analyze performance, and automate decisions.
-              From sales predictions to smart analytics, we give you the power to stay ahead.
+              Our AI systems forecast trends, analyze performance, and automate
+              decisions. From sales predictions to smart analytics, we give you
+              the power to stay ahead.
             </p>
 
             <div className="space-y-4">

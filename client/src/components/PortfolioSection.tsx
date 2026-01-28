@@ -1,5 +1,14 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, Github, ExternalLink, X, CheckCircle2, Server, Database, Smartphone } from "lucide-react";
+import {
+  ArrowUpRight,
+  Github,
+  ExternalLink,
+  X,
+  CheckCircle2,
+  Server,
+  Database,
+  Smartphone,
+} from "lucide-react";
 import { Button } from "./ui/button";
 import { useState } from "react";
 import {
@@ -60,11 +69,19 @@ const ProjectCard = ({ project, index, onClick }: ProjectCardProps) => (
           size="icon"
           variant="secondary"
           className="rounded-full shadow-lg h-10 w-10"
-          onClick={(e) => { e.stopPropagation(); }} // Prevent card click
+          onClick={(e) => {
+            e.stopPropagation();
+          }} // Prevent card click
         >
           <Github className="w-5 h-5" />
         </Button>
-        <Button size="icon" className="rounded-full shadow-lg h-10 w-10" onClick={(e) => { e.stopPropagation(); }}>
+        <Button
+          size="icon"
+          className="rounded-full shadow-lg h-10 w-10"
+          onClick={(e) => {
+            e.stopPropagation();
+          }}
+        >
           <ExternalLink className="w-5 h-5" />
         </Button>
       </div>
@@ -112,14 +129,15 @@ export default function PortfolioSection() {
       subtitle: "Management Solution",
       description:
         "Complete automotive service center management with QR tracking, service reporting, sales, and customer relationship management.",
-      longDescription: "A cutting-edge, enterprise-grade solution designed to revolutionize automotive service center operations. This system integrates every aspect of the service lifecycle, from initial appointment scheduling to final vehicle delivery, powered by QR code technology for instant vehicle identification and tracking.",
+      longDescription:
+        "A cutting-edge, enterprise-grade solution designed to revolutionize automotive service center operations. This system integrates every aspect of the service lifecycle, from initial appointment scheduling to final vehicle delivery, powered by QR code technology for instant vehicle identification and tracking.",
       features: [
         "QR Code Vehicle Tracking: Instant access to service history scanning a QR code.",
         "Comprehensive Service Reports: Detailed digital reports with images and diagnostics.",
         "Integrated CRM: Customer profiles, communication logs, and loyalty management.",
         "Inventory & Sales Management: Real-time parts tracking and billing integration.",
         "Tech Dashboard: Tablet-optimized interface for mechanics.",
-        "Automated Notifications: SMS/Email updates for customers on service status."
+        "Automated Notifications: SMS/Email updates for customers on service status.",
       ],
       techStack: ["PHP", "Ajax", "MySQL", "jQuery", "Bootstrap"],
       image: "/assets/service_center_system_ui.png",
@@ -132,16 +150,22 @@ export default function PortfolioSection() {
       subtitle: "Food Discovery Platform",
       description:
         "Mobile application for finding nearby restaurants, sharing reviews, and tracking favorite food spots with real-time distance calculation.",
-      longDescription: "Fuddy is a comprehensive social food discovery platform that connects foodies with the best local dining experiences. It combines powerful geolocation services to find nearby restaurants, an engaging social feed for sharing food reviews, and smart features like favorite place tracking and real-time delivery distance calculation.",
+      longDescription:
+        "Fuddy is a comprehensive social food discovery platform that connects foodies with the best local dining experiences. It combines powerful geolocation services to find nearby restaurants, an engaging social feed for sharing food reviews, and smart features like favorite place tracking and real-time delivery distance calculation.",
       features: [
         "Restaurant Finder: Interactive map showing nearby dining options.",
         "Social Reviews: Share photos and invalid ratings with the community.",
         "Favorites List: Save and organize your go-to restaurants.",
         "Real-time Distance: Accurate distance and delivery time calculation using Google Maps API.",
         "Smart Search: Filter by cuisine, rating, and distance.",
-        "User Profiles: Track your foodie level and review history."
+        "User Profiles: Track your foodie level and review history.",
       ],
-      techStack: ["Flutter", "Firebase", "Google Maps API", "Google Places API"],
+      techStack: [
+        "Flutter",
+        "Firebase",
+        "Google Maps API",
+        "Google Places API",
+      ],
       image: "/assets/fuddy_mobile_app_ui.png",
       gradient: "from-orange-500 to-red-400",
       tags: ["Flutter", "Google Maps", "Social", "Food"],
@@ -152,16 +176,23 @@ export default function PortfolioSection() {
       subtitle: "Luxury Fashion E-commerce",
       description:
         "Premium high-fashion clothing brand website with a cinematic shopping experience, immersive visuals, and exclusive collection drops.",
-      longDescription: "Noir Mode is an ultra-modern luxury fashion e-commerce platform that redefines online shopping. Inspired by high-end fashion editorials, it features full-screen cinematic visuals, sophisticated typography, and 3D product interactions. The platform offers a seamless and exclusive shopping experience with features like limited-edition drops, virtual try-ons, and personalized style curation.",
+      longDescription:
+        "Noir Mode is an ultra-modern luxury fashion e-commerce platform that redefines online shopping. Inspired by high-end fashion editorials, it features full-screen cinematic visuals, sophisticated typography, and 3D product interactions. The platform offers a seamless and exclusive shopping experience with features like limited-edition drops, virtual try-ons, and personalized style curation.",
       features: [
         "Cinematic UI/UX: Immersive full-screen visuals and smooth transitions.",
         "3D Product View: Interactive 360-degree product exploration.",
         "Exclusive Drops: Countdown-timer based limited edition releases.",
         "Virtual Stylist: AI-powered outfit recommendations.",
         "Global Shipping: Integrated logistics for worldwide delivery.",
-        "VIP Membership: Tiered loyalty program with early access perks."
+        "VIP Membership: Tiered loyalty program with early access perks.",
       ],
-      techStack: ["Next.js", "Three.js", "Shopify Headless", "GraphQL", "Tailwind CSS"],
+      techStack: [
+        "Next.js",
+        "Three.js",
+        "Shopify Headless",
+        "GraphQL",
+        "Tailwind CSS",
+      ],
       image: "/assets/noir_mode_ecommerce_ui.png",
       gradient: "from-zinc-900 to-stone-800",
       tags: ["Next.js", "Three.js", "Shopify", "Fashion"],
@@ -172,14 +203,15 @@ export default function PortfolioSection() {
       subtitle: "Education Management System",
       description:
         "Comprehensive institute management platform with student portals, online classes, material sharing, and automated fee payments.",
-      longDescription: "NexGen Institute is an all-in-one educational management solution designed to streamline the operations of modern learning institutions. It bridges the gap between administration, teachers, students, and parents. The platform facilitates seamless online learning with live classes, secure material distribution, and a robust payment gateway for fee collection.",
+      longDescription:
+        "NexGen Institute is an all-in-one educational management solution designed to streamline the operations of modern learning institutions. It bridges the gap between administration, teachers, students, and parents. The platform facilitates seamless online learning with live classes, secure material distribution, and a robust payment gateway for fee collection.",
       features: [
         "Student Management: specialized profiles, attendance tracking, and performance analytics.",
         "Online Live Classes: Built-in virtual classroom with video conferencing and whiteboards.",
         "Material Sharing: Secure digital library for lecture notes, assignments, and resources.",
         "Online Payments: Integrated gateway for tuition fee collection and automated invoicing.",
         "Parent Portal: Real-time updates on student progress and institute announcements.",
-        "Exam Module: Online quizzes, grading systems, and report card generation."
+        "Exam Module: Online quizzes, grading systems, and report card generation.",
       ],
       techStack: ["React", "Node.js", "MongoDB", "Express", "Stripe", "WebRTC"],
       image: "/assets/nexgen_institute_ui_v2.png",
@@ -192,14 +224,15 @@ export default function PortfolioSection() {
       subtitle: "Intelligent Resource Planning",
       description:
         "Next-gen ERP system with AI-driven predictive analytics and automated decision support.",
-      longDescription: "Nova ERP is a self-learning enterprise resource planning platform. Beyond standard modules, it utilizes advanced machine learning to predict inventory shortages, optimize supply chains, and suggest financial strategies. The AI assistant pro-actively identifies anomalies and opportunities, transforming reactive management into proactive strategy.",
+      longDescription:
+        "Nova ERP is a self-learning enterprise resource planning platform. Beyond standard modules, it utilizes advanced machine learning to predict inventory shortages, optimize supply chains, and suggest financial strategies. The AI assistant pro-actively identifies anomalies and opportunities, transforming reactive management into proactive strategy.",
       features: [
         "AI Predictions: Forecasting sales, stock levels, and cash flow trends.",
         "Smart Suggestions: Actionable insights for cost reduction and efficiency.",
         "Automated Workflows: Self-correcting processes based on real-time data.",
         "Holistic Dashboard: Unified view of Finance, HR, Supply Chain, and CRM.",
         "Anomaly Detection: Real-time alerts for irregular patterns or fraud.",
-        "Voice Assistant: Natural language interface for querying data."
+        "Voice Assistant: Natural language interface for querying data.",
       ],
       techStack: ["Python", "React", "TensorFlow", "FastAPI", "PostgreSQL"],
       image: "/assets/ai_erp_system_ui.png",
@@ -212,14 +245,15 @@ export default function PortfolioSection() {
       subtitle: "Casual 2D Game",
       description:
         "Fun and addictive 2D cricket game with vibrant graphics, multiple levels, and leaderboards.",
-      longDescription: "Mini Crik is a hyper-casual mobile cricket game designed for quick fun. It features an intuitive 'tap-to-hit' mechanic, colorful cartoon-style graphics, and a progression system with unlocking stadiums and gear. Challenge friends on the global leaderboard and unlock achievements as you become the ultimate cricket champion.",
+      longDescription:
+        "Mini Crik is a hyper-casual mobile cricket game designed for quick fun. It features an intuitive 'tap-to-hit' mechanic, colorful cartoon-style graphics, and a progression system with unlocking stadiums and gear. Challenge friends on the global leaderboard and unlock achievements as you become the ultimate cricket champion.",
       features: [
         "Intuitive Gameplay: Simple one-touch controls for accessible fun.",
         "Multiple Modes: Quick Match, World Tour, and Challenge Mode.",
         "Unlockables: Earn coins to unlock new bats, balls, and stadiums.",
         "Global Leaderboards: Compete with players worldwide for the high score.",
         "Daily Rewards: Daily login bonuses and challenges.",
-        "Offline Play: Enjoy the game anywhere, even without internet."
+        "Offline Play: Enjoy the game anywhere, even without internet.",
       ],
       techStack: ["Unity", "C#", "Firebase", "AdMob"],
       image: "/assets/mini_crik_game_ui.png",
@@ -235,7 +269,7 @@ export default function PortfolioSection() {
       : projects.filter((p) => p.category === activeTab);
 
   return (
-    <section id="portfolio" className="py-32 bg-background">
+    <section id="portfolio" className="py-32 bg-black/40">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <motion.span
@@ -270,10 +304,11 @@ export default function PortfolioSection() {
               <button
                 key={cat}
                 onClick={() => setActiveTab(cat)}
-                className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${activeTab === cat
-                  ? "bg-primary text-primary-foreground shadow-lg shadow-primary/25"
-                  : "bg-secondary/50 text-muted-foreground hover:bg-secondary"
-                  }`}
+                className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  activeTab === cat
+                    ? "bg-primary text-primary-foreground shadow-lg shadow-primary/25"
+                    : "bg-secondary/50 text-muted-foreground hover:bg-secondary"
+                }`}
               >
                 {cat}
               </button>
@@ -283,7 +318,12 @@ export default function PortfolioSection() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
-            <ProjectCard key={project.title} project={project} index={index} onClick={setSelectedProject} />
+            <ProjectCard
+              key={project.title}
+              project={project}
+              index={index}
+              onClick={setSelectedProject}
+            />
           ))}
         </div>
 
@@ -299,12 +339,17 @@ export default function PortfolioSection() {
       </div>
 
       {/* Project Details Modal */}
-      <Dialog open={!!selectedProject} onOpenChange={(open) => !open && setSelectedProject(null)}>
+      <Dialog
+        open={!!selectedProject}
+        onOpenChange={(open) => !open && setSelectedProject(null)}
+      >
         <DialogContent className="max-w-4xl p-0 overflow-hidden bg-background/95 backdrop-blur-xl border-white/10">
           {selectedProject && (
             <div className="flex flex-col md:flex-row h-[80vh] md:h-auto overflow-y-auto md:overflow-hidden">
               {/* Left/Top: Visual */}
-              <div className={`w-full md:w-2/5 bg-gradient-to-br ${selectedProject.gradient} relative p-6 flex flex-col justify-end overflow-hidden`}>
+              <div
+                className={`w-full md:w-2/5 bg-gradient-to-br ${selectedProject.gradient} relative p-6 flex flex-col justify-end overflow-hidden`}
+              >
                 {/* Background Image */}
                 {selectedProject.image ? (
                   <>
@@ -324,8 +369,12 @@ export default function PortfolioSection() {
                   <Badge className="bg-white/20 hover:bg-white/30 text-white border-none mb-4 backdrop-blur-md">
                     {selectedProject.category}
                   </Badge>
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">{selectedProject.title}</h2>
-                  <p className="text-white/80 font-medium">{selectedProject.subtitle}</p>
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
+                    {selectedProject.title}
+                  </h2>
+                  <p className="text-white/80 font-medium">
+                    {selectedProject.subtitle}
+                  </p>
                 </div>
               </div>
 
@@ -337,16 +386,22 @@ export default function PortfolioSection() {
                     Project Overview
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    {selectedProject.longDescription || selectedProject.description}
+                    {selectedProject.longDescription ||
+                      selectedProject.description}
                   </p>
                 </div>
 
                 {selectedProject.features && (
                   <div>
-                    <h3 className="text-lg font-bold mb-3 text-foreground">Key Features</h3>
+                    <h3 className="text-lg font-bold mb-3 text-foreground">
+                      Key Features
+                    </h3>
                     <ul className="grid gap-2">
                       {selectedProject.features.map((feature, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <li
+                          key={i}
+                          className="flex items-start gap-2 text-sm text-muted-foreground"
+                        >
                           <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                           {feature}
                         </li>
@@ -357,10 +412,16 @@ export default function PortfolioSection() {
 
                 {selectedProject.techStack && (
                   <div>
-                    <h3 className="text-lg font-bold mb-3 text-foreground">Technology Stack</h3>
+                    <h3 className="text-lg font-bold mb-3 text-foreground">
+                      Technology Stack
+                    </h3>
                     <div className="flex flex-wrap gap-2">
                       {selectedProject.techStack.map((tech) => (
-                        <Badge key={tech} variant="secondary" className="px-3 py-1">
+                        <Badge
+                          key={tech}
+                          variant="secondary"
+                          className="px-3 py-1"
+                        >
                           {tech}
                         </Badge>
                       ))}
