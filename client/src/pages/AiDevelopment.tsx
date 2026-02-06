@@ -13,6 +13,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AiMetrics from "@/components/metrics/AiMetrics";
 import MatrixRain from "@/components/MatrixRain";
+import SEO from "@/components/SEO";
 import futuristicAi from "@assets/generated_images/futuristic_ai_concept.png";
 
 export default function AiDevelopment() {
@@ -95,7 +96,25 @@ export default function AiDevelopment() {
   ];
 
   return (
-    <div className="min-h-screen text-foreground selection:bg-emerald-500/30">
+    <div className="min-h-screen text-foreground selection:bg-purple-500/30">
+      <SEO
+        title="AI & Intelligent Software Solutions"
+        description="Custom AI solutions, including intelligent data processing, automated workflows, and smart recommendation systems for business efficiency."
+        keywords="AI development, machine learning, intelligent software, automation, data processing, CodePlay Studios"
+        schemas={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "AI & Intelligent Software Solutions",
+            description:
+              "Custom AI solutions, predictive analytics, and automated decision-making systems.",
+            provider: {
+              "@type": "Organization",
+              name: "CodePlay Studios",
+            },
+          },
+        ]}
+      />
       <Navigation />
 
       <main className="pt-24 pb-16 relative z-10">

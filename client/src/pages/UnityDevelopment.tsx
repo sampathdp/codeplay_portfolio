@@ -13,6 +13,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import GameMetrics from "@/components/metrics/GameMetrics";
 import MatrixRain from "@/components/MatrixRain";
+import SEO from "@/components/SEO";
 import futuristicUnity from "@assets/generated_images/futuristic_unity_game_dev.png";
 
 export default function UnityDevelopment() {

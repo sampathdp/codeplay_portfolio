@@ -13,6 +13,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AdminMetrics from "@/components/metrics/AdminMetrics";
 import MatrixRain from "@/components/MatrixRain";
+import SEO from "@/components/SEO";
 import futuristicAdmin from "@assets/generated_images/futuristic_admin_dashboard.png";
 
 export default function AdminPanels() {
@@ -95,6 +96,23 @@ export default function AdminPanels() {
   return (
     <div className="min-h-screen text-foreground selection:bg-amber-500/30">
       <Navigation />
+      <SEO
+        title="Admin Panels & Management Systems"
+        description="Powerful custom admin dashboards and management systems tailored to your business operations for better visibility and control."
+        keywords="admin panels, dashboards, management systems, ERP development, data management, CodePlay Studios"
+        schemas={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Admin Panels & Management Systems",
+            description: "Custom admin dashboards and data management systems.",
+            provider: {
+              "@type": "Organization",
+              name: "CodePlay Studios",
+            },
+          },
+        ]}
+      />
 
       <main className="pt-24 pb-16 relative z-10">
         {/* Generative Background */}

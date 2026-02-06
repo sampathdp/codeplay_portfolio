@@ -2,6 +2,7 @@ import { Switch, Route } from "wouter";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/theme-provider";
+import { HelmetProvider } from "react-helmet-async";
 import Home from "@/pages/Home";
 import WebDevelopment from "@/pages/WebDevelopment";
 import MobileDevelopment from "@/pages/MobileDevelopment";
@@ -31,12 +32,14 @@ function Router() {
 
 function App() {
   return (
-    <ThemeProvider defaultTheme="dark" enableSystem={false} attribute="class">
-      <TooltipProvider>
-        <Toaster />
-        <Router />
-      </TooltipProvider>
-    </ThemeProvider>
+    <HelmetProvider>
+      <ThemeProvider defaultTheme="dark" enableSystem={false} attribute="class">
+        <TooltipProvider>
+          <Toaster />
+          <Router />
+        </TooltipProvider>
+      </ThemeProvider>
+    </HelmetProvider>
   );
 }
 

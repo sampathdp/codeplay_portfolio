@@ -120,7 +120,7 @@ export default function AISection() {
             />
             <motion.img
               src={aiVisualization}
-              alt="AI Analytics Visualization"
+              alt="CodePlay Studios AI Analytics Visualization - Predictive insights and data processing"
               className="relative rounded-lg shadow-2xl"
               data-testid="img-ai-visualization"
               whileHover={{ scale: 1.02 }}

@@ -58,7 +58,7 @@ const ProjectCard = ({ project, index, onClick }: ProjectCardProps) => (
       {project.image && (
         <img
           src={project.image}
-          alt={project.title}
+          alt={`${project.title} - ${project.subtitle} by CodePlay Studios`}
           className="absolute inset-0 w-full h-full object-cover opacity-50 mix-blend-overlay group-hover:opacity-70 transition-opacity"
         />
       )}
@@ -355,7 +355,7 @@ export default function PortfolioSection() {
                   <>
                     <img
                       src={selectedProject.image}
-                      alt={selectedProject.title}
+                      alt={`${selectedProject.title} - ${selectedProject.subtitle} project detail`}
                       className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-50"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />

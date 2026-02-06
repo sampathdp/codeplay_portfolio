@@ -13,6 +13,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import MobileMetrics from "@/components/metrics/MobileMetrics";
 import MatrixRain from "@/components/MatrixRain";
+import SEO from "@/components/SEO";
 import futuristicMobileDev from "@assets/generated_images/futuristic_mobile_dev.png";
 
 export default function MobileDevelopment() {
@@ -95,6 +96,25 @@ export default function MobileDevelopment() {
 
   return (
     <div className="min-h-screen text-foreground selection:bg-purple-500/30">
+      <SEO
+        title="Mobile App Development - iOS & Android"
+        description="Native-quality cross-platform mobile apps built with Flutter. We deliver secure, scalable apps for Android and iOS with real-time features."
+        keywords="mobile app development, Flutter development, iOS apps, Android apps, cross-platform apps, CodePlay Studios"
+        schemas={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Mobile App Development",
+            description:
+              "Native-quality cross-platform mobile apps for iOS and Android using Flutter.",
+            provider: {
+              "@type": "Organization",
+              name: "CodePlay Studios",
+            },
+            areaServed: "Worldwide",
+          },
+        ]}
+      />
       <Navigation />
 
       <main className="pt-24 pb-16 relative z-10">

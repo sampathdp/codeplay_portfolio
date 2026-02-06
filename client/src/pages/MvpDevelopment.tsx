@@ -13,6 +13,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import MvpMetrics from "@/components/metrics/MvpMetrics";
 import MatrixRain from "@/components/MatrixRain";
+import SEO from "@/components/SEO";
 import futuristicMvp from "@assets/generated_images/futuristic_mvp_launch.png";
 
 export default function MvpDevelopment() {
@@ -95,6 +96,24 @@ export default function MvpDevelopment() {
 
   return (
     <div className="min-h-screen text-foreground selection:bg-fuchsia-500/30">
+      <SEO
+        title="MVP Development & Prototyping"
+        description="Fast-track your startup idea with our rapid MVP development services. We build scalable prototypes to validate your business concept quickly."
+        keywords="MVP development, rapid prototyping, startup solutions, lean development, prototype building, CodePlay Studios"
+        schemas={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "MVP Development & Prototyping",
+            description:
+              "Rapid development of Minimum Viable Products for startups.",
+            provider: {
+              "@type": "Organization",
+              name: "CodePlay Studios",
+            },
+          },
+        ]}
+      />
       <Navigation />
 
       <main className="pt-24 pb-16 relative z-10">

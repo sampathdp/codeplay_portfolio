@@ -148,7 +148,9 @@ export default function HeroSection() {
                         }}
                         transition={{ duration: 0.8 }}
                         src={slide.image}
-                        alt={slide.title}
+                        alt={`CodePlay Studios ${slide.title} - ${slide.headline} ${slide.highlight}`}
+                        fetchPriority={index === 0 ? "high" : "auto"}
+                        loading={index === 0 ? "eager" : "lazy"}
                         className="max-h-[80%] max-w-full object-contain drop-shadow-2xl"
                         style={{
                           filter: `drop-shadow(0 0 40px ${slide.shadowColor}80)`,

@@ -86,7 +86,7 @@ export default function AboutSection() {
             >
               <img
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80"
-                alt="Team collaboration"
+                alt="CodePlay Studios team collaboration - working on innovative digital solutions"
                 className="rounded-3xl shadow-xl object-cover h-64 w-full"
               />
               <div className="glass p-6 rounded-3xl">
@@ -111,7 +111,7 @@ export default function AboutSection() {
               </div>
               <img
                 src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80"
-                alt="Office workspace"
+                alt="CodePlay Studios office workspace - creating future-proof technology"
                 className="rounded-3xl shadow-xl object-cover h-64 w-full"
               />
             </motion.div>

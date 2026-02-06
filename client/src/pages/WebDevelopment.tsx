@@ -13,6 +13,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import WebMetrics from "@/components/metrics/WebMetrics";
 import MatrixRain from "@/components/MatrixRain";
+import SEO from "@/components/SEO";
 import futuristicDev from "@assets/generated_images/futuristic_web_dev.png";
 
 export default function WebDevelopment() {
@@ -95,6 +96,25 @@ export default function WebDevelopment() {
 
   return (
     <div className="min-h-screen text-foreground selection:bg-primary/20">
+      <SEO
+        title="Web Application & Website Development"
+        description="We build high-performance web applications and websites, including e-commerce platforms and corporate sites, optimized for speed and SEO."
+        keywords="web development, React development, e-commerce websites, corporate websites, API integration, CodePlay Studios"
+        schemas={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Web Application & Website Development",
+            description:
+              "High-performance web applications, e-commerce platforms, and corporate websites.",
+            provider: {
+              "@type": "Organization",
+              name: "CodePlay Studios",
+            },
+            areaServed: "Worldwide",
+          },
+        ]}
+      />
       <Navigation />
 
       <main className="pt-24 pb-16 relative z-10">
