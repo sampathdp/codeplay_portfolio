@@ -75,13 +75,13 @@ export default function HeroSection() {
   );
 
   return (
-    <section className="relative w-full h-screen overflow-hidden bg-transparent">
+    <section className="relative w-full min-h-screen lg:h-screen overflow-hidden bg-transparent pt-20 lg:pt-0">
       {/* MatrixRain is now global in Home.tsx */}
       {/* Overlay to ensuring text readability */}
       <div className="container mx-auto h-full px-6 relative z-10">
         <div className="grid lg:grid-cols-2 h-full gap-8">
           {/* LEFT: Static Text Content */}
-          <div className="flex flex-col justify-center z-20 order-2 lg:order-1 relative min-h-[400px]">
+          <div className="flex flex-col justify-center z-20 order-2 lg:order-1 relative min-h-[300px] lg:min-h-[400px]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={selectedIndex}
@@ -93,7 +93,7 @@ export default function HeroSection() {
                 <span className="inline-block px-4 py-1.5 rounded-full glass border border-primary/20 text-primary text-sm font-medium mb-6 backdrop-blur-md">
                   Welcome to CodePlay Studios
                 </span>
-                <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
                   {slides[selectedIndex].headline} <br />
                   <span
                     className={`text-transparent bg-clip-text bg-gradient-to-r ${slides[selectedIndex].textGradient}`}
@@ -101,10 +101,10 @@ export default function HeroSection() {
                     {slides[selectedIndex].highlight}
                   </span>
                 </h1>
-                <p className="text-xl md:text-2xl text-muted-foreground mb-10 font-light max-w-lg leading-relaxed">
+                <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-10 font-light max-w-lg leading-relaxed">
                   {slides[selectedIndex].description}
                 </p>
-                <div className="flex gap-4">
+                <div className="flex flex-col sm:flex-row gap-4">
                   <Button
                     size="lg"
                     className="rounded-full bg-primary hover:bg-primary/90 text-white border-none h-14 px-8 text-lg shadow-lg shadow-primary/20"
@@ -125,7 +125,7 @@ export default function HeroSection() {
           </div>
 
           {/* RIGHT: Image Slider */}
-          <div className="relative h-full flex items-center justify-center order-1 lg:order-2 overflow-hidden">
+          <div className="relative h-[350px] sm:h-[450px] lg:h-full flex items-center justify-center order-1 lg:order-2 overflow-hidden mt-10 lg:mt-0">
             {/* Slider container */}
             <div className="w-full h-full absolute inset-0" ref={emblaRef}>
               <div className="flex h-full">
@@ -151,13 +151,11 @@ export default function HeroSection() {
                         alt={`CodePlay Studios ${slide.title} - ${slide.headline} ${slide.highlight}`}
                         fetchPriority={index === 0 ? "high" : "auto"}
                         loading={index === 0 ? "eager" : "lazy"}
-                        className="max-h-[80%] max-w-full object-contain drop-shadow-2xl"
+                        className="max-h-[90%] lg:max-h-[80%] max-w-[90%] object-contain drop-shadow-2xl"
                         style={{
                           filter: `drop-shadow(0 0 40px ${slide.shadowColor}80)`,
                           maskImage:
-                            "radial-gradient(circle at center, black 60%, transparent 100%)",
-                          WebkitMaskImage:
-                            "radial-gradient(circle at center, black 60%, transparent 100%)",
+                            "radial-gradient(circle at center, black 80%, transparent 100%)",
                         }}
                       />
                     </div>
@@ -167,7 +165,7 @@ export default function HeroSection() {
             </div>
 
             {/* Slider Navigation (Optional corner controls) */}
-            <div className="absolute bottom-12 right-0 flex gap-2 z-30">
+            <div className="absolute bottom-4 lg:bottom-12 right-0 flex gap-2 z-30">
               <Button
                 size="icon"
                 variant="outline"

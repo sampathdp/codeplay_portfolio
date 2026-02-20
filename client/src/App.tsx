@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Switch, Route } from "wouter";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -12,6 +13,8 @@ import UnityDevelopment from "@/pages/UnityDevelopment";
 import MvpDevelopment from "@/pages/MvpDevelopment";
 import { useScrollToTopOnNavigate } from "@/hooks/useScrollToTopOnNavigate";
 import NotFound from "@/pages/not-found";
+import Preloader from "@/components/Preloader";
+import { AnimatePresence } from "framer-motion";
 
 function Router() {
   useScrollToTopOnNavigate();
@@ -31,10 +34,23 @@ function Router() {
 }
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Artificial delay to show the "cool" preloader
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2800);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <HelmetProvider>
       <ThemeProvider defaultTheme="dark" enableSystem={false} attribute="class">
         <TooltipProvider>
+          <AnimatePresence mode="wait">
+            {isLoading && <Preloader key="preloader" />}
+          </AnimatePresence>
           <Toaster />
           <Router />
         </TooltipProvider>

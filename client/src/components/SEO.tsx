@@ -13,12 +13,14 @@ interface SEOProps {
   twitterImage?: string;
   canonical?: string;
   schemas?: any[];
+  robots?: string;
+  themeColor?: string;
 }
 
 const SEO = ({
   title = "CodePlay Studios - Coding Your Vision | Smart Software Solutions",
-  description = "CodePlay Studios builds AI-powered business systems, web apps, mobile solutions, and games. We deliver scalable, intelligent software tailored to your needs.",
-  keywords = "AI development, web applications, mobile apps, ERP systems, game development, custom software, CodePlay Studios",
+  description = "CodePlay Studios builds AI-powered business systems, web apps, mobile solutions, and games. We deliver scalable, intelligent software tailored to your needs. Get a quote today.",
+  keywords = "AI development, web applications, mobile apps, ERP systems, game development, custom software, CodePlay Studios, software engineering, Sri Lanka",
   ogTitle,
   ogDescription,
   ogImage = "/assets/logo_trans.png",
@@ -30,6 +32,8 @@ const SEO = ({
   twitterImage,
   canonical,
   schemas = [],
+  robots = "index, follow",
+  themeColor = "#020617",
 }: SEOProps) => {
   const siteTitle = title.includes("CodePlay Studios")
     ? title
@@ -72,13 +76,36 @@ const SEO = ({
     description: description,
     address: {
       "@type": "PostalAddress",
+      addressLocality: "Matara",
+      addressRegion: "Southern Province",
       addressCountry: "Sri Lanka",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+94-000-000-000",
+      contactType: "Customer Service",
     },
     sameAs: [
       "https://twitter.com/codeplaystudios",
       "https://linkedin.com/company/codeplaystudios",
       "https://github.com/codeplaystudios",
+      "https://facebook.com/codeplaystudios",
     ],
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    url: baseUrl,
+    name: "CodePlay Studios",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${baseUrl}/search?q={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
+    },
   };
 
   return (
@@ -87,6 +114,8 @@ const SEO = ({
       <title>{siteTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
+      <meta name="robots" content={robots} />
+      <meta name="theme-color" content={themeColor} />
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
@@ -94,6 +123,7 @@ const SEO = ({
       <meta property="og:title" content={ogTitle || siteTitle} />
       <meta property="og:description" content={ogDescription || description} />
       <meta property="og:image" content={ogImage} />
+      <meta property="og:site_name" content="CodePlay Studios" />
 
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
@@ -117,6 +147,9 @@ const SEO = ({
       </script>
       <script type="application/ld+json">
         {JSON.stringify(breadcrumbSchema)}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify(websiteSchema)}
       </script>
       {schemas.map((schema, index) => (
         <script key={index} type="application/ld+json">

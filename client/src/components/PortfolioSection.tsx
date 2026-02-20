@@ -52,14 +52,14 @@ const ProjectCard = ({ project, index, onClick }: ProjectCardProps) => (
     <div
       className={`h-64 w-full bg-gradient-to-br ${project.gradient} relative overflow-hidden group-hover:scale-105 transition-transform duration-700`}
     >
-      <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors" />
+      <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors" />
 
       {/* Optional: Actual Project Image Overlay */}
       {project.image && (
         <img
           src={project.image}
           alt={`${project.title} - ${project.subtitle} by CodePlay Studios`}
-          className="absolute inset-0 w-full h-full object-cover opacity-50 mix-blend-overlay group-hover:opacity-70 transition-opacity"
+          className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
         />
       )}
 
@@ -304,11 +304,10 @@ export default function PortfolioSection() {
               <button
                 key={cat}
                 onClick={() => setActiveTab(cat)}
-                className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                  activeTab === cat
+                className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${activeTab === cat
                     ? "bg-primary text-primary-foreground shadow-lg shadow-primary/25"
                     : "bg-secondary/50 text-muted-foreground hover:bg-secondary"
-                }`}
+                  }`}
               >
                 {cat}
               </button>
@@ -356,9 +355,9 @@ export default function PortfolioSection() {
                     <img
                       src={selectedProject.image}
                       alt={`${selectedProject.title} - ${selectedProject.subtitle} project detail`}
-                      className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-50"
+                      className="absolute inset-0 w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
                   </>
                 ) : (
                   <div className="absolute inset-0 bg-black/10" />
