@@ -4,7 +4,8 @@ import AISection from "@/components/AISection";
 import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
 import WhyChooseSection from "@/components/WhyChooseSection";
-import PortfolioSection from "@/components/PortfolioSection";
+import CaseStudiesSection from "@/components/CaseStudiesSection";
+import PricingSection from "@/components/PricingSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import MatrixRain from "@/components/MatrixRain";
@@ -29,7 +30,8 @@ export default function Home() {
         <AboutSection />
         <ServicesSection />
         <WhyChooseSection />
-        <PortfolioSection />
+        <CaseStudiesSection />
+        <PricingSection />
         <ContactSection />
         <Footer />
       </div>

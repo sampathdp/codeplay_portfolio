@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "wouter";
 import {
   Globe,
   ShoppingCart,
@@ -14,86 +15,87 @@ import Footer from "@/components/Footer";
 import WebMetrics from "@/components/metrics/WebMetrics";
 import MatrixRain from "@/components/MatrixRain";
 import SEO from "@/components/SEO";
-import futuristicDev from "@assets/generated_images/futuristic_web_dev.png";
+import WebPricingSection from "@/components/WebPricingSection";
+import futuristicDev from "@assets/futuristic_web_dev.png";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
+const services = [
+  {
+    icon: Globe,
+    title: "Corporate & Business Websites",
+    description:
+      "Professional, responsive websites designed to represent your brand and build trust.",
+    color: "text-blue-400",
+    bg: "bg-blue-400/10",
+    border: "border-blue-400/20",
+  },
+  {
+    icon: ShoppingCart,
+    title: "E-Commerce Platforms",
+    description:
+      "Secure online stores with product management, order handling, and payment integration.",
+    color: "text-emerald-400",
+    bg: "bg-emerald-400/10",
+    border: "border-emerald-400/20",
+  },
+  {
+    icon: Layout,
+    title: "Web Applications",
+    description:
+      "Custom web-based systems built for performance, reliability, and long-term use.",
+    color: "text-purple-400",
+    bg: "bg-purple-400/10",
+    border: "border-purple-400/20",
+  },
+  {
+    icon: Server,
+    title: "API & Third-Party Integrations",
+    description:
+      "Payment gateways, external services, and system integrations tailored to business needs.",
+    color: "text-orange-400",
+    bg: "bg-orange-400/10",
+    border: "border-orange-400/20",
+  },
+  {
+    icon: Search,
+    title: "SEO-Ready & Mobile-Optimized",
+    description:
+      "Optimized for search engines, speed, and seamless performance across all devices.",
+    color: "text-cyan-400",
+    bg: "bg-cyan-400/10",
+    border: "border-cyan-400/20",
+  },
+];
+
+const businessValues = [
+  "Strong and credible online presence",
+  "Easy content and data management",
+  "Platforms designed to generate leads and sales",
+  "Scalable solutions that grow with your business",
+];
 
 export default function WebDevelopment() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
-    },
-  };
-
-  const services = [
-    {
-      icon: Globe,
-      title: "Corporate & Business Websites",
-      description:
-        "Professional, responsive websites designed to represent your brand and build trust.",
-      color: "text-blue-400",
-      bg: "bg-blue-400/10",
-      border: "border-blue-400/20",
-    },
-    {
-      icon: ShoppingCart,
-      title: "E-Commerce Platforms",
-      description:
-        "Secure online stores with product management, order handling, and payment integration.",
-      color: "text-emerald-400",
-      bg: "bg-emerald-400/10",
-      border: "border-emerald-400/20",
-    },
-    {
-      icon: Layout,
-      title: "Web Applications",
-      description:
-        "Custom web-based systems built for performance, reliability, and long-term use.",
-      color: "text-purple-400",
-      bg: "bg-purple-400/10",
-      border: "border-purple-400/20",
-    },
-    {
-      icon: Server,
-      title: "API & Third-Party Integrations",
-      description:
-        "Payment gateways, external services, and system integrations tailored to business needs.",
-      color: "text-orange-400",
-      bg: "bg-orange-400/10",
-      border: "border-orange-400/20",
-    },
-    {
-      icon: Search,
-      title: "SEO-Ready & Mobile-Optimized",
-      description:
-        "Optimized for search engines, speed, and seamless performance across all devices.",
-      color: "text-cyan-400",
-      bg: "bg-cyan-400/10",
-      border: "border-cyan-400/20",
-    },
-  ];
-
-  const businessValues = [
-    "Strong and credible online presence",
-    "Easy content and data management",
-    "Platforms designed to generate leads and sales",
-    "Scalable solutions that grow with your business",
-  ];
-
   return (
     <div className="min-h-screen text-foreground selection:bg-primary/20">
       <SEO
@@ -164,18 +166,24 @@ export default function WebDevelopment() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
                 <Button
+                  asChild
                   size="lg"
-                  className="h-12 px-8 text-lg rounded-full bg-primary hover:bg-primary/90 text-white shadow-[0_0_20px_rgba(var(--primary),0.3)] hover:shadow-[0_0_30px_rgba(var(--primary),0.5)] transition-all"
+                  className="h-12 px-8 text-lg rounded-full bg-primary hover:bg-primary/90 text-white shadow-[0_0_20px_rgba(var(--primary),0.3)] hover:shadow-[0_0_30px_rgba(var(--primary),0.5)] transition-all cursor-pointer"
                 >
-                  Start Your Project
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <Link href="/#contact">
+                    Start Your Project
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
                 </Button>
                 <Button
+                  asChild
                   size="lg"
                   variant="outline"
-                  className="h-12 px-8 text-lg rounded-full border-white/10 hover:bg-white/5 backdrop-blur-sm"
+                  className="h-12 px-8 text-lg rounded-full border-white/10 hover:bg-white/5 backdrop-blur-sm cursor-pointer"
                 >
-                  View Portfolio
+                  <Link href="/case-studies">
+                    View Portfolio
+                  </Link>
                 </Button>
               </div>
             </motion.div>
@@ -269,6 +277,7 @@ export default function WebDevelopment() {
                     whileHover={{ y: -5, transition: { duration: 0.2 } }}
                     className={`group relative p-8 rounded-3xl border transition-all duration-300 ${service.bg} ${service.border} hover:border-opacity-50 hover:bg-opacity-20`}
                   >
+                    <Link href="/#contact" className="absolute inset-0 z-10" />
                     <div
                       className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 bg-black/40 text-white shadow-lg group-hover:scale-110 transition-transform duration-300`}
                     >
@@ -290,6 +299,9 @@ export default function WebDevelopment() {
               </div>
             </motion.div>
 
+            {/* Detailed Web Pricing Section */}
+            <WebPricingSection />
+
             {/* CTA Section */}
             <motion.div
               variants={itemVariants}
@@ -306,10 +318,13 @@ export default function WebDevelopment() {
                     powerful, scalable web solution.
                   </p>
                   <Button
+                    asChild
                     size="lg"
-                    className="h-14 px-10 text-lg rounded-full bg-white text-black hover:bg-gray-200"
+                    className="h-14 px-10 text-lg rounded-full bg-white text-black hover:bg-gray-200 cursor-pointer"
                   >
-                    Get a Quote
+                    <Link href="/#contact">
+                      Get a Quote
+                    </Link>
                   </Button>
                 </div>
               </div>

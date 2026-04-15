@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { Menu, X, Instagram, Twitter, Linkedin, Github } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "./ui/button";
+import CurrencySwitcher from "./CurrencySwitcher";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,10 +19,10 @@ export default function Navigation() {
 
   const links = [
     { href: "/", label: "Home" },
-    { href: "#about", label: "About" },
-    { href: "#services", label: "Services" },
-    { href: "#portfolio", label: "Work" },
-    { href: "#contact", label: "Contact" },
+    { href: "/case-studies", label: "Projects" },
+    { href: "/#about", label: "About" },
+    { href: "/#services", label: "Services" },
+    { href: "/#contact", label: "Contact" },
   ];
 
   const socialLinks = [
@@ -49,19 +50,17 @@ export default function Navigation() {
           `}
         >
           {/* Logo */}
-          <Link href="/">
-            <a className="flex items-center gap-2 group">
-              <img
-                src="/assets/logo_trans.png"
-                alt="CodePlay Studios"
-                className="h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="hidden sm:flex items-center gap-1.5 font-['Outfit']">
-                <span className="font-bold text-2xl tracking-tight bg-gradient-to-r from-white via-primary to-purple-400 bg-clip-text text-transparent group-hover:bg-gradient-to-l transition-all duration-500">
-                  CodePlay Studios
-                </span>
-              </div>
-            </a>
+          <Link href="/" className="flex items-center gap-2 group">
+            <img
+              src="/assets/logo_trans.png"
+              alt="CodePlay Studios"
+              className="h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="hidden sm:flex items-center gap-1.5 font-['Outfit']">
+              <span className="font-bold text-2xl tracking-tight bg-gradient-to-r from-white via-primary to-purple-400 bg-clip-text text-transparent group-hover:bg-gradient-to-l transition-all duration-500">
+                CodePlay Studios
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Menu */}
@@ -84,6 +83,7 @@ export default function Navigation() {
             </div>
 
             <div className="h-6 w-[1px] bg-white/10 mx-6" />
+            <CurrencySwitcher />
           </div>
 
           {/* Mobile Toggle */}
@@ -110,29 +110,31 @@ export default function Navigation() {
           >
             {/* Header */}
             <div className="h-24 px-6 flex items-center justify-between border-b border-border/50">
-              <Link href="/">
-                <a
-                  className="flex items-center gap-3"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  <img
-                    src="/assets/logo_trans.png"
-                    alt="CodePlay Studios"
-                    className="h-12 w-auto object-contain"
-                  />
-                  <div className="flex items-center font-['Outfit']">
-                    <span className="font-bold text-2xl tracking-tight bg-gradient-to-r from-white via-primary to-purple-400 bg-clip-text text-transparent">
-                      CodePlay Studios
-                    </span>
-                  </div>
-                </a>
-              </Link>
-              <button
-                className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center"
+              <Link
+                href="/"
+                className="flex items-center gap-3"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                <X className="w-6 h-6" />
-              </button>
+                <img
+                  src="/assets/logo_trans.png"
+                  alt="CodePlay Studios"
+                  className="h-12 w-auto object-contain"
+                />
+                <div className="flex items-center font-['Outfit']">
+                  <span className="font-bold text-2xl tracking-tight bg-gradient-to-r from-white via-primary to-purple-400 bg-clip-text text-transparent">
+                    CodePlay Studios
+                  </span>
+                </div>
+              </Link>
+              <div className="flex items-center gap-4">
+                <CurrencySwitcher />
+                <button
+                  className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
             </div>
 
             {/* Links Section */}

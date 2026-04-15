@@ -149,7 +149,7 @@ export default function HeroSection() {
                         transition={{ duration: 0.8 }}
                         src={slide.image}
                         alt={`CodePlay Studios ${slide.title} - ${slide.headline} ${slide.highlight}`}
-                        fetchPriority={index === 0 ? "high" : "auto"}
+                        fetchpriority={index === 0 ? "high" : "auto"}
                         loading={index === 0 ? "eager" : "lazy"}
                         className="max-h-[90%] lg:max-h-[80%] max-w-[90%] object-contain drop-shadow-2xl"
                         style={{
