@@ -11,12 +11,15 @@ import AiDevelopment from "@/pages/AiDevelopment";
 import ErpSystems from "@/pages/ErpSystems";
 import UnityDevelopment from "@/pages/UnityDevelopment";
 import CaseStudies from "@/pages/CaseStudies";
+import About from "@/pages/About";
+import Contact from "@/pages/Contact";
 import CaseStudyDetail from "@/pages/CaseStudyDetail";
 import { useScrollToTopOnNavigate } from "@/hooks/useScrollToTopOnNavigate";
 import NotFound from "@/pages/not-found";
 import Preloader from "@/components/Preloader";
 import { AnimatePresence } from "framer-motion";
 import { CurrencyProvider } from "@/context/CurrencyContext";
+import WhatsAppWidget from "@/components/WhatsAppWidget";
 
 function Router() {
   useScrollToTopOnNavigate();
@@ -31,6 +34,8 @@ function Router() {
       <Route path="/unity-game-development" component={UnityDevelopment} />
       <Route path="/case-studies" component={CaseStudies} />
       <Route path="/case-studies/:slug" component={CaseStudyDetail} />
+      <Route path="/about" component={About} />
+      <Route path="/contact" component={Contact} />
       <Route component={NotFound} />
     </Switch>
   );
@@ -55,6 +60,7 @@ function App() {
             <AnimatePresence mode="wait">
               {isLoading && <Preloader key="preloader" />}
             </AnimatePresence>
+            <WhatsAppWidget />
             <Toaster />
             <Router />
           </TooltipProvider>

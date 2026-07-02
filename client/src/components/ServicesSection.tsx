@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { Button } from "./ui/button";
 import { useLocation } from "wouter";
+import ClientLogosStrip from "./ClientLogosStrip";
 
 interface Service {
   icon: React.ReactNode;
@@ -128,7 +129,7 @@ export default function ServicesSection() {
         "Powerful and intuitive dashboards that provide full visibility and control over business operations.",
       gradient: "from-orange-500 to-amber-400",
       features: ["Custom Dashboards", "Role-Based Access", "Data Management"],
-      link: "/admin-panels",
+      link: "/erp-systems",
     },
     {
       icon: <Gamepad2 className="w-full h-full" />,
@@ -199,6 +200,7 @@ export default function ServicesSection() {
           ))}
         </div>
       </div>
+      <ClientLogosStrip />
     </section>
   );
 }

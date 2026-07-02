@@ -18,11 +18,9 @@ export default function Navigation() {
   }, []);
 
   const links = [
-    { href: "/", label: "Home" },
-    { href: "/case-studies", label: "Projects" },
-    { href: "/#about", label: "About" },
-    { href: "/#services", label: "Services" },
-    { href: "/#contact", label: "Contact" },
+    { href: "/case-studies", label: "Industrial Portfolio" },
+    { href: "/about", label: "About Us" },
+    { href: "/contact", label: "Discovery" },
   ];
 
   const socialLinks = [

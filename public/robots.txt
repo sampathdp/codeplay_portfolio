@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://codeplaystudios.com/sitemap.xml

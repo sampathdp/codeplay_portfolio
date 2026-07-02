@@ -104,7 +104,7 @@ export const WEB_DETAILED_TIERS: PricingTier[] = [
     href: "/#contact",
     featured: false,
     includes: [
-      "8 Main Pages",
+      "3–5 Main Pages",
       "1 Proposal",
       "Simple Control Panel to Update the Website",
       "Set Up Hosting and Domain Name",
@@ -125,7 +125,7 @@ export const WEB_DETAILED_TIERS: PricingTier[] = [
     href: "/#contact",
     featured: true,
     includes: [
-      "12 Main Web Pages",
+      "7 Main Web Pages",
       "1 Proposal Design Concept",
       "Mobile Responsive Design",
       "Unique Content Development",
@@ -150,7 +150,7 @@ export const WEB_DETAILED_TIERS: PricingTier[] = [
     href: "/#contact",
     featured: false,
     includes: [
-      "20 Main Web Pages",
+      "10 Main Web Pages",
       "2 Proposal Design Concepts",
       "Mobile Responsive Design",
       "Payment Gateway",
@@ -175,7 +175,7 @@ export const WEB_DETAILED_TIERS: PricingTier[] = [
     href: "/#contact",
     featured: false,
     includes: [
-      "25 Main Web Pages",
+      "12–15 Main Web Pages",
       "2 Proposal Design Concepts",
       "Mobile Responsive Design",
       "User and Member Registration",

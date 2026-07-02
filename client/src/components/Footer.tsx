@@ -1,85 +1,158 @@
-import { SiGithub, SiLinkedin, SiFacebook, SiInstagram } from 'react-icons/si';
 import { motion } from 'framer-motion';
+import { 
+  Mail, 
+  Phone, 
+  MapPin, 
+  ArrowRight, 
+  Instagram, 
+  Twitter, 
+  Linkedin, 
+  Github,
+  Rocket
+} from 'lucide-react';
+import { Link } from 'wouter';
 
 const socialLinks = [
-  { icon: SiGithub, href: '#', label: 'GitHub' },
-  { icon: SiLinkedin, href: '#', label: 'LinkedIn' },
-  { icon: SiFacebook, href: '#', label: 'Facebook' },
-  { icon: SiInstagram, href: '#', label: 'Instagram' },
+  { icon: Github, href: '#', label: 'GitHub' },
+  { icon: Linkedin, href: '#', label: 'LinkedIn' },
+  { icon: Twitter, href: '#', label: 'Twitter' },
+  { icon: Instagram, href: '#', label: 'Instagram' },
 ];
 
 export default function Footer() {
   return (
-    <footer className="py-12 px-6 border-t border-border bg-card/50 relative overflow-hidden">
+    <footer className="pt-24 pb-12 px-6 border-t border-white/5 bg-black/40 relative overflow-hidden backdrop-blur-xl">
+      {/* Scanning Scanner Effect */}
       <motion.div
-        className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent"
+        className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent"
         animate={{
           x: ['-100%', '100%'],
         }}
         transition={{
-          duration: 3,
+          duration: 4,
           repeat: Infinity,
           ease: 'linear',
         }}
       />
 
-      <div className="container mx-auto max-w-6xl">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          <motion.div
-            className="text-center md:text-left"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h3 className="text-2xl font-bold mb-2">CodePlay Studios</h3>
-            <p className="text-muted-foreground">Coding Your Vision</p>
-            <p className="text-sm text-muted-foreground mt-1">Smart Software. Real Solutions.</p>
-            <div className="mt-4 space-y-1 text-sm text-gray-400">
-              <p>115/A, Gagabada rd, hirana panadura</p>
-              <p>075 445 3334</p>
-              <p>info@codeplaystudios.com</p>
-            </div>
-          </motion.div>
-
-          <motion.div
-            className="flex gap-4"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            {socialLinks.map((social, index) => {
-              const Icon = social.icon;
-              return (
+      <div className="container mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 mb-20">
+          
+          {/* Column 1: Brand & Bio */}
+          <div className="lg:col-span-4 space-y-8">
+            <Link href="/" className="inline-block">
+              <div className="flex items-center gap-3 group">
+                <img src="/assets/logo_trans.png" alt="CodePlay Studios" className="h-10 w-auto opacity-80 group-hover:opacity-100 transition-opacity" />
+                <span className="text-xl font-bold tracking-tighter uppercase font-['Outfit']">CodePlay Studios</span>
+              </div>
+            </Link>
+            <p className="text-muted-foreground text-lg leading-relaxed max-w-sm">
+              We engine industrial-grade digital ecosystems with a focus on 
+              precision, clarity, and "Calm Computing."
+            </p>
+            <div className="flex gap-4">
+              {socialLinks.map((social, index) => (
                 <motion.a
                   key={index}
                   href={social.href}
-                  aria-label={social.label}
-                  className="h-10 w-10 rounded-md bg-primary/10 border border-primary/20 flex items-center justify-center hover-elevate transition-all duration-300 group hover:bg-primary hover:border-primary"
-                  data-testid={`link-social-${social.label.toLowerCase()}`}
-                  whileHover={{
-                    scale: 1.1,
-                    rotate: 360,
-                  }}
-                  transition={{ duration: 0.3 }}
+                  whileHover={{ y: -3 }}
+                  className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-300 group"
                 >
-                  <Icon className="h-5 w-5 text-foreground group-hover:text-white" />
+                  <social.icon className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
                 </motion.a>
-              );
-            })}
-          </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Column 2: Systems */}
+          <div className="lg:col-span-2 space-y-6">
+            <h4 className="text-xs font-mono uppercase tracking-[0.3em] text-primary">Software Systems</h4>
+            <ul className="space-y-4">
+              {[
+                { label: "Web Apps", href: "/web-development" },
+                { label: "Mobile Apps", href: "/mobile-development" },
+                { label: "ERP Suites", href: "/erp-systems" },
+                { label: "Unity Game Dev", href: "/unity-game-development" },
+                { label: "AI Integration", href: "/ai-development" }
+              ].map((link, i) => (
+                <li key={i}>
+                  <Link href={link.href} className="text-muted-foreground hover:text-white transition-colors text-sm flex items-center group">
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-primary" />
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 3: Agency */}
+          <div className="lg:col-span-2 space-y-6">
+            <h4 className="text-xs font-mono uppercase tracking-[0.3em] text-primary">Agency</h4>
+            <ul className="space-y-4">
+              {[
+                { label: "Our Story", href: "/about" },
+                { label: "Industrial Portfolio", href: "/case-studies" },
+                { label: "Discovery", href: "/contact" },
+                { label: "Privacy Policy", href: "#" }
+              ].map((link, i) => (
+                <li key={i}>
+                  <Link href={link.href} className="text-muted-foreground hover:text-white transition-colors text-sm flex items-center group">
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-primary" />
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 4: Contact */}
+          <div className="lg:col-span-4 space-y-6">
+            <h4 className="text-xs font-mono uppercase tracking-[0.3em] text-primary">Quick Contact</h4>
+            <div className="space-y-6">
+              <div className="flex items-start gap-4 group">
+                <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center shrink-0 border border-white/10 group-hover:border-primary/50 transition-colors">
+                  <MapPin className="w-5 h-5 text-gray-400 group-hover:text-primary transition-colors" />
+                </div>
+                <div>
+                  <p className="text-xs uppercase font-mono text-gray-500 mb-1">Operational Center</p>
+                  <p className="text-sm font-medium">Panadura, Sri Lanka</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4 group">
+                <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center shrink-0 border border-white/10 group-hover:border-primary/50 transition-colors">
+                  <Phone className="w-5 h-5 text-gray-400 group-hover:text-primary transition-colors" />
+                </div>
+                <div>
+                  <p className="text-xs uppercase font-mono text-gray-500 mb-1">Inquiry Line</p>
+                  <p className="text-sm font-medium">+94 75 445 3334</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4 group">
+                <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center shrink-0 border border-white/10 group-hover:border-primary/50 transition-colors">
+                  <Mail className="w-5 h-5 text-gray-400 group-hover:text-primary transition-colors" />
+                </div>
+                <div>
+                  <p className="text-xs uppercase font-mono text-gray-500 mb-1">Direct Email</p>
+                  <p className="text-sm font-medium">info@codeplaystudios.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <motion.div
-          className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <p>© {new Date().getFullYear()} CodePlay Studios — Coding Your Vision. All rights reserved.</p>
-        </motion.div>
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex items-center gap-6 text-xs font-mono text-gray-500">
+            <p>© {new Date().getFullYear()} CodePlay Studios</p>
+            <div className="hidden md:block w-px h-3 bg-white/10" />
+            <p>All Rights Reserved</p>
+          </div>
+          
+          <div className="flex items-center gap-2">
+            <Rocket className="w-4 h-4 text-primary animate-pulse" />
+            <p className="font-mono text-[10px] tracking-[0.4em] uppercase">Smart Software. Real Solutions.</p>
+          </div>
+        </div>
       </div>
     </footer>
   );

@@ -74,15 +74,19 @@ const SEO = ({
     url: baseUrl,
     logo: `${baseUrl}/assets/logo_trans.png`,
     description: description,
+    founder: {
+      "@type": "Person",
+      name: "Sampath Dananjaya"
+    },
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Matara",
-      addressRegion: "Southern Province",
+      addressLocality: "Panadura",
+      addressRegion: "Western Province",
       addressCountry: "Sri Lanka",
     },
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+94-000-000-000",
+      telephone: "+94754453334",
       contactType: "Customer Service",
     },
     sameAs: [

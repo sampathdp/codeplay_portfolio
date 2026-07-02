@@ -1,10 +1,7 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
-import AISection from "@/components/AISection";
-import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
-import WhyChooseSection from "@/components/WhyChooseSection";
-import CaseStudiesSection from "@/components/CaseStudiesSection";
+import PortfolioTeaser from "@/components/PortfolioTeaser";
 import PricingSection from "@/components/PricingSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -26,11 +23,8 @@ export default function Home() {
       <div className="relative z-10">
         <Navigation />
         <HeroSection />
-        <AISection />
-        <AboutSection />
         <ServicesSection />
-        <WhyChooseSection />
-        <CaseStudiesSection />
+        <PortfolioTeaser />
         <PricingSection />
         <ContactSection />
         <Footer />
