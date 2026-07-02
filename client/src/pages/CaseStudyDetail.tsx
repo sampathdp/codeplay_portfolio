@@ -8,7 +8,7 @@ import { CASE_STUDIES } from "@/data/caseStudies";
 import { useScrollToTopOnNavigate } from "@/hooks/useScrollToTopOnNavigate";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, CheckCircle2, Cpu, Rocket, Target, Zap } from "lucide-react";
+import { ArrowLeft, CheckCircle2, Cpu, ExternalLink, Rocket, Target, Zap } from "lucide-react";
 import NotFound from "./not-found";
 
 export default function CaseStudyDetail() {
@@ -60,13 +60,22 @@ export default function CaseStudyDetail() {
                   {cs.description}
                 </p>
                 
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-3 mb-10">
                   {cs.techStack.map((tech) => (
                     <Badge key={tech} variant="secondary" className="bg-white/5 border-white/5 px-4 py-1 rounded-full text-xs font-medium">
                       {tech}
                     </Badge>
                   ))}
                 </div>
+
+                {cs.liveUrl && (
+                  <Button asChild size="lg" className="rounded-2xl px-8 h-12 font-bold group">
+                    <a href={cs.liveUrl} target="_blank" rel="noopener noreferrer">
+                      Visit Live Site
+                      <ExternalLink className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                    </a>
+                  </Button>
+                )}
               </motion.div>
 
               <motion.div
@@ -75,10 +84,45 @@ export default function CaseStudyDetail() {
                 transition={{ duration: 0.8 }}
                 className={`aspect-video rounded-[2.5rem] bg-gradient-to-br ${cs.gradient} border border-white/10 shadow-2xl relative overflow-hidden group p-12 flex items-center justify-center`}
               >
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors" />
-                <Rocket className="w-32 h-32 text-white/20 animate-pulse" />
+                {cs.images?.[0] ? (
+                  <>
+                    <img
+                      src={cs.images[0]}
+                      alt={cs.title}
+                      className="absolute inset-0 w-full h-full object-cover object-top"
+                    />
+                    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors" />
+                  </>
+                ) : (
+                  <>
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors" />
+                    <Rocket className="w-32 h-32 text-white/20 animate-pulse" />
+                  </>
+                )}
               </motion.div>
             </div>
+
+            {/* Screenshot Gallery */}
+            {cs.images && cs.images.length > 1 && (
+              <div className="grid md:grid-cols-2 gap-6 mb-24">
+                {cs.images.slice(1).map((img, i) => (
+                  <motion.div
+                    key={img}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.1 }}
+                    viewport={{ once: true }}
+                    className="aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-xl"
+                  >
+                    <img
+                      src={img}
+                      alt={`${cs.title} screenshot ${i + 2}`}
+                      className="w-full h-full object-cover object-top"
+                    />
+                  </motion.div>
+                ))}
+              </div>
+            )}
 
             {/* Metrics Row */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">

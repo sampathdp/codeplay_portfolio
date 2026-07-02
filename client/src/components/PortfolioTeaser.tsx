@@ -64,7 +64,7 @@ export default function PortfolioTeaser() {
               <Link href={`/case-studies/${project.slug}`}>
                 <div className="absolute inset-0 cursor-pointer">
                   <img
-                    src={project.image}
+                    src={project.images?.[0]}
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
@@ -73,7 +73,7 @@ export default function PortfolioTeaser() {
                   <div className="absolute inset-0 p-12 flex flex-col justify-end">
                     <div className="space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                       <div className="px-4 py-1 rounded-full bg-primary/20 border border-primary/30 w-fit text-xs font-mono text-primary uppercase">
-                        {project.category}
+                        {project.tag}
                       </div>
                       <h3 className="text-4xl font-bold text-white tracking-tight">{project.title}</h3>
                       <p className="text-white/60 text-lg line-clamp-2 max-w-sm">

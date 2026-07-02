@@ -54,7 +54,12 @@ function App() {
 
   return (
     <HelmetProvider>
-      <ThemeProvider defaultTheme="dark" enableSystem={false} attribute="class">
+      <ThemeProvider
+        defaultTheme="dark"
+        forcedTheme="dark"
+        enableSystem={false}
+        attribute="class"
+      >
         <CurrencyProvider>
           <TooltipProvider>
             <AnimatePresence mode="wait">

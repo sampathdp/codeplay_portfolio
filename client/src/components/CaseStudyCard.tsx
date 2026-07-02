@@ -13,6 +13,7 @@ interface CaseStudyCardProps {
   slug: string;
   gradient: string;
   index: number;
+  images?: string[];
 }
 
 export default function CaseStudyCard({
@@ -25,7 +26,9 @@ export default function CaseStudyCard({
   slug,
   gradient,
   index,
+  images,
 }: CaseStudyCardProps) {
+  const image = images?.[0];
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -38,6 +41,16 @@ export default function CaseStudyCard({
         <div className="relative h-full glass rounded-3xl overflow-hidden border border-white/10 p-1 transition-all duration-500 group-hover:border-primary/50 group-hover:shadow-[0_0_30px_rgba(0,212,255,0.15)]">
           {/* Visual Area */}
           <div className={`aspect-video rounded-2xl bg-gradient-to-br ${gradient} p-8 flex flex-col justify-end relative overflow-hidden`}>
+            {image && (
+              <>
+                <img
+                  src={image}
+                  alt={title}
+                  className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10" />
+              </>
+            )}
             {/* Decorative elements */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 blur-3xl transition-all duration-700 group-hover:bg-primary/20" />
             
