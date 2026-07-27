@@ -32,12 +32,12 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./Tools/backend/
-          # NOTE: adjust this if your FTP account's landing directory isn't
-          # the account home (/home/<user>/) - it needs to resolve to the
-          # api.codeplaystudios.com application root created in cPanel's
-          # Python Selector. Verify after the first run by checking whether
-          # app/main.py actually landed in that folder.
-          server-dir: /../api.codeplaystudios.com/
+          # The FTP account lands in /home/<user>/codeplaystudios.com/ (the
+          # frontend job deploys there with no server-dir override), but the
+          # Python App's "Application root" is api.codeplaystudios.com
+          # relative to the account HOME - a sibling one level up, not a
+          # child of the frontend folder. Hence ../ here rather than ./.
+          server-dir: ../api.codeplaystudios.com/
           exclude: |
             **/.venv/**
             **/__pycache__/**
