@@ -24,6 +24,11 @@ jobs:
         run: npm install
 
       - name: 🏗️ Build Project
+        env:
+          # Vite bakes VITE_* vars in at build time, not runtime - this has
+          # to be set here, not just in a local .env file, or the deployed
+          # site silently falls back to the localhost dev default.
+          VITE_TOOLS_API_URL: https://api.codeplaystudios.com
         run: npm run build
 
       - name: 📂 Sync files (FTP)
