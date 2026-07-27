@@ -37,7 +37,7 @@ jobs:
           # api.codeplaystudios.com application root created in cPanel's
           # Python Selector. Verify after the first run by checking whether
           # app/main.py actually landed in that folder.
-          server-dir: ./api.codeplaystudios.com/
+          server-dir: ../api.codeplaystudios.com/
           exclude: |
             **/.venv/**
             **/__pycache__/**
