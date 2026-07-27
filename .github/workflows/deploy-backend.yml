@@ -25,13 +25,17 @@ jobs:
           mkdir -p Tools/backend/tmp
           date -u > Tools/backend/tmp/restart.txt
 
-      - name: 📂 Sync files (FTP)
+      - name: 📂 Sync files (FTPS)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
-          port: 21
           username: ${{ secrets.BACKEND_FTP_USERNAME }}
           password: ${{ secrets.BACKEND_FTP_PASSWORD }}
+          protocol: ftps
+          port: 21
+          security: loose
+          timeout: 60000
+          log-level: verbose
           local-dir: ./Tools/backend/
           # The main FTP account (used by the frontend job) is chrooted to
           # the codeplaystudios.com folder - it can't reach the Python App's
@@ -40,4 +44,9 @@ jobs:
           # second FTP account created specifically scoped to
           # /home/<user>/api.codeplaystudios.com/, so its root already IS
           # the right place - no server-dir override needed.
+          exclude: |
+            **/.venv/**
+            **/__pycache__/**
+            **/*.pyc
+            **/Dockerfile
           dry-run: false
