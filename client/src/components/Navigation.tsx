@@ -19,6 +19,7 @@ export default function Navigation() {
 
   const links = [
     { href: "/case-studies", label: "Industrial Portfolio" },
+    { href: "/tools", label: "Tools" },
     { href: "/about", label: "About Us" },
     { href: "/contact", label: "Discovery" },
   ];

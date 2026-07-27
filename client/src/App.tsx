@@ -14,6 +14,10 @@ import CaseStudies from "@/pages/CaseStudies";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
 import CaseStudyDetail from "@/pages/CaseStudyDetail";
+import Tools from "@/pages/Tools";
+import ImageEditorTool from "@/pages/ImageEditorTool";
+import ImageConverterTool from "@/pages/ImageConverterTool";
+import VideoWatermarkTool from "@/pages/VideoWatermarkTool";
 import { useScrollToTopOnNavigate } from "@/hooks/useScrollToTopOnNavigate";
 import NotFound from "@/pages/not-found";
 import Preloader from "@/components/Preloader";
@@ -34,6 +38,10 @@ function Router() {
       <Route path="/unity-game-development" component={UnityDevelopment} />
       <Route path="/case-studies" component={CaseStudies} />
       <Route path="/case-studies/:slug" component={CaseStudyDetail} />
+      <Route path="/tools" component={Tools} />
+      <Route path="/tools/image-editor" component={ImageEditorTool} />
+      <Route path="/tools/image-converter" component={ImageConverterTool} />
+      <Route path="/tools/video-watermark" component={VideoWatermarkTool} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
       <Route component={NotFound} />

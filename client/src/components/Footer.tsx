@@ -92,6 +92,7 @@ export default function Footer() {
               {[
                 { label: "Our Story", href: "/about" },
                 { label: "Industrial Portfolio", href: "/case-studies" },
+                { label: "Free Tools", href: "/tools" },
                 { label: "Discovery", href: "/contact" },
                 { label: "Privacy Policy", href: "#" }
               ].map((link, i) => (
