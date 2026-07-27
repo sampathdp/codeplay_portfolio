@@ -29,18 +29,14 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          username: ${{ secrets.BACKEND_FTP_USERNAME }}
+          password: ${{ secrets.BACKEND_FTP_PASSWORD }}
           local-dir: ./Tools/backend/
-          # The FTP account lands in /home/<user>/codeplaystudios.com/ (the
-          # frontend job deploys there with no server-dir override), but the
-          # Python App's "Application root" is api.codeplaystudios.com
-          # relative to the account HOME - a sibling one level up, not a
-          # child of the frontend folder. Hence ../ here rather than ./.
-          server-dir: ../api.codeplaystudios.com/
-          exclude: |
-            **/.venv/**
-            **/__pycache__/**
-            **/*.pyc
-            **/Dockerfile
+          # The main FTP account (used by the frontend job) is chrooted to
+          # the codeplaystudios.com folder - it can't reach the Python App's
+          # actual root (a sibling folder) no matter what relative path is
+          # given here, since it can't escape its own chroot. This uses a
+          # second FTP account created specifically scoped to
+          # /home/<user>/api.codeplaystudios.com/, so its root already IS
+          # the right place - no server-dir override needed.
           dry-run: false
