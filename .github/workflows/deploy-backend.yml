@@ -19,7 +19,7 @@ jobs:
 
       - name: 🔄 Mark for Passenger restart
         # Passenger restarts the app whenever this file's mtime changes -
-        # this is its standard "deploy" signal, so every push effectively
+        # this is its s  tandard "deploy" signal, so every push effectively
         # triggers a live restart once uploaded.
         run: |
           mkdir -p Tools/backend/tmp
