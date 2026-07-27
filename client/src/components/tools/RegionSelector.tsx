@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import type { Region } from "@/lib/videoApi";
+import type { Region } from "@/lib/region";
 
-interface VideoRegionSelectorProps {
-  frameUrl: string;
+interface RegionSelectorProps {
+  imageUrl: string;
   naturalWidth: number;
   naturalHeight: number;
   region: Region;
@@ -12,20 +12,14 @@ interface VideoRegionSelectorProps {
 const MIN_SIZE = 12;
 
 /**
- * Lets the user drag/resize a rectangle over a still video frame to mark
- * the watermark's location. The region is tracked in natural (source video
- * pixel) coordinates - the single source of truth - and only converted
- * to/from on-screen pixels for rendering and pointer math, so it maps 1:1
- * onto the coordinates the backend needs regardless of how the frame is
- * scaled to fit the container.
+ * Lets the user drag/resize a rectangle over a still image (a video preview
+ * frame, or a plain uploaded image) to mark a watermark's location. The
+ * region is tracked in natural (source pixel) coordinates - the single
+ * source of truth - and only converted to/from on-screen pixels for
+ * rendering and pointer math, so it maps 1:1 onto the coordinates the
+ * backend needs regardless of how the image is scaled to fit the container.
  */
-export function VideoRegionSelector({
-  frameUrl,
-  naturalWidth,
-  naturalHeight,
-  region,
-  onRegionChange,
-}: VideoRegionSelectorProps) {
+export function RegionSelector({ imageUrl, naturalWidth, naturalHeight, region, onRegionChange }: RegionSelectorProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
   const drag = useRef<{
@@ -91,7 +85,7 @@ export function VideoRegionSelector({
       className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-[#0b0d14]"
     >
       <div className="relative shadow-2xl" style={{ width: displayW, height: displayH }}>
-        <img src={frameUrl} alt="Video preview frame" className="absolute inset-0 h-full w-full select-none" draggable={false} />
+        <img src={imageUrl} alt="Preview" className="absolute inset-0 h-full w-full select-none" draggable={false} />
         <div
           onPointerDown={startDrag("move")}
           onPointerMove={onPointerMove}

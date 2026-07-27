@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { ImagePlus, RefreshCw, Clapperboard, ArrowRight, Sparkles, type LucideIcon } from "lucide-react";
+import { ImagePlus, RefreshCw, Eraser, Clapperboard, ArrowRight, Sparkles, type LucideIcon } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
@@ -44,6 +44,16 @@ const categories: ToolCategory[] = [
         color: "text-violet-400",
         bg: "bg-violet-400/10",
         border: "border-violet-400/20",
+      },
+      {
+        icon: Eraser,
+        title: "Image Watermark Remover",
+        description:
+          "Mark the Gemini icon or any watermark on an image and remove it with lossless, content-aware repair — full original resolution, no quality loss.",
+        href: "/tools/image-watermark",
+        color: "text-rose-400",
+        bg: "bg-rose-400/10",
+        border: "border-rose-400/20",
       },
     ],
   },

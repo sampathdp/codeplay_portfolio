@@ -18,6 +18,7 @@ import Tools from "@/pages/Tools";
 import ImageEditorTool from "@/pages/ImageEditorTool";
 import ImageConverterTool from "@/pages/ImageConverterTool";
 import VideoWatermarkTool from "@/pages/VideoWatermarkTool";
+import ImageWatermarkTool from "@/pages/ImageWatermarkTool";
 import { useScrollToTopOnNavigate } from "@/hooks/useScrollToTopOnNavigate";
 import NotFound from "@/pages/not-found";
 import Preloader from "@/components/Preloader";
@@ -41,6 +42,7 @@ function Router() {
       <Route path="/tools" component={Tools} />
       <Route path="/tools/image-editor" component={ImageEditorTool} />
       <Route path="/tools/image-converter" component={ImageConverterTool} />
+      <Route path="/tools/image-watermark" component={ImageWatermarkTool} />
       <Route path="/tools/video-watermark" component={VideoWatermarkTool} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />

@@ -11,9 +11,10 @@ import {
   AlertCircle,
 } from "lucide-react";
 import { VideoUploadDropzone } from "@/components/tools/VideoUploadDropzone";
-import { VideoRegionSelector } from "@/components/tools/VideoRegionSelector";
+import { RegionSelector } from "@/components/tools/RegionSelector";
 import SEO from "@/components/SEO";
-import { probeVideo, removeLogo, replaceLogo, type Region } from "@/lib/videoApi";
+import { probeVideo, removeLogo, replaceLogo } from "@/lib/videoApi";
+import type { Region } from "@/lib/region";
 
 type Corner = "top-left" | "top-right" | "bottom-left" | "bottom-right";
 
@@ -206,8 +207,8 @@ export default function VideoWatermarkTool() {
             <div className="space-y-4">
               <div className="h-[50vh] min-h-[320px]">
                 {frameUrl && (
-                  <VideoRegionSelector
-                    frameUrl={frameUrl}
+                  <RegionSelector
+                    imageUrl={frameUrl}
                     naturalWidth={videoW}
                     naturalHeight={videoH}
                     region={region}

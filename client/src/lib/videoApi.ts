@@ -4,6 +4,10 @@
  * endpoints and the reasoning behind the API_BASE default.
  */
 
+import type { Region } from "./region";
+
+export type { Region } from "./region";
+
 const API_BASE = import.meta.env.VITE_TOOLS_API_URL || "http://127.0.0.1:8001";
 
 export class VideoApiError extends Error {}
@@ -50,13 +54,6 @@ export async function probeVideo(file: File): Promise<VideoProbeResult> {
     duration: Number(res.headers.get("X-Video-Duration") ?? 0),
     fps: Number(res.headers.get("X-Video-Fps") ?? 0),
   };
-}
-
-export interface Region {
-  x: number;
-  y: number;
-  w: number;
-  h: number;
 }
 
 /** Re-uploads the full video (the backend is stateless between requests)
