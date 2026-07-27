@@ -7,4 +7,5 @@ Pillow>=10.2.0
 rembg>=2.0.57
 onnxruntime>=1.17.0
 imageio-ffmpeg>=0.5.1
+a2wsgi>=1.10.0
 pip-system-certs>=4.0; sys_platform == "win32"

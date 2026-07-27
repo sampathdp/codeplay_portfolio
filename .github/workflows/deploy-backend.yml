@@ -1,0 +1,46 @@
+name: Deploy Backend to Shared Hosting
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - "Tools/backend/**"
+      - ".github/workflows/deploy-backend.yml"
+
+jobs:
+  backend-deploy:
+    name: 🐍 Deploy Backend
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
+
+      - name: 🔄 Mark for Passenger restart
+        # Passenger restarts the app whenever this file's mtime changes -
+        # this is its standard "deploy" signal, so every push effectively
+        # triggers a live restart once uploaded.
+        run: |
+          mkdir -p Tools/backend/tmp
+          date -u > Tools/backend/tmp/restart.txt
+
+      - name: 📂 Sync files (FTP)
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./Tools/backend/
+          # NOTE: adjust this if your FTP account's landing directory isn't
+          # the account home (/home/<user>/) - it needs to resolve to the
+          # api.codeplaystudios.com application root created in cPanel's
+          # Python Selector. Verify after the first run by checking whether
+          # app/main.py actually landed in that folder.
+          server-dir: ./api.codeplaystudios.com/
+          exclude: |
+            **/.venv/**
+            **/__pycache__/**
+            **/*.pyc
+            **/Dockerfile
+          dry-run: false

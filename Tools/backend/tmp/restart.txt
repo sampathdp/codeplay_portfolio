@@ -1,0 +1,4 @@
+Touching this file's mtime tells Passenger to restart the app. The deploy
+workflow (.github/workflows/deploy-backend.yml) rewrites it on every deploy
+so new code actually takes effect instead of the old worker process sticking
+around.
