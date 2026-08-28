@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { ImagePlus, RefreshCw, Eraser, Clapperboard, ArrowRight, Sparkles, type LucideIcon } from "lucide-react";
+import { ImagePlus, RefreshCw, Eraser, Clapperboard, ArrowRight, Sparkles, FileText, type LucideIcon } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
@@ -69,6 +69,21 @@ const categories: ToolCategory[] = [
         color: "text-amber-400",
         bg: "bg-amber-400/10",
         border: "border-amber-400/20",
+      },
+    ],
+  },
+  {
+    title: "Documents",
+    tools: [
+      {
+        icon: FileText,
+        title: "Image to PDF Template Editor",
+        description:
+          "Upload a certificate, form, or document image, patch/edit its text and logos, set where page 1 ends, and export a print-ready 2-page A4 PDF.",
+        href: "/tools/pdf-template",
+        color: "text-emerald-400",
+        bg: "bg-emerald-400/10",
+        border: "border-emerald-400/20",
       },
     ],
   },

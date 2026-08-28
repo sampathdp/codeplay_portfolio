@@ -1,0 +1,20 @@
+# Supabase CLI config for CodePlay Insights.
+# Local dev:  supabase start   (needs Docker)
+# Push schema: supabase db push --db-url "$SUPABASE_DB_URL"
+project_id = "codeplay-insights"
+
+[db]
+major_version = 15
+
+[api]
+enabled = true
+schemas = ["public"]
+extra_search_path = ["public"]
+max_rows = 1000
+
+[auth]
+enable_signup = false
+# Admins sign in via email magic link; there is no public signup.
+[auth.email]
+enable_signup = false
+enable_confirmations = true

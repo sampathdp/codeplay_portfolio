@@ -11,6 +11,9 @@ export default defineConfig({
     },
   },
   root: path.resolve(import.meta.dirname, "client"),
+  // `root` is client/, but the single .env lives at the repo root (shared
+  // with the engine scripts). Without this, VITE_* vars are not picked up.
+  envDir: path.resolve(import.meta.dirname),
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,

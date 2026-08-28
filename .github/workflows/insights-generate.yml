@@ -1,0 +1,54 @@
+name: Insights — Generate Draft Articles
+
+# Runs AFTER discovery. Processes queued generation jobs
+# (`insights_content_generation_jobs`) with Gemini, subject to the daily
+# article quota and the AI budget in `insights_settings`. Every article
+# lands as `review` — nothing is auto-published. No image generation yet.
+
+on:
+  schedule:
+    # ~30 min after each discovery run (UTC)
+    - cron: "30 3,10,17 * * *"
+  workflow_dispatch:
+    inputs:
+      cluster_id:
+        description: "Queue + generate one specific cluster id"
+        type: string
+        required: false
+      limit:
+        description: "Max jobs to process this run"
+        type: string
+        default: "3"
+
+concurrency:
+  group: insights-generate
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    name: Generate
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+      - run: npm ci
+
+      - name: Run generation worker
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          # Optional model overrides — real defaults live in config.ts.
+          GEMINI_TEXT_MODEL: ${{ vars.GEMINI_TEXT_MODEL }}
+          GEMINI_FAST_MODEL: ${{ vars.GEMINI_FAST_MODEL }}
+          GEMINI_IMAGE_MODEL: ${{ vars.GEMINI_IMAGE_MODEL }}
+        run: |
+          ARGS="--limit ${{ inputs.limit || '3' }}"
+          if [ -n "${{ inputs.cluster_id }}" ]; then
+            ARGS="$ARGS --cluster ${{ inputs.cluster_id }}"
+          fi
+          npx tsx insights-engine/src/generation/run.ts $ARGS

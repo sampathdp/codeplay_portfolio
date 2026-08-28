@@ -23,12 +23,35 @@ jobs:
       - name: 📦 Install dependencies
         run: npm install
 
+      - name: 🗞️ Refresh Insights SEO artefacts (snapshot + sitemap + RSS)
+        # Pulls published articles from Supabase and regenerates
+        # client/src/data/insights.generated.ts, sitemap-insights.xml and
+        # insights/rss.xml. Self-guards when Supabase env is absent and
+        # never fails the deploy.
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: npm run insights:seo
+        continue-on-error: true
+
       - name: 🏗️ Build Project
         env:
+          # CodePlay Insights SEO / analytics / ads (Phase 8). All non-secret
+          # — a GA4 id, an AdSense publisher id, a flag, a GSC token. Set as
+          # repository *variables*; unset = feature renders nothing.
+          VITE_GA4_ID: ${{ vars.VITE_GA4_ID }}
+          VITE_ADSENSE_CLIENT: ${{ vars.VITE_ADSENSE_CLIENT }}
+          VITE_ADSENSE_ENABLED: ${{ vars.VITE_ADSENSE_ENABLED }}
+          VITE_GSC_VERIFICATION: ${{ vars.VITE_GSC_VERIFICATION }}
           # Vite bakes VITE_* vars in at build time, not runtime - this has
           # to be set here, not just in a local .env file, or the deployed
           # site silently falls back to the localhost dev default.
           VITE_TOOLS_API_URL: https://api.codeplaystudios.com
+          # CodePlay Insights (optional). Both are anon-safe - RLS enforces
+          # access. When unset the Insights admin page just reports "not
+          # configured" and @supabase/supabase-js is tree-shaken out.
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
         run: npm run build
 
       - name: 📂 Sync files (FTPS)

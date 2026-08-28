@@ -1,0 +1,54 @@
+name: Insights — Discover Trending Stories
+
+# The site is static (no long-running server), so discovery runs as a
+# scheduled GitHub Action. It only gathers, dedupes, scores and stores
+# trending candidates — it never generates or publishes articles.
+#
+# Times are UTC. Asia/Colombo is UTC+5:30, so these map to roughly
+# 08:30 / 12:30 / 15:30 / 19:30 / 22:30 local. The authoritative schedule
+# config lives in the `insights_settings` table (key: scheduler).
+
+on:
+  schedule:
+    - cron: "0 3,7,10,14,17,21 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Run without writing to the database"
+        type: boolean
+        default: false
+
+concurrency:
+  group: insights-discover
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    name: Discover
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - run: npm ci
+
+      - name: Run discovery engine
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          # Raises the GitHub API rate limit for the releases adapter.
+          GITHUB_TOKEN: ${{ github.token }}
+          # Optional — enables the Reddit community-signal adapter.
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            npx tsx insights-engine/src/run.ts discover --dry-run --select
+          else
+            npx tsx insights-engine/src/run.ts discover --select
+          fi

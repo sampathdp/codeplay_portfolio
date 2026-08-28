@@ -92,6 +92,8 @@ export default function Footer() {
               {[
                 { label: "Our Story", href: "/about" },
                 { label: "Industrial Portfolio", href: "/case-studies" },
+                { label: "Insights", href: "/insights" },
+                { label: "Editorial Policy", href: "/insights/editorial-policy" },
                 { label: "Free Tools", href: "/tools" },
                 { label: "Discovery", href: "/contact" },
                 { label: "Privacy Policy", href: "#" }

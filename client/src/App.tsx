@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { Switch, Route } from "wouter";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -19,12 +19,24 @@ import ImageEditorTool from "@/pages/ImageEditorTool";
 import ImageConverterTool from "@/pages/ImageConverterTool";
 import VideoWatermarkTool from "@/pages/VideoWatermarkTool";
 import ImageWatermarkTool from "@/pages/ImageWatermarkTool";
+import PdfTemplateTool from "@/pages/PdfTemplateTool";
 import { useScrollToTopOnNavigate } from "@/hooks/useScrollToTopOnNavigate";
 import NotFound from "@/pages/not-found";
 import Preloader from "@/components/Preloader";
 import { AnimatePresence } from "framer-motion";
 import { CurrencyProvider } from "@/context/CurrencyContext";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
+
+// Insights pulls in @supabase/supabase-js on the admin path — lazy-load
+// so it stays out of the marketing site's main bundle.
+const InsightsHome = lazy(() => import("@/pages/insights/InsightsHome"));
+const InsightsArticle = lazy(() => import("@/pages/insights/InsightsArticle"));
+const InsightsCategory = lazy(() => import("@/pages/insights/InsightsCategory"));
+const InsightsTag = lazy(() => import("@/pages/insights/InsightsTag"));
+const InsightsSearch = lazy(() => import("@/pages/insights/InsightsSearch"));
+const InsightsInfoPage = lazy(() => import("@/pages/insights/InsightsInfoPage"));
+const InsightsAuthor = lazy(() => import("@/pages/insights/InsightsAuthor"));
+const AdminInsights = lazy(() => import("@/pages/admin/AdminInsights"));
 
 function Router() {
   useScrollToTopOnNavigate();
@@ -44,6 +56,62 @@ function Router() {
       <Route path="/tools/image-converter" component={ImageConverterTool} />
       <Route path="/tools/image-watermark" component={ImageWatermarkTool} />
       <Route path="/tools/video-watermark" component={VideoWatermarkTool} />
+      <Route path="/tools/pdf-template" component={PdfTemplateTool} />
+      <Route path="/insights">
+        <Suspense fallback={null}>
+          <InsightsHome />
+        </Suspense>
+      </Route>
+      <Route path="/insights/search">
+        <Suspense fallback={null}>
+          <InsightsSearch />
+        </Suspense>
+      </Route>
+      <Route path="/insights/category/:slug">
+        <Suspense fallback={null}>
+          <InsightsCategory />
+        </Suspense>
+      </Route>
+      <Route path="/insights/tag/:slug">
+        <Suspense fallback={null}>
+          <InsightsTag />
+        </Suspense>
+      </Route>
+      <Route path="/insights/authors/:slug">
+        <Suspense fallback={null}>
+          <InsightsAuthor />
+        </Suspense>
+      </Route>
+      <Route path="/insights/about">
+        <Suspense fallback={null}>
+          <InsightsInfoPage slug="about" />
+        </Suspense>
+      </Route>
+      <Route path="/insights/editorial-policy">
+        <Suspense fallback={null}>
+          <InsightsInfoPage slug="editorial-policy" />
+        </Suspense>
+      </Route>
+      <Route path="/insights/ai-policy">
+        <Suspense fallback={null}>
+          <InsightsInfoPage slug="ai-policy" />
+        </Suspense>
+      </Route>
+      <Route path="/insights/corrections">
+        <Suspense fallback={null}>
+          <InsightsInfoPage slug="corrections" />
+        </Suspense>
+      </Route>
+      <Route path="/insights/:slug">
+        <Suspense fallback={null}>
+          <InsightsArticle />
+        </Suspense>
+      </Route>
+      <Route path="/admin/insights/:page?/:id?">
+        <Suspense fallback={null}>
+          <AdminInsights />
+        </Suspense>
+      </Route>
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
       <Route component={NotFound} />

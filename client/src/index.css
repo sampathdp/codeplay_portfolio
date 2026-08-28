@@ -106,3 +106,38 @@
 .animate-fade-in {
   animation: fadeIn 0.8s ease-out forwards;
 }
+
+/* CodePlay Insights — editorial article body refinements */
+.insights-prose {
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+.insights-prose > h2 {
+  scroll-margin-top: 6rem;
+  border-top: 1px solid hsl(var(--border) / 0.6);
+  padding-top: 1.75rem;
+}
+.insights-prose > h2:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+.insights-prose blockquote {
+  border-left-color: hsl(var(--primary) / 0.5);
+  font-style: normal;
+}
+.insights-prose :where(code):not(pre code) {
+  background: hsl(var(--muted) / 0.6);
+  padding: 0.15em 0.4em;
+  border-radius: 0.3rem;
+  font-size: 0.9em;
+}
+.insights-prose pre {
+  border: 1px solid hsl(var(--border) / 0.6);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in {
+    animation: none;
+    opacity: 1;
+  }
+}
