@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "wouter";
-import { FileText } from "lucide-react";
+import { FileText, Plus } from "lucide-react";
 import { ADMIN_INSIGHTS_BASE } from "@/lib/insights/routes";
 import type { ArticleStatusRow } from "@/lib/insights/records";
 import { listArticles } from "@/lib/insights/admin";
@@ -45,6 +45,12 @@ export default function Articles() {
             {g.label}
           </button>
         ))}
+        <Link
+          href={`${ADMIN_INSIGHTS_BASE}/articles/new`}
+          className="ml-auto inline-flex items-center gap-1 rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+        >
+          <Plus className="h-3.5 w-3.5" /> New article
+        </Link>
       </div>
 
       {list.loading ? (

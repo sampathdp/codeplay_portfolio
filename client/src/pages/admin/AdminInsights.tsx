@@ -7,6 +7,7 @@ import AdminLayout from "@/components/admin/AdminLayout";
 import Dashboard from "./insights/Dashboard";
 import Candidates from "./insights/Candidates";
 import Articles from "./insights/Articles";
+import NewArticle from "./insights/NewArticle";
 import Editor from "./insights/Editor";
 import Sources from "./insights/Sources";
 import SettingsPage from "./insights/Settings";
@@ -36,7 +37,10 @@ export default function AdminInsights() {
       break;
     case "articles":
       nav = "articles";
-      if (id) {
+      if (id === "new") {
+        title = "New article";
+        body = <NewArticle />;
+      } else if (id) {
         title = "Edit article";
         body = <Editor id={id} />;
       } else {

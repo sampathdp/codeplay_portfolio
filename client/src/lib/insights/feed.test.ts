@@ -1,4 +1,4 @@
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, beforeAll, afterAll } from "vitest";
 import {
   allArticles,
   getFeatured,
@@ -12,9 +12,15 @@ import {
   nonEmptyCategories,
   formatRelative,
   formatDate,
+  __setFeedArticlesForTests,
 } from "./feed";
+import { SAMPLE_INSIGHTS_ARTICLES } from "@/data/insights.sample";
 
-// In vitest (DEV), feed.ts serves the sample dataset (8 articles).
+// Sample data is a TEST FIXTURE only — it is never imported by app code
+// and never ships. The feed selectors read it here via the test hook.
+beforeAll(() => __setFeedArticlesForTests(SAMPLE_INSIGHTS_ARTICLES));
+afterAll(() => __setFeedArticlesForTests(null));
+
 describe("feed selectors (sample data)", () => {
   it("returns published articles newest first", () => {
     const all = allArticles();

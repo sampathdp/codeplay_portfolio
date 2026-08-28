@@ -12,7 +12,7 @@
  * refresh must not block a deploy.
  */
 
-import { mkdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { createServiceClient } from "../store/supabase";
 import { INSIGHTS_CATEGORY_SLUGS } from "../categories";
@@ -62,19 +62,29 @@ async function main(): Promise<void> {
     console.log("insights:seo — no Supabase env; writing article-less artefacts");
   }
 
-  // Content snapshot — only overwrite when we actually queried the DB, so a
-  // mis-configured run can never wipe a good snapshot.
+  // Only rewrite artefacts when we actually queried the DB, so a
+  // mis-configured or secret-less run (e.g. CI without Supabase secrets)
+  // can never wipe a good, committed snapshot / sitemap / feed. When not
+  // configured we only *bootstrap* missing files so a fresh checkout still
+  // ships something valid.
+  const bootstrap = !snapshotFromDb;
+
   if (snapshotFromDb) {
     write(SNAPSHOT, renderArticlesModule(articles));
   }
 
-  write(
-    SITEMAP,
-    buildInsightsSitemap(articles, [...INSIGHTS_CATEGORY_SLUGS]),
-  );
-  write(RSS, buildRssXml(articles));
+  if (snapshotFromDb || !existsSync(SITEMAP)) {
+    write(SITEMAP, buildInsightsSitemap(articles, [...INSIGHTS_CATEGORY_SLUGS]));
+  }
+  if (snapshotFromDb || !existsSync(RSS)) {
+    write(RSS, buildRssXml(articles));
+  }
 
-  console.log("insights:seo — done");
+  console.log(
+    bootstrap
+      ? "insights:seo — no DB; kept existing artefacts (bootstrapped any missing)"
+      : "insights:seo — done",
+  );
 }
 
 main().catch((err) => {

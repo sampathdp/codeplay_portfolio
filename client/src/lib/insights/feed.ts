@@ -15,12 +15,26 @@ import type {
 } from "./types";
 import { INSIGHTS_CATEGORIES, type InsightsCategory } from "./categories";
 import { INSIGHTS_ARTICLES } from "@/data/insights.generated";
-import { SAMPLE_INSIGHTS_ARTICLES } from "@/data/insights.sample";
+
+/**
+ * The public site shows ONLY real, published articles from the build-time
+ * snapshot (`insights.generated.ts`, produced by `npm run insights:seo`
+ * from Supabase). No sample/placeholder data ships in any environment —
+ * an empty snapshot renders the "launching soon" empty state.
+ *
+ * `__setFeedArticlesForTests` lets the unit tests inject a fixture; it is
+ * a no-op in normal use and is tree-shaken from the production bundle.
+ */
+let testOverride: InsightsArticle[] | null = null;
+
+export function __setFeedArticlesForTests(
+  articles: InsightsArticle[] | null,
+): void {
+  testOverride = articles;
+}
 
 function source(): InsightsArticle[] {
-  if (INSIGHTS_ARTICLES.length > 0) return INSIGHTS_ARTICLES;
-  if (import.meta.env.DEV) return SAMPLE_INSIGHTS_ARTICLES;
-  return [];
+  return testOverride ?? INSIGHTS_ARTICLES;
 }
 
 const byNewest = (a: InsightsArticle, b: InsightsArticle) =>

@@ -1,7 +1,10 @@
 /**
- * Sample CodePlay Insights articles — used ONLY in dev (`import.meta.env.DEV`)
- * when the generated snapshot is empty, so the public layout can be
- * previewed and tested. Never shipped to production (`feed.ts` guards this).
+ * TEST FIXTURE ONLY.
+ *
+ * This dataset is imported exclusively by `feed.test.ts` (via
+ * `__setFeedArticlesForTests`). No application code imports it, so it is
+ * never bundled and never rendered — in dev or in production. The public
+ * site shows only real published articles from `insights.generated.ts`.
  *
  * Not auto-generated — safe to edit.
  */
