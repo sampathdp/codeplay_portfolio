@@ -20,6 +20,27 @@ export function isTransientError(err: unknown): boolean {
   );
 }
 
+/**
+ * A *hard* quota stop: the free-tier per-day request cap, or billing not
+ * enabled on the Google Cloud project. Unlike a per-minute 429 this will
+ * NOT clear by retrying within the same run — the worker must abort and
+ * leave the job queued for a later run (after the quota window resets or
+ * billing is turned on).
+ */
+export function isDailyQuotaError(err: unknown): boolean {
+  const m = (err instanceof Error ? err.message : String(err)).toLowerCase();
+  if (!m.includes("resource_exhausted") && !/\b429\b/.test(m)) return false;
+  return (
+    m.includes("perday") ||
+    m.includes("per day") ||
+    m.includes("quotafailure") ||
+    m.includes("check your plan and billing") ||
+    m.includes("free_tier") ||
+    m.includes("free-tier") ||
+    m.includes("freetier")
+  );
+}
+
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 export async function retryTransient<T>(

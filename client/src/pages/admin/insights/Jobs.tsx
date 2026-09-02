@@ -1,7 +1,14 @@
 import { Link } from "wouter";
 import { RefreshCw } from "lucide-react";
 import { ADMIN_INSIGHTS_BASE } from "@/lib/insights/routes";
-import { listGenerationJobs, retryJob, aiSpendToday } from "@/lib/insights/admin";
+import {
+  listGenerationJobs,
+  retryJob,
+  aiSpendToday,
+  cancelJob,
+  cancelAllPendingJobs,
+  clearInactiveJobs,
+} from "@/lib/insights/admin";
 import type { GenerationJobRow } from "@/lib/insights/records";
 import { useAsync, useAction } from "@/components/admin/useAsync";
 import {
@@ -43,9 +50,24 @@ export default function Jobs() {
       <Card
         title="Failed & retryable"
         action={
-          <button onClick={jobs.reload} className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground">
-            <RefreshCw className="h-3 w-3" /> Refresh
-          </button>
+          <div className="flex items-center gap-3">
+            {failed.length > 0 && (
+              <button
+                onClick={() => {
+                  if (window.confirm(`Permanently delete ${failed.length} failed / cancelled job(s)?`)) {
+                    action.run("clear-inactive", clearInactiveJobs, jobs.reload);
+                  }
+                }}
+                className="text-xs text-destructive hover:underline disabled:opacity-50"
+                disabled={action.pending === "clear-inactive"}
+              >
+                Clear all
+              </button>
+            )}
+            <button onClick={jobs.reload} className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground">
+              <RefreshCw className="h-3 w-3" /> Refresh
+            </button>
+          </div>
         }
       >
         {jobs.loading ? (
@@ -84,7 +106,24 @@ export default function Jobs() {
         )}
       </Card>
 
-      <Card title={`In flight (${active.length})`}>
+      <Card
+        title={`In flight (${active.length})`}
+        action={
+          active.length > 0 ? (
+            <button
+              onClick={() => {
+                if (window.confirm(`Cancel all ${active.length} queued / running job(s)?`)) {
+                  action.run("cancel-all", cancelAllPendingJobs, jobs.reload);
+                }
+              }}
+              className="text-xs text-destructive hover:underline disabled:opacity-50"
+              disabled={action.pending === "cancel-all"}
+            >
+              Cancel all
+            </button>
+          ) : undefined
+        }
+      >
         {active.length === 0 ? (
           <EmptyRow>Nothing queued or running.</EmptyRow>
         ) : (
@@ -94,6 +133,13 @@ export default function Jobs() {
                 <StatusPill status={j.status} />
                 <span className="text-xs">{j.kind.replace(/_/g, " ")} · {j.step}</span>
                 <span className="ml-auto text-[0.7rem] text-muted-foreground">{relTime(j.created_at)}</span>
+                <button
+                  onClick={() => action.run(`cancel-${j.id}`, () => cancelJob(j.id), jobs.reload)}
+                  className="text-[0.7rem] text-muted-foreground hover:text-destructive disabled:opacity-50"
+                  disabled={action.pending === `cancel-${j.id}`}
+                >
+                  Cancel
+                </button>
               </li>
             ))}
           </ul>

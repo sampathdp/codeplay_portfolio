@@ -149,6 +149,40 @@ export function listFailedJobs(limit = 30): Promise<GenerationJobRow[]> {
   return listGenerationJobs({ status: ["failed", "cancelled"], limit });
 }
 
+/** Cancel a single queued / running job so the worker skips it. */
+export async function cancelJob(id: string): Promise<void> {
+  const { error } = await getInsightsSupabase()
+    .from(T.generationJobs)
+    .update({ status: "cancelled", completed_at: new Date().toISOString() })
+    .eq("id", id)
+    .in("status", ["queued", "running"]);
+  if (error) throw new Error(error.message);
+}
+
+/** Cancel every queued or running job in one shot — the "clear the stuck
+ * queue" button. Returns how many rows were cancelled. */
+export async function cancelAllPendingJobs(): Promise<number> {
+  const { data, error } = await getInsightsSupabase()
+    .from(T.generationJobs)
+    .update({ status: "cancelled", completed_at: new Date().toISOString() })
+    .in("status", ["queued", "running"])
+    .select("id");
+  if (error) throw new Error(error.message);
+  return data?.length ?? 0;
+}
+
+/** Permanently delete every failed / cancelled job — clears the history
+ * list. Returns how many rows were removed. */
+export async function clearInactiveJobs(): Promise<number> {
+  const { data, error } = await getInsightsSupabase()
+    .from(T.generationJobs)
+    .delete()
+    .in("status", ["failed", "cancelled"])
+    .select("id");
+  if (error) throw new Error(error.message);
+  return data?.length ?? 0;
+}
+
 export interface AiSpendSummary {
   totalUsd: number;
   calls: number;

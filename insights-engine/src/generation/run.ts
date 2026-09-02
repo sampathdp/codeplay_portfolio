@@ -14,6 +14,7 @@ import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 import { resolveGeminiModels } from "../config";
 import type { ArticleType } from "./schema";
 import { createGeminiClient } from "../gemini/client";
+import { isDailyQuotaError } from "../gemini/retry";
 import {
   BudgetedGeminiClient,
   type BudgetState,
@@ -257,6 +258,21 @@ async function main() {
     if (!job) throw new Error("could not queue job");
   }
 
+  // Reclaim jobs left "running" by a previous worker that crashed or was
+  // killed mid-call. Anything running longer than this is not actually in
+  // flight — put it back on the queue so a later run retries it.
+  const STALE_RUNNING_MS = 30 * 60 * 1000;
+  const staleBefore = new Date(Date.now() - STALE_RUNNING_MS).toISOString();
+  const reclaimed = await sb
+    .from("insights_content_generation_jobs")
+    .update({ status: "queued", started_at: null })
+    .eq("status", "running")
+    .lt("started_at", staleBefore)
+    .select("id");
+  if (reclaimed.data?.length) {
+    console.log(JSON.stringify({ msg: "jobs.reclaimed", count: reclaimed.data.length }));
+  }
+
   let generatedToday = await articlesGeneratedToday(sb);
   const { data: jobs, error } = await sb
     .from("insights_content_generation_jobs")
@@ -361,13 +377,27 @@ async function main() {
       }
     } catch (err) {
       const message = err instanceof Error ? err.message : String(err);
+      await recordUsage(sb, jobId, String(job.cluster_id ?? ""), usageRecords);
+
+      if (isDailyQuotaError(err)) {
+        // Hard quota stop — every remaining call this run would 429 too.
+        // Put the job back on the queue (not "failed", no attempt burned)
+        // so it resumes automatically once the quota resets or billing is
+        // enabled, and stop the run here.
+        await sb.from("insights_content_generation_jobs").update({
+          status: "queued",
+          started_at: null,
+        }).eq("id", jobId);
+        console.error(JSON.stringify({ msg: "run.aborted.quota", jobId, error: message }));
+        return;
+      }
+
       await sb.from("insights_content_generation_jobs").update({
         status: "failed",
         error: message,
         attempt_count: Number(job.attempt_count ?? 0) + 1,
         completed_at: new Date().toISOString(),
       }).eq("id", jobId);
-      await recordUsage(sb, jobId, String(job.cluster_id ?? ""), usageRecords);
       console.error(JSON.stringify({ msg: "job.failed", jobId, error: message }));
     }
   }
@@ -399,16 +429,38 @@ async function main() {
         (r) => textUsage.push(r),
       );
 
-      const status = await runImageForArticle(sb, {
-        articleId,
-        jobId,
-        imageModel,
-        imagePricing,
-        imageSettings,
-        textClient: budgeted,
-        promptOverride: (params.prompt_override as string) ?? null,
-        force: Boolean(params.force),
-      });
+      let status: string;
+      try {
+        status = await runImageForArticle(sb, {
+          articleId,
+          jobId,
+          imageModel,
+          imagePricing,
+          imageSettings,
+          textClient: budgeted,
+          promptOverride: (params.prompt_override as string) ?? null,
+          force: Boolean(params.force),
+        });
+      } catch (err) {
+        state.dailySpentUsd += budgeted.runSpentUsd;
+        state.dailyCalls += budgeted.runCalls;
+        const message = err instanceof Error ? err.message : String(err);
+        if (isDailyQuotaError(err)) {
+          await sb.from("insights_content_generation_jobs").update({
+            status: "queued",
+            started_at: null,
+          }).eq("id", jobId);
+          console.error(JSON.stringify({ msg: "run.aborted.quota", jobId, error: message }));
+          return;
+        }
+        await sb.from("insights_content_generation_jobs").update({
+          status: "failed",
+          error: message,
+          completed_at: new Date().toISOString(),
+        }).eq("id", jobId);
+        console.error(JSON.stringify({ msg: "image.job.failed", jobId, error: message }));
+        continue;
+      }
       state.dailySpentUsd += budgeted.runSpentUsd;
       state.dailyCalls += budgeted.runCalls;
 
