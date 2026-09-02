@@ -33,8 +33,64 @@ export function __setFeedArticlesForTests(
   testOverride = articles;
 }
 
+// --- live hydration store -------------------------------------------
+//
+// The build-time snapshot is only as fresh as the last deploy. When
+// Supabase is configured the public pages also hydrate live: `liveFeed.ts`
+// fetches the currently-published articles once per page load and calls
+// `setLiveArticles`, and every feed reader below transparently switches to
+// that data. Falls back to the snapshot when Supabase is absent or the
+// fetch fails.
+
+export type FeedStatus = "static" | "loading" | "live" | "error";
+
+let liveArticles: InsightsArticle[] | null = null;
+let feedStatus: FeedStatus = "static";
+let feedVersion = 0;
+const feedListeners = new Set<() => void>();
+
+function emitFeedChange(): void {
+  feedVersion += 1;
+  feedListeners.forEach((listener) => listener());
+}
+
+export function subscribeFeed(cb: () => void): () => void {
+  feedListeners.add(cb);
+  return () => {
+    feedListeners.delete(cb);
+  };
+}
+
+export function getFeedVersion(): number {
+  return feedVersion;
+}
+
+export function getFeedStatus(): FeedStatus {
+  return feedStatus;
+}
+
+export function setFeedLoading(): void {
+  if (feedStatus === "static") {
+    feedStatus = "loading";
+    emitFeedChange();
+  }
+}
+
+export function setLiveArticles(articles: InsightsArticle[]): void {
+  liveArticles = articles;
+  feedStatus = "live";
+  emitFeedChange();
+}
+
+export function setFeedError(): void {
+  if (feedStatus !== "live") {
+    feedStatus = "error";
+    emitFeedChange();
+  }
+}
+
 function source(): InsightsArticle[] {
-  return testOverride ?? INSIGHTS_ARTICLES;
+  return testOverride ?? liveArticles ?? INSIGHTS_ARTICLES;
 }
 
 const byNewest = (a: InsightsArticle, b: InsightsArticle) =>

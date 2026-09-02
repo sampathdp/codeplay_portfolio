@@ -6,6 +6,7 @@ import { trackCategoryView } from "@/lib/insights/analytics";
 import { getInsightsCategory } from "@/lib/insights/categories";
 import { INSIGHTS_BASE, SITE_ORIGIN, insightsCategoryPath } from "@/lib/insights/routes";
 import { byCategory } from "@/lib/insights/feed";
+import { useInsightsFeed } from "@/hooks/useInsightsFeed";
 import {
   InsightsShell,
   Breadcrumb,
@@ -16,6 +17,7 @@ import {
 
 export default function InsightsCategory() {
   const { slug } = useParams();
+  useInsightsFeed();
   const category = slug ? getInsightsCategory(slug) : undefined;
   const articles = category ? byCategory(category.slug) : [];
 

@@ -4,6 +4,7 @@ import { Search as SearchIcon, X } from "lucide-react";
 import SEO from "@/components/SEO";
 import { INSIGHTS_BASE, SITE_ORIGIN, insightsSearchPath } from "@/lib/insights/routes";
 import { searchArticles, categoryName } from "@/lib/insights/feed";
+import { useInsightsFeed } from "@/hooks/useInsightsFeed";
 import { trackSearch } from "@/lib/insights/analytics";
 import { insightsArticlePath } from "@/lib/insights/routes";
 import {
@@ -15,6 +16,7 @@ import {
 
 export default function InsightsSearch() {
   const rawSearch = useSearch();
+  useInsightsFeed();
   const [, navigate] = useLocation();
   const initial = new URLSearchParams(rawSearch).get("q") ?? "";
   const [query, setQuery] = useState(initial);

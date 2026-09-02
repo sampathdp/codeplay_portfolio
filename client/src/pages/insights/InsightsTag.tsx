@@ -2,6 +2,7 @@ import { useParams } from "wouter";
 import SEO from "@/components/SEO";
 import { INSIGHTS_BASE, SITE_ORIGIN, insightsTagPath } from "@/lib/insights/routes";
 import { byTag, allArticles } from "@/lib/insights/feed";
+import { useInsightsFeed } from "@/hooks/useInsightsFeed";
 import {
   InsightsShell,
   Breadcrumb,
@@ -19,6 +20,7 @@ function tagName(slug: string): string {
 
 export default function InsightsTag() {
   const { slug = "" } = useParams();
+  useInsightsFeed();
   const name = tagName(slug);
   const articles = byTag(slug);
 

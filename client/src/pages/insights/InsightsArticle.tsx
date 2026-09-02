@@ -15,6 +15,7 @@ import {
   insightsCategoryPath,
 } from "@/lib/insights/routes";
 import { getArticle, categoryName, formatDate } from "@/lib/insights/feed";
+import { useInsightsFeed } from "@/hooks/useInsightsFeed";
 import {
   InsightsShell,
   ArticleSEO,
@@ -32,6 +33,7 @@ import {
 
 export default function InsightsArticle() {
   const { slug } = useParams();
+  const feedStatus = useInsightsFeed();
   const article = slug ? getArticle(slug) : undefined;
 
   useEffect(() => {
@@ -45,7 +47,18 @@ export default function InsightsArticle() {
     if (article) trackScrollDepth(article.slug, pct);
   });
 
-  if (!article) return <NotFound />;
+  if (!article) {
+    if (feedStatus === "loading") {
+      return (
+        <InsightsShell>
+          <div className="container mx-auto max-w-3xl px-5 py-24 text-center text-sm text-muted-foreground">
+            Loading…
+          </div>
+        </InsightsShell>
+      );
+    }
+    return <NotFound />;
+  }
 
   const url = insightsArticleUrl(article.slug);
   const catName = categoryName(article.category);

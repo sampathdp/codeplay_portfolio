@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { Search } from "lucide-react";
 import SEO from "@/components/SEO";
+import { useInsightsFeed } from "@/hooks/useInsightsFeed";
 import { insightsSearchPath, SITE_ORIGIN, INSIGHTS_BASE } from "@/lib/insights/routes";
 import {
   allArticles,
@@ -25,6 +26,7 @@ import {
 } from "@/components/insights";
 
 export default function InsightsHome() {
+  const feedStatus = useInsightsFeed();
   const featured = getFeatured();
   const trending = getTrending(5);
   const mostRead = getMostRead(5);
@@ -87,10 +89,14 @@ export default function InsightsHome() {
         </header>
 
         {!hasContent() ? (
-          <EmptyState
-            title="CodePlay Insights is launching soon"
-            message="We're preparing the first articles — original analysis on AI, software, gaming and security. Check back shortly."
-          />
+          feedStatus === "loading" ? (
+            <p className="py-10 text-sm text-muted-foreground">Loading the latest Insights…</p>
+          ) : (
+            <EmptyState
+              title="CodePlay Insights is launching soon"
+              message="We're preparing the first articles — original analysis on AI, software, gaming and security. Check back shortly."
+            />
+          )
         ) : (
           <>
             {featured && (

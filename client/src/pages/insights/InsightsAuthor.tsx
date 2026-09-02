@@ -4,6 +4,7 @@ import SEO from "@/components/SEO";
 import { INSIGHTS_BASE, SITE_ORIGIN } from "@/lib/insights/routes";
 import { INSIGHTS_AUTHORS, getInsightsAuthor } from "@/lib/insights/authors";
 import { allArticles, toSummary } from "@/lib/insights/feed";
+import { useInsightsFeed } from "@/hooks/useInsightsFeed";
 import { InsightsShell, Breadcrumb, ArticleGrid } from "@/components/insights";
 
 /**
@@ -13,6 +14,7 @@ import { InsightsShell, Breadcrumb, ArticleGrid } from "@/components/insights";
  */
 export default function InsightsAuthor() {
   const { slug = "" } = useParams();
+  useInsightsFeed();
   const known = INSIGHTS_AUTHORS.some((a) => a.slug === slug);
   if (!known) return <NotFound />;
 
