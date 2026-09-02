@@ -1,0 +1,32 @@
+# CodePlay marketing site — single-page app (wouter client-side routing).
+# Deployed to LiteSpeed shared hosting via FTP (see .github/workflows/main.yml).
+
+# Never serve an auto-generated directory listing. Without this, /insights/
+# (a real folder that only holds rss.xml) renders as "Index of /insights/"
+# instead of falling through to the SPA.
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Real files (index.html, /assets/*, /insights/rss.xml, sitemap*.xml,
+  # robots.txt, …) are served as-is.
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -l
+  RewriteRule ^ - [L]
+
+  # Everything else — including paths that collide with a real directory
+  # such as /insights and /insights/ — is handed to the SPA entry point.
+  RewriteRule ^ /index.html [L]
+</IfModule>
+
+# Long-cache the fingerprinted build assets.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|woff2?|png|jpe?g|gif|svg|webp|avif)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(html|xml)$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>

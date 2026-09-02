@@ -120,15 +120,27 @@ function Router() {
 }
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
+  // Preloader only on the very first entry to the home page. Any other
+  // landing route, or a repeat visit in the same tab session, skips it.
+  const [isLoading, setIsLoading] = useState(() => {
+    if (typeof window === "undefined") return false;
+    const isHome = window.location.pathname === "/";
+    const alreadyShown = sessionStorage.getItem("preloaderShown") === "1";
+    return isHome && !alreadyShown;
+  });
 
   useEffect(() => {
-    // Artificial delay to show the "cool" preloader
+    if (!isLoading) return;
+    try {
+      sessionStorage.setItem("preloaderShown", "1");
+    } catch {
+      // ignore storage failures (private mode, etc.)
+    }
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2800);
+    }, 1200);
     return () => clearTimeout(timer);
-  }, []);
+  }, [isLoading]);
 
   return (
     <HelmetProvider>

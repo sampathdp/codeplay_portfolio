@@ -53,10 +53,10 @@ export default function Preloader() {
                     clearInterval(timer);
                     return 100;
                 }
-                const step = p < 30 ? 2 : p < 70 ? 0.5 : 1.5;
+                const step = p < 30 ? 6 : p < 70 ? 2.5 : 4;
                 return Math.min(p + step, 100);
             });
-        }, 40);
+        }, 30);
 
         const phaseTimer = setInterval(() => {
             setPhase(ph => (ph + 1) % 4);
@@ -74,7 +74,7 @@ export default function Preloader() {
             exit={{
                 opacity: 0,
                 filter: "contrast(4) brightness(5) blur(20px)",
-                transition: { duration: 1, ease: [0.76, 0, 0.24, 1] }
+                transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] }
             }}
             className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#000000] text-primary overflow-hidden font-mono"
         >
