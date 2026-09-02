@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { RefreshCw } from "lucide-react";
 import { ADMIN_INSIGHTS_BASE } from "@/lib/insights/routes";
 import { listGenerationJobs, retryJob, aiSpendToday } from "@/lib/insights/admin";
+import type { GenerationJobRow } from "@/lib/insights/records";
 import { useAsync, useAction } from "@/components/admin/useAsync";
 import {
   Card,
@@ -76,7 +77,7 @@ export default function Jobs() {
                     Retry
                   </Btn>
                 </div>
-                {j.error && <p className="mt-1.5 break-words text-xs text-destructive">{j.error}</p>}
+                <JobFailureReason job={j} />
               </li>
             ))}
           </ul>
@@ -118,5 +119,42 @@ export default function Jobs() {
         )}
       </Card>
     </div>
+  );
+}
+
+/**
+ * A soft-failed generation job (article gated out, budget exhausted, no
+ * usable draft) records its reason in `review_reason` / `result`, not the
+ * `error` column — only a thrown exception sets `error`. Surface whichever
+ * we have so the row is never a silent "FAILED" with no explanation.
+ */
+function JobFailureReason({ job }: { job: GenerationJobRow }) {
+  const result = (job.result ?? {}) as {
+    status?: string;
+    reasons?: unknown;
+    error?: unknown;
+  };
+  const reasons = Array.isArray(result.reasons)
+    ? result.reasons.filter((r): r is string => typeof r === "string")
+    : [];
+
+  const detail =
+    job.error ||
+    job.review_reason ||
+    (typeof result.error === "string" ? result.error : "") ||
+    reasons.join(" · ");
+
+  if (detail) {
+    return (
+      <p className="mt-1.5 break-words text-xs text-destructive">{detail}</p>
+    );
+  }
+
+  return (
+    <p className="mt-1.5 text-xs text-muted-foreground">
+      No reason recorded
+      {result.status ? ` — outcome: ${result.status}` : ""}. Check the
+      generation worker logs for this run.
+    </p>
   );
 }

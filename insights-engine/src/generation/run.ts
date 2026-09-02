@@ -301,10 +301,16 @@ async function main() {
       state.dailyCalls += budgeted.runCalls;
 
       if (!outcome.article) {
+        const softFailed = outcome.status !== "needs_review";
+        const reasonText =
+          outcome.reasons.join(" | ") || `no article produced (${outcome.status})`;
         await sb.from("insights_content_generation_jobs").update({
-          status: outcome.status === "needs_review" ? "succeeded" : "failed",
+          status: softFailed ? "failed" : "succeeded",
           needs_review: outcome.status === "needs_review",
-          review_reason: outcome.reasons.join(" | "),
+          review_reason: reasonText,
+          // Mirror the reason into `error` too — the admin Jobs view reads
+          // that column, so a soft fail is otherwise a silent "FAILED".
+          error: softFailed ? reasonText : null,
           result: { status: outcome.status, reasons: outcome.reasons, stepsRun: outcome.stepsRun },
           completed_at: new Date().toISOString(),
         }).eq("id", jobId);
