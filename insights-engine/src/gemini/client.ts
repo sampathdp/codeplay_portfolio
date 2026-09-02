@@ -15,6 +15,7 @@ import type {
   GeminiResult,
 } from "./types";
 import { modelForPurpose } from "./types";
+import { retryTransient } from "./retry";
 
 export class GeminiError extends Error {}
 
@@ -22,18 +23,22 @@ export interface RealGeminiOptions {
   apiKey: string;
   models: GeminiModelConfig;
   defaultMaxOutputTokens?: number;
+  /** Max attempts per call for transient errors (429 / 5xx). Default 5. */
+  maxAttempts?: number;
 }
 
 export class RealGeminiClient implements GeminiClient {
   private readonly ai: GoogleGenAI;
   private readonly models: GeminiModelConfig;
   private readonly defaultMax: number;
+  private readonly maxAttempts: number;
 
   constructor(opts: RealGeminiOptions) {
     if (!opts.apiKey) throw new GeminiError("GEMINI_API_KEY is not set");
     this.ai = new GoogleGenAI({ apiKey: opts.apiKey });
     this.models = opts.models;
     this.defaultMax = opts.defaultMaxOutputTokens ?? 8192;
+    this.maxAttempts = Math.max(1, opts.maxAttempts ?? 5);
   }
 
   async generate(
@@ -44,16 +49,20 @@ export class RealGeminiClient implements GeminiClient {
 
     let res;
     try {
-      res = await this.ai.models.generateContent({
-        model,
-        contents: prompt,
-        config: {
-          systemInstruction: opts.system,
-          temperature: opts.temperature ?? 0.5,
-          maxOutputTokens: opts.maxOutputTokens ?? this.defaultMax,
-          ...(opts.json ? { responseMimeType: "application/json" } : {}),
-        },
-      });
+      res = await retryTransient(
+        () =>
+          this.ai.models.generateContent({
+            model,
+            contents: prompt,
+            config: {
+              systemInstruction: opts.system,
+              temperature: opts.temperature ?? 0.5,
+              maxOutputTokens: opts.maxOutputTokens ?? this.defaultMax,
+              ...(opts.json ? { responseMimeType: "application/json" } : {}),
+            },
+          }),
+        { attempts: this.maxAttempts, label: `Gemini ${model}/${opts.purpose}` },
+      );
     } catch (err) {
       throw new GeminiError(
         `Gemini request failed (${model}, ${opts.purpose}): ${

@@ -44,6 +44,7 @@ export default function Candidates() {
   const [tab, setTab] = useState<CandidateStatusRow | "all">("discovered");
   const [expanded, setExpanded] = useState<string | null>(null);
   const [dupFor, setDupFor] = useState<string | null>(null);
+  const [q, setQ] = useState("");
   const [, navigate] = useLocation();
   const action = useAction();
 
@@ -51,11 +52,28 @@ export default function Candidates() {
     () =>
       listClusters(
         tab === "all"
-          ? { limit: 60 }
-          : { status: tab === "discovered" ? ["discovered", "filtered"] : tab, limit: 60 },
+          ? { limit: 150 }
+          : { status: tab === "discovered" ? ["discovered", "filtered"] : tab, limit: 150 },
       ),
     [tab, action.pending],
   );
+
+  const query = q.trim().toLowerCase();
+  const rows = (clusters.data ?? []).filter((c) => {
+    if (!query) return true;
+    const hay = [
+      c.title,
+      c.primary_theme,
+      c.category,
+      c.selection_reason,
+      ...(Array.isArray(c.entities) ? c.entities : []),
+      ...(Array.isArray(c.keywords) ? c.keywords : []),
+    ]
+      .filter(Boolean)
+      .join(" ")
+      .toLowerCase();
+    return query.split(/\s+/).every((term) => hay.includes(term));
+  });
 
   return (
     <div className="space-y-4">
@@ -75,6 +93,22 @@ export default function Candidates() {
         ))}
       </div>
 
+      <div className="relative">
+        <SearchIcon className="pointer-events-none absolute left-3 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground" />
+        <input
+          type="search"
+          value={q}
+          onChange={(e) => setQ(e.target.value)}
+          placeholder="Filter candidates — e.g. GTA, Rockstar, Gemini, security…"
+          className="w-full rounded-lg border border-white/10 bg-white/5 py-2 pl-9 pr-3 text-sm outline-none placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-primary"
+        />
+        {q && (
+          <span className="absolute right-3 top-1/2 -translate-y-1/2 text-[0.7rem] text-muted-foreground">
+            {rows.length} match{rows.length === 1 ? "" : "es"}
+          </span>
+        )}
+      </div>
+
       {action.error && (
         <ErrorNote error={action.error} onRetry={action.clearError} />
       )}
@@ -85,11 +119,24 @@ export default function Candidates() {
         <ErrorNote error={clusters.error} onRetry={clusters.reload} />
       ) : !clusters.data || clusters.data.length === 0 ? (
         <EmptyRow>
-          No candidates. The discovery engine runs on a schedule (every ~3h).
+          No candidates yet. Discovery runs on a schedule (~every 3h in CI),
+          or run it now with{" "}
+          <code className="rounded bg-white/10 px-1 py-0.5 text-[0.7rem]">
+            npm run insights:discover
+          </code>
+          . You can also skip discovery and write a post by hand from{" "}
+          <span className="text-primary">Articles → New article</span>.
+        </EmptyRow>
+      ) : rows.length === 0 ? (
+        <EmptyRow>
+          No candidates match &ldquo;{q.trim()}&rdquo;. Try a broader term, or
+          clear the filter. Discovery only covers enabled sources — add feeds
+          on the <span className="text-primary">Sources</span> page and re-run
+          discovery to widen coverage.
         </EmptyRow>
       ) : (
         <ul className="space-y-3">
-          {clusters.data.map((c) => {
+          {rows.map((c) => {
             const isOpen = expanded === c.id;
             return (
               <li key={c.id}>

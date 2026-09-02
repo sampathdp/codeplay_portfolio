@@ -75,8 +75,10 @@ export class SupabaseStore implements Store {
   async upsertClusters(clusters: ScoredCluster[]): Promise<PersistResult> {
     let clustersUpserted = 0;
     let candidatesUpserted = 0;
+    const failures: string[] = [];
 
     for (const cluster of clusters) {
+     try {
       const scoreCols = {
         title: cluster.title,
         normalized_title: cluster.normalizedTitle,
@@ -127,29 +129,39 @@ export class SupabaseStore implements Store {
       }
       clustersUpserted++;
 
-      const rows = cluster.items.map((it) => ({
-        cluster_id: clusterId,
-        external_id: it.externalId,
-        title: it.title,
-        url: it.url,
-        source: it.source,
-        source_type: adapterToSourceKind(it.adapter),
-        adapter: it.adapter,
-        summary: (it.summary ?? "").slice(0, 800),
-        published_at: it.publishedAt ?? null,
-        normalized_title: it.normalizedTitle,
-        normalized_url: it.normalizedUrl,
-        dedupe_hash: it.dedupeHash,
-        themes: it.themes,
-        entities: it.entities,
-        keywords: it.keywords,
-        fact_confidence: it.factConfidence,
-        relevance_score: round(it.relevanceScore),
-        engagement_score: round(engagementProxy(it)),
-        community_score: round(it.signals?.redditScore ? 60 : 0),
-        viral_score: round(cluster.viralScore),
-        raw: it.raw ?? {},
-      }));
+      // De-duplicate by `url` within the cluster: Postgres rejects an
+      // `ON CONFLICT DO UPDATE` that would touch the same conflict target
+      // (url) twice in one statement ("cannot affect row a second time").
+      const seenUrls = new Set<string>();
+      const rows = cluster.items
+        .filter((it) => {
+          if (!it.url || seenUrls.has(it.url)) return false;
+          seenUrls.add(it.url);
+          return true;
+        })
+        .map((it) => ({
+          cluster_id: clusterId,
+          external_id: it.externalId,
+          title: it.title,
+          url: it.url,
+          source: it.source,
+          source_type: adapterToSourceKind(it.adapter),
+          adapter: it.adapter,
+          summary: (it.summary ?? "").slice(0, 800),
+          published_at: it.publishedAt ?? null,
+          normalized_title: it.normalizedTitle,
+          normalized_url: it.normalizedUrl,
+          dedupe_hash: it.dedupeHash,
+          themes: it.themes,
+          entities: it.entities,
+          keywords: it.keywords,
+          fact_confidence: it.factConfidence,
+          relevance_score: round(it.relevanceScore),
+          engagement_score: round(engagementProxy(it)),
+          community_score: round(it.signals?.redditScore ? 60 : 0),
+          viral_score: round(cluster.viralScore),
+          raw: it.raw ?? {},
+        }));
 
       if (rows.length) {
         const up = await this.sb
@@ -158,8 +170,22 @@ export class SupabaseStore implements Store {
         if (up.error) throw new Error(`candidate upsert: ${up.error.message}`);
         candidatesUpserted += rows.length;
       }
+     } catch (err) {
+       // One bad cluster must not sink the whole run.
+       failures.push(
+         `${cluster.key}: ${err instanceof Error ? err.message : String(err)}`,
+       );
+     }
     }
 
+    if (failures.length && clustersUpserted === 0) {
+      throw new Error(`all cluster upserts failed: ${failures.join(" | ")}`);
+    }
+    if (failures.length) {
+      console.error(
+        `upsertClusters: ${failures.length} cluster(s) skipped — ${failures.join(" | ")}`,
+      );
+    }
     return { clustersUpserted, candidatesUpserted };
   }
 }

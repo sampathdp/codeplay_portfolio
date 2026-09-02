@@ -11,6 +11,7 @@
 
 import { GoogleGenAI } from "@google/genai";
 import { GeminiError } from "./client";
+import { retryTransient } from "./retry";
 
 export interface ImageRequest {
   prompt: string;
@@ -48,9 +49,13 @@ export class RealGeminiImageClient implements GeminiImageClient {
   async generateImage(req: ImageRequest): Promise<ImageResult> {
     const model = req.model ?? this.defaultModel;
     try {
-      return isImagen(model)
-        ? await this.viaImagen(model, req)
-        : await this.viaGemini(model, req);
+      return await retryTransient(
+        () =>
+          isImagen(model)
+            ? this.viaImagen(model, req)
+            : this.viaGemini(model, req),
+        { attempts: 4, label: `Gemini image ${model}` },
+      );
     } catch (err) {
       throw new GeminiError(
         `image generation failed (${model}): ${

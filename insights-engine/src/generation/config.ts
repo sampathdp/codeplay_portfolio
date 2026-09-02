@@ -54,6 +54,8 @@ export function resolveAiBudget(
     (b.pricingPer1MTokensUsd as AiBudgetConfig["pricingPer1MTokensUsd"]) ??
     DEFAULT_AI_BUDGET.pricingPer1MTokensUsd;
   const imagePricing = (b.imagePricingUsd as Record<string, number> | undefined) ?? {
+    "gemini-3.1-flash-image": 0.04,
+    "gemini-3-pro-image": 0.06,
     "gemini-2.5-flash-image": 0.04,
     default: 0.04,
   };

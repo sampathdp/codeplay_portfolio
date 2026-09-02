@@ -162,10 +162,16 @@ export interface GeminiModelConfig {
   imageModel: string;
 }
 
+// gemini-2.5-* was deprecated for new API keys. The newest aliases
+// (gemini-flash-latest / gemini-3.7-flash) are frequently 503-overloaded
+// and the free-tier `*-pro-*` quota is tiny (429s), so both defaults are
+// pinned to a stable, available flash model — the pipeline actually
+// completes on a free key. For higher draft quality once billing is on,
+// set  GEMINI_TEXT_MODEL=gemini-pro-latest  in the environment.
 export const DEFAULT_GEMINI_MODELS: GeminiModelConfig = {
-  textModel: "gemini-2.5-pro",
-  fastModel: "gemini-2.5-flash",
-  imageModel: "gemini-2.5-flash-image",
+  textModel: "gemini-3.6-flash",
+  fastModel: "gemini-3.6-flash",
+  imageModel: "gemini-3.1-flash-image",
 };
 
 export function resolveGeminiModels(
