@@ -16,7 +16,17 @@
   <!-- Open Graph / Twitter tags are set per-route by components/SEO.tsx
        (react-helmet-async). Keeping static copies here as well produced
        duplicate og:title / og:type on article pages. -->
-  <link rel="icon" type="image/png" href="/assets/favicon-32x32.png" />
+  <!-- Favicon set. Google Search needs a square icon that is a multiple of
+       48px (48/96/144…) reachable at a stable URL; the old 128px
+       favicon-32x32.png satisfied neither and Search fell back to the globe.
+       /favicon.ico + /apple-touch-icon.png sit at the domain root because
+       crawlers and iOS probe those fixed paths directly. -->
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0f1729" />
   <link rel="alternate" type="application/rss+xml" title="CodePlay Insights" href="/insights/rss.xml" />
 
   <!-- LCP image lives in the JS bundle (hero carousel); preload so the
