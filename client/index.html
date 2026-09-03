@@ -1,5 +1,9 @@
 <!doctype html>
-<html lang="en">
+<!-- Site is forced-dark (ThemeProvider forcedTheme="dark"). Set the class
+     statically so the first paint uses dark tokens — otherwise the light
+     :root palette flashes (and trips the contrast audit on primary buttons)
+     until next-themes adds the class on mount. -->
+<html lang="en" class="dark" style="color-scheme: dark;">
 
 <head>
   <meta charset="UTF-8" />
