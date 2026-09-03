@@ -26,10 +26,10 @@ export default function Navigation() {
   ];
 
   const socialLinks = [
-    { icon: <Twitter className="w-5 h-5" />, href: "#" },
-    { icon: <Instagram className="w-5 h-5" />, href: "#" },
-    { icon: <Linkedin className="w-5 h-5" />, href: "#" },
-    { icon: <Github className="w-5 h-5" />, href: "#" },
+    { icon: <Twitter className="w-5 h-5" aria-hidden="true" />, href: "#", label: "Twitter" },
+    { icon: <Instagram className="w-5 h-5" aria-hidden="true" />, href: "#", label: "Instagram" },
+    { icon: <Linkedin className="w-5 h-5" aria-hidden="true" />, href: "#", label: "LinkedIn" },
+    { icon: <Github className="w-5 h-5" aria-hidden="true" />, href: "#", label: "GitHub" },
   ];
 
   return (
@@ -93,8 +93,10 @@ export default function Navigation() {
             <button
               className="w-12 h-12 rounded-full flex items-center justify-center bg-white/10 backdrop-blur hover:bg-white/20 transition-all"
               onClick={() => setIsMobileMenuOpen(true)}
+              aria-label="Open menu"
+              aria-expanded={isMobileMenuOpen}
             >
-              <Menu className="w-6 h-6 text-white" />
+              <Menu className="w-6 h-6 text-white" aria-hidden="true" />
             </button>
           </div>
         </div>
@@ -135,8 +137,9 @@ export default function Navigation() {
                 <button
                   className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center"
                   onClick={() => setIsMobileMenuOpen(false)}
+                  aria-label="Close menu"
                 >
-                  <X className="w-6 h-6" />
+                  <X className="w-6 h-6" aria-hidden="true" />
                 </button>
               </div>
             </div>
@@ -173,6 +176,7 @@ export default function Navigation() {
                   <motion.a
                     key={i}
                     href={social.href}
+                    aria-label={social.label}
                     initial={{ opacity: 0, scale: 0 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.7 + i * 0.1 }}
