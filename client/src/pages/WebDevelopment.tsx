@@ -16,7 +16,7 @@ import WebMetrics from "@/components/metrics/WebMetrics";
 import MatrixRain from "@/components/MatrixRain";
 import SEO from "@/components/SEO";
 import WebPricingSection from "@/components/WebPricingSection";
-import futuristicDev from "@assets/futuristic_web_dev.png";
+import futuristicDev from "@assets/futuristic_web_dev.webp";
 
 const containerVariants = {
   hidden: { opacity: 0 },

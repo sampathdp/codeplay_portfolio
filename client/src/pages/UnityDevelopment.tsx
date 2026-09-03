@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 import GameMetrics from "@/components/metrics/GameMetrics";
 import MatrixRain from "@/components/MatrixRain";
 import SEO from "@/components/SEO";
-import futuristicUnity from "@assets/generated_images/futuristic_unity_game_dev.png";
+import futuristicUnity from "@assets/generated_images/futuristic_unity_game_dev.webp";
 
 export default function UnityDevelopment() {
   const containerVariants = {

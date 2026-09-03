@@ -9,7 +9,7 @@ import MatrixRain from "./MatrixRain";
 // New Slides Data with generated assets
 const slides = [
   {
-    image: "/assets/hero_web_dev_cartoon.png",
+    image: "/assets/hero_web_dev_cartoon.webp",
     title: "Web Development",
     headline: "Crafting Digital",
     highlight: "Experiences",
@@ -22,7 +22,7 @@ const slides = [
     shadowColor: "#06b6d4",
   },
   {
-    image: "/assets/hero_mobile_dev_cartoon.png",
+    image: "/assets/hero_mobile_dev_cartoon.webp",
     title: "Mobile Apps",
     headline: "Building Smart",
     highlight: "Mobile Apps",
@@ -35,7 +35,7 @@ const slides = [
     shadowColor: "#a855f7",
   },
   {
-    image: "/assets/hero_creative_dev_cartoon.png",
+    image: "/assets/hero_creative_dev_cartoon.webp",
     title: "Creative Design",
     headline: "Designing Visual",
     highlight: "Masterpieces",
@@ -149,9 +149,11 @@ export default function HeroSection() {
                         transition={{ duration: 0.8 }}
                         src={slide.image}
                         alt={`CodePlay Studios ${slide.title} - ${slide.headline} ${slide.highlight}`}
-                        fetchpriority={index === 0 ? "high" : "auto"}
+                        width={800}
+                        height={800}
+                        fetchPriority={index === 0 ? "high" : "auto"}
                         loading={index === 0 ? "eager" : "lazy"}
-                        className="max-h-[90%] lg:max-h-[80%] max-w-[90%] object-contain drop-shadow-2xl"
+                        className="max-h-[90%] lg:max-h-[80%] max-w-[90%] w-auto h-auto object-contain drop-shadow-2xl"
                         style={{
                           filter: `drop-shadow(0 0 40px ${slide.shadowColor}80)`,
                           maskImage:

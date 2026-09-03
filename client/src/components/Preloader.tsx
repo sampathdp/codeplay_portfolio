@@ -16,32 +16,59 @@ const terminalLogs = [
     "UI_ENGINE: gl_context_created",
 ];
 
+// Fixed count so the feed never adds/removes DOM nodes after mount — a
+// growing list was the top layout-shift culprit on the home page (CLS).
+const LOG_ROWS = 25;
+const FILL_ROWS = 100;
+
 export default function Preloader() {
     const [progress, setProgress] = useState(0);
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-    const [activeLogs, setActiveLogs] = useState<string[]>([]);
+    const [activeLogs, setActiveLogs] = useState<string[]>(() =>
+        Array.from({ length: LOG_ROWS }, (_, i) => `> ${terminalLogs[i % terminalLogs.length]}`),
+    );
     const [phase, setPhase] = useState(0);
 
-    // Parallax tracking
+    // Decorative hex fillers: generated once so re-renders never reflow them.
+    const fillers = useMemo(
+        () =>
+            Array.from({ length: FILL_ROWS }, () =>
+                Math.random().toString(16).substring(2, 10).toUpperCase(),
+            ),
+        [],
+    );
+
+    // Parallax tracking. Cache viewport size (read on resize only) so the
+    // mousemove handler never touches layout and triggers a forced reflow.
     useEffect(() => {
+        let vw = window.innerWidth;
+        let vh = window.innerHeight;
+        const onResize = () => {
+            vw = window.innerWidth;
+            vh = window.innerHeight;
+        };
         const handleMove = (e: MouseEvent) => {
             setMousePos({
-                x: (e.clientX / window.innerWidth - 0.5) * 60,
-                y: (e.clientY / window.innerHeight - 0.5) * 60,
+                x: (e.clientX / vw - 0.5) * 60,
+                y: (e.clientY / vh - 0.5) * 60,
             });
         };
+        window.addEventListener("resize", onResize);
         window.addEventListener("mousemove", handleMove);
-        return () => window.removeEventListener("mousemove", handleMove);
+        return () => {
+            window.removeEventListener("resize", onResize);
+            window.removeEventListener("mousemove", handleMove);
+        };
     }, []);
 
-    // Ultimate Logging Feed
+    // Ultimate Logging Feed — replace rows in place, keep the count constant.
     useEffect(() => {
         const logInterval = setInterval(() => {
             setActiveLogs(prev => {
                 const nextLog = terminalLogs[Math.floor(Math.random() * terminalLogs.length)];
-                return [...prev, `> ${nextLog}`].slice(-25);
+                return [...prev.slice(1), `> ${nextLog}`];
             });
-        }, 100);
+        }, 120);
         return () => clearInterval(logInterval);
     }, []);
 
@@ -82,12 +109,12 @@ export default function Preloader() {
             <div className="absolute inset-0 opacity-[0.08] select-none pointer-events-none text-[9px] leading-tight overflow-hidden p-4">
                 <div className="flex flex-wrap gap-x-8 gap-y-1">
                     {activeLogs.map((log, i) => (
-                        <div key={i} className="w-1/4 min-w-[150px]">{log}</div>
+                        <div key={i} className="w-1/4 min-w-[150px] h-[11px] overflow-hidden whitespace-nowrap">{log}</div>
                     ))}
-                    {/* Repeat logs to fill space */}
-                    {Array.from({ length: 100 }).map((_, i) => (
-                        <div key={`fill-${i}`} className="w-1/4 min-w-[150px] opacity-20 leading-none">
-                            {Math.random().toString(16).substring(2, 10).toUpperCase()}
+                    {/* Repeat logs to fill space (stable content — see `fillers`) */}
+                    {fillers.map((hex, i) => (
+                        <div key={`fill-${i}`} className="w-1/4 min-w-[150px] h-[11px] overflow-hidden whitespace-nowrap opacity-20 leading-none">
+                            {hex}
                         </div>
                     ))}
                 </div>

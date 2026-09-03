@@ -42,7 +42,7 @@ export default function Footer() {
           <div className="lg:col-span-4 space-y-8">
             <Link href="/" className="inline-block">
               <div className="flex items-center gap-3 group">
-                <img src="/assets/logo_trans.png" alt="CodePlay Studios" className="h-10 w-auto opacity-80 group-hover:opacity-100 transition-opacity" />
+                <img src="/assets/logo_trans.webp" alt="CodePlay Studios" width={40} height={40} className="h-10 w-10 object-contain opacity-80 group-hover:opacity-100 transition-opacity" />
                 <span className="text-xl font-bold tracking-tighter uppercase font-['Outfit']">CodePlay Studios</span>
               </div>
             </Link>

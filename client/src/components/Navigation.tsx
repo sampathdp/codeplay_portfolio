@@ -52,9 +52,11 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <img
-              src="/assets/logo_trans.png"
+              src="/assets/logo_trans.webp"
               alt="CodePlay Studios"
-              className="h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+              width={48}
+              height={48}
+              className="h-12 w-12 object-contain group-hover:scale-105 transition-transform duration-300"
             />
             <div className="hidden sm:flex items-center gap-1.5 font-['Outfit']">
               <span className="font-bold text-2xl tracking-tight bg-gradient-to-r from-white via-primary to-purple-400 bg-clip-text text-transparent group-hover:bg-gradient-to-l transition-all duration-500">
@@ -116,9 +118,11 @@ export default function Navigation() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <img
-                  src="/assets/logo_trans.png"
+                  src="/assets/logo_trans.webp"
                   alt="CodePlay Studios"
-                  className="h-12 w-auto object-contain"
+                  width={48}
+                  height={48}
+                  className="h-12 w-12 object-contain"
                 />
                 <div className="flex items-center font-['Outfit']">
                   <span className="font-bold text-2xl tracking-tight bg-gradient-to-r from-white via-primary to-purple-400 bg-clip-text text-transparent">

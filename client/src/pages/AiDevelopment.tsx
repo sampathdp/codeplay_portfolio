@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 import AiMetrics from "@/components/metrics/AiMetrics";
 import MatrixRain from "@/components/MatrixRain";
 import SEO from "@/components/SEO";
-import futuristicAi from "@assets/generated_images/futuristic_ai_concept.png";
+import futuristicAi from "@assets/generated_images/futuristic_ai_concept.webp";
 
 export default function AiDevelopment() {
   const containerVariants = {

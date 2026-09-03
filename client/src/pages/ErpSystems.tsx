@@ -17,7 +17,7 @@ import Footer from "@/components/Footer";
 import AdminMetrics from "@/components/metrics/AdminMetrics";
 import MatrixRain from "@/components/MatrixRain";
 import SEO from "@/components/SEO";
-import futuristicErp from "@assets/futuristic_erp_system.png";
+import futuristicErp from "@assets/futuristic_erp_system.webp";
 
 const containerVariants = {
   hidden: { opacity: 0 },

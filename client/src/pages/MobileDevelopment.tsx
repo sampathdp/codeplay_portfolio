@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 import MobileMetrics from "@/components/metrics/MobileMetrics";
 import MatrixRain from "@/components/MatrixRain";
 import SEO from "@/components/SEO";
-import futuristicMobileDev from "@assets/generated_images/futuristic_mobile_dev.png";
+import futuristicMobileDev from "@assets/generated_images/futuristic_mobile_dev.webp";
 
 export default function MobileDevelopment() {
   const containerVariants = {
