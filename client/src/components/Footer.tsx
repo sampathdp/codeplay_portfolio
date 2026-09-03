@@ -11,6 +11,7 @@ import {
   Rocket
 } from 'lucide-react';
 import { Link } from 'wouter';
+import { TOOLS_HREF } from '@/lib/toolsLink';
 
 const socialLinks = [
   { icon: Github, href: '#', label: 'GitHub' },
@@ -95,15 +96,22 @@ export default function Footer() {
                 { label: "Industrial Portfolio", href: "/case-studies" },
                 { label: "Insights", href: "/insights" },
                 { label: "Editorial Policy", href: "/insights/editorial-policy" },
-                { label: "Free Tools", href: "/tools" },
+                { label: "Free Tools", href: TOOLS_HREF },
                 { label: "Discovery", href: "/contact" },
                 { label: "Privacy Policy", href: "#" }
               ].map((link, i) => (
                 <li key={i}>
-                  <Link href={link.href} className="text-muted-foreground hover:text-white transition-colors text-sm flex items-center group">
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-primary" />
-                    {link.label}
-                  </Link>
+                  {link.href.startsWith("http") ? (
+                    <a href={link.href} className="text-muted-foreground hover:text-white transition-colors text-sm flex items-center group">
+                      <ArrowRight className="w-3 h-3 mr-2 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-primary" />
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link href={link.href} className="text-muted-foreground hover:text-white transition-colors text-sm flex items-center group">
+                      <ArrowRight className="w-3 h-3 mr-2 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-primary" />
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

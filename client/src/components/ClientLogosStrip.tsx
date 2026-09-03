@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import {
   SiReact, SiNextdotjs, SiFlutter, SiUnity,
   SiNodedotjs, SiPython, SiFirebase, SiMongodb,
@@ -33,10 +32,10 @@ const double = (arr: typeof row1) => [...arr, ...arr];
 function MarqueeRow({ items, reverse = false }: { items: typeof row1; reverse?: boolean }) {
   return (
     <div className="flex overflow-hidden relative">
-      <motion.div
-        className="flex gap-4 shrink-0"
-        animate={{ x: reverse ? ["-50%", "0%"] : ["0%", "-50%"] }}
-        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+      <div
+        className={`flex gap-4 shrink-0 motion-reduce:animate-none ${
+          reverse ? "animate-marquee-reverse" : "animate-marquee"
+        }`}
       >
         {double(items).map((item, i) => {
           const Icon = item.icon;
@@ -56,7 +55,7 @@ function MarqueeRow({ items, reverse = false }: { items: typeof row1; reverse?: 
             </div>
           );
         })}
-      </motion.div>
+      </div>
     </div>
   );
 }

@@ -10,6 +10,7 @@ import Preloader from "@/components/Preloader";
 import { AnimatePresence } from "framer-motion";
 import { CurrencyProvider } from "@/context/CurrencyContext";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
+import { ToolsGate } from "@/lib/toolsLink";
 
 // Only Home is eager (it is the landing/LCP route). Every other page is
 // code-split so it stays out of the initial bundle.
@@ -55,12 +56,12 @@ function Router() {
       <Route path="/unity-game-development" component={UnityDevelopment} />
       <Route path="/case-studies" component={CaseStudies} />
       <Route path="/case-studies/:slug" component={CaseStudyDetail} />
-      <Route path="/tools" component={Tools} />
-      <Route path="/tools/image-editor" component={ImageEditorTool} />
-      <Route path="/tools/image-converter" component={ImageConverterTool} />
-      <Route path="/tools/image-watermark" component={ImageWatermarkTool} />
-      <Route path="/tools/video-watermark" component={VideoWatermarkTool} />
-      <Route path="/tools/pdf-template" component={PdfTemplateTool} />
+      <Route path="/tools"><ToolsGate><Tools /></ToolsGate></Route>
+      <Route path="/tools/image-editor"><ToolsGate><ImageEditorTool /></ToolsGate></Route>
+      <Route path="/tools/image-converter"><ToolsGate><ImageConverterTool /></ToolsGate></Route>
+      <Route path="/tools/image-watermark"><ToolsGate><ImageWatermarkTool /></ToolsGate></Route>
+      <Route path="/tools/video-watermark"><ToolsGate><VideoWatermarkTool /></ToolsGate></Route>
+      <Route path="/tools/pdf-template"><ToolsGate><PdfTemplateTool /></ToolsGate></Route>
       <Route path="/insights">
         <Suspense fallback={null}>
           <InsightsHome />

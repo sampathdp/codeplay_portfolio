@@ -4,6 +4,7 @@ import { Menu, X, Instagram, Twitter, Linkedin, Github } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "./ui/button";
 import CurrencySwitcher from "./CurrencySwitcher";
+import { TOOLS_HREF } from "@/lib/toolsLink";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,7 +21,7 @@ export default function Navigation() {
   const links = [
     { href: "/case-studies", label: "Industrial Portfolio" },
     { href: "/insights", label: "Insights" },
-    { href: "/tools", label: "Tools" },
+    { href: TOOLS_HREF, label: "Tools" },
     { href: "/about", label: "About Us" },
     { href: "/contact", label: "Discovery" },
   ];

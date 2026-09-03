@@ -23,12 +23,7 @@ Contact: info@codeplaystudios.com
 
 ## Free Tools
 
-- [Tools](https://codeplaystudios.com/tools): Free browser-based utilities.
-- [Image Editor](https://codeplaystudios.com/tools/image-editor): Edit images in the browser.
-- [Image Converter](https://codeplaystudios.com/tools/image-converter): Convert images between formats.
-- [Image Watermark](https://codeplaystudios.com/tools/image-watermark): Add watermarks to images.
-- [Video Watermark](https://codeplaystudios.com/tools/video-watermark): Add watermarks to video.
-- [PDF Template](https://codeplaystudios.com/tools/pdf-template): Generate PDFs from templates.
+- [WipeClip](https://wipeclip.co): Free browser-based image and video utilities (editor, converter, watermark, PDF templates).
 
 ## Insights
 
