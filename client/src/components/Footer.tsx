@@ -55,10 +55,11 @@ export default function Footer() {
                 <motion.a
                   key={index}
                   href={social.href}
+                  aria-label={social.label}
                   whileHover={{ y: -3 }}
                   className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-300 group"
                 >
-                  <social.icon className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
+                  <social.icon className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" aria-hidden="true" />
                 </motion.a>
               ))}
             </div>
@@ -117,7 +118,7 @@ export default function Footer() {
                   <MapPin className="w-5 h-5 text-gray-400 group-hover:text-primary transition-colors" />
                 </div>
                 <div>
-                  <p className="text-xs uppercase font-mono text-gray-500 mb-1">Operational Center</p>
+                  <p className="text-xs uppercase font-mono text-gray-400 mb-1">Operational Center</p>
                   <p className="text-sm font-medium">Panadura, Sri Lanka</p>
                 </div>
               </div>
@@ -126,7 +127,7 @@ export default function Footer() {
                   <Phone className="w-5 h-5 text-gray-400 group-hover:text-primary transition-colors" />
                 </div>
                 <div>
-                  <p className="text-xs uppercase font-mono text-gray-500 mb-1">Inquiry Line</p>
+                  <p className="text-xs uppercase font-mono text-gray-400 mb-1">Inquiry Line</p>
                   <p className="text-sm font-medium">+94 75 445 3334</p>
                 </div>
               </div>
@@ -135,7 +136,7 @@ export default function Footer() {
                   <Mail className="w-5 h-5 text-gray-400 group-hover:text-primary transition-colors" />
                 </div>
                 <div>
-                  <p className="text-xs uppercase font-mono text-gray-500 mb-1">Direct Email</p>
+                  <p className="text-xs uppercase font-mono text-gray-400 mb-1">Direct Email</p>
                   <p className="text-sm font-medium">info@codeplaystudios.com</p>
                 </div>
               </div>
@@ -145,7 +146,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex items-center gap-6 text-xs font-mono text-gray-500">
+          <div className="flex items-center gap-6 text-xs font-mono text-gray-400">
             <p>© {new Date().getFullYear()} CodePlay Studios</p>
             <div className="hidden md:block w-px h-3 bg-white/10" />
             <p>All Rights Reserved</p>

@@ -3,8 +3,11 @@
  *
  * Converts the oversized PNGs that ship with the marketing site into
  * right-sized WebP (and shrinks the couple of PNGs that must stay PNG for
- * crawler/OG compatibility). Safe to re-run — sharp never upscales, so a
- * second pass is a no-op.
+ * crawler/OG compatibility).
+ *
+ * The hero entries now read their own .webp as source (the PNG originals
+ * were removed). They are already at target width, so re-runs only
+ * re-encode — harmless once or twice, but don't loop it needlessly.
  *
  *   node scripts/optimize-images.mjs
  */
@@ -19,16 +22,16 @@ const KiB = (n) => `${(n / 1024).toFixed(1)} KiB`;
 /** @type {{src: string, out: string, width: number, format: "webp"|"png"}[]} */
 const jobs = [
   // --- client/public/assets: served verbatim, referenced by string path ---
-  // Visible logo: displayed at ~48px, square. 256px covers retina.
-  { src: "client/public/assets/logo_trans.png", out: "client/public/assets/logo_trans.webp", width: 256, format: "webp" },
+  // Visible logo: displayed at ~48px, square. 128px covers retina.
+  { src: "client/public/assets/logo_trans.png", out: "client/public/assets/logo_trans.webp", width: 128, format: "webp" },
   // Same file, shrunk in place: still used as og:image / JSON-LD logo where
   // PNG is the safe bet. 2048 -> 512.
   { src: "client/public/assets/logo_trans.png", out: "client/public/assets/logo_trans.png", width: 512, format: "png" },
 
-  // Hero carousel cartoons: displayed <=450px, 1024 source. 800px webp.
-  { src: "client/public/assets/hero_web_dev_cartoon.png", out: "client/public/assets/hero_web_dev_cartoon.webp", width: 800, format: "webp" },
-  { src: "client/public/assets/hero_mobile_dev_cartoon.png", out: "client/public/assets/hero_mobile_dev_cartoon.webp", width: 800, format: "webp" },
-  { src: "client/public/assets/hero_creative_dev_cartoon.png", out: "client/public/assets/hero_creative_dev_cartoon.webp", width: 800, format: "webp" },
+  // Hero carousel cartoons: displayed <=~490px; re-encode existing webp down to 640px.
+  { src: "client/public/assets/hero_web_dev_cartoon.webp", out: "client/public/assets/hero_web_dev_cartoon.webp", width: 640, format: "webp" },
+  { src: "client/public/assets/hero_mobile_dev_cartoon.webp", out: "client/public/assets/hero_mobile_dev_cartoon.webp", width: 640, format: "webp" },
+  { src: "client/public/assets/hero_creative_dev_cartoon.webp", out: "client/public/assets/hero_creative_dev_cartoon.webp", width: 640, format: "webp" },
 
   // --- attached_assets: pulled in via `@assets` import, Vite hashes them ---
   { src: "attached_assets/futuristic_web_dev.png", out: "attached_assets/futuristic_web_dev.webp", width: 1100, format: "webp" },

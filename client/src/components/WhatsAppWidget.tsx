@@ -16,6 +16,7 @@ export default function WhatsAppWidget() {
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Chat with us on WhatsApp"
         className="relative group block"
       >
         {/* Glow Effect */}
@@ -23,7 +24,7 @@ export default function WhatsAppWidget() {
         
         {/* Button */}
         <div className="relative w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl transition-transform duration-300 group-hover:scale-110">
-          <MessageCircle className="w-8 h-8 fill-current" />
+          <MessageCircle className="w-8 h-8 fill-current" aria-hidden="true" />
         </div>
 
         {/* Label */}

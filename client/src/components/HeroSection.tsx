@@ -149,8 +149,8 @@ export default function HeroSection() {
                         transition={{ duration: 0.8 }}
                         src={slide.image}
                         alt={`CodePlay Studios ${slide.title} - ${slide.headline} ${slide.highlight}`}
-                        width={800}
-                        height={800}
+                        width={640}
+                        height={640}
                         fetchPriority={index === 0 ? "high" : "auto"}
                         loading={index === 0 ? "eager" : "lazy"}
                         className="max-h-[90%] lg:max-h-[80%] max-w-[90%] w-auto h-auto object-contain drop-shadow-2xl"
@@ -172,17 +172,19 @@ export default function HeroSection() {
                 size="icon"
                 variant="outline"
                 onClick={scrollPrev}
+                aria-label="Previous slide"
                 className="rounded-full h-10 w-10 border-white/10 bg-black/20 text-white hover:bg-black/40 backdrop-blur-sm"
               >
-                <ChevronLeft className="h-5 w-5" />
+                <ChevronLeft className="h-5 w-5" aria-hidden="true" />
               </Button>
               <Button
                 size="icon"
                 variant="outline"
                 onClick={scrollNext}
+                aria-label="Next slide"
                 className="rounded-full h-10 w-10 border-white/10 bg-black/20 text-white hover:bg-black/40 backdrop-blur-sm"
               >
-                <ChevronRight className="h-5 w-5" />
+                <ChevronRight className="h-5 w-5" aria-hidden="true" />
               </Button>
             </div>
           </div>

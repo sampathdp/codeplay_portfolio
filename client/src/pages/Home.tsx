@@ -22,11 +22,13 @@ export default function Home() {
       </div>
       <div className="relative z-10">
         <Navigation />
-        <HeroSection />
-        <ServicesSection />
-        <PortfolioTeaser />
-        <PricingSection />
-        <ContactSection />
+        <main id="main">
+          <HeroSection />
+          <ServicesSection />
+          <PortfolioTeaser />
+          <PricingSection />
+          <ContactSection />
+        </main>
         <Footer />
       </div>
     </div>

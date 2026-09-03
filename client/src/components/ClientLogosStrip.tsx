@@ -48,6 +48,7 @@ function MarqueeRow({ items, reverse = false }: { items: typeof row1; reverse?: 
               <Icon
                 className="w-7 h-7 shrink-0 opacity-60 group-hover:opacity-100 transition-opacity duration-300"
                 style={{ color: item.color }}
+                aria-hidden="true"
               />
               <span className="text-sm font-semibold text-white/40 group-hover:text-white/80 transition-colors duration-300 whitespace-nowrap">
                 {item.name}
