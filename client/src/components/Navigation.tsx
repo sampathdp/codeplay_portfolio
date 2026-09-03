@@ -52,7 +52,7 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <img
-              src="/assets/logo_trans.webp"
+              src="/assets/logo_trans-128.webp"
               alt="CodePlay Studios"
               width={48}
               height={48}
@@ -118,7 +118,7 @@ export default function Navigation() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <img
-                  src="/assets/logo_trans.webp"
+                  src="/assets/logo_trans-128.webp"
                   alt="CodePlay Studios"
                   width={48}
                   height={48}

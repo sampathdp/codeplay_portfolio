@@ -7,6 +7,9 @@ export default function MatrixRain() {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
+    // Honour reduced-motion — skip the animation entirely.
+    if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) return;
+
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
@@ -57,7 +60,30 @@ export default function MatrixRain() {
       }
     };
 
-    const interval = setInterval(draw, 33);
+    // rAF loop throttled to ~20fps. Pauses automatically when the tab is
+    // hidden, and — critically — we don't start it until the browser is
+    // idle so it never competes with first paint / hydration.
+    let rafId = 0;
+    let last = 0;
+    let running = false;
+    const frame = (now: number) => {
+      rafId = requestAnimationFrame(frame);
+      if (now - last < 50) return;
+      last = now;
+      draw();
+    };
+    const start = () => {
+      if (running) return;
+      running = true;
+      rafId = requestAnimationFrame(frame);
+    };
+
+    const idle = (window as typeof window & {
+      requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number;
+    }).requestIdleCallback;
+    const startTimer = idle
+      ? idle(start, { timeout: 2500 })
+      : window.setTimeout(start, 1500);
 
     const handleResize = () => {
       width = canvas.width = window.innerWidth;
@@ -67,7 +93,8 @@ export default function MatrixRain() {
     window.addEventListener("resize", handleResize);
 
     return () => {
-      clearInterval(interval);
+      cancelAnimationFrame(rafId);
+      clearTimeout(startTimer as number);
       window.removeEventListener("resize", handleResize);
     };
   }, []);

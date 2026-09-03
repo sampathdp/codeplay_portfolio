@@ -9,7 +9,7 @@ import MatrixRain from "./MatrixRain";
 // New Slides Data with generated assets
 const slides = [
   {
-    image: "/assets/hero_web_dev_cartoon.webp",
+    image: "/assets/hero_web_dev_cartoon-640.webp",
     title: "Web Development",
     headline: "Crafting Digital",
     highlight: "Experiences",
@@ -22,7 +22,7 @@ const slides = [
     shadowColor: "#06b6d4",
   },
   {
-    image: "/assets/hero_mobile_dev_cartoon.webp",
+    image: "/assets/hero_mobile_dev_cartoon-640.webp",
     title: "Mobile Apps",
     headline: "Building Smart",
     highlight: "Mobile Apps",
@@ -35,7 +35,7 @@ const slides = [
     shadowColor: "#a855f7",
   },
   {
-    image: "/assets/hero_creative_dev_cartoon.webp",
+    image: "/assets/hero_creative_dev_cartoon-640.webp",
     title: "Creative Design",
     headline: "Designing Visual",
     highlight: "Masterpieces",

@@ -1,0 +1,45 @@
+# CodePlay Studios
+
+> CodePlay Studios is a software studio that builds AI-powered business systems, web applications, mobile apps, ERP suites, and Unity games. We deliver scalable, intelligent software tailored to each client's needs.
+
+CodePlay Studios is based in Panadura, Sri Lanka, and works with clients worldwide. This file points language models to the canonical pages describing our services, work, and editorial content.
+
+Contact: info@codeplaystudios.com
+
+## Services
+
+- [Web Development](https://codeplaystudios.com/web-development): Robust, scalable, responsive web applications.
+- [Mobile Development](https://codeplaystudios.com/mobile-development): Native and cross-platform apps for iOS and Android.
+- [AI Development](https://codeplaystudios.com/ai-development): AI integration, automation, and intelligent business systems.
+- [ERP Systems](https://codeplaystudios.com/erp-systems): Custom ERP suites and internal business platforms.
+- [Unity Game Development](https://codeplaystudios.com/unity-game-development): Games and interactive 3D experiences built with Unity.
+
+## Company
+
+- [Home](https://codeplaystudios.com/): Overview of CodePlay Studios and its services.
+- [About Us](https://codeplaystudios.com/about): Team, story, and approach.
+- [Case Studies](https://codeplaystudios.com/case-studies): Portfolio of delivered projects.
+- [Contact](https://codeplaystudios.com/contact): Start a project or ask a question.
+
+## Free Tools
+
+- [Tools](https://codeplaystudios.com/tools): Free browser-based utilities.
+- [Image Editor](https://codeplaystudios.com/tools/image-editor): Edit images in the browser.
+- [Image Converter](https://codeplaystudios.com/tools/image-converter): Convert images between formats.
+- [Image Watermark](https://codeplaystudios.com/tools/image-watermark): Add watermarks to images.
+- [Video Watermark](https://codeplaystudios.com/tools/video-watermark): Add watermarks to video.
+- [PDF Template](https://codeplaystudios.com/tools/pdf-template): Generate PDFs from templates.
+
+## Insights
+
+- [CodePlay Insights](https://codeplaystudios.com/insights): Articles on software, AI, and product engineering.
+- [RSS Feed](https://codeplaystudios.com/insights/rss.xml): Full-content feed of Insights articles.
+- [About Insights](https://codeplaystudios.com/insights/about): What the Insights section is and who writes it.
+- [Editorial Policy](https://codeplaystudios.com/insights/editorial-policy): Standards for Insights content.
+- [AI Policy](https://codeplaystudios.com/insights/ai-policy): How AI is used in producing Insights content.
+- [Corrections](https://codeplaystudios.com/insights/corrections): Corrections policy and log.
+
+## Optional
+
+- [Sitemap](https://codeplaystudios.com/sitemap.xml): All indexable pages.
+- [Insights Sitemap](https://codeplaystudios.com/sitemap-insights.xml): All Insights articles.
