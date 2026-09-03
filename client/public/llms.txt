@@ -36,5 +36,6 @@ Contact: info@codeplaystudios.com
 
 ## Optional
 
-- [Sitemap](https://codeplaystudios.com/sitemap.xml): All indexable pages.
-- [Insights Sitemap](https://codeplaystudios.com/sitemap-insights.xml): All Insights articles.
+- [Sitemap](https://codeplaystudios.com/sitemap.xml): Sitemap index linking all sub-sitemaps.
+- [Pages Sitemap](https://codeplaystudios.com/sitemap-pages.xml): Marketing and service pages.
+- [Insights Sitemap](https://codeplaystudios.com/sitemap-insights.xml): All Insights articles and sections.
