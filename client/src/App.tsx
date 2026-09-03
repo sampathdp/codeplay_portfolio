@@ -5,27 +5,30 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/theme-provider";
 import { HelmetProvider } from "react-helmet-async";
 import Home from "@/pages/Home";
-import WebDevelopment from "@/pages/WebDevelopment";
-import MobileDevelopment from "@/pages/MobileDevelopment";
-import AiDevelopment from "@/pages/AiDevelopment";
-import ErpSystems from "@/pages/ErpSystems";
-import UnityDevelopment from "@/pages/UnityDevelopment";
-import CaseStudies from "@/pages/CaseStudies";
-import About from "@/pages/About";
-import Contact from "@/pages/Contact";
-import CaseStudyDetail from "@/pages/CaseStudyDetail";
-import Tools from "@/pages/Tools";
-import ImageEditorTool from "@/pages/ImageEditorTool";
-import ImageConverterTool from "@/pages/ImageConverterTool";
-import VideoWatermarkTool from "@/pages/VideoWatermarkTool";
-import ImageWatermarkTool from "@/pages/ImageWatermarkTool";
-import PdfTemplateTool from "@/pages/PdfTemplateTool";
 import { useScrollToTopOnNavigate } from "@/hooks/useScrollToTopOnNavigate";
-import NotFound from "@/pages/not-found";
 import Preloader from "@/components/Preloader";
 import { AnimatePresence } from "framer-motion";
 import { CurrencyProvider } from "@/context/CurrencyContext";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
+
+// Only Home is eager (it is the landing/LCP route). Every other page is
+// code-split so it stays out of the initial bundle.
+const WebDevelopment = lazy(() => import("@/pages/WebDevelopment"));
+const MobileDevelopment = lazy(() => import("@/pages/MobileDevelopment"));
+const AiDevelopment = lazy(() => import("@/pages/AiDevelopment"));
+const ErpSystems = lazy(() => import("@/pages/ErpSystems"));
+const UnityDevelopment = lazy(() => import("@/pages/UnityDevelopment"));
+const CaseStudies = lazy(() => import("@/pages/CaseStudies"));
+const About = lazy(() => import("@/pages/About"));
+const Contact = lazy(() => import("@/pages/Contact"));
+const CaseStudyDetail = lazy(() => import("@/pages/CaseStudyDetail"));
+const Tools = lazy(() => import("@/pages/Tools"));
+const ImageEditorTool = lazy(() => import("@/pages/ImageEditorTool"));
+const ImageConverterTool = lazy(() => import("@/pages/ImageConverterTool"));
+const VideoWatermarkTool = lazy(() => import("@/pages/VideoWatermarkTool"));
+const ImageWatermarkTool = lazy(() => import("@/pages/ImageWatermarkTool"));
+const PdfTemplateTool = lazy(() => import("@/pages/PdfTemplateTool"));
+const NotFound = lazy(() => import("@/pages/not-found"));
 
 // Insights pulls in @supabase/supabase-js on the admin path — lazy-load
 // so it stays out of the marketing site's main bundle.
@@ -42,6 +45,7 @@ function Router() {
   useScrollToTopOnNavigate();
 
   return (
+    <Suspense fallback={null}>
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/web-development" component={WebDevelopment} />
@@ -116,6 +120,7 @@ function Router() {
       <Route path="/contact" component={Contact} />
       <Route component={NotFound} />
     </Switch>
+    </Suspense>
   );
 }
 
@@ -138,7 +143,7 @@ function App() {
     }
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1200);
+    }, 700);
     return () => clearTimeout(timer);
   }, [isLoading]);
 

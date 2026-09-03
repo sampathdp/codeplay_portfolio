@@ -82,7 +82,7 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-2 h-full gap-8">
           {/* LEFT: Static Text Content */}
           <div className="flex flex-col justify-center z-20 order-2 lg:order-1 relative min-h-[300px] lg:min-h-[400px]">
-            <AnimatePresence mode="wait">
+            <AnimatePresence mode="wait" initial={false}>
               <motion.div
                 key={selectedIndex}
                 initial={{ opacity: 0, x: -30 }}
@@ -139,8 +139,7 @@ export default function HeroSection() {
                     {/* Character Image */}
                     <div className="relative z-10 w-full h-full flex items-center justify-center p-8">
                       <motion.img
-                        key={selectedIndex}
-                        initial={{ scale: 0.8, opacity: 0, y: 20 }}
+                        initial={false}
                         animate={{
                           scale: selectedIndex === index ? 1 : 0.8,
                           opacity: selectedIndex === index ? 1 : 0,

@@ -101,7 +101,7 @@ export default function Preloader() {
             exit={{
                 opacity: 0,
                 filter: "contrast(4) brightness(5) blur(20px)",
-                transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] }
+                transition: { duration: 0.3, ease: [0.76, 0, 0.24, 1] }
             }}
             className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#000000] text-primary overflow-hidden font-mono"
         >
