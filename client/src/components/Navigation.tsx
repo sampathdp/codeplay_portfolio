@@ -11,10 +11,25 @@ export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
+    let last = false;
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 40);
+      if (ticking) return;
+      ticking = true;
+      // Read scroll position inside rAF so it is never interleaved with the
+      // style writes React makes when `isScrolled` flips — avoids a forced
+      // reflow on every scroll event. State is set only when the boolean
+      // actually changes, so React does no work mid-scroll otherwise.
+      requestAnimationFrame(() => {
+        const next = window.scrollY > 40;
+        if (next !== last) {
+          last = next;
+          setIsScrolled(next);
+        }
+        ticking = false;
+      });
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 

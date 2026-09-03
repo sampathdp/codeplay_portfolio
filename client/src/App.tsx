@@ -1,6 +1,5 @@
 import { useState, useEffect, lazy, Suspense } from "react";
 import { Switch, Route } from "wouter";
-import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/theme-provider";
 import { HelmetProvider } from "react-helmet-async";
@@ -9,8 +8,33 @@ import { useScrollToTopOnNavigate } from "@/hooks/useScrollToTopOnNavigate";
 import Preloader from "@/components/Preloader";
 import { AnimatePresence } from "framer-motion";
 import { CurrencyProvider } from "@/context/CurrencyContext";
-import WhatsAppWidget from "@/components/WhatsAppWidget";
 import { ToolsGate } from "@/lib/toolsLink";
+
+// Non-critical chrome — not needed for first paint or first interaction.
+// Split out of the entry bundle and mounted once the browser is idle.
+const Toaster = lazy(() =>
+  import("@/components/ui/toaster").then((m) => ({ default: m.Toaster })),
+);
+const WhatsAppWidget = lazy(() => import("@/components/WhatsAppWidget"));
+
+/** Renders children only after the first idle window (or a 2s fallback). */
+function DeferredChrome({ children }: { children: React.ReactNode }) {
+  const [ready, setReady] = useState(false);
+  useEffect(() => {
+    const w = window as typeof window & {
+      requestIdleCallback?: (cb: () => void, o?: { timeout: number }) => number;
+      cancelIdleCallback?: (id: number) => void;
+    };
+    if (w.requestIdleCallback) {
+      const id = w.requestIdleCallback(() => setReady(true), { timeout: 2500 });
+      return () => w.cancelIdleCallback?.(id);
+    }
+    const t = window.setTimeout(() => setReady(true), 2000);
+    return () => clearTimeout(t);
+  }, []);
+  if (!ready) return null;
+  return <Suspense fallback={null}>{children}</Suspense>;
+}
 
 // Only Home is eager (it is the landing/LCP route). Every other page is
 // code-split so it stays out of the initial bundle.
@@ -161,9 +185,11 @@ function App() {
             <AnimatePresence mode="wait">
               {isLoading && <Preloader key="preloader" />}
             </AnimatePresence>
-            <WhatsAppWidget />
-            <Toaster />
             <Router />
+            <DeferredChrome>
+              <WhatsAppWidget />
+              <Toaster />
+            </DeferredChrome>
           </TooltipProvider>
         </CurrencyProvider>
       </ThemeProvider>
