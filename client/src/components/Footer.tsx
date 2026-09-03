@@ -67,7 +67,7 @@ export default function Footer() {
 
           {/* Column 2: Systems */}
           <div className="lg:col-span-2 space-y-6">
-            <h4 className="text-xs font-mono uppercase tracking-[0.3em] text-primary">Software Systems</h4>
+            <h3 className="text-xs font-mono uppercase tracking-[0.3em] text-primary">Software Systems</h3>
             <ul className="space-y-4">
               {[
                 { label: "Web Apps", href: "/web-development" },
@@ -88,7 +88,7 @@ export default function Footer() {
 
           {/* Column 3: Agency */}
           <div className="lg:col-span-2 space-y-6">
-            <h4 className="text-xs font-mono uppercase tracking-[0.3em] text-primary">Agency</h4>
+            <h3 className="text-xs font-mono uppercase tracking-[0.3em] text-primary">Agency</h3>
             <ul className="space-y-4">
               {[
                 { label: "Our Story", href: "/about" },
@@ -111,7 +111,7 @@ export default function Footer() {
 
           {/* Column 4: Contact */}
           <div className="lg:col-span-4 space-y-6">
-            <h4 className="text-xs font-mono uppercase tracking-[0.3em] text-primary">Quick Contact</h4>
+            <h3 className="text-xs font-mono uppercase tracking-[0.3em] text-primary">Quick Contact</h3>
             <div className="space-y-6">
               <div className="flex items-start gap-4 group">
                 <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center shrink-0 border border-white/10 group-hover:border-primary/50 transition-colors">

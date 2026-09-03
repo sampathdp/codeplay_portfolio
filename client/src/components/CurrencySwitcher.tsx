@@ -10,7 +10,7 @@ export default function CurrencySwitcher() {
       <button
         onClick={() => setCurrency("USD")}
         className={`relative flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold transition-all duration-300 ${
-          currency === "USD" ? "text-white" : "text-white/70 hover:text-white"
+          currency === "USD" ? "text-primary-foreground" : "text-white/70 hover:text-white"
         }`}
       >
         {currency === "USD" && (
@@ -27,7 +27,7 @@ export default function CurrencySwitcher() {
       <button
         onClick={() => setCurrency("LKR")}
         className={`relative flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold transition-all duration-300 ${
-          currency === "LKR" ? "text-white" : "text-white/70 hover:text-white"
+          currency === "LKR" ? "text-primary-foreground" : "text-white/70 hover:text-white"
         }`}
       >
         {currency === "LKR" && (

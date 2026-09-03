@@ -73,7 +73,7 @@ export default function PricingSection() {
           </div>
           <Button 
             asChild
-            className="bg-primary hover:bg-primary/90 text-white font-bold px-8 py-6 rounded-2xl shrink-0 group shadow-lg shadow-primary/25 cursor-pointer"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-8 py-6 rounded-2xl shrink-0 group shadow-lg shadow-primary/25 cursor-pointer"
           >
             <Link href="/#contact">
               Get a Free Quote
