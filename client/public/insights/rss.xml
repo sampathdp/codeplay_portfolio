@@ -6,8 +6,24 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 28 Aug 2026 18:54:51 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 08 Sep 2026 15:22:52 GMT</lastBuildDate>
     <ttl>60</ttl>
-
+    <item>
+      <title>How Cloudflare Saved 100 Terabytes of RAM Across Its 1.1.1.1 DNS Cache Infrastructure</title>
+      <link>https://codeplaystudios.com/insights/cloudflare-100tb-ram-dns-cache-optimization</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/cloudflare-100tb-ram-dns-cache-optimization</guid>
+      <pubDate>Thu, 03 Sep 2026 14:12:28 GMT</pubDate>
+      <category>Open Source</category>
+      <description>How micro-optimizations in Cloudflare&apos;s 1.1.1.1 DNS cache data structures yielded 100 terabytes of aggregate RAM savings across edge infrastructure.</description>
+    </item>
+    <item>
+      <title>Inside Cloudflare&apos;s 100TB RAM Savings: Lessons in In-Memory Data Structure Optimization</title>
+      <link>https://codeplaystudios.com/insights/cloudflare-100tb-ram-dns-cache-optimization-2</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/cloudflare-100tb-ram-dns-cache-optimization-2</guid>
+      <pubDate>Wed, 02 Sep 2026 15:49:04 GMT</pubDate>
+      <category>Open Source</category>
+      <description>Cloudflare&apos;s 1.1.1.1 DNS cache optimization reclaimed 100 terabytes of memory across its global fleet, demonstrating the compounded impact of low-level data structure tuning at scale.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/08/cloudflare-100tb-ram-dns-cache-optimization-2/fallback.svg" type="image/webp" />
+    </item>
   </channel>
 </rss>
