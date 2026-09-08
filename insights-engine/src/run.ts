@@ -13,7 +13,8 @@
 import { DEFAULT_CONFIG, resolveConfig } from "./config";
 import { createContext, createLogger } from "./context";
 import { runDiscoveryPipeline } from "./pipeline";
-import { selectDailyArticleCandidates } from "./selection";
+import { selectDailyArticleCandidates, type SelectionPick } from "./selection";
+import { planAutoQueue } from "./generation/autoQueue";
 import { describeSchedule, publishWindowInfo } from "./scheduler";
 import { MemoryStore } from "./store/memory";
 import { SupabaseStore, createServiceClient } from "./store/supabase";
@@ -25,6 +26,56 @@ const env = process.env as Record<string, string | undefined>;
 
 function has(flag: string): boolean {
   return process.argv.includes(flag);
+}
+
+function startOfUtcDayIso(): string {
+  const d = new Date();
+  d.setUTCHours(0, 0, 0, 0);
+  return d.toISOString();
+}
+
+/** Autopilot: queue a `full_article` job for each daily pick, respecting
+ *  the daily quota and skipping clusters already spoken for. */
+async function autoQueueDailyPicks(
+  store: SupabaseStore,
+  picks: SelectionPick[],
+  maxArticlesPerDay: number,
+  log: (msg: string, extra?: Record<string, unknown>) => void,
+): Promise<void> {
+  if (picks.length === 0) {
+    log("autoqueue.skip", { reason: "no picks" });
+    return;
+  }
+
+  const load = await store.countFullArticleJobsSince(startOfUtcDayIso());
+  const quotaRemaining = Math.max(0, maxArticlesPerDay - load);
+
+  const rows = await store.getClustersByKey(picks.map((p) => p.cluster.key));
+  const clusterIdByKey = new Map(rows.map((r) => [r.key, r.id]));
+  const liveJobIds = await store.getClusterIdsWithLiveJob(rows.map((r) => r.id));
+
+  const blockedClusterIds = new Set<string>();
+  for (const r of rows) {
+    if (r.status === "converted" || r.articleId || liveJobIds.has(r.id)) {
+      blockedClusterIds.add(r.id);
+    }
+  }
+
+  const plan = planAutoQueue({ picks, quotaRemaining, blockedClusterIds, clusterIdByKey });
+  for (const item of plan.queue) {
+    await store.queueAutoGeneration(item.clusterId, item.reason);
+  }
+
+  log("autoqueue.done", {
+    queued: plan.queue.length,
+    skipped: plan.skipped.length,
+    quotaRemaining,
+    dailyLoad: load,
+    skippedReasons: plan.skipped,
+  });
+  console.log(
+    `\n(autopilot) queued ${plan.queue.length} generation job(s), skipped ${plan.skipped.length} (quota left ${quotaRemaining}).`,
+  );
 }
 
 async function main() {
@@ -90,7 +141,8 @@ async function main() {
   }
 
   if (has("--select")) {
-    const cfg = resolveConfig(await store.getSettings());
+    const settings = await store.getSettings();
+    const cfg = resolveConfig(settings);
     const recentlyUsedKeys = await store.getRecentlyUsedClusterKeys(cfg.selection.lookbackHours * 2);
     const forcedKeys = await store.getForcedClusterKeys();
     const selection = selectDailyArticleCandidates(
@@ -102,6 +154,19 @@ async function main() {
       console.log(`  [slot ${p.slot}] ${p.cluster.title.slice(0, 90)}\n      ${p.reason}`);
     }
     if (selection.note) console.log(`  note: ${selection.note}`);
+
+    // Autopilot — when publishing.autoPublish is on, queue a generation job
+    // for each daily pick. Off = print-only, exactly as before.
+    const autopilot = Boolean(
+      (settings.publishing as { autoPublish?: boolean } | undefined)?.autoPublish,
+    );
+    if (autopilot && dryRun) {
+      console.log(
+        `\n(autopilot) dry run — would queue: ${selection.picks.map((p) => p.cluster.key).join(", ") || "nothing"}`,
+      );
+    } else if (autopilot && store instanceof SupabaseStore) {
+      await autoQueueDailyPicks(store, selection.picks, cfg.scheduler.maxArticlesPerDay, log);
+    }
   }
 
   if (failed.length === report.runs.length && report.runs.length > 0) {

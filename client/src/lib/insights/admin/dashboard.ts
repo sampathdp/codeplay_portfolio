@@ -177,7 +177,14 @@ export interface DiversityStatus {
 
 export async function getTodayPublishPlan(
   tz = "Asia/Colombo",
-): Promise<{ minPerDay: number; maxPerDay: number; publishedToday: number; slots: DiversityStatus[] }> {
+): Promise<{
+  minPerDay: number;
+  maxPerDay: number;
+  publishedToday: number;
+  autoPublish: boolean;
+  autoQueue: boolean;
+  slots: DiversityStatus[];
+}> {
   const since = startOfDay(tz);
   const sb = getInsightsSupabase();
 
@@ -208,6 +215,8 @@ export async function getTodayPublishPlan(
     minPerDay: Number(cfg.minPerDay ?? 2),
     maxPerDay: Number(cfg.maxPerDay ?? 3),
     publishedToday: rows.length,
+    autoPublish: cfg.autoPublish === true,
+    autoQueue: cfg.autoQueue === true,
     slots,
   };
 }

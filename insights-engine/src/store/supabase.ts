@@ -56,6 +56,78 @@ export class SupabaseStore implements Store {
     return new Set((data ?? []).map((r) => (r as { cluster_key: string }).cluster_key));
   }
 
+  // --- autopilot: auto-queue generation for the daily picks -----------------
+
+  /** Cluster rows for the given keys — id, workflow status, article link. */
+  async getClustersByKey(
+    keys: string[],
+  ): Promise<{ key: string; id: string; status: string; articleId: string | null }[]> {
+    if (keys.length === 0) return [];
+    const { data, error } = await this.sb
+      .from("insights_topic_clusters")
+      .select("cluster_key,id,status,article_id")
+      .in("cluster_key", keys);
+    if (error) throw new Error(`getClustersByKey: ${error.message}`);
+    return (data ?? []).map((r) => {
+      const row = r as {
+        cluster_key: string;
+        id: string;
+        status: string;
+        article_id: string | null;
+      };
+      return { key: row.cluster_key, id: row.id, status: row.status, articleId: row.article_id };
+    });
+  }
+
+  /** Cluster ids among `clusterIds` that already hold a non-terminal
+   *  `full_article` generation job (queued / running / succeeded). */
+  async getClusterIdsWithLiveJob(clusterIds: string[]): Promise<Set<string>> {
+    if (clusterIds.length === 0) return new Set();
+    const { data, error } = await this.sb
+      .from("insights_content_generation_jobs")
+      .select("cluster_id")
+      .eq("kind", "full_article")
+      .in("cluster_id", clusterIds)
+      .in("status", ["queued", "running", "succeeded"]);
+    if (error) throw new Error(`getClusterIdsWithLiveJob: ${error.message}`);
+    return new Set(
+      (data ?? [])
+        .map((r) => (r as { cluster_id: string | null }).cluster_id)
+        .filter((v): v is string => Boolean(v)),
+    );
+  }
+
+  /** How many `full_article` jobs (queued / running / succeeded) were
+   *  created since `sinceIso` — the day's generation load so far. */
+  async countFullArticleJobsSince(sinceIso: string): Promise<number> {
+    const { count, error } = await this.sb
+      .from("insights_content_generation_jobs")
+      .select("id", { count: "exact", head: true })
+      .eq("kind", "full_article")
+      .in("status", ["queued", "running", "succeeded"])
+      .gte("created_at", sinceIso);
+    if (error) throw new Error(`countFullArticleJobsSince: ${error.message}`);
+    return count ?? 0;
+  }
+
+  /** Queue one auto `full_article` job and mark the cluster `selected`. */
+  async queueAutoGeneration(clusterId: string, reason: string): Promise<void> {
+    const job = await this.sb.from("insights_content_generation_jobs").insert({
+      cluster_id: clusterId,
+      kind: "full_article",
+      status: "queued",
+      step: "research_bundle",
+      params: { auto: true, reason },
+    });
+    if (job.error) throw new Error(`queueAutoGeneration insert: ${job.error.message}`);
+
+    const upd = await this.sb
+      .from("insights_topic_clusters")
+      .update({ status: "selected", selection_reason: reason })
+      .eq("id", clusterId);
+    if (upd.error) throw new Error(`queueAutoGeneration select: ${upd.error.message}`);
+  }
+
   async saveIngestionRun(
     run: IngestionRunResult & { startedAt: string; finishedAt: string },
   ): Promise<void> {

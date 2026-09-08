@@ -2,8 +2,14 @@ name: Insights — Generate Draft Articles
 
 # Runs AFTER discovery. Processes queued generation jobs
 # (`insights_content_generation_jobs`) with Gemini, subject to the daily
-# article quota and the AI budget in `insights_settings`. Every article
-# lands as `review` — nothing is auto-published. No image generation yet.
+# article quota and the AI budget in `insights_settings`. Each draft lands
+# as `review` and gets one Gemini featured image.
+#
+# When `insights_settings.publishing.autoPublish` is true (Phase 9
+# autopilot), a final step ranks the day's `review` drafts and flips the
+# best 2-3 (diverse) to `published`; `insights-refresh.yml` then ships
+# them. With autoPublish false this step is skipped and an editor
+# approves each article by hand.
 
 on:
   schedule:

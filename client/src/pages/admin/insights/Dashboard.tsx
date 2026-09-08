@@ -47,7 +47,27 @@ export default function Dashboard() {
       </section>
 
       {/* Publish plan */}
-      <Card title="Today's publishing plan">
+      <Card
+        title="Today's publishing plan"
+        action={
+          plan.data ? (
+            <span
+              className={`inline-flex items-center gap-1.5 rounded-full px-2 py-0.5 text-[0.65rem] font-mono uppercase tracking-wider ${
+                plan.data.autoPublish
+                  ? "bg-emerald-500/15 text-emerald-300"
+                  : "bg-white/5 text-muted-foreground"
+              }`}
+            >
+              <span
+                className={`h-1.5 w-1.5 rounded-full ${
+                  plan.data.autoPublish ? "bg-emerald-400" : "bg-muted-foreground"
+                }`}
+              />
+              Autopilot {plan.data.autoPublish ? "on" : "off"}
+            </span>
+          ) : undefined
+        }
+      >
         {plan.loading ? (
           <Spinner />
         ) : plan.error ? (

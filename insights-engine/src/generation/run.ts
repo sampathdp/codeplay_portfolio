@@ -17,10 +17,16 @@ import { createGeminiClient } from "../gemini/client";
 import { isDailyQuotaError } from "../gemini/retry";
 import {
   BudgetedGeminiClient,
+  type AiBudgetConfig,
   type BudgetState,
   type UsageRecord,
 } from "../gemini/budget";
 import { resolveAiBudget, resolveGenerationConfig } from "./config";
+import {
+  rankForAutoPublish,
+  resolveAutoPublishConfig,
+  type PublishCandidate,
+} from "../publish/autopublish";
 import { generateArticle } from "./pipeline";
 import { persistGeneratedArticle } from "./persist";
 import type { ClusterInput } from "./steps";
@@ -473,6 +479,191 @@ async function main() {
       console.log(JSON.stringify({ msg: "image.job.done", jobId, articleId, status }));
     }
   }
+
+  // ---- autopilot: publish the day's best drafts --------------------------
+  const publishing = (settings.publishing ?? {}) as Record<string, unknown>;
+  if (publishing.autoPublish === true) {
+    try {
+      await runAutoPublish(sb, {
+        publishing,
+        models,
+        budget,
+        state,
+        imageModel,
+        imagePricing,
+        imageSettings,
+      });
+    } catch (err) {
+      console.error(
+        JSON.stringify({
+          msg: "autopublish.error",
+          error: err instanceof Error ? err.message : String(err),
+        }),
+      );
+    }
+  }
+}
+
+/**
+ * Rank today's `review` drafts and flip the best `minPerDay..maxPerDay`
+ * (diverse) ones to `published`. Fully autonomous: a `needs_review` flag
+ * does not exclude a draft. Each winner is guaranteed a featured image
+ * first. Never throws past its own try/catch in `main`.
+ */
+async function runAutoPublish(
+  sb: SupabaseClient,
+  opts: {
+    publishing: Record<string, unknown>;
+    models: ReturnType<typeof resolveGeminiModels>;
+    budget: AiBudgetConfig;
+    state: BudgetState;
+    imageModel: string;
+    imagePricing: Record<string, number>;
+    imageSettings: ImageSettings;
+  },
+): Promise<void> {
+  const baseCfg = resolveAutoPublishConfig(opts.publishing);
+  const since = startOfUtcDay();
+
+  // Respect the daily cap across every generate run today.
+  const already = await sb
+    .from("insights_articles")
+    .select("id", { count: "exact", head: true })
+    .eq("status", "published")
+    .not("generation_job_id", "is", null)
+    .gte("published_at", since);
+  if (already.error) throw new Error(`autopublish count: ${already.error.message}`);
+  const publishedToday = already.count ?? 0;
+
+  const cfg = {
+    ...baseCfg,
+    maxPerDay: Math.max(0, baseCfg.maxPerDay - publishedToday),
+    minPerDay: Math.max(0, baseCfg.minPerDay - publishedToday),
+  };
+  if (cfg.maxPerDay === 0) {
+    console.log(JSON.stringify({ msg: "autopublish.none", reason: "daily cap reached", publishedToday }));
+    return;
+  }
+
+  const res = await sb
+    .from("insights_articles")
+    .select(
+      "id,slug,quality_score,viral_score,breaking,needs_review,created_at,featured_image_url,featured_image_status,insights_categories:category_id ( slug )",
+    )
+    .eq("status", "review")
+    .gte("created_at", since);
+  if (res.error) throw new Error(`autopublish load: ${res.error.message}`);
+
+  const rows = (res.data ?? []) as Array<Record<string, unknown>>;
+  if (rows.length === 0) {
+    console.log(JSON.stringify({ msg: "autopublish.none", reason: "no review drafts today" }));
+    return;
+  }
+
+  const candidates: PublishCandidate[] = rows.map((r) => ({
+    id: String(r.id),
+    slug: String(r.slug),
+    categorySlug: (r.insights_categories as { slug?: string } | null)?.slug ?? null,
+    qualityScore: Number(r.quality_score ?? 0),
+    viralScore: Number(r.viral_score ?? 0),
+    breaking: Boolean(r.breaking),
+    needsReview: Boolean(r.needs_review),
+    createdAt: String(r.created_at ?? ""),
+  }));
+
+  const ranked = rankForAutoPublish(candidates, cfg);
+  if (ranked.winners.length === 0) {
+    console.log(JSON.stringify({ msg: "autopublish.none", reason: "nothing ranked" }));
+    return;
+  }
+
+  const byId = new Map(rows.map((r) => [String(r.id), r]));
+  const publishedSlugs: string[] = [];
+
+  for (let i = 0; i < ranked.winners.length; i++) {
+    const w = ranked.winners[i];
+    const row = byId.get(w.id) ?? {};
+
+    // Guarantee a usable featured image before going live.
+    const hasImage =
+      Boolean(row.featured_image_url) && row.featured_image_status !== "failed";
+    if (!hasImage) {
+      const budgeted = new BudgetedGeminiClient(
+        createGeminiClient(env, opts.models),
+        { ...opts.budget, perRunCallCap: 4 },
+        opts.state,
+        () => {},
+      );
+      try {
+        const imgStatus = await runImageForArticle(sb, {
+          articleId: w.id,
+          jobId: null,
+          imageModel: opts.imageModel,
+          imagePricing: opts.imagePricing,
+          imageSettings: opts.imageSettings,
+          textClient: budgeted,
+        });
+        opts.state.dailySpentUsd += budgeted.runSpentUsd;
+        opts.state.dailyCalls += budgeted.runCalls;
+        console.log(JSON.stringify({ msg: "autopublish.image", articleId: w.id, imgStatus }));
+      } catch (err) {
+        opts.state.dailySpentUsd += budgeted.runSpentUsd;
+        opts.state.dailyCalls += budgeted.runCalls;
+        console.error(
+          JSON.stringify({
+            msg: "autopublish.image.error",
+            articleId: w.id,
+            error: err instanceof Error ? err.message : String(err),
+          }),
+        );
+      }
+    }
+
+    // Compare-and-swap: only publish while the draft is still `review`,
+    // so a concurrent human edit / unpublish is never clobbered.
+    const upd = await sb
+      .from("insights_articles")
+      .update({
+        status: "published",
+        published_at: new Date().toISOString(),
+        scheduled_at: null,
+        ...(i === 0 ? { featured: true } : {}),
+      })
+      .eq("id", w.id)
+      .eq("status", "review")
+      .select("id");
+    if (upd.error) {
+      console.error(JSON.stringify({ msg: "autopublish.publish.error", articleId: w.id, error: upd.error.message }));
+      continue;
+    }
+    if (!upd.data?.length) {
+      console.log(JSON.stringify({ msg: "autopublish.skip", articleId: w.id, reason: "no longer in review" }));
+      continue;
+    }
+
+    await sb.from("insights_admin_action_logs").insert({
+      actor: null,
+      actor_email: "autopilot",
+      action: "autopublish",
+      entity_type: "article",
+      entity_id: w.id,
+      metadata: {
+        slug: w.slug,
+        score: Math.round(ranked.scores[w.id] ?? 0),
+        reason: ranked.reasons[w.id] ?? "",
+      },
+    });
+    publishedSlugs.push(w.slug);
+  }
+
+  console.log(
+    JSON.stringify({
+      msg: "autopublish.done",
+      published: publishedSlugs,
+      belowMin: ranked.belowMin,
+      consideredToday: candidates.length,
+    }),
+  );
 }
 
 async function recordUsage(

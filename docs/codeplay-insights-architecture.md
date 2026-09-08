@@ -25,6 +25,13 @@
 > RSS, E-E-A-T pages, internal linking, optional GA4, dormant AdSense
 > slots. The build-time snapshot + sitemap + RSS are refreshed by
 > `npm run insights:seo` before `vite build`.
+> **Phase 9 (autopilot — end-to-end autonomous)** — see §4.3. One switch
+> (`insights_settings.publishing.autoPublish`): discovery auto-queues a
+> generation job per daily pick, the worker ranks the day's `review`
+> drafts and auto-publishes the best 2–3 (diverse), and
+> `.github/workflows/insights-refresh.yml` commits the regenerated
+> snapshot to `main` to fire the deploy. `autoPublish=false` restores
+> fully-manual editorial approval with no other change.
 > Not yet built: crawler-perfect static prerendering of `/insights/*`
 > (needs a versioned host rewrite rule), newsletter backend.
 
@@ -269,6 +276,40 @@ Options, in preference order:
    Add later if 8-hour latency is too slow.
 
 RSS + sitemap regeneration happen in the same build step.
+
+### 4.3 Phase 9 — autopilot (implemented)
+
+Gated by `insights_settings.publishing.autoPublish` (+ `autoQueue`,
+`maxPerCategory`, `rankWeights`). When **off**, everything below is skipped
+and the flow is exactly §4.1–§4.2 with a human at each step.
+
+When **on**:
+
+1. **Auto-queue** — `run.ts discover --select` (the discovery cron) maps
+   each `selectDailyArticleCandidates` pick to its cluster row and inserts
+   a `full_article` job (`params.auto = true`), marking the cluster
+   `selected`. Respects `scheduler.maxArticlesPerDay` (counts today's
+   `full_article` jobs) and skips clusters already `converted` / linked to
+   an article / holding a live job. Logic: `generation/autoQueue.ts`
+   (pure) + `SupabaseStore` helpers.
+2. **Generate + illustrate** — unchanged worker. Each draft lands `review`
+   with a Gemini featured image.
+3. **Auto-publish** — after the job loop, `generation/run.ts` →
+   `runAutoPublish` loads today's `review` drafts, ranks them
+   (`publish/autopublish.ts`: `0.6·quality + 0.35·viral + breaking boost`,
+   then the AI/dev/gaming diversity slots + `maxPerCategory` cap +
+   `minPerDay` floor), guarantees each winner an image, and flips the best
+   `minPerDay..maxPerDay` to `published` via a `status='review'`
+   compare-and-swap (never clobbers a concurrent human action). Fully
+   autonomous: a `needs_review` flag does **not** exclude a draft; a
+   hard-gate failure (draft lands `draft`, not `review`) does. Each
+   publish writes an `insights_admin_action_logs` row
+   (`action='autopublish'`, `actor=null`).
+4. **Deploy** — `.github/workflows/insights-refresh.yml` (cron, ~20 min
+   after generate) runs `npm run insights:seo`, and if the snapshot /
+   sitemap / RSS changed, commits + pushes to `main` (needs a PAT —
+   `secrets.INSIGHTS_DEPLOY_PAT` — because `GITHUB_TOKEN` pushes don't
+   trigger `main.yml`). The existing deploy workflow builds + FTPS-uploads.
 
 ---
 

@@ -1,0 +1,60 @@
+name: Insights — Refresh Published Snapshot
+
+# Autopilot deploy trigger. The generation worker auto-publishes the day's
+# best drafts straight into Supabase, but the live site is a static build
+# that only refreshes on a push to `main`. This job pulls the published
+# articles, regenerates the committed snapshot + sitemap + RSS, and — when
+# any of them actually changed — commits and pushes, which fires the
+# existing "Deploy to Shared Hosting" workflow (main.yml).
+#
+# Runs ~20 min after each generation run (UTC). Asia/Colombo +5:30.
+#
+# REQUIRES repo secret INSIGHTS_DEPLOY_PAT — a PAT with `contents: write`
+# on this repo. A push made with the default GITHUB_TOKEN does NOT trigger
+# another workflow, so main.yml would never run.
+
+on:
+  schedule:
+    - cron: "50 4,11,18 * * *"
+  workflow_dispatch: {}
+
+concurrency:
+  group: insights-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    name: Refresh
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.INSIGHTS_DEPLOY_PAT }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - run: npm ci
+
+      - name: Regenerate snapshot + sitemap + RSS
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: npm run insights:seo
+
+      - name: Commit + push if changed
+        run: |
+          git config user.name  "codeplay-insights-bot"
+          git config user.email "insights-bot@codeplaystudios.com"
+          git add client/src/data/insights.generated.ts \
+                  client/public/sitemap-insights.xml \
+                  client/public/insights/rss.xml
+          if git diff --cached --quiet; then
+            echo "No snapshot changes — nothing to deploy."
+            exit 0
+          fi
+          git commit -m "chore(insights): refresh published snapshot"
+          git push
