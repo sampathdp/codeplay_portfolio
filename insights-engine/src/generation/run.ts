@@ -44,6 +44,19 @@ function startOfUtcDay(): string {
   return d.toISOString();
 }
 
+/** Persist the live pipeline step for the admin progress bar. Best-effort. */
+async function setJobStep(
+  sb: SupabaseClient,
+  jobId: string,
+  step: string,
+): Promise<void> {
+  try {
+    await sb.from("insights_content_generation_jobs").update({ step }).eq("id", jobId);
+  } catch {
+    // never fail a generation run because progress reporting hiccupped
+  }
+}
+
 async function loadSettings(sb: SupabaseClient): Promise<Record<string, unknown>> {
   const { data, error } = await sb.from("insights_settings").select("key,value");
   if (error) throw new Error(`settings: ${error.message}`);
@@ -316,6 +329,7 @@ async function main() {
         cluster: { ...ci.input, viralScore: ci.viralScore, breaking: ci.breaking },
         config: genConfig,
         articleType: (job.article_type as ArticleType | null) ?? undefined,
+        onStep: (step) => setJobStep(sb, jobId, step),
       });
 
       // account for what we spent
@@ -345,6 +359,7 @@ async function main() {
         continue;
       }
 
+      await setJobStep(sb, jobId, "persist");
       const persisted = await persistGeneratedArticle(sb, {
         article: outcome.article,
         status: outcome.status,
@@ -357,6 +372,7 @@ async function main() {
 
       await sb.from("insights_content_generation_jobs").update({
         status: "succeeded",
+        step: "finalize",
         article_id: persisted.articleId,
         needs_review: outcome.status !== "review",
         result: { status: outcome.status, reasons: outcome.reasons, stepsRun: outcome.stepsRun, articleId: persisted.articleId },
@@ -369,6 +385,7 @@ async function main() {
       // One featured image per selected article — only when the draft passed
       // the gates (status "review"), so we never spend on a weak draft.
       if (imagesEnabled && imageSettings.autoGenerateOnReview !== false && outcome.status === "review") {
+        await setJobStep(sb, jobId, "image");
         const imgStatus = await runImageForArticle(sb, {
           articleId: persisted.articleId,
           jobId,

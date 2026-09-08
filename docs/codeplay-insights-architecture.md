@@ -32,6 +32,7 @@
 > `.github/workflows/insights-refresh.yml` commits the regenerated
 > snapshot to `main` to fire the deploy. `autoPublish=false` restores
 > fully-manual editorial approval with no other change.
+>
 > Not yet built: crawler-perfect static prerendering of `/insights/*`
 > (needs a versioned host rewrite rule), newsletter backend.
 
@@ -293,7 +294,11 @@ When **on**:
    an article / holding a live job. Logic: `generation/autoQueue.ts`
    (pure) + `SupabaseStore` helpers.
 2. **Generate + illustrate** — unchanged worker. Each draft lands `review`
-   with a Gemini featured image.
+   with a Gemini featured image. The worker now advances the job's `step`
+   column through `FULL_ARTICLE_STEP_SEQUENCE` (`pipeline.ts` `onStep`
+   callback → `run.ts` `setJobStep`), so `/admin/insights/jobs` shows a
+   real progress bar (`lib/insights/jobProgress.ts`) that polls every 4 s
+   while anything is in flight.
 3. **Auto-publish** — after the job loop, `generation/run.ts` →
    `runAutoPublish` loads today's `review` drafts, ranks them
    (`publish/autopublish.ts`: `0.6·quality + 0.35·viral + breaking boost`,

@@ -62,6 +62,25 @@ export const DEFAULT_GENERATION_CONFIG: GenerationConfig = {
 
 export type GenerationStatus = "review" | "needs_review" | "rejected" | "failed";
 
+/**
+ * Canonical ordered steps of a `full_article` job, used to drive the admin
+ * progress bar. The first 7 run inside `generateArticle`; `persist` and
+ * `finalize` are written by the worker (`run.ts`) around persistence.
+ */
+export const FULL_ARTICLE_STEP_SEQUENCE = [
+  "research_bundle",
+  "source_verification",
+  "outline",
+  "draft",
+  "fact_check",
+  "seo",
+  "quality",
+  "persist",
+  "finalize",
+] as const;
+
+export type FullArticleStep = (typeof FULL_ARTICLE_STEP_SEQUENCE)[number];
+
 export interface GenerationOutcome {
   status: GenerationStatus;
   article: GeneratedArticle | null;
@@ -76,6 +95,9 @@ export interface GenerateOptions {
   articleType?: ArticleType;
   existingSlugs?: Iterable<string>;
   now?: Date;
+  /** Called after each pipeline step completes — lets the worker persist
+   *  live progress for the admin UI. Awaited; failures are swallowed. */
+  onStep?: (step: FullArticleStep) => void | Promise<void>;
 }
 
 export async function generateArticle(
@@ -86,14 +108,23 @@ export async function generateArticle(
   const stepsRun: string[] = [];
   const cluster = opts.cluster;
 
+  const emit = async (step: FullArticleStep): Promise<void> => {
+    stepsRun.push(step);
+    try {
+      await opts.onStep?.(step);
+    } catch {
+      // progress reporting is best-effort — never fail generation over it
+    }
+  };
+
   try {
     // 1. research bundle
     const { bundle } = await buildResearchBundle(client, cluster);
-    stepsRun.push("research_bundle");
+    await emit("research_bundle");
 
     // 2. source verification — gate before spending on a draft
     const { data: verification } = await verifySources(client, bundle);
-    stepsRun.push("source_verification");
+    await emit("source_verification");
 
     const important =
       (cluster.viralScore ?? 0) >= 78 || cluster.breaking === true;
@@ -131,15 +162,15 @@ export async function generateArticle(
       articleType,
       wordTarget,
     );
-    stepsRun.push("outline");
+    await emit("outline");
 
     // 4. draft
     const { draft } = await generateDraft(client, bundle, verification, outline);
-    stepsRun.push("draft");
+    await emit("draft");
 
     // 5. fact check
     const { factCheck } = await factCheckDraft(client, bundle, draft);
-    stepsRun.push("fact_check");
+    await emit("fact_check");
 
     // 6. SEO + headlines
     const { seo } = await generateSeo(
@@ -149,7 +180,7 @@ export async function generateArticle(
       cfg.headlineCandidates,
       cluster.category,
     );
-    stepsRun.push("seo");
+    await emit("seo");
 
     // deterministic style pass
     const bodyText = draft.sections.map((s) => s.content).join("\n\n");
@@ -166,7 +197,7 @@ export async function generateArticle(
       factCheck,
       style.sensationalismScore,
     );
-    stepsRun.push("quality");
+    await emit("quality");
 
     // Blend model readability with the deterministic Flesch proxy.
     quality.readability = Math.round(

@@ -1,6 +1,8 @@
+import { useEffect } from "react";
 import { Link } from "wouter";
 import { RefreshCw } from "lucide-react";
 import { ADMIN_INSIGHTS_BASE } from "@/lib/insights/routes";
+import { jobProgress } from "@/lib/insights/jobProgress";
 import {
   listGenerationJobs,
   retryJob,
@@ -34,6 +36,14 @@ export default function Jobs() {
     (j) => j.status === "queued" || j.status === "running",
   );
   const done = (jobs.data ?? []).filter((j) => j.status === "succeeded");
+
+  // Live-poll while anything is in flight so the progress bars actually move.
+  const hasActive = active.length > 0;
+  useEffect(() => {
+    if (!hasActive) return;
+    const id = window.setInterval(() => jobs.reload(), 4000);
+    return () => window.clearInterval(id);
+  }, [hasActive, jobs.reload]);
 
   return (
     <div className="space-y-5">
@@ -129,17 +139,20 @@ export default function Jobs() {
         ) : (
           <ul className="divide-y divide-white/5 text-sm">
             {active.map((j) => (
-              <li key={j.id} className="flex items-center gap-2 py-2">
-                <StatusPill status={j.status} />
-                <span className="text-xs">{j.kind.replace(/_/g, " ")} · {j.step}</span>
-                <span className="ml-auto text-[0.7rem] text-muted-foreground">{relTime(j.created_at)}</span>
-                <button
-                  onClick={() => action.run(`cancel-${j.id}`, () => cancelJob(j.id), jobs.reload)}
-                  className="text-[0.7rem] text-muted-foreground hover:text-destructive disabled:opacity-50"
-                  disabled={action.pending === `cancel-${j.id}`}
-                >
-                  Cancel
-                </button>
+              <li key={j.id} className="py-2.5">
+                <div className="flex items-center gap-2">
+                  <StatusPill status={j.status} />
+                  <span className="text-xs">{j.kind.replace(/_/g, " ")}</span>
+                  <span className="ml-auto text-[0.7rem] text-muted-foreground">{relTime(j.created_at)}</span>
+                  <button
+                    onClick={() => action.run(`cancel-${j.id}`, () => cancelJob(j.id), jobs.reload)}
+                    className="text-[0.7rem] text-muted-foreground hover:text-destructive disabled:opacity-50"
+                    disabled={action.pending === `cancel-${j.id}`}
+                  >
+                    Cancel
+                  </button>
+                </div>
+                <JobProgressBar job={j} />
               </li>
             ))}
           </ul>
@@ -202,5 +215,40 @@ function JobFailureReason({ job }: { job: GenerationJobRow }) {
       {result.status ? ` — outcome: ${result.status}` : ""}. Check the
       generation worker logs for this run.
     </p>
+  );
+}
+
+/**
+ * Real progress bar driven by the job's live `step` column, which the
+ * generation worker advances through the pipeline
+ * (research → verify → outline → draft → fact-check → SEO → quality →
+ * save → finalise → image).
+ */
+function JobProgressBar({ job }: { job: GenerationJobRow }) {
+  const p = jobProgress(job);
+  const barColor =
+    p.tone === "failed"
+      ? "bg-destructive"
+      : p.tone === "done"
+        ? "bg-emerald-500"
+        : p.tone === "queued"
+          ? "bg-white/25"
+          : "bg-primary";
+
+  return (
+    <div className="mt-1.5">
+      <div className="mb-1 flex items-center justify-between text-[0.7rem] text-muted-foreground">
+        <span>{p.label}</span>
+        {!p.indeterminate && p.tone !== "queued" && <span>{p.pct}%</span>}
+      </div>
+      <div className="h-1.5 overflow-hidden rounded-full bg-white/10">
+        <div
+          className={`h-full rounded-full transition-all duration-500 ${barColor} ${
+            p.indeterminate ? "animate-pulse" : ""
+          }`}
+          style={{ width: `${p.indeterminate ? 100 : Math.max(p.pct, 2)}%` }}
+        />
+      </div>
+    </div>
   );
 }

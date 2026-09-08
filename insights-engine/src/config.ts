@@ -162,19 +162,21 @@ export interface GeminiModelConfig {
   imageModel: string;
 }
 
-// Free-tier friendliness is the priority for the default. Newer models
-// (`gemini-3.x-*`, `gemini-flash-latest`) and every `*-pro-*` carry a tiny
-// free-tier request-per-day quota (RESOURCE_EXHAUSTED after ~20 calls —
-// less than one article) and the newest aliases are also frequently
-// 503-overloaded. `gemini-2.0-flash` has a large free RPD allowance, is
-// widely available, and completes the pipeline on a billing-free key.
+// `gemini-2.0-flash` was retired (404 "no longer available … use
+// models/gemini-3.6-flash"), so the default is now the rolling
+// `gemini-flash-latest` alias — always points at a live model and never
+// 404s. Trade-off: newer models carry a smaller free-tier request-per-day
+// quota (RESOURCE_EXHAUSTED after ~20 calls, < 1 article) and the alias is
+// occasionally 503-overloaded (the retry wrapper in `gemini/retry.ts`
+// absorbs transient 503s).
 //
 // Overrides (env or `insights_settings`):
 //   GEMINI_TEXT_MODEL=gemini-2.5-flash-lite  # highest free RPD (~1000/day)
+//   GEMINI_TEXT_MODEL=gemini-3.7-flash       # tested stable when -latest is overloaded
 //   GEMINI_TEXT_MODEL=gemini-pro-latest      # best quality, needs billing
 export const DEFAULT_GEMINI_MODELS: GeminiModelConfig = {
-  textModel: "gemini-2.0-flash",
-  fastModel: "gemini-2.0-flash",
+  textModel: "gemini-flash-latest",
+  fastModel: "gemini-flash-latest",
   imageModel: "gemini-2.5-flash-image",
 };
 
