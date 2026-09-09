@@ -6,7 +6,7 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 09 Sep 2026 09:14:31 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 09 Sep 2026 15:21:03 GMT</lastBuildDate>
     <ttl>60</ttl>
     <item>
       <title>How Cloudflare Saved 100 Terabytes of RAM Across Its 1.1.1.1 DNS Cache Infrastructure</title>
