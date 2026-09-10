@@ -38,9 +38,9 @@ npm run insights:generate -- --limit 2
 
   | Env var | Default | Used for |
   |---|---|---|
-  | `GEMINI_TEXT_MODEL` | `gemini-2.5-pro` | outline, draft |
-  | `GEMINI_FAST_MODEL` | `gemini-2.5-flash` | research, verification, fact-check, SEO, quality |
-  | `GEMINI_IMAGE_MODEL` | `gemini-2.5-flash-image` | Phase 5 (unused) |
+  | `GEMINI_TEXT_MODEL` | `gemini-3.6-flash` | outline, draft |
+  | `GEMINI_FAST_MODEL` | `gemini-3.5-flash-lite` | research, verification, fact-check, SEO, quality |
+  | `GEMINI_IMAGE_MODEL` | `gemini-3.1-flash-image` | Phase 5 (unused) |
   | `GEMINI_API_KEY` | — | required; server/CI only |
 
 - `GeminiClient` is an **interface**. The pipeline depends only on it, so
@@ -264,8 +264,8 @@ Server / CI only (never `VITE_`-prefixed, never in the bundle):
 
 ```
 GEMINI_API_KEY=            # required
-GEMINI_TEXT_MODEL=         # optional — default gemini-2.5-pro
-GEMINI_FAST_MODEL=         # optional — default gemini-2.5-flash
+GEMINI_TEXT_MODEL=         # optional — default gemini-3.6-flash
+GEMINI_FAST_MODEL=         # optional — default gemini-3.5-flash-lite
 GEMINI_IMAGE_MODEL=        # optional — Phase 5
 SUPABASE_URL=
 SUPABASE_SERVICE_ROLE_KEY=

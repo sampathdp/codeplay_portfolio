@@ -162,22 +162,24 @@ export interface GeminiModelConfig {
   imageModel: string;
 }
 
-// `gemini-2.0-flash` was retired (404 "no longer available … use
-// models/gemini-3.6-flash"), so the default is now the rolling
-// `gemini-flash-latest` alias — always points at a live model and never
-// 404s. Trade-off: newer models carry a smaller free-tier request-per-day
-// quota (RESOURCE_EXHAUSTED after ~20 calls, < 1 article) and the alias is
-// occasionally 503-overloaded (the retry wrapper in `gemini/retry.ts`
-// absorbs transient 503s).
+// Defaults are pinned to explicit *stable* model IDs, not a rolling
+// `-latest` alias. The alias hot-swaps to whatever Gemini ships newest,
+// and the newest model always launches with a tiny free-tier quota —
+// `gemini-flash-latest` was resolving to `gemini-3.8-flash`, whose free
+// tier is ~20 requests/day (RESOURCE_EXHAUSTED before a single article
+// finishes). Pin one generation back from newest: mature enough for a
+// real free quota, still current. The 2.x line (`gemini-2.0-flash` …
+// `gemini-2.5-*`) is retired / off the free tier — stay on 3.x.
 //
 // Overrides (env or `insights_settings`):
-//   GEMINI_TEXT_MODEL=gemini-2.5-flash-lite  # highest free RPD (~1000/day)
-//   GEMINI_TEXT_MODEL=gemini-3.7-flash       # tested stable when -latest is overloaded
-//   GEMINI_TEXT_MODEL=gemini-pro-latest      # best quality, needs billing
+//   GEMINI_TEXT_MODEL=gemini-3.5-flash-lite  # fastest / highest free RPD
+//   GEMINI_TEXT_MODEL=gemini-3.7-flash       # newer, still has a real free quota
+//   GEMINI_TEXT_MODEL=gemini-3.1-pro-preview # best quality, needs billing
+//   GEMINI_IMAGE_MODEL=gemini-3-pro-image    # studio-quality hero images, needs billing
 export const DEFAULT_GEMINI_MODELS: GeminiModelConfig = {
-  textModel: "gemini-flash-latest",
-  fastModel: "gemini-flash-latest",
-  imageModel: "gemini-2.5-flash-image",
+  textModel: "gemini-3.6-flash",
+  fastModel: "gemini-3.5-flash-lite",
+  imageModel: "gemini-3.1-flash-image",
 };
 
 export function resolveGeminiModels(

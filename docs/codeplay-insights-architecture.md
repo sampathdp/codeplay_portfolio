@@ -373,11 +373,11 @@ in the worker, never the browser). `GEMINI_API_KEY` is server-only.
 
 | Step | Model (configurable in `settings`) | Output | Guardrails |
 | --- | --- | --- | --- |
-| Research notes | `gemini-2.x-flash` | `research_notes.notes_md` — structured summary, key facts, open questions, list of source URLs | Prompt forbids copying sentences; must attribute each fact to a source URL |
-| Article draft | `gemini-2.x-pro` | `articles.body_mdx` + the 7 original-value fields (`developer_take`, `business_impact`, `developer_impact`, `technical_explanation` in body, `risks_limitations`, `why_it_matters`, `recommendations`) | JSON schema response, validated with `zod`. Min length per section. Must include ≥2 distinct cited source links. |
+| Research notes | `gemini-3.x-flash` | `research_notes.notes_md` — structured summary, key facts, open questions, list of source URLs | Prompt forbids copying sentences; must attribute each fact to a source URL |
+| Article draft | `gemini-3.x-flash` (or `-pro` with billing) | `articles.body_mdx` + the 7 original-value fields (`developer_take`, `business_impact`, `developer_impact`, `technical_explanation` in body, `risks_limitations`, `why_it_matters`, `recommendations`) | JSON schema response, validated with `zod`. Min length per section. Must include ≥2 distinct cited source links. |
 | SEO fields | same call | `seo_title`, `seo_description`, `slug`, `tags[]` | length limits enforced |
 | Editorial image | Gemini image model (see §7) | hero image | §7 |
-| Quality check | `gemini-2.x-flash` as critic + rule checks | `quality_report` jsonb, pass/fail | §6.2 |
+| Quality check | `gemini-3.x-flash` as critic + rule checks | `quality_report` jsonb, pass/fail | §6.2 |
 
 ### 6.2 Quality checks (must pass before `status` can become `in_review`)
 

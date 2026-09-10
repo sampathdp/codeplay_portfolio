@@ -35,12 +35,12 @@ export const DEFAULT_AI_BUDGET: AiBudgetConfig = {
     // Rough per-1M-token USD estimates for budget guarding — not billing.
     "gemini-pro-latest": { input: 1.25, output: 10.0 },
     "gemini-flash-latest": { input: 0.3, output: 2.5 },
+    "gemini-3.1-pro-preview": { input: 1.25, output: 10.0 },
     "gemini-3.7-flash": { input: 0.3, output: 2.5 },
     "gemini-3.6-flash": { input: 0.3, output: 2.5 },
     "gemini-3.5-flash": { input: 0.3, output: 2.5 },
+    "gemini-3.5-flash-lite": { input: 0.1, output: 0.4 },
     "gemini-3.1-flash-lite": { input: 0.1, output: 0.4 },
-    "gemini-2.5-pro": { input: 1.25, output: 10.0 },
-    "gemini-2.5-flash": { input: 0.3, output: 2.5 },
     default: { input: 0.5, output: 4.0 },
   },
 };

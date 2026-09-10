@@ -11,8 +11,8 @@ const input = {
   category: "artificial-intelligence",
   summary: "Acme AI announced a new model with an agentic coding mode.",
   entities: ["Acme AI"],
-  imageModel: "gemini-2.5-flash-image",
-  imagePricingUsd: { "gemini-2.5-flash-image": 0.04, default: 0.04 },
+  imageModel: "gemini-3.1-flash-image",
+  imagePricingUsd: { "gemini-3.1-flash-image": 0.04, default: 0.04 },
   aspectRatio: "16:9",
 };
 
@@ -34,7 +34,7 @@ describe("generateFeaturedImage — success", () => {
 
     expect(out.status).toBe("generated");
     expect(out.aiGenerated).toBe(true);
-    expect(out.model).toBe("gemini-2.5-flash-image");
+    expect(out.model).toBe("gemini-3.1-flash-image");
     expect(out.primary).not.toBeNull();
     expect(out.primary!.url).toMatch(/^memory:\/\/insights-media\/insights\/2026\/08\/acme-nimbus-3-agentic-coding\//);
     expect(out.variants.length).toBe(1); // passthrough keeps one

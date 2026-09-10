@@ -13,7 +13,7 @@ const opts = { purpose: "draft" as const };
 describe("estimateCostUsd", () => {
   it("prices input and output tokens per model", () => {
     const cost = estimateCostUsd(
-      "gemini-2.5-pro",
+      "gemini-3.1-pro-preview",
       { promptTokens: 1_000_000, completionTokens: 1_000_000, totalTokens: 2_000_000 },
       DEFAULT_AI_BUDGET.pricingPer1MTokensUsd,
     );
@@ -33,7 +33,7 @@ describe("BudgetedGeminiClient", () => {
   it("records usage + cost for each call", async () => {
     const records: UsageRecord[] = [];
     const inner = new MockGeminiClient({
-      model: "gemini-2.5-flash",
+      model: "gemini-3.6-flash",
       usage: { promptTokens: 1000, completionTokens: 2000 },
       respond: () => "ok",
     });

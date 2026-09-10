@@ -88,7 +88,7 @@ artwork; entities are referenced "without depicting their logos".
    - `imagen-*` → `models.generateImages` (`aspectRatio: "16:9"`, `negativePrompt`)
    - `gemini-*-image` → `models.generateContent` with an `IMAGE` response
      modality; aspect ratio steered via the prompt.
-   Default model `GEMINI_IMAGE_MODEL` = `gemini-2.5-flash-image`.
+   Default model `GEMINI_IMAGE_MODEL` = `gemini-3.1-flash-image`.
 3. **Optimise** — `storage/processor.ts` `SharpImageProcessor` (sharp,
    optional dependency, lazy-loaded; passthrough fallback if unavailable):
    `fit: cover, position: attention` crop to each 16:9 size, WebP q82.
@@ -221,7 +221,7 @@ Server / CI only:
 
 ```
 GEMINI_API_KEY=            # required (shared with Phase 4)
-GEMINI_IMAGE_MODEL=        # optional — default gemini-2.5-flash-image
+GEMINI_IMAGE_MODEL=        # optional — default gemini-3.1-flash-image
 INSIGHTS_MEDIA_BUCKET=     # optional — default insights-media
 SUPABASE_URL=
 SUPABASE_SERVICE_ROLE_KEY=
