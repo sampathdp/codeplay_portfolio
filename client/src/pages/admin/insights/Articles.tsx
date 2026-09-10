@@ -22,7 +22,7 @@ const GROUPS: { key: string; label: string; statuses: ArticleStatusRow[] }[] = [
 ];
 
 export default function Articles() {
-  const [group, setGroup] = useState("review");
+  const [group, setGroup] = useState("published");
   const active = GROUPS.find((g) => g.key === group)!;
   const list = useAsync(
     () => listArticles({ status: active.statuses, limit: 100 }),
@@ -64,13 +64,14 @@ export default function Articles() {
         </EmptyRow>
       ) : (
         <div className="overflow-x-auto rounded-xl border border-white/10">
-          <table className="w-full min-w-[640px] text-sm">
+          <table className="w-full min-w-[720px] text-sm">
             <thead className="bg-white/[0.03] text-left text-xs text-muted-foreground">
               <tr>
                 <th className="px-4 py-2 font-medium">Title</th>
                 <th className="px-3 py-2 font-medium">Type</th>
                 <th className="px-3 py-2 font-medium">Status</th>
                 <th className="px-3 py-2 font-medium">Quality</th>
+                <th className="px-3 py-2 font-medium">Views</th>
                 <th className="px-3 py-2 font-medium">Updated</th>
               </tr>
             </thead>
@@ -98,6 +99,9 @@ export default function Articles() {
                   </td>
                   <td className="px-3 py-2.5 tabular-nums text-muted-foreground">
                     {a.quality_score ?? "—"}
+                  </td>
+                  <td className="px-3 py-2.5 tabular-nums text-muted-foreground">
+                    {(a.view_count ?? 0).toLocaleString()}
                   </td>
                   <td className="px-3 py-2.5 text-xs text-muted-foreground">
                     {relTime(a.updated_at)}
