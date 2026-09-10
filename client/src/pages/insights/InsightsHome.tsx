@@ -30,11 +30,14 @@ export default function InsightsHome() {
   const featured = getFeatured();
   const trending = getTrending(5);
   const mostRead = getMostRead(5);
-  const excludeFromLatest = [
-    featured?.slug,
-    ...trending.slice(0, 3).map((t) => t.slug),
-  ].filter(Boolean) as string[];
-  const latest = getLatest(9, excludeFromLatest);
+  // Trending stories lead the "Latest Insights" grid; the featured story
+  // stays out of it (it already has the hero slot above).
+  const pinnedTrending = trending.slice(0, 3).map((t) => t.slug);
+  const latest = getLatest(
+    9,
+    featured?.slug ? [featured.slug] : [],
+    pinnedTrending,
+  );
   const total = allArticles().length;
 
   const websiteSchema = {

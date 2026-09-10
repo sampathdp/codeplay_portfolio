@@ -57,6 +57,18 @@ describe("feed selectors (sample data)", () => {
     expect(latest.some((a) => a.slug === featured.slug)).toBe(false);
   });
 
+  it("leads latest with pinned (trending) slugs, in order", () => {
+    const featured = getFeatured()!;
+    const pinned = getTrending(3)
+      .map((t) => t.slug)
+      .filter((s) => s !== featured.slug);
+    const latest = getLatest(9, [featured.slug], pinned);
+    expect(latest.slice(0, pinned.length).map((a) => a.slug)).toEqual(pinned);
+    // still excluded, and no duplicates
+    expect(latest.some((a) => a.slug === featured.slug)).toBe(false);
+    expect(new Set(latest.map((a) => a.slug)).size).toBe(latest.length);
+  });
+
   it("filters by category and tag", () => {
     expect(byCategory("artificial-intelligence").every((a) => a.category === "artificial-intelligence")).toBe(true);
     const tagged = byTag("react");

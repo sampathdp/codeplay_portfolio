@@ -164,12 +164,23 @@ export function getMostRead(limit = 5): InsightsArticleSummary[] {
 export function getLatest(
   limit = 9,
   exclude: string[] = [],
+  pinned: string[] = [],
 ): InsightsArticleSummary[] {
   const skip = new Set(exclude);
-  return allArticles()
-    .filter((a) => !skip.has(a.slug))
-    .slice(0, limit)
-    .map(toSummary);
+  const pool = allArticles().filter((a) => !skip.has(a.slug));
+
+  if (pinned.length === 0) {
+    return pool.slice(0, limit).map(toSummary);
+  }
+
+  // Pinned slugs (e.g. the trending stories) lead the list, in the given
+  // order; the rest follow newest-first. Missing/excluded slugs are skipped.
+  const pinnedSet = new Set(pinned);
+  const head = pinned
+    .map((slug) => pool.find((a) => a.slug === slug))
+    .filter((a): a is InsightsArticle => Boolean(a));
+  const rest = pool.filter((a) => !pinnedSet.has(a.slug));
+  return [...head, ...rest].slice(0, limit).map(toSummary);
 }
 
 export function byCategory(

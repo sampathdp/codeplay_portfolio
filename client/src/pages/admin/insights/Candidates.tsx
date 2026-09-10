@@ -52,8 +52,12 @@ export default function Candidates() {
     () =>
       listClusters(
         tab === "all"
-          ? { limit: 150 }
-          : { status: tab === "discovered" ? ["discovered", "filtered"] : tab, limit: 150 },
+          ? { orderBy: "recency", limit: 150 }
+          : {
+              status: tab === "discovered" ? ["discovered", "filtered"] : tab,
+              orderBy: "recency",
+              limit: 150,
+            },
       ),
     [tab, action.pending],
   );

@@ -17,6 +17,12 @@ export interface ListClustersOptions {
   status?: CandidateStatusRow | CandidateStatusRow[];
   minViralScore?: number;
   breakingOnly?: boolean;
+  /**
+   * `viral` (default) — best story first, the classic review-queue order.
+   * `recency` — latest news first (newest `earliest_published_at`, then
+   * viral score as a tie-break).
+   */
+  orderBy?: "viral" | "recency";
   limit?: number;
   offset?: number;
 }
@@ -31,7 +37,12 @@ export async function listClusters(
   if (opts.minViralScore != null) filter = filter.gte("viral_score", opts.minViralScore);
   if (opts.breakingOnly) filter = filter.eq("breaking", true);
 
-  let query = filter.order("viral_score", { ascending: false });
+  let query =
+    opts.orderBy === "recency"
+      ? filter
+          .order("earliest_published_at", { ascending: false, nullsFirst: false })
+          .order("viral_score", { ascending: false })
+      : filter.order("viral_score", { ascending: false });
   if (opts.limit != null) {
     const from = opts.offset ?? 0;
     query = query.range(from, from + opts.limit - 1);
