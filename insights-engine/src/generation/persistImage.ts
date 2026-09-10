@@ -32,18 +32,24 @@ export async function persistImageOutcome(
     return;
   }
 
-  const source = outcome.status === "fallback" ? "fallback" : "generated";
+  const source =
+    outcome.status === "fallback"
+      ? "fallback"
+      : outcome.status === "stock"
+        ? "stock"
+        : "generated";
 
   await sb
     .from("insights_articles")
     .update({
       featured_image_url: outcome.primary?.url ?? null,
       featured_image_alt: outcome.altText,
-      featured_image_status: outcome.status, // 'generated' | 'fallback'
+      featured_image_status: outcome.status, // 'generated' | 'stock' | 'fallback'
       featured_image_is_manual: false,
       image_is_ai_generated: outcome.aiGenerated,
       image_prompt: outcome.prompt,
       featured_image_model: outcome.model,
+      featured_image_credit: outcome.credit,
       featured_image_generated_at: outcome.generatedAt,
       featured_image_width: outcome.width,
       featured_image_height: outcome.height,

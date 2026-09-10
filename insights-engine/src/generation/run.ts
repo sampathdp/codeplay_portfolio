@@ -34,6 +34,7 @@ import { createGeminiImageClient } from "../gemini/image";
 import { SharpImageProcessor, type VariantSpec } from "../storage/processor";
 import { SupabaseImageStore } from "../storage/images";
 import { generateFeaturedImage } from "./imagePipeline";
+import { createStockImageClient } from "./stockImage";
 import { persistImageOutcome } from "./persistImage";
 
 const env = process.env as Record<string, string | undefined>;
@@ -192,6 +193,7 @@ async function runImageForArticle(
     const outcome = await generateFeaturedImage(
       {
         imageClient: createGeminiImageClient(env, ctx.imageModel),
+        stockClient: createStockImageClient(env),
         processor: new SharpImageProcessor(),
         store: new SupabaseImageStore(sb, env.INSIGHTS_MEDIA_BUCKET || "insights-media"),
         textClient: ctx.textClient,

@@ -133,11 +133,32 @@ export default function InsightsArticle() {
               sizes="(min-width: 768px) 768px, 100vw"
               priority
             />
-            {article.heroImage.aiGenerated && (
+            {article.heroImage.kind === "stock" && article.heroImage.credit ? (
+              <figcaption className="bg-black/30 px-4 py-2 text-xs text-muted-foreground">
+                Photo:{" "}
+                <a
+                  href={article.heroImage.credit.photographerUrl}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="underline hover:text-foreground"
+                >
+                  {article.heroImage.credit.photographer}
+                </a>{" "}
+                on{" "}
+                <a
+                  href={article.heroImage.credit.sourceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="underline hover:text-foreground"
+                >
+                  Pexels
+                </a>
+              </figcaption>
+            ) : article.heroImage.aiGenerated ? (
               <figcaption className="bg-black/30 px-4 py-2 text-xs text-muted-foreground">
                 AI-generated editorial illustration
               </figcaption>
-            )}
+            ) : null}
           </figure>
         )}
 

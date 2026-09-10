@@ -11,6 +11,14 @@
 export const SITE_ORIGIN = "https://codeplaystudios.com";
 export const INSIGHTS_BASE = "/insights";
 
+/** Attribution for a stock (non-generated, non-manual) hero photo. */
+export interface ImageCredit {
+  provider: "pexels";
+  photographer: string;
+  photographerUrl: string;
+  sourceUrl: string;
+}
+
 /** The subset of a published article these artefacts need. */
 export interface PublishArticle {
   id: string;
@@ -44,7 +52,8 @@ export interface PublishArticle {
     height?: number;
     ogSrc?: string;
     aiGenerated?: boolean;
-    kind?: "generated" | "manual" | "fallback";
+    kind?: "generated" | "manual" | "fallback" | "stock";
+    credit?: ImageCredit | null;
   };
   author: string;
   authorRole?: string;
@@ -173,6 +182,7 @@ export function buildRssXml(
         a.heroImage?.ogSrc || a.heroImage?.src
           ? absolute(a.heroImage!.ogSrc || a.heroImage!.src)
           : undefined;
+      const imgType = img?.endsWith(".svg") ? "image/svg+xml" : "image/webp";
       return [
         "    <item>",
         `      <title>${escapeXml(a.title)}</title>`,
@@ -182,7 +192,7 @@ export function buildRssXml(
         `      <category>${escapeXml(a.categoryName)}</category>`,
         `      <description>${escapeXml(a.dek)}</description>`,
         img
-          ? `      <enclosure url="${escapeXml(img)}" type="image/webp" />`
+          ? `      <enclosure url="${escapeXml(img)}" type="${imgType}" />`
           : "",
         "    </item>",
       ]

@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { generateFeaturedImage } from "./imagePipeline";
-import { MockGeminiImageClient } from "../gemini/mock";
+import { MockGeminiImageClient, TINY_PNG_BASE64 } from "../gemini/mock";
 import { MemoryImageStore } from "../storage/images";
 import { PassthroughImageProcessor, DEFAULT_VARIANTS } from "../storage/processor";
 import type { UsageRecord } from "../gemini/budget";
@@ -99,6 +99,66 @@ describe("generateFeaturedImage — failure handling", () => {
       removeArticleFolder: store.removeArticleFolder.bind(store),
     };
     const out = await generateFeaturedImage(deps({ store: flaky }), input);
+    expect(out.status).toBe("fallback");
+  });
+});
+
+describe("generateFeaturedImage — stock-photo fallback tier", () => {
+  const stockPhoto = {
+    bytes: Buffer.from(TINY_PNG_BASE64, "base64"),
+    mimeType: "image/jpeg",
+    description: "A dim server room seen down a long aisle",
+    credit: {
+      provider: "pexels" as const,
+      photographer: "Jane Roe",
+      photographerUrl: "https://www.pexels.com/@jane-roe",
+      sourceUrl: "https://www.pexels.com/photo/12345/",
+    },
+  };
+
+  it("uses a stock photo when generation fails and a client is configured", async () => {
+    const usage: UsageRecord[] = [];
+    const out = await generateFeaturedImage(
+      deps({
+        imageClient: new MockGeminiImageClient({ failWith: "RESOURCE_EXHAUSTED" }),
+        stockClient: { find: async () => stockPhoto },
+        onUsage: (r) => usage.push(r),
+      }),
+      input,
+    );
+    expect(out.status).toBe("stock");
+    expect(out.aiGenerated).toBe(false);
+    expect(out.credit?.photographer).toBe("Jane Roe");
+    expect(out.model).toBe("pexels");
+    expect(out.primary!.url).toMatch(/primary\.webp$/);
+    expect(out.altText).toContain("server room");
+    expect(usage.some((u) => u.model === "pexels" && u.status === "ok")).toBe(true);
+  });
+
+  it("drops to the SVG when the stock client finds nothing", async () => {
+    const out = await generateFeaturedImage(
+      deps({
+        imageClient: new MockGeminiImageClient({ failWith: "RESOURCE_EXHAUSTED" }),
+        stockClient: { find: async () => null },
+      }),
+      input,
+    );
+    expect(out.status).toBe("fallback");
+    expect(out.credit).toBeNull();
+  });
+
+  it("drops to the SVG when the stock lookup throws", async () => {
+    const out = await generateFeaturedImage(
+      deps({
+        imageClient: new MockGeminiImageClient({ failWith: "RESOURCE_EXHAUSTED" }),
+        stockClient: {
+          find: async () => {
+            throw new Error("Pexels 401");
+          },
+        },
+      }),
+      input,
+    );
     expect(out.status).toBe("fallback");
   });
 });

@@ -11,7 +11,7 @@
  * Mirrors `insights-engine/src/publish/snapshot.ts` field-for-field.
  */
 
-import type { InsightsArticle } from "./types";
+import type { ImageCredit, InsightsArticle } from "./types";
 import { isInsightsConfigured, getInsightsSupabase } from "./supabase";
 import { setLiveArticles, setFeedLoading, setFeedError } from "./feed";
 
@@ -23,7 +23,8 @@ const ARTICLE_COLUMNS = `
   developer_take, business_impact, developer_impact, risks_limitations,
   why_it_matters, recommendations, sections,
   featured_image_url, featured_image_alt, featured_image_width,
-  featured_image_height, featured_image_status, image_is_ai_generated,
+  featured_image_height, featured_image_status, featured_image_credit,
+  image_is_ai_generated,
   insights_categories:category_id ( slug, name ),
   insights_authors:author_id ( name )
 `;
@@ -93,6 +94,7 @@ interface ArticleRow {
   featured_image_width: number | null;
   featured_image_height: number | null;
   featured_image_status: string | null;
+  featured_image_credit: ImageCredit | null;
   image_is_ai_generated: boolean | null;
   insights_categories: { slug: string; name: string } | null;
   insights_authors: { name: string } | null;
@@ -194,7 +196,10 @@ async function loadPublishedArticles(): Promise<InsightsArticle[]> {
                 ? "manual"
                 : r.featured_image_status === "fallback"
                   ? "fallback"
-                  : "generated",
+                  : r.featured_image_status === "stock"
+                    ? "stock"
+                    : "generated",
+            credit: r.featured_image_credit ?? null,
           }
         : undefined,
       author: r.insights_authors?.name ?? EDITORIAL_AUTHOR,

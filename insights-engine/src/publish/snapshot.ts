@@ -4,7 +4,7 @@
  */
 
 import type { SupabaseClient } from "@supabase/supabase-js";
-import type { PublishArticle } from "./feeds";
+import type { ImageCredit, PublishArticle } from "./feeds";
 
 const EDITORIAL_AUTHOR = "CodePlay Studios Editorial Team";
 
@@ -39,6 +39,7 @@ interface Row {
   featured_image_width: number | null;
   featured_image_height: number | null;
   featured_image_status: string | null;
+  featured_image_credit: ImageCredit | null;
   image_is_ai_generated: boolean | null;
   insights_categories: { slug: string; name: string } | null;
   insights_authors: { name: string } | null;
@@ -64,7 +65,8 @@ export async function loadPublishedArticles(
        developer_take, business_impact, developer_impact, risks_limitations,
        why_it_matters, recommendations, sections,
        featured_image_url, featured_image_alt, featured_image_width,
-       featured_image_height, featured_image_status, image_is_ai_generated,
+       featured_image_height, featured_image_status, featured_image_credit,
+       image_is_ai_generated,
        insights_categories:category_id ( slug, name ),
        insights_authors:author_id ( name )`,
     )
@@ -159,7 +161,10 @@ export async function loadPublishedArticles(
                 ? "manual"
                 : r.featured_image_status === "fallback"
                   ? "fallback"
-                  : "generated",
+                  : r.featured_image_status === "stock"
+                    ? "stock"
+                    : "generated",
+            credit: r.featured_image_credit ?? null,
           }
         : undefined,
       author: r.insights_authors?.name ?? EDITORIAL_AUTHOR,

@@ -52,6 +52,8 @@ jobs:
           GEMINI_TEXT_MODEL: ${{ vars.GEMINI_TEXT_MODEL }}
           GEMINI_FAST_MODEL: ${{ vars.GEMINI_FAST_MODEL }}
           GEMINI_IMAGE_MODEL: ${{ vars.GEMINI_IMAGE_MODEL }}
+          # Stock-photo fallback for when image generation is unavailable.
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
         run: |
           ARGS="--limit ${{ inputs.limit || '3' }}"
           if [ -n "${{ inputs.cluster_id }}" ]; then

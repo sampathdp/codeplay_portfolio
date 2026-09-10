@@ -100,9 +100,21 @@ export interface ArticleRow {
   featured_image_alt: string | null;
   image_prompt: string | null;
   image_is_ai_generated: boolean;
-  featured_image_status: "none" | "generated" | "manual" | "fallback" | "failed";
+  featured_image_status:
+    | "none"
+    | "generated"
+    | "stock"
+    | "manual"
+    | "fallback"
+    | "failed";
   featured_image_is_manual: boolean;
   featured_image_model: string | null;
+  featured_image_credit: {
+    provider: "pexels";
+    photographer: string;
+    photographerUrl: string;
+    sourceUrl: string;
+  } | null;
   featured_image_generated_at: string | null;
   featured_image_width: number | null;
   featured_image_height: number | null;

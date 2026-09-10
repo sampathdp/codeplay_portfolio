@@ -122,7 +122,7 @@ Per article: image URL, prompt, generation model, `generated_at`,
 AI-generated flag, alt text, width, height, file size, storage path, and
 the responsive-variant list. Per variant (`insights_image_assets`): label,
 url, storage_path, content_type, width, height, bytes, `is_primary`,
-`source` (`generated`/`manual`/`fallback`), model, prompt, alt_text.
+`source` (`generated`/`stock`/`manual`/`fallback`), model, prompt, alt_text.
 
 ---
 
@@ -167,16 +167,27 @@ image-column write is scoped `.eq("featured_image_is_manual", false)`.
 
 ## 9. Fallback (publish never crashes)
 
-If the Gemini image call fails (RAI filter, timeout, quota) **or**
-processing/storage of the generated image fails, `generateFeaturedImage`
-builds a **deterministic category fallback SVG**
-(`generation/imageFallback.ts` — a restrained gradient + category-tinted
-geometric motif, no text, 1600×900), stores it as `fallback.svg`, and
-returns `status: "fallback"` with `image_is_ai_generated = false`,
-`featured_image_status = "fallback"`. The article stays in `review` with a
-usable image. Only if the fallback upload *also* fails does it return
-`status: "failed"` (article marked `featured_image_status = "failed"`, no
-crash) — an admin can retry.
+If the Gemini image call fails (RAI filter, timeout, quota — note the
+**free tier cannot generate images at all**) **or** processing/storage of
+the generated image fails, `generateFeaturedImage` falls back in two
+tiers:
+
+1. **Stock photo** (`generation/stockImage.ts`). When `PEXELS_API_KEY` is
+   set, search Pexels for a landscape editorial photo keyed to the
+   article's category, run it through the same sharp pipeline (identical
+   16:9 WebP variants), and store it. Returns `status: "stock"`,
+   `image_is_ai_generated = false`, and a `featured_image_credit` JSON blob
+   (`{ provider, photographer, photographerUrl, sourceUrl }`).
+   `InsightsArticle.tsx` renders a **"Photo: <name> on Pexels"** caption.
+
+2. **Deterministic category SVG** (`generation/imageFallback.ts` — a
+   restrained gradient + category-tinted geometric motif, no text,
+   1600×900), stored as `fallback.svg`. Returns `status: "fallback"`,
+   `image_is_ai_generated = false`.
+
+The article stays in `review` with a usable image. Only if the SVG upload
+*also* fails does it return `status: "failed"` (article marked
+`featured_image_status = "failed"`, no crash) — an admin can retry.
 
 ---
 
@@ -221,7 +232,8 @@ Server / CI only:
 
 ```
 GEMINI_API_KEY=            # required (shared with Phase 4)
-GEMINI_IMAGE_MODEL=        # optional — default gemini-3.1-flash-image
+GEMINI_IMAGE_MODEL=        # optional — default gemini-3.1-flash-image (needs billing)
+PEXELS_API_KEY=            # optional — stock-photo fallback when generation fails
 INSIGHTS_MEDIA_BUCKET=     # optional — default insights-media
 SUPABASE_URL=
 SUPABASE_SERVICE_ROLE_KEY=

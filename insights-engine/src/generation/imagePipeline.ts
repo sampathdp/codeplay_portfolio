@@ -3,10 +3,11 @@
  *
  *   prompt (deterministic + optional Gemini subject)
  *   → Gemini image call
- *       └─ failure → category fallback SVG (publish never crashes)
+ *       └─ failure → stock photo (Pexels), then category fallback SVG
+ *          (publish never crashes)
  *   → optimise to 16:9 WebP variants (sharp)
  *   → store every variant in permanent object storage
- *   → metadata (url, prompt, model, size, alt text, dimensions)
+ *   → metadata (url, prompt, model, size, alt text, dimensions, credit)
  *
  * A manual image is never touched unless `force` is set.
  */
@@ -20,11 +21,18 @@ import { DEFAULT_VARIANTS } from "../storage/processor";
 import type { ImageStore, StoredObject } from "../storage/images";
 import { buildImagePrompt, composePrompt } from "./imagePrompt";
 import { fallbackSvg, fallbackAlt } from "./imageFallback";
+import {
+  NullStockImageClient,
+  type StockImageClient,
+  type StockImageCredit,
+} from "./stockImage";
 
 export interface ImagePipelineDeps {
   imageClient: GeminiImageClient;
   processor: ImageProcessor;
   store: ImageStore;
+  /** Real-photo fallback source. Defaults to a no-op client. */
+  stockClient?: StockImageClient;
   /** Budgeted text client for the subject-refinement step (optional). */
   textClient?: GeminiClient;
   onUsage?: (r: UsageRecord) => void;
@@ -60,7 +68,12 @@ export interface StoredVariant {
   isPrimary: boolean;
 }
 
-export type ImageStatus = "generated" | "fallback" | "skipped_manual" | "failed";
+export type ImageStatus =
+  | "generated"
+  | "stock"
+  | "fallback"
+  | "skipped_manual"
+  | "failed";
 
 export interface ImageOutcome {
   status: ImageStatus;
@@ -70,6 +83,8 @@ export interface ImageOutcome {
   altText: string;
   model: string | null;
   aiGenerated: boolean;
+  /** Attribution for a stock photo; null for generated / SVG. */
+  credit: StockImageCredit | null;
   primary: StoredVariant | null;
   variants: StoredVariant[];
   width: number | null;
@@ -99,6 +114,7 @@ export async function generateFeaturedImage(
       altText: "",
       model: null,
       aiGenerated: false,
+      credit: null,
       primary: null,
       variants: [],
       width: null,
@@ -177,7 +193,7 @@ export async function generateFeaturedImage(
       status: "error",
       error: reason,
     });
-    return buildFallback(deps, input, now, generatedAt, prompt, negativePrompt, reason);
+    return buildNonGeneratedImage(deps, input, now, generatedAt, prompt, negativePrompt, reason);
   }
 
   // 3. optimise + 4. store
@@ -197,6 +213,7 @@ export async function generateFeaturedImage(
       altText,
       model: usedModel,
       aiGenerated: true,
+      credit: null,
       primary,
       variants: stored,
       width: primary?.width ?? processed.sourceWidth,
@@ -206,11 +223,16 @@ export async function generateFeaturedImage(
     };
   } catch (err) {
     const reason = `storage/processing failed: ${err instanceof Error ? err.message : String(err)}`;
-    return buildFallback(deps, input, now, generatedAt, prompt, negativePrompt, reason);
+    return buildNonGeneratedImage(deps, input, now, generatedAt, prompt, negativePrompt, reason);
   }
 }
 
-async function buildFallback(
+/**
+ * Generation failed. Try a real stock photo first; if that misses (no
+ * key, no match, download error) drop to the deterministic category SVG.
+ * Never throws — publish must not crash on an image.
+ */
+async function buildNonGeneratedImage(
   deps: ImagePipelineDeps,
   input: ImagePipelineInput,
   now: Date,
@@ -219,6 +241,9 @@ async function buildFallback(
   negativePrompt: string,
   reason: string,
 ): Promise<ImageOutcome> {
+  const stock = await tryStockImage(deps, input, now, generatedAt, prompt, negativePrompt, reason);
+  if (stock) return stock;
+
   const svg = fallbackSvg(input.category, input.slug);
   const alt = fallbackAlt(input.category);
   try {
@@ -247,6 +272,7 @@ async function buildFallback(
       altText: alt,
       model: null,
       aiGenerated: false,
+      credit: null,
       primary: variant,
       variants: [variant],
       width: 1600,
@@ -265,6 +291,7 @@ async function buildFallback(
       altText: alt,
       model: null,
       aiGenerated: false,
+      credit: null,
       primary: null,
       variants: [],
       width: null,
@@ -272,6 +299,93 @@ async function buildFallback(
       bytes: null,
       generatedAt,
     };
+  }
+}
+
+/**
+ * Attempt the stock-photo tier. Returns a full outcome on success, or null
+ * to signal "fall through to the SVG". Swallows every error.
+ */
+async function tryStockImage(
+  deps: ImagePipelineDeps,
+  input: ImagePipelineInput,
+  now: Date,
+  generatedAt: string,
+  prompt: string,
+  negativePrompt: string,
+  reason: string,
+): Promise<ImageOutcome | null> {
+  const client = deps.stockClient ?? new NullStockImageClient();
+  const specs = input.variants?.length ? input.variants : DEFAULT_VARIANTS;
+  const quality = input.webpQuality ?? 82;
+
+  let photo;
+  try {
+    photo = await client.find({
+      title: input.title,
+      category: input.category,
+      entities: input.entities,
+      visualConcept: input.visualConcept,
+    });
+  } catch (err) {
+    deps.onUsage?.({
+      purpose: "image",
+      model: "pexels",
+      usage: { promptTokens: 0, completionTokens: 0, totalTokens: 0 },
+      costUsd: 0,
+      status: "error",
+      error: `stock lookup failed: ${err instanceof Error ? err.message : String(err)}`,
+    });
+    return null;
+  }
+  if (!photo) return null;
+
+  try {
+    const processed = await deps.processor.process(photo.bytes, photo.mimeType, specs, quality);
+    const stored: StoredVariant[] = [];
+    for (const v of processed.variants) {
+      const obj = await deps.store.put(input.slug, `${v.label}.webp`, v.bytes, v.contentType, now);
+      stored.push(toStoredVariant(v.label, obj, v, v.label === processed.primary.label));
+    }
+    const primary = stored.find((v) => v.isPrimary) ?? stored[0] ?? null;
+    const altText = (
+      photo.description?.trim() || `Photograph illustrating: ${input.title}`
+    ).slice(0, 180);
+
+    deps.onUsage?.({
+      purpose: "image",
+      model: "pexels",
+      usage: { promptTokens: 0, completionTokens: 0, totalTokens: 0 },
+      costUsd: 0,
+      status: "ok",
+    });
+
+    return {
+      status: "stock",
+      reason: `generation unavailable (${reason}); used ${photo.credit.provider} stock photo`,
+      prompt,
+      negativePrompt,
+      altText,
+      model: photo.credit.provider,
+      aiGenerated: false,
+      credit: photo.credit,
+      primary,
+      variants: stored,
+      width: primary?.width ?? processed.sourceWidth,
+      height: primary?.height ?? processed.sourceHeight,
+      bytes: primary?.bytes ?? photo.bytes.length,
+      generatedAt,
+    };
+  } catch (err) {
+    deps.onUsage?.({
+      purpose: "image",
+      model: "pexels",
+      usage: { promptTokens: 0, completionTokens: 0, totalTokens: 0 },
+      costUsd: 0,
+      status: "error",
+      error: `stock processing failed: ${err instanceof Error ? err.message : String(err)}`,
+    });
+    return null;
   }
 }
 

@@ -39,6 +39,15 @@ export interface DeveloperTake {
   actionableRecommendations: string;
 }
 
+/** Attribution for a stock (non-generated, non-manual) hero photo. */
+export interface ImageCredit {
+  provider: "pexels";
+  photographer: string;
+  photographerUrl: string;
+  /** The photo's page on the provider. */
+  sourceUrl: string;
+}
+
 export interface ArticleImage {
   /** Public URL of the hero image once shipped into the static build. */
   src: string;
@@ -52,8 +61,10 @@ export interface ArticleImage {
   /** True for a Gemini-generated editorial illustration — surface the
    * "AI-generated editorial illustration" label where shown. */
   aiGenerated?: boolean;
-  /** 'generated' | 'manual' | 'fallback'. */
-  kind?: "generated" | "manual" | "fallback";
+  /** 'generated' | 'manual' | 'fallback' | 'stock'. */
+  kind?: "generated" | "manual" | "fallback" | "stock";
+  /** Present for `kind: 'stock'` — show a "Photo: <name> / Pexels" credit. */
+  credit?: ImageCredit | null;
 }
 
 export interface ArticleTag {

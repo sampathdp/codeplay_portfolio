@@ -124,6 +124,10 @@ const STATUS_TONE: Record<string, string> = {
   likely: "bg-teal-500/15 text-teal-300",
   community_rumor: "bg-amber-500/15 text-amber-300",
   unverified: "bg-white/10 text-muted-foreground",
+  generated: "bg-emerald-500/15 text-emerald-300",
+  stock: "bg-blue-500/15 text-blue-300",
+  fallback: "bg-amber-500/15 text-amber-300",
+  none: "bg-white/5 text-muted-foreground",
 };
 
 export function StatusPill({ status }: { status: string }) {
