@@ -1,24 +1,13 @@
 import { motion } from 'framer-motion';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  ArrowRight, 
-  Instagram, 
-  Twitter, 
-  Linkedin, 
-  Github,
+import {
+  Mail,
+  Phone,
+  MapPin,
+  ArrowRight,
   Rocket
 } from 'lucide-react';
 import { Link } from 'wouter';
 import { TOOLS_HREF } from '@/lib/toolsLink';
-
-const socialLinks = [
-  { icon: Github, href: '#', label: 'GitHub' },
-  { icon: Linkedin, href: '#', label: 'LinkedIn' },
-  { icon: Twitter, href: '#', label: 'Twitter' },
-  { icon: Instagram, href: '#', label: 'Instagram' },
-];
 
 export default function Footer() {
   return (
@@ -48,22 +37,9 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-muted-foreground text-lg leading-relaxed max-w-sm">
-              We engine industrial-grade digital ecosystems with a focus on 
+              We engineer industrial-grade digital ecosystems with a focus on
               precision, clarity, and "Calm Computing."
             </p>
-            <div className="flex gap-4">
-              {socialLinks.map((social, index) => (
-                <motion.a
-                  key={index}
-                  href={social.href}
-                  aria-label={social.label}
-                  whileHover={{ y: -3 }}
-                  className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-300 group"
-                >
-                  <social.icon className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" aria-hidden="true" />
-                </motion.a>
-              ))}
-            </div>
           </div>
 
           {/* Column 2: Systems */}
@@ -98,7 +74,8 @@ export default function Footer() {
                 { label: "Editorial Policy", href: "/insights/editorial-policy" },
                 { label: "Free Tools", href: TOOLS_HREF },
                 { label: "Discovery", href: "/contact" },
-                { label: "Privacy Policy", href: "#" }
+                { label: "Privacy Policy", href: "/privacy-policy" },
+                { label: "Terms & Conditions", href: "/terms-and-conditions" }
               ].map((link, i) => (
                 <li key={i}>
                   {link.href.startsWith("http") ? (

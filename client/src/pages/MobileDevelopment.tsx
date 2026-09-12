@@ -9,6 +9,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import MobileMetrics from "@/components/metrics/MobileMetrics";
@@ -97,9 +98,9 @@ export default function MobileDevelopment() {
   return (
     <div className="min-h-screen text-foreground selection:bg-purple-500/30">
       <SEO
-        title="Mobile App Development - iOS & Android"
-        description="Native-quality cross-platform mobile apps built with Flutter. We deliver secure, scalable apps for Android and iOS with real-time features."
-        keywords="mobile app development, Flutter development, iOS apps, Android apps, cross-platform apps, CodePlay Studios"
+        title="Mobile App Development Sri Lanka"
+        description="CodePlay Studios builds native-quality cross-platform mobile apps with Flutter for Sri Lankan and global businesses — secure, scalable Android and iOS apps with real-time features."
+        keywords="mobile app development Sri Lanka, mobile app development company Sri Lanka, Flutter development, iOS apps, Android apps, cross-platform apps, CodePlay Studios"
         schemas={[
           {
             "@context": "https://schema.org",
@@ -111,7 +112,7 @@ export default function MobileDevelopment() {
               "@type": "Organization",
               name: "CodePlay Studios",
             },
-            areaServed: "Worldwide",
+            areaServed: ["Sri Lanka", "Worldwide"],
           },
         ]}
       />
@@ -159,18 +160,22 @@ export default function MobileDevelopment() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
                 <Button
+                  asChild
                   size="lg"
-                  className="h-12 px-8 text-lg rounded-full bg-purple-600 hover:bg-purple-500 text-white shadow-[0_0_20px_rgba(147,51,234,0.3)] hover:shadow-[0_0_30px_rgba(147,51,234,0.5)] transition-all"
+                  className="h-12 px-8 text-lg rounded-full bg-purple-600 hover:bg-purple-500 text-white shadow-[0_0_20px_rgba(147,51,234,0.3)] hover:shadow-[0_0_30px_rgba(147,51,234,0.5)] transition-all cursor-pointer"
                 >
-                  Start Your App
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <Link href="/#contact">
+                    Start Your App
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
                 </Button>
                 <Button
+                  asChild
                   size="lg"
                   variant="outline"
-                  className="h-12 px-8 text-lg rounded-full border-white/10 hover:bg-white/5 backdrop-blur-sm"
+                  className="h-12 px-8 text-lg rounded-full border-white/10 hover:bg-white/5 backdrop-blur-sm cursor-pointer"
                 >
-                  View Apps
+                  <Link href="/case-studies">View Apps</Link>
                 </Button>
               </div>
             </motion.div>
@@ -220,7 +225,7 @@ export default function MobileDevelopment() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-20" />
                     <img
                       src={futuristicMobileDev}
-                      alt="Futuristic Mobile Development"
+                      alt="Mobile app development illustration by CodePlay Studios"
                       className="absolute inset-0 w-full h-full object-cover opacity-90"
                     />
                     {/* Overlay HUD elements on image */}
@@ -267,6 +272,7 @@ export default function MobileDevelopment() {
                     whileHover={{ y: -5, transition: { duration: 0.2 } }}
                     className={`group relative p-8 rounded-3xl border transition-all duration-300 ${service.bg} ${service.border} hover:border-opacity-50 hover:bg-opacity-20`}
                   >
+                    <Link href="/#contact" className="absolute inset-0 z-10" />
                     <div
                       className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 bg-black/40 text-white shadow-lg group-hover:scale-110 transition-transform duration-300`}
                     >
@@ -278,7 +284,7 @@ export default function MobileDevelopment() {
                       {service.description}
                     </p>
 
-                    <div className="absolute top-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+                    <div className="absolute top-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <ArrowRight
                         className={`h-6 w-6 ${service.color} -rotate-45 group-hover:rotate-0 transition-transform duration-300`}
                       />
@@ -304,10 +310,11 @@ export default function MobileDevelopment() {
                     codebase.
                   </p>
                   <Button
+                    asChild
                     size="lg"
-                    className="h-14 px-10 text-lg rounded-full bg-white text-black hover:bg-gray-200"
+                    className="h-14 px-10 text-lg rounded-full bg-white text-black hover:bg-gray-200 cursor-pointer"
                   >
-                    Get a Quote
+                    <Link href="/#contact">Get a Quote</Link>
                   </Button>
                 </div>
               </div>

@@ -14,7 +14,8 @@ export default function CaseStudies() {
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden relative selection:bg-primary/20">
       <SEO
         title="Case Studies | CodePlay Studios"
-        description="Explore our in-depth project case studies showcasing how we solve complex business challenges with AI, web, and mobile solutions."
+        description="Explore case studies from CodePlay Studios, a Sri Lanka software development company, showing how we solve real business challenges with AI, web, mobile, and enterprise software."
+        keywords="CodePlay Studios case studies, software development portfolio Sri Lanka, web development projects, mobile app projects"
       />
       
       {/* Background */}

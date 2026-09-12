@@ -10,6 +10,11 @@ Options -Indexes
   RewriteEngine On
   RewriteBase /
 
+  # /tools now lives at wipeclip.co (see client/src/lib/toolsLink.tsx). A
+  # real 301 here means crawlers and no-JS clients get sent straight there
+  # instead of hitting a 200 SPA shell that only redirects via JS.
+  RewriteRule ^tools(/.*)?$ https://wipeclip.co$1 [R=301,L]
+
   # Real files (index.html, /assets/*, /insights/rss.xml, sitemap*.xml,
   # robots.txt, …) are served as-is.
   RewriteCond %{REQUEST_FILENAME} -f [OR]

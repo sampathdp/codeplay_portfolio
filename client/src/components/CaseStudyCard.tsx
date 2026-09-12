@@ -72,9 +72,9 @@ export default function CaseStudyCard({
 
           {/* Content Area */}
           <div className="p-6">
-            <h3 className="text-xl font-bold mb-3 transition-colors group-hover:text-primary">
+            <h2 className="text-xl font-bold mb-3 transition-colors group-hover:text-primary">
               {title}
-            </h3>
+            </h2>
             <p className="text-sm text-muted-foreground line-clamp-2 leading-relaxed">
               {description}
             </p>

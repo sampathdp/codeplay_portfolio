@@ -9,6 +9,7 @@ import {
   Trophy,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import GameMetrics from "@/components/metrics/GameMetrics";
@@ -96,6 +97,25 @@ export default function UnityDevelopment() {
 
   return (
     <div className="min-h-screen text-foreground selection:bg-red-500/30">
+      <SEO
+        title="Unity Game Development Sri Lanka"
+        description="CodePlay Studios builds 2D and 3D games and interactive experiences with Unity — cross-platform titles, gamification, and training simulators for Sri Lankan and global clients."
+        keywords="Unity game development, Unity game development Sri Lanka, 2D game development, 3D game development, cross-platform games, gamification, CodePlay Studios"
+        schemas={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Unity Game Development",
+            description:
+              "2D and 3D game development, cross-platform deployment, and gamification built with Unity.",
+            provider: {
+              "@type": "Organization",
+              name: "CodePlay Studios",
+            },
+            areaServed: ["Sri Lanka", "Worldwide"],
+          },
+        ]}
+      />
       <Navigation />
 
       <main className="pt-24 pb-16 relative z-10">
@@ -141,18 +161,22 @@ export default function UnityDevelopment() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
                 <Button
+                  asChild
                   size="lg"
-                  className="h-12 px-8 text-lg rounded-full bg-red-600 hover:bg-red-500 text-white shadow-[0_0_20px_rgba(220,38,38,0.3)] hover:shadow-[0_0_30px_rgba(220,38,38,0.5)] transition-all"
+                  className="h-12 px-8 text-lg rounded-full bg-red-600 hover:bg-red-500 text-white shadow-[0_0_20px_rgba(220,38,38,0.3)] hover:shadow-[0_0_30px_rgba(220,38,38,0.5)] transition-all cursor-pointer"
                 >
-                  Start Creating
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <Link href="/#contact">
+                    Start Creating
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
                 </Button>
                 <Button
+                  asChild
                   size="lg"
                   variant="outline"
-                  className="h-12 px-8 text-lg rounded-full border-white/10 hover:bg-white/5 backdrop-blur-sm"
+                  className="h-12 px-8 text-lg rounded-full border-white/10 hover:bg-white/5 backdrop-blur-sm cursor-pointer"
                 >
-                  See Portfolio
+                  <Link href="/case-studies">See Portfolio</Link>
                 </Button>
               </div>
             </motion.div>
@@ -246,6 +270,7 @@ export default function UnityDevelopment() {
                     whileHover={{ y: -5, transition: { duration: 0.2 } }}
                     className={`group relative p-8 rounded-3xl border transition-all duration-300 ${service.bg} ${service.border} hover:border-opacity-50 hover:bg-opacity-20`}
                   >
+                    <Link href="/#contact" className="absolute inset-0 z-10" />
                     <div
                       className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 bg-black/40 text-white shadow-lg group-hover:scale-110 transition-transform duration-300`}
                     >
@@ -257,7 +282,7 @@ export default function UnityDevelopment() {
                       {service.description}
                     </p>
 
-                    <div className="absolute top-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+                    <div className="absolute top-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <ArrowRight
                         className={`h-6 w-6 ${service.color} -rotate-45 group-hover:rotate-0 transition-transform duration-300`}
                       />
@@ -283,10 +308,11 @@ export default function UnityDevelopment() {
                     developers.
                   </p>
                   <Button
+                    asChild
                     size="lg"
-                    className="h-14 px-10 text-lg rounded-full bg-white text-black hover:bg-gray-200"
+                    className="h-14 px-10 text-lg rounded-full bg-white text-black hover:bg-gray-200 cursor-pointer"
                   >
-                    Launch Project
+                    <Link href="/#contact">Launch Project</Link>
                   </Button>
                 </div>
               </div>

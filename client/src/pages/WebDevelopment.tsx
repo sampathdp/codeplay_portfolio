@@ -99,9 +99,9 @@ export default function WebDevelopment() {
   return (
     <div className="min-h-screen text-foreground selection:bg-primary/20">
       <SEO
-        title="Web Application & Website Development"
-        description="We build high-performance web applications and websites, including e-commerce platforms and corporate sites, optimized for speed and SEO."
-        keywords="web development, React development, e-commerce websites, corporate websites, API integration, CodePlay Studios"
+        title="Web Development Sri Lanka"
+        description="CodePlay Studios builds high-performance websites and web applications for Sri Lankan businesses — corporate sites, e-commerce platforms, and custom web apps optimized for speed and SEO."
+        keywords="web development Sri Lanka, website development Sri Lanka, web development, React development, e-commerce websites, corporate websites, CodePlay Studios"
         schemas={[
           {
             "@context": "https://schema.org",
@@ -113,7 +113,7 @@ export default function WebDevelopment() {
               "@type": "Organization",
               name: "CodePlay Studios",
             },
-            areaServed: "Worldwide",
+            areaServed: ["Sri Lanka", "Worldwide"],
           },
         ]}
       />
@@ -229,7 +229,7 @@ export default function WebDevelopment() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-20" />
                   <img
                     src={futuristicDev}
-                    alt="Futuristic Web Development"
+                    alt="Web development illustration by CodePlay Studios"
                     className="absolute inset-0 w-full h-full object-cover opacity-90"
                   />
                   {/* Overlay HUD elements on image */}

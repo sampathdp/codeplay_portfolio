@@ -3,15 +3,12 @@ import {
   Monitor,
   Smartphone,
   Brain,
-  Globe,
   Layout,
   ArrowRight,
-  Code2,
   Rocket,
   Gamepad2,
 } from "lucide-react";
-import { Button } from "./ui/button";
-import { useLocation } from "wouter";
+import { Link } from "wouter";
 import ClientLogosStrip from "./ClientLogosStrip";
 
 interface Service {
@@ -26,17 +23,22 @@ interface Service {
 interface ServiceCardProps {
   service: Service;
   index: number;
-  setLocation: (path: string) => void;
 }
 
-const ServiceCard = ({ service, index, setLocation }: ServiceCardProps) => (
+/**
+ * Real <a> (via wouter Link) wrapping the whole card — was a plain
+ * onClick-only div, invisible to crawlers and unreachable by keyboard.
+ * `className="contents"` on the Link keeps it out of the CSS grid box
+ * model so the visual layout is unchanged.
+ */
+const ServiceCard = ({ service, index }: ServiceCardProps) => (
+  <Link href={service.link ?? "/contact"} className="contents">
   <motion.div
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5, delay: index * 0.1 }}
     viewport={{ once: true }}
-    className={`group relative p-8 rounded-3xl bg-secondary/30 border border-white/10 dark:border-white/5 overflow-hidden hover:bg-secondary/50 transition-colors duration-500 ${service.link ? "cursor-pointer" : ""}`}
-    onClick={() => service.link && setLocation(service.link)}
+    className="group relative p-8 rounded-3xl bg-secondary/30 border border-white/10 dark:border-white/5 overflow-hidden hover:bg-secondary/50 transition-colors duration-500 cursor-pointer"
   >
     <div
       className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${service.gradient} opacity-10 blur-3xl group-hover:opacity-20 transition-opacity duration-500`}
@@ -70,18 +72,15 @@ const ServiceCard = ({ service, index, setLocation }: ServiceCardProps) => (
         ))}
       </ul>
 
-      <Button
-        variant="ghost"
-        className="group/btn pl-0 hover:pl-2 transition-all"
-      >
-        Learn more <ArrowRight className="ml-2 w-4 h-4" />
-      </Button>
+      <span className="inline-flex items-center pl-0 group-hover:pl-2 transition-all text-sm font-medium text-primary">
+        Learn more <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
+      </span>
     </div>
   </motion.div>
+  </Link>
 );
 
 export default function ServicesSection() {
-  const [, setLocation] = useLocation();
   const services = [
     {
       icon: <Monitor className="w-full h-full" />,
@@ -103,7 +102,7 @@ export default function ServicesSection() {
         "Native-quality cross-platform mobile apps that deliver seamless experiences on iOS and Android.",
       gradient: "from-violet-500 to-purple-400",
       features: [
-        "React Native / Flutter",
+        "Cross-Platform Flutter",
         "Offline-first Architecture",
         "App Store Optimization",
       ],
@@ -147,7 +146,9 @@ export default function ServicesSection() {
         "Rapid prototyping and development to validate your ideas and launch quickly.",
       gradient: "from-fuchsia-500 to-pink-500",
       features: ["Rapid Prototyping", "Scalable Architecture", "Market Launch"],
-      link: "/mvp-development",
+      // No dedicated MVP landing page exists yet — send interest straight
+      // to Contact instead of a 404 (was pointing at a route that doesn't exist).
+      link: "/contact",
     },
   ];
 
@@ -195,7 +196,6 @@ export default function ServicesSection() {
               key={index}
               service={service}
               index={index}
-              setLocation={setLocation}
             />
           ))}
         </div>

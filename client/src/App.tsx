@@ -47,6 +47,8 @@ const CaseStudies = lazy(() => import("@/pages/CaseStudies"));
 const About = lazy(() => import("@/pages/About"));
 const Contact = lazy(() => import("@/pages/Contact"));
 const CaseStudyDetail = lazy(() => import("@/pages/CaseStudyDetail"));
+const PrivacyPolicy = lazy(() => import("@/pages/PrivacyPolicy"));
+const TermsAndConditions = lazy(() => import("@/pages/TermsAndConditions"));
 const Tools = lazy(() => import("@/pages/Tools"));
 const ImageEditorTool = lazy(() => import("@/pages/ImageEditorTool"));
 const ImageConverterTool = lazy(() => import("@/pages/ImageConverterTool"));
@@ -143,6 +145,8 @@ function Router() {
       </Route>
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
+      <Route path="/privacy-policy" component={PrivacyPolicy} />
+      <Route path="/terms-and-conditions" component={TermsAndConditions} />
       <Route component={NotFound} />
     </Switch>
     </Suspense>

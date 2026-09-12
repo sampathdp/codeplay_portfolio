@@ -56,9 +56,9 @@ function jsonLd(value: unknown): string {
 }
 
 const SEO = ({
-  title = "CodePlay Studios - Coding Your Vision | Smart Software Solutions",
-  description = "CodePlay Studios builds AI-powered business systems, web apps, mobile solutions, and games. We deliver scalable, intelligent software tailored to your needs. Get a quote today.",
-  keywords = "AI development, web applications, mobile apps, ERP systems, game development, custom software, CodePlay Studios, software engineering, Sri Lanka",
+  title = "CodePlay Studios — Software Development Company in Sri Lanka",
+  description = "CodePlay Studios is a software development company in Sri Lanka building AI-powered business systems, web apps, mobile apps, and games. Scalable, intelligent software tailored to your needs.",
+  keywords = "software development company Sri Lanka, software company Sri Lanka, AI development, web applications, mobile apps, ERP systems, game development, custom software, CodePlay Studios",
   ogTitle,
   ogDescription,
   ogImage = "/assets/logo_trans.png",
@@ -132,6 +132,7 @@ const SEO = ({
     },
     address: {
       "@type": "PostalAddress",
+      streetAddress: "115/A, Gagabada Road, Hirana",
       addressLocality: "Panadura",
       addressRegion: "Western Province",
       addressCountry: "Sri Lanka",
@@ -140,13 +141,12 @@ const SEO = ({
       "@type": "ContactPoint",
       telephone: "+94754453334",
       contactType: "Customer Service",
+      email: "info@codeplaystudios.com",
+      areaServed: ["LK", "Worldwide"],
     },
-    sameAs: [
-      "https://twitter.com/codeplaystudios",
-      "https://linkedin.com/company/codeplaystudios",
-      "https://github.com/codeplaystudios",
-      "https://facebook.com/codeplaystudios",
-    ],
+    // No verified social profiles exist yet — `sameAs` stays empty rather
+    // than asserting accounts nobody can click through to. Add real URLs
+    // here (and to the icons in Navigation/Footer) once accounts exist.
   };
 
   const websiteSchema = {

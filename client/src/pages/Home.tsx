@@ -12,9 +12,9 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden selection:bg-primary/20 relative">
       <SEO
-        title="CodePlay Studios - Coding Your Vision | Smart Software Solutions"
-        description="CodePlay Studios builds AI-powered business systems, web apps, mobile solutions, and games. We deliver scalable, intelligent software tailored to your needs. Get a quote today."
-        keywords="AI development, web applications, mobile apps, ERP systems, game development, custom software, CodePlay Studios, software engineering, Sri Lanka"
+        title="CodePlay Studios — Software Development Company in Sri Lanka"
+        description="CodePlay Studios is a software development company in Sri Lanka building AI-powered business systems, web apps, mobile apps, and games. Scalable, intelligent software tailored to your needs — get a quote today."
+        keywords="software development company Sri Lanka, software development Sri Lanka, custom software development Sri Lanka, web development Sri Lanka, mobile app development Sri Lanka, AI development, ERP systems, game development, CodePlay Studios"
       />
       <div className="fixed inset-0 z-0 h-full w-full bg-background pointer-events-none">
         <MatrixRain />

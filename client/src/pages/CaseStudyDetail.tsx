@@ -25,6 +25,11 @@ export default function CaseStudyDetail() {
       <SEO
         title={`${cs.title} | Case Studies | CodePlay Studios`}
         description={cs.description}
+        breadcrumbs={[
+          { name: "Home", item: "https://codeplaystudios.com" },
+          { name: "Case Studies", item: "https://codeplaystudios.com/case-studies" },
+          { name: cs.title, item: `https://codeplaystudios.com/case-studies/${cs.slug}` },
+        ]}
       />
       
       {/* Background */}
@@ -142,7 +147,7 @@ export default function CaseStudyDetail() {
                   <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
                     <item.icon className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="text-4xl font-bold mb-2 tracking-tight text-white">{item.val}</h3>
+                  <h2 className="text-4xl font-bold mb-2 tracking-tight text-white">{item.val}</h2>
                   <p className="text-muted-foreground text-sm uppercase tracking-widest font-medium">{item.label}</p>
                 </motion.div>
               ))}
@@ -163,10 +168,10 @@ export default function CaseStudyDetail() {
                   viewport={{ once: true }}
                   className={`p-10 rounded-[2rem] bg-gradient-to-b ${item.color} to-transparent border border-white/5 h-full`}
                 >
-                  <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+                  <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
                     <span className="w-2 h-8 bg-primary rounded-full" />
                     {item.title}
-                  </h3>
+                  </h2>
                   <p className="text-muted-foreground leading-relaxed">
                     {item.content}
                   </p>

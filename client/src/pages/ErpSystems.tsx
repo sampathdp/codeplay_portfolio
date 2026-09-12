@@ -95,9 +95,9 @@ export default function ErpSystems() {
   return (
     <div className="min-h-screen text-foreground selection:bg-amber-500/30">
       <SEO
-        title="ERP & Enterprise Management Systems"
-        description="Custom ERP solutions, Payroll systems, CRM, and Inventory management tailored for high-growth enterprises."
-        keywords="ERP development, payroll systems, CRM software, inventory management, enterprise software, CodePlay Studios"
+        title="Business Management Systems Sri Lanka"
+        description="CodePlay Studios builds custom ERP and business management systems for Sri Lankan enterprises — Payroll, CRM, and Inventory management tailored to your operations."
+        keywords="business management system Sri Lanka, ERP development Sri Lanka, ERP development, payroll systems, CRM software, inventory management, CodePlay Studios"
         schemas={[
           {
             "@context": "https://schema.org",
@@ -108,6 +108,7 @@ export default function ErpSystems() {
               "@type": "Organization",
               name: "CodePlay Studios",
             },
+            areaServed: ["Sri Lanka", "Worldwide"],
           },
         ]}
       />
@@ -220,7 +221,7 @@ export default function ErpSystems() {
                       animate={{ scale: 1, opacity: 1 }}
                       transition={{ duration: 1 }}
                       src={futuristicErp}
-                      alt="Futuristic ERP System"
+                      alt="Business management system illustration by CodePlay Studios"
                       className="max-w-full h-auto object-contain rounded-2xl shadow-2xl relative z-10"
                     />
                     <div className="absolute inset-0 bg-amber-950/20 mix-blend-overlay z-10" />

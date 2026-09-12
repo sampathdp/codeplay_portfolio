@@ -9,6 +9,7 @@ import {
   Cpu,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AiMetrics from "@/components/metrics/AiMetrics";
@@ -98,9 +99,9 @@ export default function AiDevelopment() {
   return (
     <div className="min-h-screen text-foreground selection:bg-purple-500/30">
       <SEO
-        title="AI & Intelligent Software Solutions"
-        description="Custom AI solutions, including intelligent data processing, automated workflows, and smart recommendation systems for business efficiency."
-        keywords="AI development, machine learning, intelligent software, automation, data processing, CodePlay Studios"
+        title="AI Development Sri Lanka"
+        description="CodePlay Studios delivers custom AI solutions for Sri Lankan businesses — intelligent data processing, automated workflows, and smart recommendation systems built for efficiency."
+        keywords="AI development Sri Lanka, AI development, machine learning, intelligent software, automation, data processing, CodePlay Studios"
         schemas={[
           {
             "@context": "https://schema.org",
@@ -112,6 +113,7 @@ export default function AiDevelopment() {
               "@type": "Organization",
               name: "CodePlay Studios",
             },
+            areaServed: ["Sri Lanka", "Worldwide"],
           },
         ]}
       />
@@ -160,18 +162,22 @@ export default function AiDevelopment() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
                 <Button
+                  asChild
                   size="lg"
-                  className="h-12 px-8 text-lg rounded-full bg-emerald-600 hover:bg-emerald-500 text-white shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] transition-all"
+                  className="h-12 px-8 text-lg rounded-full bg-emerald-600 hover:bg-emerald-500 text-white shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] transition-all cursor-pointer"
                 >
-                  Exploit AI Power
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <Link href="/#contact">
+                    Explore AI Solutions
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
                 </Button>
                 <Button
+                  asChild
                   size="lg"
                   variant="outline"
-                  className="h-12 px-8 text-lg rounded-full border-white/10 hover:bg-white/5 backdrop-blur-sm"
+                  className="h-12 px-8 text-lg rounded-full border-white/10 hover:bg-white/5 backdrop-blur-sm cursor-pointer"
                 >
-                  View Capabilities
+                  <Link href="/case-studies">View Capabilities</Link>
                 </Button>
               </div>
             </motion.div>
@@ -218,7 +224,7 @@ export default function AiDevelopment() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-20" />
                     <img
                       src={futuristicAi}
-                      alt="Futuristic AI Concept"
+                      alt="AI and automation illustration by CodePlay Studios"
                       className="absolute inset-0 w-full h-full object-cover opacity-90"
                     />
                     {/* Overlay HUD elements on image */}
@@ -265,6 +271,7 @@ export default function AiDevelopment() {
                     whileHover={{ y: -5, transition: { duration: 0.2 } }}
                     className={`group relative p-8 rounded-3xl border transition-all duration-300 ${service.bg} ${service.border} hover:border-opacity-50 hover:bg-opacity-20`}
                   >
+                    <Link href="/#contact" className="absolute inset-0 z-10" />
                     <div
                       className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 bg-black/40 text-white shadow-lg group-hover:scale-110 transition-transform duration-300`}
                     >
@@ -276,7 +283,7 @@ export default function AiDevelopment() {
                       {service.description}
                     </p>
 
-                    <div className="absolute top-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+                    <div className="absolute top-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <ArrowRight
                         className={`h-6 w-6 ${service.color} -rotate-45 group-hover:rotate-0 transition-transform duration-300`}
                       />
@@ -302,10 +309,11 @@ export default function AiDevelopment() {
                     solutions.
                   </p>
                   <Button
+                    asChild
                     size="lg"
-                    className="h-14 px-10 text-lg rounded-full bg-white text-black hover:bg-gray-200"
+                    className="h-14 px-10 text-lg rounded-full bg-white text-black hover:bg-gray-200 cursor-pointer"
                   >
-                    Integrate AI Now
+                    <Link href="/#contact">Integrate AI Now</Link>
                   </Button>
                 </div>
               </div>

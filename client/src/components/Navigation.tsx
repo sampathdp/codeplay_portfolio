@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
-import { Menu, X, Instagram, Twitter, Linkedin, Github } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "./ui/button";
 import CurrencySwitcher from "./CurrencySwitcher";
@@ -39,13 +39,6 @@ export default function Navigation() {
     { href: TOOLS_HREF, label: "Tools" },
     { href: "/about", label: "About Us" },
     { href: "/contact", label: "Discovery" },
-  ];
-
-  const socialLinks = [
-    { icon: <Twitter className="w-5 h-5" aria-hidden="true" />, href: "#", label: "Twitter" },
-    { icon: <Instagram className="w-5 h-5" aria-hidden="true" />, href: "#", label: "Instagram" },
-    { icon: <Linkedin className="w-5 h-5" aria-hidden="true" />, href: "#", label: "LinkedIn" },
-    { icon: <Github className="w-5 h-5" aria-hidden="true" />, href: "#", label: "GitHub" },
   ];
 
   return (
@@ -184,24 +177,12 @@ export default function Navigation() {
 
             {/* Footer */}
             <div className="p-10 border-t border-border/50 bg-secondary/30">
-              <p className="text-sm font-medium text-muted-foreground uppercase tracking-widest mb-6">
-                Socials
+              <p className="text-sm font-medium text-muted-foreground uppercase tracking-widest mb-1">
+                Panadura, Sri Lanka
               </p>
-              <div className="flex gap-6">
-                {socialLinks.map((social, i) => (
-                  <motion.a
-                    key={i}
-                    href={social.href}
-                    aria-label={social.label}
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.7 + i * 0.1 }}
-                    className="w-12 h-12 rounded-full bg-background flex items-center justify-center text-foreground/70 hover:bg-primary hover:text-white transition-all shadow-sm"
-                  >
-                    {social.icon}
-                  </motion.a>
-                ))}
-              </div>
+              <a href="tel:+94754453334" className="text-lg font-bold hover:text-primary transition-colors">
+                +94 75 445 3334
+              </a>
             </div>
           </motion.div>
         )}

@@ -18,3 +18,10 @@ enable_signup = false
 [auth.email]
 enable_signup = false
 enable_confirmations = true
+
+# Contact-form relay (see supabase/functions/contact). Keeps default JWT
+# verification on — the public anon key IS a valid JWT, so the client can
+# still call it with VITE_SUPABASE_ANON_KEY; this just blocks fully
+# anonymous/unsigned requests from outside the app.
+[functions.contact]
+verify_jwt = true

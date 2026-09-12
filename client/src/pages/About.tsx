@@ -8,8 +8,6 @@ import {
   Target, 
   Cpu, 
   Layers,
-  Linkedin,
-  Github,
   Award
 } from "lucide-react";
 import Navigation from "@/components/Navigation";
@@ -70,9 +68,9 @@ const testimonials = [
 export default function About() {
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-primary/20 relative">
-      <SEO 
+      <SEO
         title="About CodePlay Studios - Our Story & Vision"
-        description="Learn about the team behind CodePlay Studios. Founded by Sampath Dananjaya, we specialize in high-end Web, Mobile, and Game engineering with a focus on Calm Computing."
+        description="CodePlay Studios is a software development company based in Panadura, Sri Lanka. Founded by Sampath Dananjaya, we specialize in high-end Web, Mobile, and Game engineering with a focus on Calm Computing."
       />
       
       <div className="fixed inset-0 z-0 h-full w-full bg-background pointer-events-none">
@@ -144,14 +142,6 @@ export default function About() {
                     <Award className="w-5 h-5 text-primary" />
                     <span className="text-sm font-medium">System Architect</span>
                   </div>
-                </div>
-                <div className="flex gap-4 pt-4">
-                  <button className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors duration-300">
-                    <Linkedin className="w-5 h-5" />
-                  </button>
-                  <button className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors duration-300">
-                    <Github className="w-5 h-5" />
-                  </button>
                 </div>
               </div>
             </motion.div>

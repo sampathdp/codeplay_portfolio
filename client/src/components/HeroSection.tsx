@@ -82,6 +82,11 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-2 h-full gap-8">
           {/* LEFT: Static Text Content */}
           <div className="flex flex-col justify-center z-20 order-2 lg:order-1 relative min-h-[300px] lg:min-h-[400px]">
+            {/* Static (non-carousel) line so the page's core "who/what/where"
+                is present regardless of which slide is showing. */}
+            <p className="text-sm md:text-base font-medium text-white/60 tracking-wide mb-3">
+              Software Development Company in Sri Lanka
+            </p>
             <AnimatePresence mode="wait" initial={false}>
               <motion.div
                 key={selectedIndex}

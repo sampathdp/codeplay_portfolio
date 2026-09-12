@@ -20,6 +20,8 @@ Contact: info@codeplaystudios.com
 - [About Us](https://codeplaystudios.com/about): Team, story, and approach.
 - [Case Studies](https://codeplaystudios.com/case-studies): Portfolio of delivered projects.
 - [Contact](https://codeplaystudios.com/contact): Start a project or ask a question.
+- [Privacy Policy](https://codeplaystudios.com/privacy-policy): How we handle visitor and client data.
+- [Terms & Conditions](https://codeplaystudios.com/terms-and-conditions): Terms for using this site and engaging our services.
 
 ## Free Tools
 
