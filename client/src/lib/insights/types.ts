@@ -94,6 +94,7 @@ export interface InsightsArticle {
   /** Standfirst / deck. */
   dek: string;
   category: InsightsCategorySlug;
+  categoryName?: string;
   tags: ArticleTag[];
   /** Article body as Markdown (rendered to safe HTML client-side). The
    * "Sources & Further Reading" section is stripped — see `sources`. */
@@ -133,6 +134,7 @@ export type InsightsArticleSummary = Pick<
   | "title"
   | "dek"
   | "category"
+  | "categoryName"
   | "tags"
   | "heroImage"
   | "author"

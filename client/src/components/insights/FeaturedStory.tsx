@@ -16,10 +16,10 @@ export default function FeaturedStory({ article }: { article: InsightsArticle })
 
   return (
     <motion.article
-      initial={reduce ? false : { opacity: 0, y: 20 }}
+      initial={reduce ? false : { opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="group relative overflow-hidden rounded-[2rem] border border-white/10 shadow-2xl shadow-black/40 transition-colors duration-300 hover:border-primary/30"
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="group relative overflow-hidden rounded-[2.25rem] border border-white/15 bg-[#0e1424] shadow-2xl shadow-black/60 transition-all duration-500 hover:border-primary/50 hover:shadow-primary/10"
     >
       <Link
         href={href}
@@ -32,54 +32,58 @@ export default function FeaturedStory({ article }: { article: InsightsArticle })
           category={article.category}
           sizes="100vw"
           priority
-          className="h-full w-full transition-transform duration-700 ease-out group-hover:scale-105"
+          className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
         />
       </Link>
 
-      {/* scrim — strong at the bottom for text contrast, a wash across the rest */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/10" />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent" />
+      {/* Modern multi-layer gradient scrim for supreme text contrast and legibility */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#080d1a] via-[#080d1a]/80 to-transparent" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#080d1a]/90 via-[#080d1a]/40 to-transparent" />
 
-      <div className="relative flex min-h-[440px] flex-col justify-end gap-5 p-7 sm:min-h-[480px] md:min-h-[560px] md:p-12">
+      <div className="relative flex min-h-[460px] flex-col justify-end gap-5 p-6 sm:min-h-[500px] sm:p-10 md:min-h-[580px] md:p-14">
         <div className="flex flex-wrap items-center gap-3">
           <CategoryBadge category={article.category} asLink />
           {article.breaking && (
-            <span className="inline-flex items-center gap-1 rounded-md bg-destructive px-2 py-0.5 text-[0.65rem] font-bold uppercase tracking-wide text-white">
+            <span className="inline-flex items-center gap-1 rounded-full bg-destructive px-2.5 py-0.5 text-[0.68rem] font-bold uppercase tracking-wider text-white shadow-sm">
               <Zap className="h-3 w-3" aria-hidden="true" /> Breaking
             </span>
           )}
-          <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.25em] text-white/60">
-            <span className="h-1.5 w-1.5 rounded-full bg-primary" aria-hidden="true" />
-            Featured Story
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/15 px-3 py-0.5 text-[0.7rem] font-mono font-semibold uppercase tracking-[0.25em] text-primary backdrop-blur-md">
+            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary" aria-hidden="true" />
+            Featured Analysis
           </span>
         </div>
 
-        <h2 className="max-w-3xl text-2xl font-bold leading-[1.1] tracking-tight text-white md:text-5xl">
+        <h2 className="max-w-4xl font-display text-2xl font-extrabold leading-[1.12] tracking-tight text-white sm:text-3xl md:text-5xl lg:text-[3.25rem]">
           <Link
             href={href}
-            className="rounded transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            className="rounded-lg transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
           >
             {article.title}
           </Link>
         </h2>
 
-        <p className="max-w-2xl text-base leading-relaxed text-white/70 md:text-lg">
+        <p className="max-w-3xl text-base leading-relaxed text-slate-200 md:text-lg lg:text-xl font-normal text-balance">
           {article.dek}
         </p>
 
-        <div className="flex flex-wrap items-center gap-x-5 gap-y-3 pt-1">
-          <div className="flex items-center gap-x-3 text-sm text-white/55">
+        <div className="mt-2 flex flex-wrap items-center justify-between gap-4 border-t border-white/15 pt-5">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-slate-300">
+            <span className="font-medium text-white/90">{article.author}</span>
+            <span aria-hidden="true" className="text-white/30">·</span>
             <time dateTime={article.publishedAt}>{formatDate(article.publishedAt)}</time>
-            <span aria-hidden="true">·</span>
-            <span>{article.readingMinutes} min read</span>
+            <span aria-hidden="true" className="text-white/30">·</span>
+            <span className="rounded-md bg-white/10 px-2 py-0.5 text-xs font-medium text-white/80">
+              {article.readingMinutes} min read
+            </span>
           </div>
 
           <Link
             href={href}
-            className="group/cta inline-flex w-fit items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/30 transition-all hover:scale-[1.03] hover:shadow-primary/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            className="group/cta inline-flex items-center gap-2.5 rounded-full bg-primary px-6 py-3 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:scale-[1.03] hover:shadow-primary/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
           >
-            Read the full story
-            <ArrowRight className="h-4 w-4 transition-transform group-hover/cta:translate-x-0.5" />
+            <span>Read full analysis</span>
+            <ArrowRight className="h-4 w-4 transition-transform group-hover/cta:translate-x-1" />
           </Link>
         </div>
       </div>

@@ -33,10 +33,10 @@
        browser fetches it without waiting for React to render the <img>. -->
   <link rel="preload" as="image" href="/assets/hero_web_dev_cartoon-640.webp" fetchpriority="high" />
 
-  <!-- Outfit is the only web font actually used (brand wordmark + a few
-       headings). Self-hosted so it is not chained behind a third-party
-       stylesheet request. Every other family the old Google Fonts link
-       pulled was dead weight (font vars were never defined). -->
+  <!-- Fonts: Outfit (brand/display headlines) + Inter (ultra-legible editorial body) + JetBrains Mono (code) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..800;1,14..32,300..800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/outfit-latin.woff2" crossorigin />
   <style>
     @font-face {

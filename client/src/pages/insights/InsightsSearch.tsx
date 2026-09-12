@@ -61,11 +61,11 @@ export default function InsightsSearch() {
         />
 
         <header className="mb-8 mt-6">
-          <h1 className="font-['Outfit'] text-3xl font-bold tracking-tight md:text-4xl">
+          <h1 className="font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
             Search Insights
           </h1>
           <form
-            className="mt-5"
+            className="mt-6"
             onSubmit={(e) => {
               e.preventDefault();
               submit(query);
@@ -73,7 +73,7 @@ export default function InsightsSearch() {
           >
             <div className="relative">
               <SearchIcon
-                className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground"
+                className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-primary"
                 aria-hidden="true"
               />
               <label htmlFor="insights-search" className="sr-only">
@@ -86,8 +86,8 @@ export default function InsightsSearch() {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 onBlur={() => submit(query)}
-                placeholder="Headlines, topics, tags, categories…"
-                className="min-h-[48px] w-full rounded-xl border border-white/10 bg-white/5 pl-11 pr-11 text-base outline-none placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-primary"
+                placeholder="Search headlines, engineering topics, tags, categories…"
+                className="min-h-[52px] w-full rounded-2xl border border-white/15 bg-[#0e1424]/90 pl-12 pr-12 text-base text-white outline-none placeholder:text-slate-400 focus:border-primary/50 focus:bg-[#131b30] focus-visible:ring-2 focus-visible:ring-primary shadow-xl shadow-black/20 transition-all"
               />
               {query && (
                 <button

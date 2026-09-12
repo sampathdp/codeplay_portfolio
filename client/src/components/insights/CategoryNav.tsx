@@ -63,14 +63,14 @@ function CatLink({
     <Link
       href={href}
       aria-current={active ? "page" : undefined}
-      className={`inline-flex shrink-0 items-center gap-1.5 rounded-full border px-4 py-2 text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary ${
+      className={`inline-flex shrink-0 items-center gap-2 rounded-full px-4 py-2 text-sm font-medium tracking-wide transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary ${
         active
-          ? "border-transparent bg-primary text-primary-foreground shadow-md shadow-primary/25"
-          : "border-white/10 bg-white/[0.04] text-muted-foreground hover:border-white/20 hover:bg-white/[0.08] hover:text-foreground"
+          ? "border border-primary/50 bg-primary text-primary-foreground shadow-lg shadow-primary/25 font-semibold"
+          : "border border-white/10 bg-[#0e1424]/80 text-slate-300 hover:border-white/25 hover:bg-[#151f38] hover:text-white backdrop-blur-md"
       }`}
     >
-      <Icon className="h-3.5 w-3.5" />
-      {label}
+      <Icon className={`h-3.5 w-3.5 ${active ? "text-primary-foreground" : "text-primary"}`} />
+      <span>{label}</span>
     </Link>
   );
 }

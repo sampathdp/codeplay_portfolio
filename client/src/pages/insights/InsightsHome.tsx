@@ -61,68 +61,70 @@ export default function InsightsHome() {
       />
 
       <div className="container mx-auto max-w-7xl px-5 sm:px-6">
-        {/* Hero */}
-        <header className="relative mb-14">
+        {/* Hero — compact: eyebrow + headline + description share one line
+            of breathing room each, stats ride the same row as the search
+            box so the fold reaches real stories sooner. */}
+        {/* Compact, Modern Editorial Header */}
+        <header className="relative mb-6">
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute -top-16 left-0 -z-10 h-72 w-72 rounded-full bg-primary/25 blur-[110px] sm:h-96 sm:w-96"
+            className="pointer-events-none absolute -top-12 left-0 -z-10 h-44 w-80 rounded-full bg-primary/10 blur-[100px]"
           />
 
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="max-w-3xl"
-          >
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1">
-              <span className="relative flex h-1.5 w-1.5">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary/60" />
-                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-primary" />
-              </span>
-              <span className="text-[0.7rem] font-mono uppercase tracking-[0.35em] text-primary">
-                CodePlay Insights
-              </span>
+          {/* Top Bar: Eyebrow + Stats on left, Quick Search on right */}
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex flex-wrap items-center gap-2.5">
+              <div className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-3 py-1 backdrop-blur-md">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary/70" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
+                </span>
+                <span className="text-[0.68rem] font-mono font-bold uppercase tracking-[0.22em] text-primary">
+                  CodePlay Insights
+                </span>
+              </div>
+              {total > 0 && (
+                <div className="flex items-center gap-2 text-xs text-slate-400 font-medium">
+                  <span className="h-3 w-px bg-white/15" aria-hidden="true" />
+                  <span>
+                    <strong className="text-white font-semibold">{total}</strong> stories
+                  </span>
+                  <span>·</span>
+                  <span>
+                    <strong className="text-white font-semibold">{categoriesCount}</strong> categories
+                  </span>
+                </div>
+              )}
             </div>
 
-            <h1 className="font-['Outfit'] text-4xl font-bold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
+            <Link
+              href={insightsSearchPath()}
+              className="group inline-flex items-center gap-2.5 self-start rounded-full border border-white/15 bg-[#0e1424]/85 px-3.5 py-1.5 text-xs text-slate-300 shadow-sm backdrop-blur-md transition-all hover:border-primary/50 hover:bg-[#131b30] hover:text-white sm:self-auto"
+            >
+              <Search className="h-3.5 w-3.5 text-primary" aria-hidden="true" />
+              <span>Search insights…</span>
+              <kbd className="hidden sm:inline-flex rounded border border-white/15 bg-white/5 px-1.5 py-0.5 text-[0.62rem] font-mono font-medium text-slate-400">
+                Ctrl K
+              </kbd>
+            </Link>
+          </div>
+
+          {/* Headline & Subhead in one compact row */}
+          <div className="mt-3.5 flex flex-col gap-1.5 md:flex-row md:items-baseline md:justify-between">
+            <h1 className="font-display text-2xl font-extrabold tracking-tight text-white sm:text-3xl md:text-4xl">
               Technology that{" "}
-              <span className="bg-gradient-to-r from-primary via-cyan-300 to-primary bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-cyan-400 via-sky-300 to-indigo-400 bg-clip-text text-transparent">
                 matters.
               </span>
             </h1>
-            <p className="mt-5 max-w-xl text-lg text-muted-foreground md:text-xl">
-              Explained for developers, gamers and businesses. Primary sources,
-              real analysis, and the CodePlay developer take on every story.
+            <p className="text-xs sm:text-sm text-slate-300 md:max-w-md lg:max-w-lg leading-relaxed text-balance">
+              Original engineering analysis, primary sources, and the developer take on every story.
             </p>
+          </div>
 
-            {total > 0 && (
-              <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted-foreground">
-                <span>
-                  <strong className="font-semibold text-foreground">{total}</strong>{" "}
-                  {total === 1 ? "story" : "stories"}
-                </span>
-                <span className="h-1 w-1 rounded-full bg-white/20" aria-hidden="true" />
-                <span>
-                  <strong className="font-semibold text-foreground">{categoriesCount}</strong>{" "}
-                  {categoriesCount === 1 ? "category" : "categories"}
-                </span>
-                <span className="h-1 w-1 rounded-full bg-white/20" aria-hidden="true" />
-                <span>Updated daily</span>
-              </div>
-            )}
-          </motion.div>
-
-          <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          {/* Category Navigation */}
+          <div className="mt-3.5 border-t border-white/10 pt-3">
             <CategoryNav />
-            <Link
-              href={insightsSearchPath()}
-              className="group inline-flex shrink-0 items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.04] py-2 pl-2 pr-4 text-sm text-muted-foreground backdrop-blur-md transition-all hover:border-primary/40 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-            >
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary/15 text-primary transition-colors group-hover:bg-primary/25">
-                <Search className="h-3.5 w-3.5" aria-hidden="true" />
-              </span>
-              Search Insights
-            </Link>
           </div>
         </header>
 
@@ -138,13 +140,13 @@ export default function InsightsHome() {
         ) : (
           <>
             {featured && (
-              <section aria-label="Featured story" className="mb-16">
+              <section aria-label="Featured story" className="mb-12">
                 <FeaturedStory article={featured} />
               </section>
             )}
 
             {/* Latest + Trending sidebar */}
-            <div className="mb-16 grid gap-10 lg:grid-cols-[1fr_320px]">
+            <div className="mb-14 grid gap-8 lg:grid-cols-[1fr_320px]">
               <div>
                 <SectionHeader
                   title="Latest Insights"
@@ -164,7 +166,7 @@ export default function InsightsHome() {
               <aside className="space-y-8 lg:sticky lg:top-28 lg:self-start">
                 <TrendingList articles={trending} />
                 {mostRead.length >= 3 && (
-                  <div className="glass rounded-3xl border border-white/10 p-6">
+                  <div className="rounded-3xl border border-white/10 bg-[#0e1424]/80 p-6 backdrop-blur-md shadow-xl shadow-black/20">
                     <MostRead articles={mostRead} />
                   </div>
                 )}
@@ -172,7 +174,7 @@ export default function InsightsHome() {
             </div>
 
             {/* Category rows — each hides itself when empty */}
-            <div className="space-y-16">
+            <div className="space-y-14">
               <CategorySection categorySlug="artificial-intelligence" title="Artificial Intelligence" />
               <CategorySection categorySlug="software-development" title="Software & Development" />
               <CategorySection categorySlug="web-development" title="Web Development" />
@@ -184,14 +186,14 @@ export default function InsightsHome() {
             </div>
 
             {total < 6 && (
-              <p className="mt-14 text-center text-sm text-muted-foreground">
+              <p className="mt-10 text-center text-sm text-muted-foreground">
                 CodePlay Insights is new — {total}{" "}
                 {total === 1 ? "article" : "articles"} published so far, with
                 2–3 added on publishing days.
               </p>
             )}
 
-            <div className="mt-20">
+            <div className="mt-16">
               <NewsletterCta />
             </div>
           </>
@@ -199,7 +201,7 @@ export default function InsightsHome() {
 
         <nav
           aria-label="About CodePlay Insights"
-          className="mt-16 flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-white/10 pt-6 text-xs text-muted-foreground"
+          className="mt-12 flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-white/10 pt-6 text-xs text-muted-foreground"
         >
           <Link href={`${INSIGHTS_BASE}/about`} className="hover:text-primary">
             About

@@ -23,12 +23,12 @@ function Indicators({ article }: { article: InsightsArticleSummary }) {
   return (
     <div className="flex items-center gap-1.5">
       {article.breaking && (
-        <span className="inline-flex items-center gap-1 rounded-md bg-destructive/15 px-2 py-0.5 text-[0.65rem] font-bold uppercase tracking-wide text-destructive">
+        <span className="inline-flex items-center gap-1 rounded-full bg-destructive/90 px-2 py-0.5 text-[0.65rem] font-bold uppercase tracking-wide text-white shadow-sm">
           <Zap className="h-3 w-3" aria-hidden="true" /> Breaking
         </span>
       )}
       {article.trending && !article.breaking && (
-        <span className="inline-flex items-center gap-1 rounded-md bg-orange-500/15 px-2 py-0.5 text-[0.65rem] font-bold uppercase tracking-wide text-orange-400">
+        <span className="inline-flex items-center gap-1 rounded-full bg-amber-500/90 px-2 py-0.5 text-[0.65rem] font-bold uppercase tracking-wide text-black shadow-sm">
           <Flame className="h-3 w-3" aria-hidden="true" /> Trending
         </span>
       )}
@@ -48,69 +48,71 @@ export default function ArticleCard({
 
   const inner =
     variant === "wide" ? (
-      <div className="grid gap-5 sm:grid-cols-[minmax(0,240px)_1fr] items-stretch">
-        <div className="relative overflow-hidden rounded-2xl border border-white/10 transition-colors duration-300 group-hover:border-primary/30">
+      <div className="grid gap-5 sm:grid-cols-[minmax(0,260px)_1fr] items-stretch">
+        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/20">
           <ArticleImage
             image={article.heroImage}
             category={article.category}
-            sizes="(min-width: 640px) 240px, 100vw"
-            className="transition-transform duration-500 group-hover:scale-[1.03]"
+            sizes="(min-width: 640px) 260px, 100vw"
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
             priority={priority}
           />
         </div>
-        <div className="flex flex-col justify-center gap-3 py-1">
+        <div className="flex flex-col justify-center gap-2.5 py-1">
           <div className="flex flex-wrap items-center gap-2">
             <CategoryBadge category={article.category} />
             <Indicators article={article} />
           </div>
-          <h3 className="text-lg font-bold leading-snug transition-colors group-hover:text-primary md:text-xl">
+          <h3 className="font-display text-lg font-bold leading-snug text-white transition-colors group-hover:text-primary md:text-xl">
             {article.title}
           </h3>
           {showExcerpt && (
-            <p className="line-clamp-2 text-sm leading-relaxed text-muted-foreground">
+            <p className="line-clamp-2 text-sm leading-relaxed text-slate-300">
               {article.dek}
             </p>
           )}
           <ArticleMetaLine
             publishedAt={article.publishedAt}
             readingMinutes={article.readingMinutes}
+            className="text-slate-400 mt-auto pt-1"
           />
         </div>
       </div>
     ) : variant === "compact" ? (
-      <div className="flex gap-4">
-        <div className="w-24 shrink-0 overflow-hidden rounded-xl border border-white/10 transition-colors duration-300 group-hover:border-primary/30 sm:w-28">
+      <div className="flex gap-4 items-center">
+        <div className="w-24 h-24 shrink-0 overflow-hidden rounded-xl border border-white/10 bg-black/20 sm:w-28 sm:h-24">
           <ArticleImage
             image={article.heroImage}
             category={article.category}
             sizes="112px"
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </div>
         <div className="flex min-w-0 flex-col justify-center gap-1.5">
           <div className="flex items-center gap-2">
-            <span className="text-[0.65rem] font-semibold uppercase tracking-wide text-primary">
+            <span className="text-[0.68rem] font-bold uppercase tracking-wider text-primary">
               {categoryShort(article.category)}
             </span>
             <Indicators article={article} />
           </div>
-          <h3 className="line-clamp-3 text-sm font-semibold leading-snug transition-colors group-hover:text-primary">
+          <h3 className="line-clamp-2 font-display text-sm font-semibold leading-snug text-white transition-colors group-hover:text-primary">
             {article.title}
           </h3>
           <ArticleMetaLine
             publishedAt={article.publishedAt}
             readingMinutes={article.readingMinutes}
-            className="text-[0.7rem]"
+            className="text-[0.72rem] text-slate-400"
           />
         </div>
       </div>
     ) : (
-      <>
-        <div className="relative overflow-hidden rounded-2xl border border-white/10 transition-colors duration-300 group-hover:border-primary/30">
+      <div className="flex h-full flex-col">
+        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/20 aspect-[16/10]">
           <ArticleImage
             image={article.heroImage}
             category={article.category}
             sizes="(min-width: 1024px) 380px, (min-width: 640px) 45vw, 100vw"
-            className="transition-transform duration-500 group-hover:scale-[1.04]"
+            className="h-full w-full object-cover transition-transform duration-600 ease-out group-hover:scale-105"
             priority={priority}
           />
           <div className="absolute left-3 top-3 flex flex-wrap gap-2">
@@ -119,21 +121,21 @@ export default function ArticleCard({
           </div>
         </div>
         <div className="mt-4 flex flex-1 flex-col gap-2.5">
-          <h3 className="text-lg font-bold leading-snug transition-colors group-hover:text-primary">
+          <h3 className="font-display text-lg font-bold leading-snug text-white transition-colors group-hover:text-primary sm:text-xl">
             {article.title}
           </h3>
           {showExcerpt && (
-            <p className="line-clamp-2 text-sm leading-relaxed text-muted-foreground">
+            <p className="line-clamp-2 text-sm leading-relaxed text-slate-300">
               {article.dek}
             </p>
           )}
           <ArticleMetaLine
             publishedAt={article.publishedAt}
             readingMinutes={article.readingMinutes}
-            className="mt-auto pt-1"
+            className="mt-auto pt-2 text-slate-400 text-xs"
           />
         </div>
-      </>
+      </div>
     );
 
   return (
@@ -147,7 +149,7 @@ export default function ArticleCard({
     >
       <Link
         href={href}
-        className="flex h-full flex-col rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+        className="flex h-full flex-col rounded-3xl border border-white/10 bg-[#0e1424]/70 p-4 backdrop-blur-md transition-all duration-300 hover:border-primary/40 hover:bg-[#131b30]/90 hover:shadow-xl hover:shadow-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
       >
         {inner}
       </Link>

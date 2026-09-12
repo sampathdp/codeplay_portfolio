@@ -35,14 +35,18 @@ export default function InsightsShell({ children }: { children: ReactNode }) {
         Skip to content
       </a>
 
-      <div className="pointer-events-none fixed inset-0 z-0">
+      <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
         <MatrixRain />
-        <div className="absolute inset-0 bg-background/85" />
+        {/* Dark, clean backdrop with soft opacity to keep matrix rain faint and non-distracting */}
+        <div className="absolute inset-0 bg-[#070b14]/96 backdrop-blur-[2px]" />
+        {/* Modern ambient radial glows */}
+        <div className="absolute -top-40 left-1/4 h-[400px] w-[400px] rounded-full bg-primary/10 blur-[140px]" />
+        <div className="absolute top-1/3 -right-20 h-[350px] w-[350px] rounded-full bg-indigo-500/8 blur-[140px]" />
       </div>
 
       <div className="relative z-10">
         <Navigation />
-        <main id="main" className="overflow-x-hidden pt-32 pb-24 md:pt-36">
+        <main id="main" className="overflow-x-hidden pt-28 pb-20 md:pt-30">
           {children}
         </main>
         <Footer />

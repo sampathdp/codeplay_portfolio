@@ -43,15 +43,15 @@ export default function InsightsCategory() {
           ]}
         />
 
-        <header className="mb-8 mt-6 max-w-2xl">
-          <h1 className="font-['Outfit'] text-3xl font-bold tracking-tight md:text-5xl">
+        <header className="mb-8 mt-6 max-w-3xl">
+          <h1 className="font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl md:text-5xl">
             {category.name}
           </h1>
-          <p className="mt-3 text-muted-foreground md:text-lg">
+          <p className="mt-3 text-base leading-relaxed text-slate-200 sm:text-lg">
             {category.description}
           </p>
-          <p className="mt-2 text-sm text-muted-foreground">
-            {articles.length} {articles.length === 1 ? "article" : "articles"}
+          <p className="mt-2 text-sm font-medium text-primary">
+            {articles.length} {articles.length === 1 ? "article published" : "articles published"}
           </p>
         </header>
 
