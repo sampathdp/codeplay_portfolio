@@ -3,6 +3,26 @@
  * CodePlay Studios palette (cyan primary, dark surfaces).
  */
 
+import {
+  Brain,
+  Code2,
+  Globe,
+  Smartphone,
+  Gamepad2,
+  Users,
+  ShieldCheck,
+  Cloud,
+  Terminal,
+  Cpu,
+  Rocket,
+  Layers,
+  Building2,
+  GitBranch,
+  Sparkles,
+  Newspaper,
+  type LucideIcon,
+} from "lucide-react";
+
 /** Tailwind gradient classes for a card's image-fallback area. */
 export const CATEGORY_GRADIENT: Record<string, string> = {
   "artificial-intelligence": "from-indigo-500/25 via-violet-500/10 to-transparent",
@@ -49,6 +69,55 @@ export const CATEGORY_SHORT: Record<string, string> = {
 
 export function categoryShort(slug: string): string {
   return CATEGORY_SHORT[slug] ?? slug.replace(/-/g, " ");
+}
+
+/** One glyph per category — used on the category bar and as the mark on
+ * cards that have no hero photo yet. */
+export const CATEGORY_ICON: Record<string, LucideIcon> = {
+  "artificial-intelligence": Brain,
+  "software-development": Code2,
+  "web-development": Globe,
+  "mobile-development": Smartphone,
+  "game-development": Gamepad2,
+  gaming: Gamepad2,
+  "gaming-community": Users,
+  cybersecurity: ShieldCheck,
+  "cloud-and-devops": Cloud,
+  "developer-tools": Terminal,
+  "hardware-and-gpus": Cpu,
+  startups: Rocket,
+  saas: Layers,
+  "big-tech": Building2,
+  "open-source": GitBranch,
+  "emerging-technology": Sparkles,
+};
+
+export function categoryIcon(slug: string): LucideIcon {
+  return CATEGORY_ICON[slug] ?? Newspaper;
+}
+
+/** Solid text-color accent per category, for icon glyphs on dark surfaces. */
+export const CATEGORY_TINT: Record<string, string> = {
+  "artificial-intelligence": "text-indigo-300",
+  "software-development": "text-sky-300",
+  "web-development": "text-cyan-300",
+  "mobile-development": "text-emerald-300",
+  "game-development": "text-violet-300",
+  gaming: "text-fuchsia-300",
+  "gaming-community": "text-rose-300",
+  cybersecurity: "text-teal-300",
+  "cloud-and-devops": "text-blue-300",
+  "developer-tools": "text-amber-300",
+  "hardware-and-gpus": "text-orange-300",
+  startups: "text-green-300",
+  saas: "text-sky-300",
+  "big-tech": "text-slate-300",
+  "open-source": "text-lime-300",
+  "emerging-technology": "text-purple-300",
+};
+
+export function categoryTint(slug: string): string {
+  return CATEGORY_TINT[slug] ?? "text-primary";
 }
 
 /** Category-aware business CTA copy → links to the existing contact route. */

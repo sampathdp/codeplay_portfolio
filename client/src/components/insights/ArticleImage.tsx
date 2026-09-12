@@ -1,4 +1,9 @@
-import { categoryGradient } from "@/lib/insights/visuals";
+import {
+  categoryGradient,
+  categoryIcon,
+  categoryTint,
+  categoryShort,
+} from "@/lib/insights/visuals";
 import type { ArticleImage as ArticleImageData } from "@/lib/insights/types";
 
 interface Props {
@@ -23,13 +28,27 @@ export default function ArticleImage({
   priority = false,
 }: Props) {
   if (!image?.src) {
+    const Icon = categoryIcon(category);
     return (
       <div
         aria-hidden="true"
-        className={`aspect-video w-full bg-gradient-to-br ${categoryGradient(
+        className={`relative flex aspect-video w-full items-center justify-center overflow-hidden bg-gradient-to-br ${categoryGradient(
           category,
-        )} bg-black/30 ${className}`}
-      />
+        )} bg-neutral-900 ${className}`}
+      >
+        {/* ambient glow */}
+        <div className="absolute -left-8 -top-8 h-32 w-32 rounded-full bg-white/10 blur-3xl" />
+        <div className="absolute -bottom-10 -right-6 h-36 w-36 rounded-full bg-white/10 blur-3xl" />
+        {/* dot-grid texture */}
+        <div className="absolute inset-0 bg-[radial-gradient(currentColor_1px,transparent_1px)] bg-[length:18px_18px] text-white opacity-[0.08]" />
+        <Icon
+          className={`relative h-9 w-9 ${categoryTint(category)} opacity-80 sm:h-11 sm:w-11`}
+          strokeWidth={1.5}
+        />
+        <span className="absolute bottom-2.5 left-3 text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-white/40">
+          {categoryShort(category)}
+        </span>
+      </div>
     );
   }
 

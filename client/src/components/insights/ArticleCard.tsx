@@ -49,7 +49,7 @@ export default function ArticleCard({
   const inner =
     variant === "wide" ? (
       <div className="grid gap-5 sm:grid-cols-[minmax(0,240px)_1fr] items-stretch">
-        <div className="relative overflow-hidden rounded-2xl border border-white/10">
+        <div className="relative overflow-hidden rounded-2xl border border-white/10 transition-colors duration-300 group-hover:border-primary/30">
           <ArticleImage
             image={article.heroImage}
             category={article.category}
@@ -79,7 +79,7 @@ export default function ArticleCard({
       </div>
     ) : variant === "compact" ? (
       <div className="flex gap-4">
-        <div className="w-24 shrink-0 overflow-hidden rounded-xl border border-white/10 sm:w-28">
+        <div className="w-24 shrink-0 overflow-hidden rounded-xl border border-white/10 transition-colors duration-300 group-hover:border-primary/30 sm:w-28">
           <ArticleImage
             image={article.heroImage}
             category={article.category}
@@ -105,7 +105,7 @@ export default function ArticleCard({
       </div>
     ) : (
       <>
-        <div className="relative overflow-hidden rounded-2xl border border-white/10">
+        <div className="relative overflow-hidden rounded-2xl border border-white/10 transition-colors duration-300 group-hover:border-primary/30">
           <ArticleImage
             image={article.heroImage}
             category={article.category}
@@ -141,6 +141,7 @@ export default function ArticleCard({
       initial={reduce ? false : { opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
+      whileHover={reduce ? undefined : { y: -4, transition: { duration: 0.2 } }}
       transition={{ duration: 0.4, delay: Math.min(index * 0.05, 0.3) }}
       className="group flex h-full flex-col"
     >

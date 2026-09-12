@@ -11,6 +11,7 @@ import {
   getMostRead,
   getLatest,
   hasContent,
+  nonEmptyCategories,
 } from "@/lib/insights/feed";
 import {
   InsightsShell,
@@ -39,6 +40,7 @@ export default function InsightsHome() {
     pinnedTrending,
   );
   const total = allArticles().length;
+  const categoriesCount = nonEmptyCategories().length;
 
   const websiteSchema = {
     "@context": "https://schema.org",
@@ -60,32 +62,65 @@ export default function InsightsHome() {
 
       <div className="container mx-auto max-w-7xl px-5 sm:px-6">
         {/* Hero */}
-        <header className="mb-12">
+        <header className="relative mb-14">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -top-16 left-0 -z-10 h-72 w-72 rounded-full bg-primary/25 blur-[110px] sm:h-96 sm:w-96"
+          />
+
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="max-w-3xl"
           >
-            <p className="mb-3 text-[0.7rem] font-mono uppercase tracking-[0.4em] text-primary">
-              CodePlay Insights
-            </p>
-            <h1 className="font-['Outfit'] text-4xl font-bold leading-[1.05] tracking-tight md:text-6xl">
-              Technology that matters.
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1">
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary/60" />
+                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-primary" />
+              </span>
+              <span className="text-[0.7rem] font-mono uppercase tracking-[0.35em] text-primary">
+                CodePlay Insights
+              </span>
+            </div>
+
+            <h1 className="font-['Outfit'] text-4xl font-bold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
+              Technology that{" "}
+              <span className="bg-gradient-to-r from-primary via-cyan-300 to-primary bg-clip-text text-transparent">
+                matters.
+              </span>
             </h1>
-            <p className="mt-4 max-w-xl text-lg text-muted-foreground md:text-xl">
+            <p className="mt-5 max-w-xl text-lg text-muted-foreground md:text-xl">
               Explained for developers, gamers and businesses. Primary sources,
               real analysis, and the CodePlay developer take on every story.
             </p>
+
+            {total > 0 && (
+              <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted-foreground">
+                <span>
+                  <strong className="font-semibold text-foreground">{total}</strong>{" "}
+                  {total === 1 ? "story" : "stories"}
+                </span>
+                <span className="h-1 w-1 rounded-full bg-white/20" aria-hidden="true" />
+                <span>
+                  <strong className="font-semibold text-foreground">{categoriesCount}</strong>{" "}
+                  {categoriesCount === 1 ? "category" : "categories"}
+                </span>
+                <span className="h-1 w-1 rounded-full bg-white/20" aria-hidden="true" />
+                <span>Updated daily</span>
+              </div>
+            )}
           </motion.div>
 
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <CategoryNav />
             <Link
               href={insightsSearchPath()}
-              className="inline-flex shrink-0 items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-muted-foreground transition-colors hover:border-primary/40 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              className="group inline-flex shrink-0 items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.04] py-2 pl-2 pr-4 text-sm text-muted-foreground backdrop-blur-md transition-all hover:border-primary/40 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             >
-              <Search className="h-4 w-4" aria-hidden="true" />
+              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary/15 text-primary transition-colors group-hover:bg-primary/25">
+                <Search className="h-3.5 w-3.5" aria-hidden="true" />
+              </span>
               Search Insights
             </Link>
           </div>

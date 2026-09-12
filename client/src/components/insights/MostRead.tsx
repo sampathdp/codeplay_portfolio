@@ -26,7 +26,7 @@ export default function MostRead({
               className="group flex items-center gap-4 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             >
               <span
-                className="text-lg font-bold text-primary/60 tabular-nums"
+                className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-sm font-bold text-primary/80 tabular-nums transition-colors group-hover:bg-primary/20"
                 aria-hidden="true"
               >
                 {String(i + 1).padStart(2, "0")}
