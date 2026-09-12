@@ -6,8 +6,75 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 09 Sep 2026 21:16:04 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2026 09:44:29 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>Building Zero-Trust AI Agents with Google&apos;s Agent Development Kit</title>
+      <link>https://codeplaystudios.com/insights/building-zero-trust-ai-agents-google-agent-development-kit</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/building-zero-trust-ai-agents-google-agent-development-kit</guid>
+      <pubDate>Sat, 12 Sep 2026 08:14:05 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>To safely allow autonomous AI agents built with Google&apos;s Agent Development Kit to mutate production state, software teams must replace soft system prompts with hard security boundaries like gVisor sandboxing and cryptographic verification.</description>
+    </item>
+    <item>
+      <title>Perplexity Adopts OpenAI GPT-6 Astra for Autonomous Systems Management</title>
+      <link>https://codeplaystudios.com/insights/perplexity-adopts-openai-gpt-6-astra</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/perplexity-adopts-openai-gpt-6-astra</guid>
+      <pubDate>Sat, 12 Sep 2026 08:13:42 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>Perplexity adopts OpenAI&apos;s GPT-6 Astra for software maintenance, production monitoring, and internal communications with reduced human oversight.</description>
+    </item>
+    <item>
+      <title>Google Releases TPU Microbenchmarks for Granular Performance Tuning</title>
+      <link>https://codeplaystudios.com/insights/google-tpu-microbenchmarks-performance-tuning</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/google-tpu-microbenchmarks-performance-tuning</guid>
+      <pubDate>Fri, 11 Sep 2026 14:42:08 GMT</pubDate>
+      <category>Open Source</category>
+      <description>Google&apos;s open-source TPU microbenchmark suite allows machine learning engineers to isolate hardware subsystems, build empirical Roofline models, and target compiler-level optimizations.</description>
+    </item>
+    <item>
+      <title>Xbox Acquires Publishing Rights for Kojima&apos;s Physint After Sony Departs</title>
+      <link>https://codeplaystudios.com/insights/xbox-acquires-publishing-rights-for-kojimas-physint</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/xbox-acquires-publishing-rights-for-kojimas-physint</guid>
+      <pubDate>Fri, 11 Sep 2026 08:16:38 GMT</pubDate>
+      <category>Gaming</category>
+      <description>In a dramatic shift for platform publishing, Microsoft Xbox steps in to publish Kojima Productions&apos; action-espionage title Physint following Sony&apos;s departure.</description>
+    </item>
+    <item>
+      <title>Google Releases Agent and Model Evaluation Tools for Gemini Enterprise Platform</title>
+      <link>https://codeplaystudios.com/insights/gemini-enterprise-agent-platform-evaluation-tools-ga</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/gemini-enterprise-agent-platform-evaluation-tools-ga</guid>
+      <pubDate>Fri, 11 Sep 2026 08:16:14 GMT</pubDate>
+      <category>Developer Tools</category>
+      <description>Google&apos;s General Availability release of evaluation tools for the Gemini Enterprise Agent Platform brings standardized, enterprise-grade validation to AI agent pipelines.</description>
+    </item>
+    <item>
+      <title>Kotlin ADK 1.0 Brings Multi-Agent AI to Multiplatform</title>
+      <link>https://codeplaystudios.com/insights/kotlin-adk-1-0-multi-agent-ai-multiplatform</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/kotlin-adk-1-0-multi-agent-ai-multiplatform</guid>
+      <pubDate>Thu, 10 Sep 2026 08:24:36 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>Google releases Agent Development Kit for Kotlin 1.0, bringing multi-agent AI orchestration and KSP-driven function calling to Kotlin Multiplatform environments.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/kotlin-adk-1-0-multi-agent-ai-multiplatform/fallback.svg" type="image/svg+xml" />
+    </item>
+    <item>
+      <title>The Anatomy of Harness Engineering: How to Evaluate and Iterate AI Coding Agents</title>
+      <link>https://codeplaystudios.com/insights/anatomy-of-harness-engineering-ai-coding-agents</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/anatomy-of-harness-engineering-ai-coding-agents</guid>
+      <pubDate>Thu, 10 Sep 2026 08:24:16 GMT</pubDate>
+      <category>Developer Tools</category>
+      <description>By shifting from slow end-to-end benchmarks to localized behavioral evaluations, software engineering teams can pinpoint root causes faster and reduce compute overhead when developing AI coding agents.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/anatomy-of-harness-engineering-ai-coding-agents/fallback.svg" type="image/svg+xml" />
+    </item>
+    <item>
+      <title>Apple Announces iPhone 18 Pro and iPhone Duo: What Mobile Developers Need to Know</title>
+      <link>https://codeplaystudios.com/insights/apple-iphone-18-pro-iphone-duo-developer-guide</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/apple-iphone-18-pro-iphone-duo-developer-guide</guid>
+      <pubDate>Thu, 10 Sep 2026 08:23:55 GMT</pubDate>
+      <category>Big Tech</category>
+      <description>Apple&apos;s September 2026 lineup introduces the iPhone 18 Pro, the new iPhone Duo, and updated Apple Watch models, creating new considerations for mobile software engineering teams.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/apple-iphone-18-pro-iphone-duo-developer-guide/fallback.svg" type="image/svg+xml" />
+    </item>
     <item>
       <title>How Cloudflare Saved 100 Terabytes of RAM Across Its 1.1.1.1 DNS Cache Infrastructure</title>
       <link>https://codeplaystudios.com/insights/cloudflare-100tb-ram-dns-cache-optimization</link>
@@ -23,7 +90,7 @@
       <pubDate>Wed, 02 Sep 2026 15:49:04 GMT</pubDate>
       <category>Open Source</category>
       <description>Cloudflare&apos;s 1.1.1.1 DNS cache optimization reclaimed 100 terabytes of memory across its global fleet, demonstrating the compounded impact of low-level data structure tuning at scale.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/08/cloudflare-100tb-ram-dns-cache-optimization-2/fallback.svg" type="image/webp" />
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/08/cloudflare-100tb-ram-dns-cache-optimization-2/fallback.svg" type="image/svg+xml" />
     </item>
   </channel>
 </rss>
