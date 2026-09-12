@@ -67,6 +67,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://codeplaystudios.com/insights/google-cloud-api-gateway-native-model-routing</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codeplaystudios.com/insights/building-zero-trust-ai-agents-google-agent-development-kit</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -116,7 +122,7 @@
   </url>
   <url>
     <loc>https://codeplaystudios.com/insights/cloudflare-100tb-ram-dns-cache-optimization</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
