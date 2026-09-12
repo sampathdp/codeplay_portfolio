@@ -85,7 +85,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-12T13:41:42.625+00:00",
-    "updatedAt": "2026-09-12T13:41:42.745386+00:00",
+    "updatedAt": "2026-09-12T16:27:36.622295+00:00",
     "seo": {
       "title": "Google Cloud API Gateway Adds Native Model Routing",
       "description": "Google Cloud API Gateway now features native model routing in Public Preview, allowing declarative multi-LLM management using OpenAPI 3.x specs.",
@@ -95,7 +95,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 0
+    "viewCount": 1
   },
   {
     "status": "published",
