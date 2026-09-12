@@ -31,11 +31,11 @@ const jobs = [
   // logo where PNG is the safe bet. 2048 -> 512.
   { src: "client/public/assets/logo_trans.png", out: "client/public/assets/logo_trans.png", width: 512, format: "png" },
 
-  // Hero carousel cartoons: displayed <=~490px. Re-encode from the current
-  // -640 webp (the PNG originals were removed).
-  { src: "client/public/assets/hero_web_dev_cartoon-640.webp", out: "client/public/assets/hero_web_dev_cartoon-640.webp", width: 640, format: "webp" },
-  { src: "client/public/assets/hero_mobile_dev_cartoon-640.webp", out: "client/public/assets/hero_mobile_dev_cartoon-640.webp", width: 640, format: "webp" },
-  { src: "client/public/assets/hero_creative_dev_cartoon-640.webp", out: "client/public/assets/hero_creative_dev_cartoon-640.webp", width: 640, format: "webp" },
+  // Hero carousel cartoons: displayed up to ~550px on desktop.
+  // Master transparent PNGs re-encoded to crisp 800px WebP.
+  { src: "client/public/assets/hero_web_dev_cartoon.png", out: "client/public/assets/hero_web_dev_cartoon-640.webp", width: 800, format: "webp" },
+  { src: "client/public/assets/hero_mobile_dev_cartoon.png", out: "client/public/assets/hero_mobile_dev_cartoon-640.webp", width: 800, format: "webp" },
+  { src: "client/public/assets/hero_creative_dev_cartoon.png", out: "client/public/assets/hero_creative_dev_cartoon-640.webp", width: 800, format: "webp" },
 
   // --- attached_assets: pulled in via `@assets` import, Vite hashes them ---
   { src: "attached_assets/futuristic_web_dev.png", out: "attached_assets/futuristic_web_dev.webp", width: 1100, format: "webp" },

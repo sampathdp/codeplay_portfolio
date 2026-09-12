@@ -134,29 +134,34 @@ export default function HeroSection() {
                     className="relative flex-[0_0_100%] h-full flex items-center justify-center"
                     key={index}
                   >
-                    {/* Dynamic Background Blob/Glow */}
+                    {/* Dynamic Background Ambient Glow */}
+                    <div
+                      className="absolute w-64 h-64 lg:w-80 lg:h-80 rounded-full blur-3xl pointer-events-none transition-opacity duration-700"
+                      style={{
+                        backgroundColor: slide.shadowColor,
+                        opacity: selectedIndex === index ? 0.25 : 0,
+                      }}
+                    />
 
                     {/* Character Image */}
                     <div className="relative z-10 w-full h-full flex items-center justify-center p-8">
                       <motion.img
                         initial={false}
                         animate={{
-                          scale: selectedIndex === index ? 1 : 0.8,
+                          scale: selectedIndex === index ? 1 : 0.85,
                           opacity: selectedIndex === index ? 1 : 0,
                           y: selectedIndex === index ? 0 : 20,
                         }}
                         transition={{ duration: 0.8 }}
                         src={slide.image}
                         alt={`CodePlay Studios ${slide.title} - ${slide.headline} ${slide.highlight}`}
-                        width={640}
-                        height={640}
+                        width={800}
+                        height={800}
                         fetchPriority={index === 0 ? "high" : "auto"}
                         loading={index === 0 ? "eager" : "lazy"}
-                        className="max-h-[90%] lg:max-h-[80%] max-w-[90%] w-auto h-auto object-contain drop-shadow-2xl"
+                        className="max-h-[92%] lg:max-h-[85%] max-w-[92%] w-auto h-auto object-contain select-none pointer-events-none"
                         style={{
-                          filter: `drop-shadow(0 0 40px ${slide.shadowColor}80)`,
-                          maskImage:
-                            "radial-gradient(circle at center, black 80%, transparent 100%)",
+                          filter: `drop-shadow(0 0 45px ${slide.shadowColor}70) drop-shadow(0 20px 35px rgba(0,0,0,0.5))`,
                         }}
                       />
                     </div>
