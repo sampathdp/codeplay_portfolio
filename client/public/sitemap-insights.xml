@@ -85,6 +85,18 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://codeplaystudios.com/insights/category/emerging-technology</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://codeplaystudios.com/insights/valve-steam-frame-vr-headset-launch-pricing-strategy</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codeplaystudios.com/insights/blizzcon-2026-roadmap-diablo-5-starcraft</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>

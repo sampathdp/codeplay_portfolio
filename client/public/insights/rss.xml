@@ -6,8 +6,17 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 14 Sep 2026 17:04:13 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 14 Sep 2026 22:07:18 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>Valve Launches Steam Frame VR Headset at $1,059: What Developers Need to Know</title>
+      <link>https://codeplaystudios.com/insights/valve-steam-frame-vr-headset-launch-pricing-strategy</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/valve-steam-frame-vr-headset-launch-pricing-strategy</guid>
+      <pubDate>Mon, 14 Sep 2026 21:02:50 GMT</pubDate>
+      <category>Emerging Technology</category>
+      <description>Valve opts for uncompromised hardware and hybrid rendering over budget pricing, establishing a high-performance baseline for standalone VR engineering.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/valve-steam-frame-vr-headset-launch-pricing-strategy/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>BlizzCon 2026: Blizzard Announces Diablo 5, StarCraft Shooter, and Legacy Revivals</title>
       <link>https://codeplaystudios.com/insights/blizzcon-2026-roadmap-diablo-5-starcraft</link>
