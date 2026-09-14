@@ -6,8 +6,26 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 13 Sep 2026 21:08:56 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 14 Sep 2026 10:09:03 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>BlizzCon 2026: Blizzard Announces Diablo 5, StarCraft Shooter, and Legacy Revivals</title>
+      <link>https://codeplaystudios.com/insights/blizzcon-2026-roadmap-diablo-5-starcraft</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/blizzcon-2026-roadmap-diablo-5-starcraft</guid>
+      <pubDate>Mon, 14 Sep 2026 09:13:29 GMT</pubDate>
+      <category>Web Development</category>
+      <description>Blizzard&apos;s BlizzCon 2026 roadmap pairs 2029 and 2030 release windows with legacy revivals, outlining a multi-year engineering and lifecycle strategy under Xbox.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/blizzcon-2026-roadmap-diablo-5-starcraft/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Using Apple Accessory Dimensional Drawings in Hardware CAD Workflows</title>
+      <link>https://codeplaystudios.com/insights/apple-accessory-dimensional-drawings-cad-workflows</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/apple-accessory-dimensional-drawings-cad-workflows</guid>
+      <pubDate>Mon, 14 Sep 2026 09:13:06 GMT</pubDate>
+      <category>Big Tech</category>
+      <description>A structured guide to leveraging Apple&apos;s official accessory dimensional drawings to ensure physical fit, clear sensor keepout zones, and streamline mechanical CAD workflows.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/apple-accessory-dimensional-drawings-cad-workflows/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>Swapmeat 4-Player Roguelike Co-Op Goes Free on Steam for Limited Time</title>
       <link>https://codeplaystudios.com/insights/swapmeat-free-steam-promotion</link>

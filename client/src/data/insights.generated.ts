@@ -11,6 +11,192 @@ import type { InsightsArticle } from "@/lib/insights/types";
 export const INSIGHTS_ARTICLES: InsightsArticle[] = [
   {
     "status": "published",
+    "id": "25393ac9-5f3f-41fc-ba14-ec49ed2217dc",
+    "slug": "blizzcon-2026-roadmap-diablo-5-starcraft",
+    "title": "BlizzCon 2026: Blizzard Announces Diablo 5, StarCraft Shooter, and Legacy Revivals",
+    "dek": "Blizzard's BlizzCon 2026 roadmap pairs 2029 and 2030 release windows with legacy revivals, outlining a multi-year engineering and lifecycle strategy under Xbox.",
+    "category": "web-development",
+    "categoryName": "Web Development",
+    "tags": [
+      {
+        "name": "Xbox",
+        "slug": "xbox"
+      },
+      {
+        "name": "Blizzard",
+        "slug": "blizzard"
+      },
+      {
+        "name": "BlizzCon",
+        "slug": "blizzcon"
+      },
+      {
+        "name": "Diablo 5",
+        "slug": "diablo-5"
+      },
+      {
+        "name": "StarCraft",
+        "slug": "starcraft"
+      },
+      {
+        "name": "World of Warcraft",
+        "slug": "world-of-warcraft"
+      },
+      {
+        "name": "Warcraft 3",
+        "slug": "warcraft-3"
+      }
+    ],
+    "body": "# BlizzCon 2026: Blizzard Announces Diablo 5, StarCraft Shooter, and Legacy Revivals\n\n*Blizzard's BlizzCon 2026 roadmap pairs 2029 and 2030 release windows with legacy revivals, outlining a multi-year engineering and lifecycle strategy under Xbox.*\n\n## Quick Summary\n\n- Blizzard hosted the BlizzCon 2026 Opening Ceremony on September 12, 2026, marking its first fan convention since 2023.\n- Major future reveals include Diablo 5 (slated for 2029) and a new StarCraft shooter (scheduled for 2030).\n- Legacy project announcements feature World of Warcraft Forever—a level-60 locked year-one remaster—and a brand new 30-hour Warcraft 3 story campaign.\n\n## What Happened?\n\nOn September 12, 2026, Blizzard hosted the BlizzCon 2026 Opening Ceremony, returning to its traditional fan event for the first time in three years. Prior to the broadcast, outlets including [IGN](https://www.ign.com/articles/blizzcon-2026-opening-ceremony-live-blog-the-future-of-warcraft-and-diablo-set-to-be-revealed-amid-starcraft-announcement-rumors) highlighted community rumors surrounding a potential StarCraft announcement.\n\nDuring the ceremony, primary confirmation from [Xbox Wire](https://news.xbox.com/en-us/2026/09/12/blizzcon-2026-opening-ceremony/) and reporting by [Eurogamer](https://www.eurogamer.net/blizzcon-2026-announcements-live-report-starcraft-diablo-overwatch-wow) and [PC Gamer](https://www.pcgamer.com/gaming-industry/news/live/blizzcon-2026-opening-ceremony-live-coverage-whats-next-for-warcraft-overwatch-diablo-and-starcraft/) established concrete details. Blizzard introduced two major long-term projects alongside two legacy initiatives, setting expectations for studio output across the next four years.\n\n## Key Details & Scope\n\nThe announcements detailed four distinct efforts across Blizzard's established franchises:\n\n- **World of Warcraft Forever**: A remastered, expanded year-one version of World of Warcraft featuring a progression system permanently locked at level 60.\n- **Warcraft 3 Campaign**: A brand new 30-hour narrative story campaign designed for Warcraft 3.\n- **Diablo 5**: The next entry in the Diablo series, formally slated for a 2029 release window.\n- **StarCraft Shooter**: A new shooter project within the StarCraft universe, scheduled for launch in 2030.\n\nBlizzard did not disclose specific engine details, developer tooling choices, or exact launch dates within those broad release years.\n\n## Developer Perspective: Multi-Year Pipelines and Legacy Server Architecture\n\nFrom a software engineering and pipeline management perspective, Blizzard's announcements reflect two contrasting architectural challenges: maintaining isolated legacy server environments and structuring multi-year production pipelines.\n\nBuilding and sustaining a project like World of Warcraft Forever requires specialized backend handling. Restricting character progression to level 60 while introducing remastered assets and expanded content requires isolated server logic, strict data migration boundaries, and custom rule-validation routines to ensure mechanical fidelity. Operating legacy environments alongside active live-service infrastructure requires disciplined containerization and configuration management to contain long-term technical debt.\n\nSimultaneously, announcing release windows such as 2029 for Diablo 5 and 2030 for the StarCraft shooter highlights three-to-four-year production cycles. For engineering teams under Xbox, long-horizon roadmaps require stable toolchains, modular asset pipelines, and predictable build automation to prevent scope inflation over multi-year cycles. Developing a 30-hour campaign for Warcraft 3 similarly requires robust scripting and localization tooling integrated directly into legacy or updated engine environments.\n\n## What Happens Next?\n\nEstablishing public release targets four years into the future provides clear visibility for Xbox platform planning, but it presents operational trade-offs. Long development cycles increase exposure to shifting market expectations and technology updates before launch. Conversely, near-term legacy projects like World of Warcraft Forever provide immediate player retention, bridging the revenue gap while multi-year titles remain in deep production.\n\n## CodePlay Verdict\n\nBlizzard's BlizzCon 2026 roadmap reflects a balanced portfolio approach under Xbox. Utilizing legacy revivals to secure predictable engagement provides the studio with the operational runway required to execute four-year engineering timelines for Diablo 5 and StarCraft.\n\n## Sources & Further Reading\n\n- [BlizzCon 2026 Opening Ceremony: Starcraft Returns, Diablo V Announced, Warcraft news and more](https://news.xbox.com/en-us/2026/09/12/blizzcon-2026-opening-ceremony/) — primary source\n- [BlizzCon 2026 Opening Ceremony recap—what's next for Warcraft, Diablo, and StarCraft](https://www.pcgamer.com/gaming-industry/news/live/blizzcon-2026-opening-ceremony-live-coverage-whats-next-for-warcraft-overwatch-diablo-and-starcraft/)\n- [BlizzCon 2026 Opening Ceremony: Everything Announced](https://www.ign.com/articles/blizzcon-2026-opening-ceremony-live-blog-the-future-of-warcraft-and-diablo-set-to-be-revealed-amid-starcraft-announcement-rumors)\n- [Everything announced in the BlizzCon 2026 Opening Ceremony](https://www.eurogamer.net/blizzcon-2026-announcements-live-report-starcraft-diablo-overwatch-wow)",
+    "keyTakeaways": [],
+    "take": {
+      "developerTake": "From a development perspective, maintaining fixed-cap legacy servers like World of Warcraft Forever alongside multi-year core engine projects requires strict operational separation in tooling and server infrastructure.",
+      "businessImpact": "Near-term legacy content generates predictable live-service subscription and unit sales, offsetting burn rates associated with 2029 and 2030 major title releases under Xbox.",
+      "developerImpact": "Engineering teams face dual demands: maintaining legacy engine compatibility for Warcraft 3 and WoW Forever while scaling asset and build pipelines for next-generation releases.",
+      "technicalExplanation": "",
+      "risksAndLimitations": "Publicly committing to broad 2029 and 2030 release windows risks community backlash if technical roadblocks or scope adjustments push development schedules further out.",
+      "whyItMatters": "The strategy illustrates how major publisher acquisitions utilize nostalgia-driven legacy intellectual property to maintain platform retention during prolonged core development cycles.",
+      "actionableRecommendations": "Studios planning multi-year production horizons should isolate legacy backend infrastructure early and establish strict scope boundaries for narrative expansions to prevent pipeline bottlenecks."
+    },
+    "sources": [
+      {
+        "url": "https://news.xbox.com/en-us/2026/09/12/blizzcon-2026-opening-ceremony/",
+        "title": "BlizzCon 2026 Opening Ceremony: Starcraft Returns, Diablo V Announced, Warcraft news and more",
+        "publisher": "news.xbox.com",
+        "role": "primary"
+      },
+      {
+        "url": "https://www.pcgamer.com/gaming-industry/news/live/blizzcon-2026-opening-ceremony-live-coverage-whats-next-for-warcraft-overwatch-diablo-and-starcraft/",
+        "title": "BlizzCon 2026 Opening Ceremony recap—what's next for Warcraft, Diablo, and StarCraft",
+        "publisher": "pcgamer.com",
+        "role": "supporting"
+      },
+      {
+        "url": "https://www.ign.com/articles/blizzcon-2026-opening-ceremony-live-blog-the-future-of-warcraft-and-diablo-set-to-be-revealed-amid-starcraft-announcement-rumors",
+        "title": "BlizzCon 2026 Opening Ceremony: Everything Announced",
+        "publisher": "ign.com",
+        "role": "supporting"
+      },
+      {
+        "url": "https://www.eurogamer.net/blizzcon-2026-announcements-live-report-starcraft-diablo-overwatch-wow",
+        "title": "Everything announced in the BlizzCon 2026 Opening Ceremony",
+        "publisher": "eurogamer.net",
+        "role": "supporting"
+      }
+    ],
+    "heroImage": {
+      "src": "https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/blizzcon-2026-roadmap-diablo-5-starcraft/primary.webp",
+      "alt": "Open laptop with visible code on screen on a wooden desk in a modern, cozy workspace.",
+      "width": 1600,
+      "height": 900,
+      "ogSrc": "https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/blizzcon-2026-roadmap-diablo-5-starcraft/primary.webp",
+      "aiGenerated": false,
+      "kind": "stock",
+      "credit": {
+        "provider": "pexels",
+        "sourceUrl": "https://www.pexels.com/photo/modern-laptop-displaying-code-in-cozy-workspace-34803986/",
+        "photographer": "Daniil Komov",
+        "photographerUrl": "https://www.pexels.com/@dkomov"
+      }
+    },
+    "author": "CodePlay Studios Editorial Team",
+    "authorRole": "CodePlay Insights Editorial Team",
+    "readingMinutes": 3,
+    "publishedAt": "2026-09-14T09:13:29.537+00:00",
+    "updatedAt": "2026-09-14T09:13:29.646264+00:00",
+    "seo": {
+      "title": "BlizzCon 2026: Diablo 5, StarCraft Shooter & Legacy Remasters",
+      "description": "Blizzard's BlizzCon 2026 roadmap outlines long-term release windows, including Diablo 5 in 2029, a new StarCraft shooter, and legacy Warcraft revivals.",
+      "canonicalUrl": "https://codeplaystudios.com/insights/blizzcon-2026-roadmap-diablo-5-starcraft"
+    },
+    "articleType": "gaming_news",
+    "featured": false,
+    "trending": false,
+    "breaking": false,
+    "viewCount": 0
+  },
+  {
+    "status": "published",
+    "id": "cec2aafc-2979-4b84-b21c-b2d79b399402",
+    "slug": "apple-accessory-dimensional-drawings-cad-workflows",
+    "title": "Using Apple Accessory Dimensional Drawings in Hardware CAD Workflows",
+    "dek": "A structured guide to leveraging Apple's official accessory dimensional drawings to ensure physical fit, clear sensor keepout zones, and streamline mechanical CAD workflows.",
+    "category": "big-tech",
+    "categoryName": "Big Tech",
+    "tags": [
+      {
+        "name": "Apple",
+        "slug": "apple"
+      },
+      {
+        "name": "CAD",
+        "slug": "cad"
+      },
+      {
+        "name": "Hardware Engineering",
+        "slug": "hardware-engineering"
+      },
+      {
+        "name": "Accessory Design",
+        "slug": "accessory-design"
+      },
+      {
+        "name": "Prototyping",
+        "slug": "prototyping"
+      }
+    ],
+    "body": "# Using Apple Accessory Dimensional Drawings in Hardware CAD Workflows\n\n*A structured guide to leveraging Apple's official accessory dimensional drawings to ensure physical fit, clear sensor keepout zones, and streamline mechanical CAD workflows.*\n\n## Quick Summary\n\n- Official schematics available via Apple's [Accessory Dimensional Drawings portal](https://developer.apple.com/accessories/dimensional-drawings/) give hardware engineers precise reference geometries.\n- Proper application of these specifications prevents clearance issues with acoustic ports, cameras, wireless charging coils, and connector alignments.\n- Aligning CAD assemblies directly with official dimensional specifications minimizes prototype iteration cycles and reduces re-tooling expenses.\n\n## What Apple Provides to Hardware Engineers\n\nThrough the [Apple Accessory Dimensional Drawings portal](https://developer.apple.com/accessories/dimensional-drawings/), Apple delivers precise vector schematics detailing the physical envelopes of supported hardware lines. These documents serve as the authoritative baseline for external dimensions, button placements, port locations, and surface radii.\n\nRather than relying on reverse-engineered physical measurements or third-party scans, hardware engineers gain access to vendor-published reference geometries. This documentation provides explicit dimensional boundaries that allow mechanical engineering teams to model enclosures, docks, and mounted accessories with confidence before committing to physical tooling or injection molding.\n\n## Technical Breakdown: Tolerances, Keepout Zones, and Geometries\n\nPhysical accessory integration relies on three primary engineering constraints defined within dimensional drawings: mechanical tolerances, clearance keepout zones, and alignment geometries.\n\n**Mechanical Tolerances and Critical Dimensions**\nDevice blueprints detail exact millimeter measurements along with acceptable manufacturing tolerances. Designing mating components to nominal dimensions without accounting for upper and lower tolerance limits risks binding or loose fits.\n\n**Sensor and Acoustic Keepout Zones**\nModern hardware includes arrays of microphones, ambient light sensors, cameras, and wireless antennas. Keepout zones define strictly prohibited volumes around these elements. Encroaching on a microphone keepout can induce acoustic feedback, while obstructing antenna zones degrades RF performance.\n\n**Connector and Interface Alignment**\nInterface geometries specify precise coordinates for physical ports and magnetic alignment features. For attached peripherals like physical game controllers or charging cradles, exact connector alignment prevents mechanical stress on internal port assemblies during insertion and removal.\n\n## Practical Advice for CAD Workflows and Prototyping\n\nTo translate vector blueprints into error-free production models, engineering teams should establish structured parametric modeling workflows in CAD software such as SolidWorks, Autodesk Fusion 360, or PTC Creo.\n\n* **Import and Anchor Reference Surfaces:** Import vector drawing layers as constrained sketches within CAD software. Establish fixed origin points matching the primary hardware axes specified in Apple's documentation.\n* **Model Tolerance Ranges:** Create parametric configurations representing best-case, worst-case, and nominal physical dimensions. Simulating extreme tolerance stack-ups in CAD helps verify fit before ordering tooling.\n* **Incorporate Clearance Buffer Margins:** Maintain an internal buffer beyond mandatory keepout zones to account for manufacturing variations in third-party materials like silicone, TPU, or polycarbonate.\n* **Staged Rapid Prototyping:** Utilize high-resolution SLA or SLS 3D printing to validate physical fit against real devices prior to committing to hard tooling. Focus early prototypes specifically on port alignment and button tactile engagement.\n\n## Limitations and Information Gaps\n\nWhile official dimensional drawings provide essential physical data, teams must navigate specific documentation boundaries:\n\n* **Model Coverage Limitations:** Public documentation portals may not reflect every legacy device or niche variant. Engineers must verify whether specific hardware revisions are published.\n* **Format Constraints:** Public drawings are typically distributed as vector PDFs rather than native 3D CAD files (such as STEP or IGES formats), requiring manual sketch tracing or vector importing.\n* **Pre-Release Availability:** Unreleased device geometry is generally restricted under non-disclosure agreements or Made for iPhone/iPad (MFi) program licensing, limiting pre-launch planning for non-member developers.\n\n## CodePlay Developer Take\n\nFrom a hardware-software co-design perspective, physical accessory precision directly impacts user experience. When physical controllers or docked peripherals shift off-axis due to loose manufacturing tolerances, hardware-software handshakes and user inputs suffer.\n\nFor teams building interactive peripherals, connected gaming accessories, or specialized input devices, physical alignment is non-negotiable. Obstructing a camera field of view or muffling an audio channel through poor enclosure fit creates software-level anomalies that cannot be patched via code. Utilizing official drawing parameters from the outset ensures hardware stability, allowing software interactions to perform as intended.\n\n## CodePlay Verdict\n\nEngineering leads and product managers producing hardware accessories should mandate the use of [Apple's official dimensional drawings](https://developer.apple.com/accessories/dimensional-drawings/) as the single source of truth for mechanical baselines. Incorporating these specifications directly into parametric CAD workflows minimizes physical tolerance errors, protects essential sensor functionality, and drastically reduces costly re-tooling iterations during production.\n\n## Sources & Further Reading\n\n- [Apple's Dimensional Drawings](https://developer.apple.com/accessories/dimensional-drawings/) — primary source",
+    "keyTakeaways": [],
+    "take": {
+      "developerTake": "Hardware and peripheral developers must treat physical dimensions as strict API contracts. Relying on accurate vector drawings from Apple's portal ensures physical peripherals maintain structural alignment without interfering with hardware sensors or port integrity.",
+      "businessImpact": "Eliminating dimensional errors early in CAD design prevents costly re-tooling expenses, injection mold modifications, and scrap material during manufacturing runs, significantly shortening time-to-market for third-party accessories.",
+      "developerImpact": "Mechanical engineers and peripheral developers save significant iteration time by relying on official vendor specifications rather than reverse-engineering physical hardware dimensions through physical calipers or manual 3D scans.",
+      "technicalExplanation": "",
+      "risksAndLimitations": "Public documentation provides vector drawings rather than native 3D CAD models (STEP/IGES), requiring manual CAD setup, and unreleased hardware specifications remain restricted behind MFi licensing agreements.",
+      "whyItMatters": "Precision hardware engineering prevents physical interference with device sensors, microphones, antennas, and ports, guaranteeing seamless hardware and software performance across third-party accessories.",
+      "actionableRecommendations": "Import vector PDFs directly into parametric CAD software as anchored sketches, model upper and lower tolerance stack-ups, and validate fits using SLA 3D prints before ordering production tooling."
+    },
+    "sources": [
+      {
+        "url": "https://developer.apple.com/accessories/dimensional-drawings/",
+        "title": "Apple's Dimensional Drawings",
+        "publisher": "developer.apple.com",
+        "role": "primary"
+      }
+    ],
+    "heroImage": {
+      "src": "https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/apple-accessory-dimensional-drawings-cad-workflows/primary.webp",
+      "alt": "Low-angle shot of a modern urban building with glass panels and steel structure.",
+      "width": 1600,
+      "height": 900,
+      "ogSrc": "https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/apple-accessory-dimensional-drawings-cad-workflows/primary.webp",
+      "aiGenerated": false,
+      "kind": "stock",
+      "credit": {
+        "provider": "pexels",
+        "sourceUrl": "https://www.pexels.com/photo/low-angle-shot-of-a-modern-building-with-glass-exterior-3137034/",
+        "photographer": "Adrien Olichon",
+        "photographerUrl": "https://www.pexels.com/@adrien-olichon-1257089"
+      }
+    },
+    "author": "CodePlay Studios Editorial Team",
+    "authorRole": "CodePlay Insights Editorial Team",
+    "readingMinutes": 4,
+    "publishedAt": "2026-09-14T09:13:06.83+00:00",
+    "updatedAt": "2026-09-14T09:13:06.936534+00:00",
+    "seo": {
+      "title": "Using Apple Accessory Dimensional Drawings in CAD Workflows",
+      "description": "Learn how to integrate Apple accessory dimensional drawings into CAD pipelines to ensure physical fit, clear sensors, and reduce prototype costs.",
+      "canonicalUrl": "https://codeplaystudios.com/insights/apple-accessory-dimensional-drawings-cad-workflows"
+    },
+    "articleType": "developer_guide",
+    "featured": true,
+    "trending": false,
+    "breaking": false,
+    "viewCount": 0
+  },
+  {
+    "status": "published",
     "id": "ce609fae-ebad-4b06-a44a-5501afc99f60",
     "slug": "swapmeat-free-steam-promotion",
     "title": "Swapmeat 4-Player Roguelike Co-Op Goes Free on Steam for Limited Time",
