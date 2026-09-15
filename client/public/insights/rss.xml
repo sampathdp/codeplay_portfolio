@@ -6,8 +6,17 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 15 Sep 2026 15:43:33 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2026 21:47:41 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>Google Announces Gemini 3.8 Live and Extended Thinking: What Developers Need to Know</title>
+      <link>https://codeplaystudios.com/insights/gemini-3-8-live-extended-thinking-developer-overview</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/gemini-3-8-live-extended-thinking-developer-overview</guid>
+      <pubDate>Tue, 15 Sep 2026 20:24:46 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>Google and DeepMind announce Gemini 3.8 Live and Gemini 3.8 Live Extended Thinking, establishing a clear operational divide between real-time streaming latency and deliberate background reasoning.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/gemini-3-8-live-extended-thinking-developer-overview/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>Avatar The Last Airbender: The Living Typhoon Officially Revealed on Steam</title>
       <link>https://codeplaystudios.com/insights/avatar-the-last-airbender-the-living-typhoon-announced</link>
