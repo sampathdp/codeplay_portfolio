@@ -6,8 +6,17 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 14 Sep 2026 22:07:18 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2026 09:38:09 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>Avatar The Last Airbender: The Living Typhoon Officially Revealed on Steam</title>
+      <link>https://codeplaystudios.com/insights/avatar-the-last-airbender-the-living-typhoon-announced</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/avatar-the-last-airbender-the-living-typhoon-announced</guid>
+      <pubDate>Tue, 15 Sep 2026 08:58:36 GMT</pubDate>
+      <category>Developer Tools</category>
+      <description>An official Steam announcement reveals &apos;Avatar The Last Airbender: The Living Typhoon&apos; as part of Paramount and Netflix&apos;s accelerating multimedia release strategy.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/avatar-the-last-airbender-the-living-typhoon-announced/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>Valve Launches Steam Frame VR Headset at $1,059: What Developers Need to Know</title>
       <link>https://codeplaystudios.com/insights/valve-steam-frame-vr-headset-launch-pricing-strategy</link>
