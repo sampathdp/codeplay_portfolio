@@ -54,6 +54,16 @@ jobs:
           VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
         run: npm run build
 
+      - name: 🧊 Prerender Insights article pages (static <head> for crawlers)
+        # Writes dist/public/insights/<slug>/index.html per published
+        # article, cloning the built index.html so JS still boots on top.
+        # Same self-guard as insights:seo — never fails the deploy.
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: npm run insights:prerender
+        continue-on-error: true
+
       - name: 📂 Sync files (FTPS)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:

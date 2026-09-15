@@ -18,7 +18,8 @@
     "insights:discover:dry": "tsx --env-file-if-exists=.env insights-engine/src/run.ts discover --dry-run --select",
     "insights:schedule": "tsx --env-file-if-exists=.env insights-engine/src/run.ts schedule",
     "insights:generate": "tsx --env-file-if-exists=.env insights-engine/src/generation/run.ts",
-    "insights:seo": "tsx --env-file-if-exists=.env insights-engine/src/publish/run.ts"
+    "insights:seo": "tsx --env-file-if-exists=.env insights-engine/src/publish/run.ts",
+    "insights:prerender": "tsx --env-file-if-exists=.env insights-engine/src/publish/prerender.ts"
   },
   "dependencies": {
     "@google/genai": "^2.19.0",
