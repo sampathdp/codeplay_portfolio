@@ -19,7 +19,8 @@
     "insights:schedule": "tsx --env-file-if-exists=.env insights-engine/src/run.ts schedule",
     "insights:generate": "tsx --env-file-if-exists=.env insights-engine/src/generation/run.ts",
     "insights:seo": "tsx --env-file-if-exists=.env insights-engine/src/publish/run.ts",
-    "insights:prerender": "tsx --env-file-if-exists=.env insights-engine/src/publish/prerender.ts"
+    "insights:prerender": "tsx --env-file-if-exists=.env insights-engine/src/publish/prerender.ts",
+    "insights:indexnow": "tsx --env-file-if-exists=.env insights-engine/src/publish/indexnow.ts"
   },
   "dependencies": {
     "@google/genai": "^2.19.0",

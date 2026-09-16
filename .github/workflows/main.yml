@@ -77,3 +77,9 @@ jobs:
           log-level: verbose
           local-dir: ./dist/public/
           dry-run: false
+
+      - name: 🔔 Ping IndexNow (Bing/Yandex)
+        # Submits every sitemap URL to IndexNow after the host is updated.
+        # Self-guards like the other insights: scripts — never fails the deploy.
+        run: npm run insights:indexnow
+        continue-on-error: true

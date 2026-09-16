@@ -168,6 +168,49 @@ export function buildInsightsSitemap(
   return buildSitemapXml(entries);
 }
 
+const NEWS_SITEMAP_WINDOW_MS = 48 * 60 * 60 * 1000;
+const NEWS_SITEMAP_MAX_URLS = 1000;
+const NEWS_PUBLICATION_NAME = "CodePlay Insights";
+
+/**
+ * Google News sitemap: only articles published in the last 48h, capped at
+ * 1000 URLs (both hard requirements of the news sitemap spec). Re-run on
+ * every publish so expired articles fall out automatically.
+ */
+export function buildNewsSitemapXml(
+  articles: PublishArticle[],
+  now: Date = new Date(),
+): string {
+  const cutoff = now.getTime() - NEWS_SITEMAP_WINDOW_MS;
+  const recent = articles
+    .filter((a) => Date.parse(a.publishedAt) >= cutoff)
+    .sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt))
+    .slice(0, NEWS_SITEMAP_MAX_URLS);
+
+  const urls = recent
+    .map((a) => {
+      const url = articleUrl(a.slug);
+      return [
+        "  <url>",
+        `    <loc>${escapeXml(url)}</loc>`,
+        "    <news:news>",
+        "      <news:publication>",
+        `        <news:name>${escapeXml(NEWS_PUBLICATION_NAME)}</news:name>`,
+        "        <news:language>en</news:language>",
+        "      </news:publication>",
+        `      <news:publication_date>${escapeXml(
+          new Date(a.publishedAt).toISOString(),
+        )}</news:publication_date>`,
+        `      <news:title>${escapeXml(a.title)}</news:title>`,
+        "    </news:news>",
+        "  </url>",
+      ].join("\n");
+    })
+    .join("\n");
+
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">\n${urls}\n</urlset>\n`;
+}
+
 export function buildRssXml(
   articles: PublishArticle[],
   now: Date = new Date(),

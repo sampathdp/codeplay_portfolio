@@ -40,7 +40,10 @@ Options -Indexes
   <FilesMatch "\.(js|css|woff2?|png|jpe?g|gif|svg|webp|avif)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
+  # No CDN sits in front of this host yet — s-maxage/stale-while-revalidate
+  # are no-ops until one is added, but browsers do honor SWR, and the
+  # header is ready for a future Cloudflare/edge layer with no further change.
   <FilesMatch "\.(html|xml)$">
-    Header set Cache-Control "public, max-age=0, must-revalidate"
+    Header set Cache-Control "public, max-age=0, s-maxage=60, stale-while-revalidate=120"
   </FilesMatch>
 </IfModule>
