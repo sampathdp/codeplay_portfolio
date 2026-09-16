@@ -6,8 +6,26 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 15 Sep 2026 21:47:41 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 16 Sep 2026 09:33:17 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>Sega and Netflix Partner for Multi-Title Transmedia Slate Including Crazy Taxi and Sonic</title>
+      <link>https://codeplaystudios.com/insights/sega-netflix-transmedia-partnership-crazy-taxi-sonic</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/sega-netflix-transmedia-partnership-crazy-taxi-sonic</guid>
+      <pubDate>Wed, 16 Sep 2026 08:53:13 GMT</pubDate>
+      <category>Software Development</category>
+      <description>Sega&apos;s expanded partnership with Netflix combines legacy arcade revivals and upcoming titles into a coordinated transmedia distribution strategy.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/sega-netflix-transmedia-partnership-crazy-taxi-sonic/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Cloudflare Introduces Account-Level Controls to Block AI Training While Maintaining Search Visibility</title>
+      <link>https://codeplaystudios.com/insights/cloudflare-account-level-ai-crawler-controls</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/cloudflare-account-level-ai-crawler-controls</guid>
+      <pubDate>Wed, 16 Sep 2026 08:52:49 GMT</pubDate>
+      <category>Big Tech</category>
+      <description>Cloudflare introduces account-level controls designed to help web operators maintain organic search visibility while restricting crawler ingestion for AI model training.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/cloudflare-account-level-ai-crawler-controls/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>Google Announces Gemini 3.8 Live and Extended Thinking: What Developers Need to Know</title>
       <link>https://codeplaystudios.com/insights/gemini-3-8-live-extended-thinking-developer-overview</link>
