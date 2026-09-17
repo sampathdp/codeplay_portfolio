@@ -81,7 +81,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-09-16T20:21:50.015+00:00",
-    "updatedAt": "2026-09-16T20:21:50.138028+00:00",
+    "updatedAt": "2026-09-17T09:13:12.981311+00:00",
     "seo": {
       "title": "Google Introduces Agent Anomaly Detection for Gemini Enterprise",
       "description": "Google announces Agent Anomaly Detection in Private Preview for Gemini Enterprise, featuring asynchronous OpenTelemetry trace analysis and OWASP guardrails.",
@@ -91,7 +91,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 0
+    "viewCount": 1
   },
   {
     "status": "published",
