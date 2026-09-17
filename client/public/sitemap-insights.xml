@@ -91,6 +91,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://codeplaystudios.com/insights/final-fantasy-vii-revelation-april-2027-release</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codeplaystudios.com/insights/google-agent-anomaly-detection-gemini-enterprise</loc>
     <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -212,7 +218,7 @@
   </url>
   <url>
     <loc>https://codeplaystudios.com/insights/cloudflare-100tb-ram-dns-cache-optimization</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

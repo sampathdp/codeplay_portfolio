@@ -6,8 +6,17 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 17 Sep 2026 09:41:06 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 15:41:27 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>Square Enix Sets Final Fantasy VII Revelation for April 2027 Release</title>
+      <link>https://codeplaystudios.com/insights/final-fantasy-vii-revelation-april-2027-release</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/final-fantasy-vii-revelation-april-2027-release</guid>
+      <pubDate>Thu, 17 Sep 2026 15:14:53 GMT</pubDate>
+      <category>Gaming</category>
+      <description>Square Enix details the final entry in its remake trilogy at TGS 2026, setting an April 2027 release date while highlighting current engineering constraints on physical media distribution.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/final-fantasy-vii-revelation-april-2027-release/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>Google Launches Agent Anomaly Detection in Private Preview for Gemini Enterprise</title>
       <link>https://codeplaystudios.com/insights/google-agent-anomaly-detection-gemini-enterprise</link>
