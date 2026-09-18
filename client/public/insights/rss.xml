@@ -6,8 +6,26 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 17 Sep 2026 21:48:30 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 09:14:18 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>Decoding Cosmic Signals with Deep Learning and Keras</title>
+      <link>https://codeplaystudios.com/insights/decoding-cosmic-signals-deep-learning-keras</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/decoding-cosmic-signals-deep-learning-keras</guid>
+      <pubDate>Fri, 18 Sep 2026 08:30:02 GMT</pubDate>
+      <category>Emerging Technology</category>
+      <description>How applying high-level deep learning frameworks to astroparticle physics provides design blueprints for real-world enterprise telemetry and anomaly detection.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/decoding-cosmic-signals-deep-learning-keras/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Scaling Real-Time AI Agents with Session-Aware Load Balancing</title>
+      <link>https://codeplaystudios.com/insights/scaling-real-time-ai-agents-session-aware-load-balancing</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/scaling-real-time-ai-agents-session-aware-load-balancing</guid>
+      <pubDate>Fri, 18 Sep 2026 08:29:39 GMT</pubDate>
+      <category>Emerging Technology</category>
+      <description>Long-lived bidirectional AI streams obscure server capacity, requiring application-level session telemetry paired with hybrid routing algorithms to prevent server saturation.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/scaling-real-time-ai-agents-session-aware-load-balancing/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>Square Enix Sets Final Fantasy VII Revelation for April 2027 Release</title>
       <link>https://codeplaystudios.com/insights/final-fantasy-vii-revelation-april-2027-release</link>
