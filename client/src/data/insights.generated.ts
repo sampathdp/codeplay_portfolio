@@ -89,7 +89,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-18T08:30:02.561+00:00",
-    "updatedAt": "2026-09-18T08:30:02.700554+00:00",
+    "updatedAt": "2026-09-18T14:23:49.416161+00:00",
     "seo": {
       "title": "Decoding Cosmic Signals with Deep Learning and Keras",
       "description": "Explore how Keras and deep learning decode cosmic signals in astroparticle physics, offering blueprints for enterprise telemetry and anomaly detection.",
@@ -99,7 +99,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 0
+    "viewCount": 1
   },
   {
     "status": "published",
