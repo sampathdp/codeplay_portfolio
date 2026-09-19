@@ -6,8 +6,35 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 18 Sep 2026 21:17:30 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 19 Sep 2026 09:00:53 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>EA Sports FC 27 Launches 10-Hour EA Play Trial for Subscribers</title>
+      <link>https://codeplaystudios.com/insights/ea-sports-fc-27-ea-play-trial</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/ea-sports-fc-27-ea-play-trial</guid>
+      <pubDate>Sat, 19 Sep 2026 08:16:56 GMT</pubDate>
+      <category>Gaming</category>
+      <description>EA and Microsoft launch a 10-hour EA Sports FC 27 trial on Xbox and PC, utilizing cross-entitlement subscription models and progress persistence to drive conversion.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/ea-sports-fc-27-ea-play-trial/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>How Cloudflare Saved 100TB of RAM Using Rust and Mathematical Optimization</title>
+      <link>https://codeplaystudios.com/insights/cloudflare-memory-optimization-rust-math-100tb</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/cloudflare-memory-optimization-rust-math-100tb</guid>
+      <pubDate>Sat, 19 Sep 2026 08:16:32 GMT</pubDate>
+      <category>Cybersecurity</category>
+      <description>Cloudflare&apos;s engineering update demonstrates how combining mathematical optimization with Rust&apos;s low-level memory control unlocks massive infrastructure savings across global edge networks.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/cloudflare-memory-optimization-rust-math-100tb/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>War Thunder Steam Screenshot Competition Ties Community Engagement to Major Content Updates</title>
+      <link>https://codeplaystudios.com/insights/war-thunder-steam-screenshot-competition-sky-odyssey</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/war-thunder-steam-screenshot-competition-sky-odyssey</guid>
+      <pubDate>Sat, 19 Sep 2026 08:16:09 GMT</pubDate>
+      <category>Software Development</category>
+      <description>War Thunder&apos;s 242nd Steam Screenshot Competition demonstrates how low-overhead community loops amplify major content updates like Sky Odyssey.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/war-thunder-steam-screenshot-competition-sky-odyssey/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>Decoding Cosmic Signals with Deep Learning and Keras</title>
       <link>https://codeplaystudios.com/insights/decoding-cosmic-signals-deep-learning-keras</link>
