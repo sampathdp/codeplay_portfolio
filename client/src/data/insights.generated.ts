@@ -165,7 +165,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 5,
     "publishedAt": "2026-09-19T08:16:32.79+00:00",
-    "updatedAt": "2026-09-19T08:16:32.919038+00:00",
+    "updatedAt": "2026-09-19T13:10:54.393257+00:00",
     "seo": {
       "title": "Cloudflare Saves 100TB RAM Using Rust and Mathematical Optimization",
       "description": "Discover how Cloudflare reduced edge network memory usage by 100TB using Rust and algorithmic efficiency, delivering massive infrastructure savings.",
@@ -175,7 +175,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 0
+    "viewCount": 1
   },
   {
     "status": "published",
@@ -249,7 +249,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-09-19T08:16:09.335+00:00",
-    "updatedAt": "2026-09-19T08:16:09.465706+00:00",
+    "updatedAt": "2026-09-19T11:21:48.08716+00:00",
     "seo": {
       "title": "War Thunder Screenshot Competition & Sky Odyssey Update Analysis",
       "description": "Examine how Gaijin Entertainment uses low-overhead community loops and screenshot competitions to sustain engagement following major game updates.",
@@ -259,7 +259,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 0
+    "viewCount": 1
   },
   {
     "status": "published",
