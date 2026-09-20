@@ -11,6 +11,264 @@ import type { InsightsArticle } from "@/lib/insights/types";
 export const INSIGHTS_ARTICLES: InsightsArticle[] = [
   {
     "status": "published",
+    "id": "47fe5bf3-b0bd-4d63-bb35-7e6d4bb6b4ab",
+    "slug": "final-fantasy-xiv-switch-2-december-2026-analysis",
+    "title": "Final Fantasy XIV Nintendo Switch 2 Port and December 2026 Roadmap Analysis",
+    "dek": "Square Enix's expansion of Final Fantasy XIV to Nintendo Switch 2 has driven a significant player surge, setting up a critical multiplatform baseline ahead of a scheduled December 2026 release.",
+    "category": "developer-tools",
+    "categoryName": "Developer Tools",
+    "tags": [
+      {
+        "name": "Square Enix",
+        "slug": "square-enix"
+      },
+      {
+        "name": "Final Fantasy XIV",
+        "slug": "final-fantasy-xiv"
+      },
+      {
+        "name": "Nintendo Switch 2",
+        "slug": "nintendo-switch-2"
+      },
+      {
+        "name": "Cross-Platform",
+        "slug": "cross-platform"
+      },
+      {
+        "name": "Game Engineering",
+        "slug": "game-engineering"
+      },
+      {
+        "name": "Live-Service",
+        "slug": "live-service"
+      }
+    ],
+    "body": "# Final Fantasy XIV Nintendo Switch 2 Port and December 2026 Roadmap Analysis\n\n*Square Enix's expansion of Final Fantasy XIV to Nintendo Switch 2 has driven a significant player surge, setting up a critical multiplatform baseline ahead of a scheduled December 2026 release.*\n\n## Quick Summary\n\n- Square Enix expanded Final Fantasy XIV to the Nintendo Switch 2, triggering a strong increase in active player counts.\n- An official Steam store news post confirms a new release or milestone update scheduled for December 2026.\n- The port demonstrates the engineering requirements of maintaining cross-platform feature parity across hybrid handheld and desktop profiles.\n- Square Enix continues to execute a multi-year content roadmap to maintain long-term live-service engagement.\n\n## What Happened?\n\nFollowing its deployment to the Nintendo Switch 2, Final Fantasy XIV experienced a sharp growth in active player counts. Square Enix confirmed that ongoing support, including new updates and expansions, remains actively in development. A key milestone emerged via an official [Steam store news update](https://store.steampowered.com/news/group/38666666/view/686391258373948254), which revealed a target release date slated for December 2026. While the store posting confirms the release window, it leaves open whether December 2026 marks a full-scale expansion, a major content patch, or a platform-specific feature rollout. The development team continues to manage content delivery across PC and console ecosystems in tandem.\n\n## Key Details & Release Roadmap\n\nThe confirmed facts center on the recent Switch 2 deployment, the post-launch player growth, and the official December 2026 milestone noted on Steam. While Square Enix has verified ongoing production for upcoming updates, specific structural details regarding the December 2026 content remain unannounced. Dedicated community members actively track potential expansion themes and feature roadmaps based on past release cadences. However, from an operational perspective, distinguishing confirmed publisher schedules from unverified community expectations is crucial. Currently, Square Enix's official baseline guarantees continued service support and a major release target at the end of 2026.\n\n## Developer Perspective: Technical & Operational Implications\n\nFrom an engineering standpoint, bringing an established MMORPG like Final Fantasy XIV to a modern hybrid handheld involves balancing hardware performance boundaries with strict ecosystem parity. Developers must maintain identical gameplay logic, netcode state synchronization, and server-side tick rates across varied clients—ranging from high-end desktop rigs to portable console chips. Memory management and asset pipeline scaling present ongoing overhead: texture streaming and shader compilation must fit Switch 2 constraints without forcing client-side fragmentation or breaking cross-play integrity. For engineering teams, managing continuous live-service deployments across heterogeneous platforms demands automated multi-target CI/CD pipelines and rigorous hardware-specific optimization.\n\n## What Happens Next?\n\nLeading up to December 2026, Square Enix must navigate live-service resource allocation across multiple platform architectures. Maintaining concurrent deployment cycles for PC, existing consoles, and the Switch 2 requires tight synchronization across QA and engineering divisions. A likely implication of expanding the player base to handheld hardware is an increased operational focus on UI readability, control mapping, and client optimization for on-the-go sessions. Developers managing similar multiplatform titles should anticipate higher infrastructure maintenance demands as concurrent user peaks rise across newly integrated device ecosystems.\n\n## CodePlay Verdict\n\nThe expansion of Final Fantasy XIV to the Switch 2 demonstrates the sustained commercial and technical value of adapting mature MMORPGs to modern hybrid hardware. By pairing client-side optimization with unified cross-play infrastructure, Square Enix has widened its audience funnel prior to its late-2026 release target. For studio engineering leads, this serves as a practical model for scaling complex live-service titles across evolving hardware generations.\n\n## Sources & Further Reading\n\n- [Final Fantasy 14 Sets Unexpected Release For December 2026](https://store.steampowered.com/news/group/38666666/view/686391258373948254) — primary source",
+    "keyTakeaways": [],
+    "take": {
+      "developerTake": "Porting a large-scale MMORPG to hybrid hardware like the Switch 2 underscores the necessity of decoupled architecture. Technical leads must ensure networking protocols and state replication stay uniform regardless of client execution power.",
+      "businessImpact": "Expanding to new high-volume platform hardware widens the player funnel, extending subscription and microtransaction monetization for a mature live-service game ahead of major content beats.",
+      "developerImpact": "Engineering teams must maintain dynamic asset budgets and multi-architecture build pipelines to deliver simultaneous updates without delaying deployment windows across platforms.",
+      "technicalExplanation": "",
+      "risksAndLimitations": "Uncertainty surrounding the exact nature of the December 2026 release poses external tracking challenges. Additionally, fixed hardware limits on portable clients could restrict baseline graphic upgrades across all platforms if strict feature parity is enforced.",
+      "whyItMatters": "It proves that legacy engine architecture can be optimized for modern hybrid consoles, establishing a baseline for multiplatform longevity in persistent online games.",
+      "actionableRecommendations": "Establish unified cross-platform netcode early in architecture design, build flexible build/bake pipelines for varying target hardware, and preserve client feature parity without forcing global lowest-common-denominator technical restrictions."
+    },
+    "sources": [
+      {
+        "url": "https://store.steampowered.com/news/group/38666666/view/686391258373948254",
+        "title": "Final Fantasy 14 Sets Unexpected Release For December 2026",
+        "publisher": "store.steampowered.com",
+        "role": "primary"
+      }
+    ],
+    "heroImage": {
+      "src": "https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/final-fantasy-xiv-switch-2-december-2026-analysis/primary.webp",
+      "alt": "A detailed view of a mechanical keyboard with orange accent key on a wooden table.",
+      "width": 1600,
+      "height": 900,
+      "ogSrc": "https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/final-fantasy-xiv-switch-2-december-2026-analysis/primary.webp",
+      "aiGenerated": false,
+      "kind": "stock",
+      "credit": {
+        "provider": "pexels",
+        "sourceUrl": "https://www.pexels.com/photo/black-computer-keyboard-on-wooden-table-12561283/",
+        "photographer": "An  Tran",
+        "photographerUrl": "https://www.pexels.com/@an-tran-31930396"
+      }
+    },
+    "author": "CodePlay Studios Editorial Team",
+    "authorRole": "CodePlay Insights Editorial Team",
+    "readingMinutes": 3,
+    "publishedAt": "2026-09-20T08:49:51.223+00:00",
+    "updatedAt": "2026-09-20T08:49:51.372819+00:00",
+    "seo": {
+      "title": "FFXIV Switch 2 Port & December 2026 Roadmap: Developer Analysis",
+      "description": "Explore the engineering and live-service strategy behind Final Fantasy XIV expanding to Nintendo Switch 2 ahead of the December 2026 milestone.",
+      "canonicalUrl": "https://codeplaystudios.com/insights/final-fantasy-xiv-switch-2-december-2026-analysis"
+    },
+    "articleType": "gaming_news",
+    "featured": false,
+    "trending": false,
+    "breaking": false,
+    "viewCount": 0
+  },
+  {
+    "status": "published",
+    "id": "6f05b8fd-ab5c-4d86-9114-1a2209cb85a1",
+    "slug": "dungeon-crawler-carl-franchise-expansion-peacock-novels",
+    "title": "Dungeon Crawler Carl Franchise Expansion: Final Two Novels and Peacock Series Announced",
+    "dek": "The LitRPG hit Dungeon Crawler Carl prepares for a two-novel final chapter alongside a Peacock television adaptation from Seth MacFarlane's Fuzzy Door.",
+    "category": "developer-tools",
+    "categoryName": "Developer Tools",
+    "tags": [
+      {
+        "name": "Transmedia",
+        "slug": "transmedia"
+      },
+      {
+        "name": "Dungeon Crawler Carl",
+        "slug": "dungeon-crawler-carl"
+      },
+      {
+        "name": "Peacock",
+        "slug": "peacock"
+      },
+      {
+        "name": "LitRPG",
+        "slug": "litrpg"
+      },
+      {
+        "name": "Seth MacFarlane",
+        "slug": "seth-macfarlane"
+      },
+      {
+        "name": "Fuzzy Door",
+        "slug": "fuzzy-door"
+      },
+      {
+        "name": "Universal Global Television",
+        "slug": "universal-global-television"
+      }
+    ],
+    "body": "# Dungeon Crawler Carl Franchise Expansion: Final Two Novels and Peacock Series Announced\n\n*The LitRPG hit Dungeon Crawler Carl prepares for a two-novel final chapter alongside a Peacock television adaptation from Seth MacFarlane's Fuzzy Door.*\n\n## Quick Summary\n\n- Dungeon Crawler Carl's final storyline will be split across two separate physical novels.\n- Peacock has greenlit a television adaptation produced by Seth MacFarlane's Fuzzy Door and Universal Global Television.\n- Translating explicit game mechanics and LitRPG systems into linear TV presents unique transmedia narrative challenges.\n\n## What Happened?\n\nOfficial announcements confirm that the concluding chapter of the *Dungeon Crawler Carl* LitRPG series will be released as a two-part physical novel split. Simultaneously, NBCUniversal's Peacock streaming service has greenlit a television adaptation. The project is being produced by Seth MacFarlane’s production company, Fuzzy Door, in collaboration with Universal Global Television, as highlighted in official [Steam community updates](https://store.steampowered.com/news/group/38666666/view/686391258373948180).\n\n## Key Details\n\nThe adaptation focuses on core characters Carl and Donut as they navigate a televised alien dungeon survival system. Confirmed production entities include Fuzzy Door, Universal Global Television, and Peacock. While the dual-novel publication plan is confirmed, specific milestones and production timelines for the Peacock television series remain unverified outside of the initial greenlight announcement.\n\n## Why LitRPG & Gaming Audiences Care\n\nLitRPG directly incorporates game design mechanics—such as stat allocation, inventory systems, and boss encounters—into prose. Community signals indicate that the final chapter of *Dungeon Crawler Carl* is among the most anticipated releases in the genre. A major Hollywood studio backing a system-heavy LitRPG property signals broader mainstream interest in game-centric narrative formats.\n\n## Developer Perspective: Translating System Mechanics\n\nFrom a narrative design perspective, adapting LitRPG into visual media highlights the tension between explicit game systems and linear storytelling. Written LitRPG relies on UI notifications, stat tables, and system prompts to communicate character progression. Translating these elements to screen without cluttering the visual interface requires replacing numerical feedback with diegetic visual cues and organic narrative pacing. For teams building games or cross-media adaptations, this transition serves as an study in balancing explicit mechanical communication with viewer immersion.\n\n## What Happens Next?\n\nManaging cross-media release coordination between two novel publications and a television production schedule presents operational complexities. A likely implication of the television series is increased visibility that could drive future licensing opportunities for interactive video game adaptations, given the source material's native alignment with dungeon-crawler and action-RPG game loops.\n\n## CodePlay Verdict\n\n*Dungeon Crawler Carl* establishes a precedent for gaming-literary intellectual property crossing into mainstream television. Developers and narrative designers should monitor how the adaptation converts rigid game mechanics into linear drama as a reference point for future cross-platform IP expansion.\n\n## Sources & Further Reading\n\n- [Dungeon Crawler Carl Officially Begins A New Era November 2026](https://store.steampowered.com/news/group/38666666/view/686391258373948180) — primary source",
+    "keyTakeaways": [],
+    "take": {
+      "developerTake": "Adapting LitRPG UI and numerical stat progression into passive screen media requires shifting from explicit text pop-ups to diegetic visual cues and organic narrative pacing.",
+      "businessImpact": "Hollywood backing from Fuzzy Door and Universal Global Television validates LitRPG as a viable source pipeline for mainstream streaming platforms and potential gaming spin-offs.",
+      "developerImpact": "Game writers and system designers can analyze how LitRPG converts core game loops into character motivation, offering lessons for UI and narrative integration in interactive RPGs.",
+      "technicalExplanation": "",
+      "risksAndLimitations": "Transmedia alignment carries scheduling risks between publishing releases and television production, along with the creative risk of stripping out essential game mechanics that define the IP.",
+      "whyItMatters": "It marks a significant milestone for game-mechanic-heavy fiction moving into mainstream streaming, testing the transmedia appeal of game design tropes in linear entertainment.",
+      "actionableRecommendations": "Studios evaluating LitRPG IP should study how Peacock handles UI elements and system prompts to develop best practices for translating explicit game systems into narrative media."
+    },
+    "sources": [
+      {
+        "url": "https://store.steampowered.com/news/group/38666666/view/686391258373948180",
+        "title": "Dungeon Crawler Carl Officially Begins A New Era November 2026",
+        "publisher": "store.steampowered.com",
+        "role": "primary"
+      }
+    ],
+    "heroImage": {
+      "src": "https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/dungeon-crawler-carl-franchise-expansion-peacock-novels/primary.webp",
+      "alt": "A detailed view of a mechanical keyboard with orange accent key on a wooden table.",
+      "width": 1600,
+      "height": 900,
+      "ogSrc": "https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/dungeon-crawler-carl-franchise-expansion-peacock-novels/primary.webp",
+      "aiGenerated": false,
+      "kind": "stock",
+      "credit": {
+        "provider": "pexels",
+        "sourceUrl": "https://www.pexels.com/photo/black-computer-keyboard-on-wooden-table-12561283/",
+        "photographer": "An  Tran",
+        "photographerUrl": "https://www.pexels.com/@an-tran-31930396"
+      }
+    },
+    "author": "CodePlay Studios Editorial Team",
+    "authorRole": "CodePlay Insights Editorial Team",
+    "readingMinutes": 3,
+    "publishedAt": "2026-09-20T08:49:26.335+00:00",
+    "updatedAt": "2026-09-20T08:49:26.490753+00:00",
+    "seo": {
+      "title": "Dungeon Crawler Carl Expansion: Peacock Series & Final Novels",
+      "description": "The LitRPG hit Dungeon Crawler Carl expands with a Peacock TV adaptation by Fuzzy Door and a two-novel final chapter for the book series.",
+      "canonicalUrl": "https://codeplaystudios.com/insights/dungeon-crawler-carl-franchise-expansion-peacock-novels"
+    },
+    "articleType": "gaming_news",
+    "featured": false,
+    "trending": false,
+    "breaking": false,
+    "viewCount": 0
+  },
+  {
+    "status": "published",
+    "id": "7fde523a-fab1-4abc-b601-bdb2cf7cd25b",
+    "slug": "ea-sports-fc-27-early-review-ai-hubs",
+    "title": "EA Sports FC 27 Early Review: Open-World Hubs and Persistent AI Issues",
+    "dek": "Early reviews for EA Sports FC 27 highlight structural shifts like 'The Grounds' open-world hub and a revised Tactics system alongside persistent legacy AI pathing challenges.",
+    "category": "emerging-technology",
+    "categoryName": "Emerging Technology",
+    "tags": [
+      {
+        "name": "Game Development",
+        "slug": "game-development"
+      },
+      {
+        "name": "EA Sports FC 27",
+        "slug": "ea-sports-fc-27"
+      },
+      {
+        "name": "AI Pathing",
+        "slug": "ai-pathing"
+      },
+      {
+        "name": "Sports Games",
+        "slug": "sports-games"
+      },
+      {
+        "name": "Game Architecture",
+        "slug": "game-architecture"
+      }
+    ],
+    "body": "# EA Sports FC 27 Early Review: Open-World Hubs and Persistent AI Issues\n\n*Early reviews for EA Sports FC 27 highlight structural shifts like 'The Grounds' open-world hub and a revised Tactics system alongside persistent legacy AI pathing challenges.*\n\n## Quick Summary\n\n- In-progress reviews published around September 19, 2026, highlight EA Sports FC 27's newest structural updates.\n- The title introduces 'The Grounds', an open-world spatial hub, alongside an intuitive Tactics system designed to mirror real-world managerial strategies.\n- Early critic feedback indicates that long-standing issues with computer-controlled player pathing and AI behavior remain unresolved.\n\n## What Happened?\n\nIn-progress reviews from outlets such as [IGN](https://www.ign.com/articles/ea-sports-fc-27-review-so-far) and coverage logged on [Steam](https://store.steampowered.com/news/group/9869/view/674006359399727937) have detailed the initial feature set and technical performance of EA Sports FC 27. The reception points to a distinct contrast between high-level structural features and low-level pitch simulation logic. While EA Sports has introduced a new spatial hub and revamped match tactical controls, reviewers indicate that promised refinements to AI teammate movement feel familiar, continuing pathing behaviors that critics note have affected the franchise for over a decade.\n\n## Key Details: 'The Grounds' and Revised Tactics\n\nThe headline feature additions in EA Sports FC 27 center on user navigation and strategic depth:\n\n* **'The Grounds' Hub:** A shift from traditional menu UI toward a spatial, open-world environment designed to anchor player progression and game mode access.\n* **Revised Tactics System:** A redesigned interface and mechanical framework engineered to concisely model real-world managerial strategies and tactical adjustments.\n\nWhile complete documentation regarding how 'The Grounds' scales across every mode remains pending final release builds, early impressions indicate a major departure from past UI paradigms.\n\n## Developer Perspective\n\nFrom an engineering perspective, replacing structured UI menus with a spatial hub like 'The Grounds' shifts resource allocation toward ambient assets, camera streaming, and continuous environment state handling. While spatial hubs offer improved visual continuity, they compete directly for memory and frame-rate budgets during session initialization.\n\nSimultaneously, addressing computer-controlled player behavior requires real-time predictive decision trees and pathing routines operating under strict 60 FPS performance windows. When long-running codebases prioritize high-level feature additions, fundamental agent AI state management often struggles to receive the deep architectural refactoring required to solve legacy pathing bottlenecks.\n\n## What Happens Next?\n\nAs EA Sports FC 27 approaches its full consumer rollout, attention shifts to potential day-one title updates. A key benchmark for technical evaluation will be whether post-launch patches adjust AI decision-making trees or simply tweak numerical attributes. Furthermore, long-term adoption metrics will reveal whether players prefer spatial navigation in 'The Grounds' over classic, low-latency UI menus.\n\n## CodePlay Verdict\n\nEA Sports FC 27 demonstrates clear ambition in structural presentation and tactical clarity. However, until core simulation AI pathing receives foundational engine refactoring rather than incremental adjustments, feature additions like 'The Grounds' risk masking persistent technical debt rather than resolving it.\n\n## Sources & Further Reading\n\n- [EA Sports FC 27 Review So Far](https://store.steampowered.com/news/group/9869/view/674006359399727937) — primary source\n- [EA Sports FC 27 Review So Far](https://www.ign.com/articles/ea-sports-fc-27-review-so-far)",
+    "keyTakeaways": [],
+    "take": {
+      "developerTake": "The introduction of 'The Grounds' shows an ambition to modernize presentation, but core match simulation logic continues to suffer from legacy constraints in AI pathing.",
+      "businessImpact": "Spatial hubs create new opportunities for player engagement and live-service integration, though recurring AI shortcomings risk frustrating dedicated simulation fans.",
+      "developerImpact": "Engineering teams must manage rendering and streaming overhead for spatial navigation environments without starving frame-rate budgets needed for real-time AI calculations.",
+      "technicalExplanation": "",
+      "risksAndLimitations": "Early assessments rely on in-progress review builds, meaning day-one patches could tweak AI behavior parameters. Additionally, full technical details surrounding 'The Grounds' remain unconfirmed.",
+      "whyItMatters": "The dynamic between front-end presentation shifts and legacy gameplay engine debt reflects a common challenge for studios managing long-standing annualized codebases.",
+      "actionableRecommendations": "Studios updating legacy sports franchises should isolate and refactor underlying AI state machines prior to allocating compute budgets to spatial navigation hubs."
+    },
+    "sources": [
+      {
+        "url": "https://store.steampowered.com/news/group/9869/view/674006359399727937",
+        "title": "EA Sports FC 27 Review So Far",
+        "publisher": "store.steampowered.com",
+        "role": "primary"
+      },
+      {
+        "url": "https://www.ign.com/articles/ea-sports-fc-27-review-so-far",
+        "title": "EA Sports FC 27 Review So Far",
+        "publisher": "ign.com",
+        "role": "supporting"
+      }
+    ],
+    "heroImage": {
+      "src": "https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/ea-sports-fc-27-early-review-ai-hubs/primary.webp",
+      "alt": "A futuristic robot, captured in a close-up studio shoot, showcasing innovation and design.",
+      "width": 1600,
+      "height": 900,
+      "ogSrc": "https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/ea-sports-fc-27-early-review-ai-hubs/primary.webp",
+      "aiGenerated": false,
+      "kind": "stock",
+      "credit": {
+        "provider": "pexels",
+        "sourceUrl": "https://www.pexels.com/photo/close-up-shot-of-white-toy-robot-8294620/",
+        "photographer": "Pavel Danilyuk",
+        "photographerUrl": "https://www.pexels.com/@pavel-danilyuk"
+      }
+    },
+    "author": "CodePlay Studios Editorial Team",
+    "authorRole": "CodePlay Insights Editorial Team",
+    "readingMinutes": 3,
+    "publishedAt": "2026-09-20T08:49:02.088+00:00",
+    "updatedAt": "2026-09-20T08:49:02.245568+00:00",
+    "seo": {
+      "title": "EA Sports FC 27 Early Review: Hubs, Tactics & AI",
+      "description": "Early reviews for EA Sports FC 27 analyze structural shifts like open-world hubs and revised tactics, alongside persistent legacy AI pathing challenges.",
+      "canonicalUrl": "https://codeplaystudios.com/insights/ea-sports-fc-27-early-review-ai-hubs"
+    },
+    "articleType": "gaming_news",
+    "featured": true,
+    "trending": false,
+    "breaking": false,
+    "viewCount": 0
+  },
+  {
+    "status": "published",
     "id": "aaec8df2-c2f4-4099-aa14-115f589724fe",
     "slug": "ea-sports-fc-27-ea-play-trial",
     "title": "EA Sports FC 27 Launches 10-Hour EA Play Trial for Subscribers",
@@ -81,7 +339,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-09-19T08:16:56.869+00:00",
-    "updatedAt": "2026-09-19T08:16:57.000946+00:00",
+    "updatedAt": "2026-09-19T21:18:48.45461+00:00",
     "seo": {
       "title": "EA Sports FC 27 10-Hour EA Play Trial Available Now",
       "description": "EA Sports FC 27 launches a 10-hour EA Play trial on Xbox and PC, offering progress carryover for Xbox Game Pass Ultimate and PC Game Pass subscribers.",
@@ -91,7 +349,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 0
+    "viewCount": 1
   },
   {
     "status": "published",
@@ -1801,7 +2059,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-09-12T08:13:42.429+00:00",
-    "updatedAt": "2026-09-12T08:13:42.529019+00:00",
+    "updatedAt": "2026-09-20T02:31:47.05947+00:00",
     "seo": {
       "title": "Perplexity Adopts OpenAI GPT-6 Astra for Systems Management",
       "description": "Perplexity integrates OpenAI's GPT-6 Astra for software maintenance, monitoring, and operations, signaling a shift toward autonomous management.",
@@ -1811,7 +2069,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 0
+    "viewCount": 1
   },
   {
     "status": "published",

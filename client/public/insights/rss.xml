@@ -6,8 +6,35 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 19 Sep 2026 21:05:35 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 20 Sep 2026 09:28:47 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>Final Fantasy XIV Nintendo Switch 2 Port and December 2026 Roadmap Analysis</title>
+      <link>https://codeplaystudios.com/insights/final-fantasy-xiv-switch-2-december-2026-analysis</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/final-fantasy-xiv-switch-2-december-2026-analysis</guid>
+      <pubDate>Sun, 20 Sep 2026 08:49:51 GMT</pubDate>
+      <category>Developer Tools</category>
+      <description>Square Enix&apos;s expansion of Final Fantasy XIV to Nintendo Switch 2 has driven a significant player surge, setting up a critical multiplatform baseline ahead of a scheduled December 2026 release.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/final-fantasy-xiv-switch-2-december-2026-analysis/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Dungeon Crawler Carl Franchise Expansion: Final Two Novels and Peacock Series Announced</title>
+      <link>https://codeplaystudios.com/insights/dungeon-crawler-carl-franchise-expansion-peacock-novels</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/dungeon-crawler-carl-franchise-expansion-peacock-novels</guid>
+      <pubDate>Sun, 20 Sep 2026 08:49:26 GMT</pubDate>
+      <category>Developer Tools</category>
+      <description>The LitRPG hit Dungeon Crawler Carl prepares for a two-novel final chapter alongside a Peacock television adaptation from Seth MacFarlane&apos;s Fuzzy Door.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/dungeon-crawler-carl-franchise-expansion-peacock-novels/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>EA Sports FC 27 Early Review: Open-World Hubs and Persistent AI Issues</title>
+      <link>https://codeplaystudios.com/insights/ea-sports-fc-27-early-review-ai-hubs</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/ea-sports-fc-27-early-review-ai-hubs</guid>
+      <pubDate>Sun, 20 Sep 2026 08:49:02 GMT</pubDate>
+      <category>Emerging Technology</category>
+      <description>Early reviews for EA Sports FC 27 highlight structural shifts like &apos;The Grounds&apos; open-world hub and a revised Tactics system alongside persistent legacy AI pathing challenges.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/ea-sports-fc-27-early-review-ai-hubs/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>EA Sports FC 27 Launches 10-Hour EA Play Trial for Subscribers</title>
       <link>https://codeplaystudios.com/insights/ea-sports-fc-27-ea-play-trial</link>
