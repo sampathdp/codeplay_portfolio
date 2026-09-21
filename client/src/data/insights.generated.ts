@@ -169,7 +169,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-09-20T08:49:26.335+00:00",
-    "updatedAt": "2026-09-20T08:49:26.490753+00:00",
+    "updatedAt": "2026-09-21T00:23:46.913071+00:00",
     "seo": {
       "title": "Dungeon Crawler Carl Expansion: Peacock Series & Final Novels",
       "description": "The LitRPG hit Dungeon Crawler Carl expands with a Peacock TV adaptation by Fuzzy Door and a two-novel final chapter for the book series.",
@@ -179,7 +179,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 0
+    "viewCount": 1
   },
   {
     "status": "published",
@@ -255,7 +255,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-09-20T08:49:02.088+00:00",
-    "updatedAt": "2026-09-20T08:49:02.245568+00:00",
+    "updatedAt": "2026-09-21T05:48:02.260353+00:00",
     "seo": {
       "title": "EA Sports FC 27 Early Review: Hubs, Tactics & AI",
       "description": "Early reviews for EA Sports FC 27 analyze structural shifts like open-world hubs and revised tactics, alongside persistent legacy AI pathing challenges.",
@@ -265,7 +265,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 0
+    "viewCount": 2
   },
   {
     "status": "published",
