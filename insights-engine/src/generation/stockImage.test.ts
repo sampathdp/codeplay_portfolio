@@ -93,7 +93,7 @@ describe("PexelsStockImageClient", () => {
 
     const [searchUrl, searchInit] = fetchMock.mock.calls[0];
     expect(searchUrl).toContain("orientation=landscape");
-    expect(searchUrl).toContain("query=data%20center%20server%20room");
+    expect(searchUrl).toContain("query=cloudflare%20cuts%20ram");
     expect((searchInit as RequestInit).headers).toMatchObject({ Authorization: "test-key" });
     expect(fetchMock.mock.calls[1][0]).toBe("https://images.pexels.com/999/landscape.jpg");
   });

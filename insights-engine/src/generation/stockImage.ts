@@ -36,6 +36,8 @@ export interface StockImageQuery {
   category: string | null;
   entities: string[];
   visualConcept?: string;
+  /** Photo page URLs already used by other articles; avoided when possible. */
+  excludeSourceUrls?: string[];
 }
 
 export interface StockImageClient {
@@ -79,6 +81,66 @@ export function stockQuery(q: StockImageQuery): string {
   return base.trim();
 }
 
+const STOP_WORDS = new Set(
+  (
+    "a an and are as at be by can for from how in into is it its of on or over that the " +
+    "this to what when why with your you new launches launch officially revealed reveals " +
+    "need know developers developer guide tips best more most vs via using use used"
+  ).split(" "),
+);
+
+function tokens(text: string): string[] {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, " ")
+    .split(/\s+/)
+    .filter((w) => w.length > 2 && !STOP_WORDS.has(w));
+}
+
+/**
+ * Ordered search strings, most specific first: the headline's key nouns,
+ * then the first few of them, then the generic per-category terms. Each
+ * later entry is only searched when the earlier ones return nothing.
+ * `entities` are source publisher names, so they are not searched.
+ */
+export function stockQueries(q: StockImageQuery): string[] {
+  const words = [...new Set(tokens(q.title))];
+  const out: string[] = [];
+  if (words.length) out.push(words.slice(0, 4).join(" "));
+  if (words.length > 2) out.push(words.slice(0, 2).join(" "));
+  out.push(stockQuery(q));
+  return [...new Set(out)];
+}
+
+function hash(s: string): number {
+  let h = 2166136261;
+  for (let i = 0; i < s.length; i++) {
+    h ^= s.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return h >>> 0;
+}
+
+/**
+ * Pick the photo whose alt text best overlaps the article. Ties (and the
+ * common all-zero case) are broken by a title hash so different articles
+ * landing on the same result page get different photos.
+ */
+export function pickPhoto(photos: PexelsPhoto[], q: StockImageQuery): PexelsPhoto {
+  const want = new Set(tokens(q.title));
+  const used = new Set(q.excludeSourceUrls ?? []);
+  const fresh = photos.filter((p) => !used.has(p.url));
+  const pool = fresh.length ? fresh : photos;
+  const scored = pool.map((p, i) => ({
+    p,
+    i,
+    score: tokens(p.alt ?? "").filter((w) => want.has(w)).length,
+  }));
+  const best = Math.max(...scored.map((s) => s.score));
+  const top = scored.filter((s) => s.score === best);
+  return top[hash(q.title) % top.length].p;
+}
+
 interface PexelsPhoto {
   url: string;
   photographer: string;
@@ -105,16 +167,18 @@ export class PexelsStockImageClient implements StockImageClient {
   ) {}
 
   async find(query: StockImageQuery): Promise<StockImage | null> {
-    const q = stockQuery(query);
-
     // Keep retries short — this runs inside the article pipeline and a stock
     // photo is itself a fallback; a slow retry storm is worse than the SVG.
     const retryOpts = { attempts: 2, baseMs: 500, maxMs: 2_000 };
 
-    const photo = await retryTransient(
-      () => this.search(q),
-      { ...retryOpts, label: `Pexels search "${q}"` },
-    );
+    let photo: PexelsPhoto | null = null;
+    for (const q of stockQueries(query)) {
+      photo = await retryTransient(
+        () => this.search(q, query),
+        { ...retryOpts, label: `Pexels search "${q}"` },
+      );
+      if (photo) break;
+    }
     if (!photo) return null;
 
     // Prefer a purpose-cropped landscape, fall back to the biggest source.
@@ -138,7 +202,7 @@ export class PexelsStockImageClient implements StockImageClient {
     };
   }
 
-  private async search(q: string): Promise<PexelsPhoto | null> {
+  private async search(q: string, query: StockImageQuery): Promise<PexelsPhoto | null> {
     const url = `${PEXELS_ENDPOINT}?query=${encodeURIComponent(
       q,
     )}&orientation=landscape&size=large&per_page=15`;
@@ -151,8 +215,7 @@ export class PexelsStockImageClient implements StockImageClient {
     const body = (await res.json()) as PexelsSearchResponse;
     const photos = body.photos ?? [];
     if (!photos.length) return null;
-    // Deterministic pick: first result is Pexels' best relevance match.
-    return photos[0];
+    return pickPhoto(photos, query);
   }
 
   private async download(url: string): Promise<Buffer> {
