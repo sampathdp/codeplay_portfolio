@@ -6,8 +6,17 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 21 Sep 2026 22:18:44 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 09:30:18 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>Bungie Unvaults Destiny 2 Content: Engineering Analysis</title>
+      <link>https://codeplaystudios.com/insights/bungie-unvaults-destiny-2-content-engineering-analysis</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/bungie-unvaults-destiny-2-content-engineering-analysis</guid>
+      <pubDate>Tue, 22 Sep 2026 08:50:00 GMT</pubDate>
+      <category>Open Source</category>
+      <description>Evaluating Bungie&apos;s decision to unvault Destiny 2 content through the lens of technical legacy asset integration, engine updates, and live-service maintenance costs.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/bungie-unvaults-destiny-2-content-engineering-analysis/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>Final Fantasy XIV Nintendo Switch 2 Port and December 2026 Roadmap Analysis</title>
       <link>https://codeplaystudios.com/insights/final-fantasy-xiv-switch-2-december-2026-analysis</link>
