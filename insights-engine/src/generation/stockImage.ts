@@ -85,7 +85,14 @@ const STOP_WORDS = new Set(
   (
     "a an and are as at be by can for from how in into is it its of on or over that the " +
     "this to what when why with your you new launches launch officially revealed reveals " +
-    "need know developers developer guide tips best more most vs via using use used"
+    "need know developers developer guide tips best more most vs via using use used " +
+    // Generic words that read as gaming/tech jargon in a headline but as
+    // plain English (crash test, fashion mode, taste demo...) to a stock
+    // photo search — keeping them out of the query and the match-scoring
+    // stops them from dragging in an unrelated photo that merely shares
+    // the word (see the "Arc Raiders ... Test ... Mode" bug).
+    "test tests testing beta alpha trial demo preview mode modes update updates patch patches " +
+    "version versions release releases"
   ).split(" "),
 );
 
@@ -122,11 +129,18 @@ function hash(s: string): number {
 }
 
 /**
- * Pick the photo whose alt text best overlaps the article. Ties (and the
- * common all-zero case) are broken by a title hash so different articles
- * landing on the same result page get different photos.
+ * Pick the photo whose alt text best overlaps the article. Ties are broken
+ * by a title hash so different articles landing on the same result page
+ * get different photos. Returns null when nothing in the page shares a
+ * single keyword with the title — a same-word match (query "arc raiders
+ * october test" hitting a vehicle *test*-track photo) is worse than no
+ * photo, so the caller should fall through to the next query tier.
  */
-export function pickPhoto(photos: PexelsPhoto[], q: StockImageQuery): PexelsPhoto {
+export function pickPhoto(
+  photos: PexelsPhoto[],
+  q: StockImageQuery,
+  requireMatch = true,
+): PexelsPhoto | null {
   const want = new Set(tokens(q.title));
   const used = new Set(q.excludeSourceUrls ?? []);
   const fresh = photos.filter((p) => !used.has(p.url));
@@ -137,6 +151,7 @@ export function pickPhoto(photos: PexelsPhoto[], q: StockImageQuery): PexelsPhot
     score: tokens(p.alt ?? "").filter((w) => want.has(w)).length,
   }));
   const best = Math.max(...scored.map((s) => s.score));
+  if (best === 0 && requireMatch) return null;
   const top = scored.filter((s) => s.score === best);
   return top[hash(q.title) % top.length].p;
 }
@@ -171,10 +186,13 @@ export class PexelsStockImageClient implements StockImageClient {
     // photo is itself a fallback; a slow retry storm is worse than the SVG.
     const retryOpts = { attempts: 2, baseMs: 500, maxMs: 2_000 };
 
+    const queries = stockQueries(query);
     let photo: PexelsPhoto | null = null;
-    for (const q of stockQueries(query)) {
+    for (let i = 0; i < queries.length; i++) {
+      const q = queries[i];
+      const isLastTier = i === queries.length - 1;
       photo = await retryTransient(
-        () => this.search(q, query),
+        () => this.search(q, query, !isLastTier),
         { ...retryOpts, label: `Pexels search "${q}"` },
       );
       if (photo) break;
@@ -202,7 +220,11 @@ export class PexelsStockImageClient implements StockImageClient {
     };
   }
 
-  private async search(q: string, query: StockImageQuery): Promise<PexelsPhoto | null> {
+  private async search(
+    q: string,
+    query: StockImageQuery,
+    requireMatch: boolean,
+  ): Promise<PexelsPhoto | null> {
     const url = `${PEXELS_ENDPOINT}?query=${encodeURIComponent(
       q,
     )}&orientation=landscape&size=large&per_page=15`;
@@ -215,7 +237,7 @@ export class PexelsStockImageClient implements StockImageClient {
     const body = (await res.json()) as PexelsSearchResponse;
     const photos = body.photos ?? [];
     if (!photos.length) return null;
-    return pickPhoto(photos, query);
+    return pickPhoto(photos, query, requireMatch);
   }
 
   private async download(url: string): Promise<Buffer> {
