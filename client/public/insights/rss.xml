@@ -6,8 +6,35 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 24 Sep 2026 21:51:47 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 25 Sep 2026 09:50:41 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>Summer Eternal Proposes 5% Player Ownership: Legal and Business Realities</title>
+      <link>https://codeplaystudios.com/insights/summer-eternal-player-ownership-equity-analysis</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/summer-eternal-player-ownership-equity-analysis</guid>
+      <pubDate>Fri, 25 Sep 2026 09:03:39 GMT</pubDate>
+      <category>Gaming</category>
+      <description>Analyzing the corporate governance and legal hurdles of Summer Eternal&apos;s experimental player equity initiative, moving past the marketing headline to evaluate feasibility for indie studios.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/summer-eternal-player-ownership-equity-analysis/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Path of Exile 2 Achieves Steam Deck Verified Status Ahead of December Release</title>
+      <link>https://codeplaystudios.com/insights/path-of-exile-2-steam-deck-verified</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/path-of-exile-2-steam-deck-verified</guid>
+      <pubDate>Fri, 25 Sep 2026 09:03:13 GMT</pubDate>
+      <category>Gaming</category>
+      <description>Grinding Gear Games has secured Steam Deck Verification for Path of Exile 2 ahead of its December 1.0 release, clearing prior UI hurdles.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/path-of-exile-2-steam-deck-verified/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Arc Raiders October Test Introduces Optional PvE Mode for Extraction Shooters</title>
+      <link>https://codeplaystudios.com/insights/arc-raiders-october-test-pve-mode</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/arc-raiders-october-test-pve-mode</guid>
+      <pubDate>Fri, 25 Sep 2026 09:02:48 GMT</pubDate>
+      <category>Developer Tools</category>
+      <description>Embark Studios announces a limited-time October test for Arc Raiders featuring a toggle-based PvE mode, opening up new structural and economic options for extraction shooters.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/arc-raiders-october-test-pve-mode/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>Bungie Unvaults Destiny 2 Content: Engineering Analysis</title>
       <link>https://codeplaystudios.com/insights/bungie-unvaults-destiny-2-content-engineering-analysis</link>
