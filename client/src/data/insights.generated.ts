@@ -95,7 +95,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-25T09:03:39.085+00:00",
-    "updatedAt": "2026-09-25T09:03:39.223559+00:00",
+    "updatedAt": "2026-09-25T13:16:16.482073+00:00",
     "seo": {
       "title": "Summer Eternal's Player Equity Plan: Legal & Business Analysis",
       "description": "Analyzing the corporate governance and legal hurdles of Summer Eternal's experimental player equity initiative for indie game development studios.",
@@ -105,7 +105,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 0
+    "viewCount": 1
   },
   {
     "status": "published",
@@ -179,7 +179,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-09-25T09:03:13.356+00:00",
-    "updatedAt": "2026-09-25T09:03:14.022549+00:00",
+    "updatedAt": "2026-09-25T13:26:15.982581+00:00",
     "seo": {
       "title": "Path of Exile 2 Achieves Steam Deck Verified Status",
       "description": "Grinding Gear Games has secured Steam Deck Verification for Path of Exile 2 ahead of its December release, overcoming prior UI text hurdles.",
@@ -189,7 +189,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 0
+    "viewCount": 1
   },
   {
     "status": "published",
@@ -269,7 +269,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-09-25T09:02:48.299+00:00",
-    "updatedAt": "2026-09-25T09:02:48.43646+00:00",
+    "updatedAt": "2026-09-25T13:36:15.803045+00:00",
     "seo": {
       "title": "Arc Raiders October Test Introduces Optional PvE Mode",
       "description": "Embark Studios announces an October test for Arc Raiders featuring a toggle-based PvE mode and adjusted loot economies for extraction shooters.",
@@ -279,7 +279,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 0
+    "viewCount": 1
   },
   {
     "status": "published",
