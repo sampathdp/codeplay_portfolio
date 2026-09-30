@@ -51,6 +51,7 @@ export default function Footer() {
                 { label: "Mobile Apps", href: "/mobile-development" },
                 { label: "ERP Suites", href: "/erp-systems" },
                 { label: "Unity Game Dev", href: "/unity-game-development" },
+                { label: "Unity Assets", href: "/unity-assets" },
                 { label: "AI Integration", href: "/ai-development" }
               ].map((link, i) => (
                 <li key={i}>

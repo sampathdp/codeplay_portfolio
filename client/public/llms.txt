@@ -13,6 +13,7 @@ Contact: info@codeplaystudios.com
 - [AI Development](https://codeplaystudios.com/ai-development): AI integration, automation, and intelligent business systems.
 - [ERP Systems](https://codeplaystudios.com/erp-systems): Custom ERP suites and internal business platforms.
 - [Unity Game Development](https://codeplaystudios.com/unity-game-development): Games and interactive 3D experiences built with Unity.
+- [Unity Assets](https://codeplaystudios.com/unity-assets): Terrain, environment and 2D sprite packages we publish on the Unity Asset Store.
 
 ## Company
 
