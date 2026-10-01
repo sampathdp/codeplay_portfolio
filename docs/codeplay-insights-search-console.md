@@ -49,6 +49,22 @@ https://codeplaystudios.com/sitemap-insights.xml
 `npm run insights:seo` and lists only published articles with accurate
 `lastmod`.
 
+### Automatic re-submit on every deploy
+
+`main.yml` runs `npm run insights:gsc` after the upload, which calls the
+Search Console API to re-submit `sitemap.xml`, `sitemap-insights.xml` and
+`news-sitemap.xml`. One-time setup:
+
+1. Google Cloud Console → create a project → enable **Google Search Console API**.
+2. IAM → Service Accounts → create one → Keys → add a **JSON** key.
+3. Search Console → Settings → Users and permissions → add the service
+   account's email with **Owner** (or Full) permission.
+4. GitHub → Settings → Secrets: `GSC_SERVICE_ACCOUNT_JSON` = the whole JSON.
+   If the property is a Domain property, also set the variable
+   `GSC_SITE_URL` = `sc-domain:codeplaystudios.com`.
+
+Unset secret = step skipped.
+
 ## 3. Optional — Google News / Publisher Center
 
 If pursuing Google News inclusion, add the publication in
