@@ -11,6 +11,260 @@ import type { InsightsArticle } from "@/lib/insights/types";
 export const INSIGHTS_ARTICLES: InsightsArticle[] = [
   {
     "status": "published",
+    "id": "2770562c-449b-4c0d-b1a2-f17078c46846",
+    "slug": "steamos-3-8-28-stable-release",
+    "title": "Valve Releases SteamOS 3.8.28 Stable With Expanded Hardware Support",
+    "dek": "Valve has officially pushed SteamOS 3.8.28 to the stable channel, bringing targeted enhancements to the Steam Deck, Steam Machine, and broader hardware ecosystems.",
+    "category": "gaming",
+    "categoryName": "Gaming",
+    "tags": [
+      {
+        "name": "Valve",
+        "slug": "valve"
+      },
+      {
+        "name": "Steam Deck",
+        "slug": "steam-deck"
+      },
+      {
+        "name": "Linux Gaming",
+        "slug": "linux-gaming"
+      },
+      {
+        "name": "SteamOS",
+        "slug": "steamos"
+      },
+      {
+        "name": "Steam Machine",
+        "slug": "steam-machine"
+      }
+    ],
+    "body": "# Valve Releases SteamOS 3.8.28 Stable With Expanded Hardware Support\n\n*Valve has officially pushed SteamOS 3.8.28 to the stable channel, bringing targeted enhancements to the Steam Deck, Steam Machine, and broader hardware ecosystems.*\n\n## Quick Summary\n\n- Valve officially released SteamOS 3.8.28 to the stable channel on September 25, 2026.\n- The update introduces system-level improvements tailored for both the Steam Deck and Steam Machine.\n- Expanded hardware compatibility signals a continued push toward broader Linux-based gaming device support.\n\n## What Happened?\n\nOn September 25, 2026, [Valve](https://store.steampowered.com/news/group/4218320/view/694273194214819228) promoted SteamOS 3.8.28 to the stable release channel. As documented in the [official Steam release notes](https://store.steampowered.com/news/group/4218320/view/694273194214819228) and reported by [GamingOnLinux](https://www.gamingonlinux.com/2026/09/steamos-3-8-28-stable-released-with-big-improvements-for-steam-deck-steam-machine-and-more-hardware-support/), this milestone update transitions core platform improvements out of testing pipelines and into the hands of standard users. The distribution targets Valve's established handheld ecosystem alongside hardware initiatives designed for living room environments.\n\n## Key Details\n\nThe confirmed scope of SteamOS 3.8.28 centers on three distinct areas: Steam Deck optimizations, support for Steam Machine hardware configurations, and general hardware compatibility expansions. While precise driver versions and granular technical changelogs remain sparse in initial public documentation, the release emphasizes stability across disparate form factors. This confirms Valve's ongoing effort to maintain a unified Linux-based operating system capable of scaling between portable gaming handhelds and fixed living room hardware.\n\n## Developer Perspective\n\nFrom a development perspective, the maturation of SteamOS into a stable build with wider hardware support reinforces the viability of Linux as a primary target. For teams building native Linux applications or optimizing Windows titles via Proton, a consistent operating system baseline reduces platform fragmentation. When Valve updates core system layers across both handheld and stationary form factors, studios benefit from predictable graphics driver behavior, audio routing, and input handling.\n\n## What Happens Next?\n\nA likely implication is the acceleration of third-party hardware manufacturers adopting SteamOS for competing handhelds and living room devices. As Valve refines its distribution for diverse hardware profiles, developers should anticipate a growing user base running SteamOS outside of official Valve hardware. Future software pipelines will likely focus on streamlining OEM onboarding and expanding automated testing across varied CPU and GPU combinations.\n\n## CodePlay Verdict\n\nSteamOS 3.8.28 represents a quiet yet steady milestone for Linux gaming. By consolidating improvements for both handhelds and living room systems into a stable release, Valve continues to strengthen the foundational layer of the PC gaming ecosystem. Developers should treat stable SteamOS iterations as critical compatibility targets as the hardware landscape diversifies.\n\n## Sources & Further Reading\n\n- [SteamOS 3.8.28 stable released with big improvements for Steam Deck, Steam Machine and more hardware support](https://store.steampowered.com/news/group/4218320/view/694273194214819228) — primary source\n- [SteamOS 3.8.28 Stable Release](https://www.gamingonlinux.com/2026/09/steamos-3-8-28-stable-released-with-big-improvements-for-steam-deck-steam-machine-and-more-hardware-support/)",
+    "keyTakeaways": [],
+    "take": {
+      "developerTake": "A stable, unified Linux distribution across multiple form factors simplifies target baselines for cross-platform engines.",
+      "businessImpact": "Broader hardware compatibility positions SteamOS to capture living room and third-party handheld market share beyond official Valve devices.",
+      "developerImpact": "Reduces edge-case bugs related to hardware fragmentation when validating games on Valve's ecosystem.",
+      "technicalExplanation": "",
+      "risksAndLimitations": "Exact technical changelogs and specific driver versions were not fully detailed in initial public summaries, requiring teams to conduct empirical validation.",
+      "whyItMatters": "It signals the continued evolution of an open-yet-standardized operating system for PC gaming hardware.",
+      "actionableRecommendations": "Game studios targeting portable and living room hardware should incorporate SteamOS stable builds into their regular quality assurance compatibility matrices."
+    },
+    "sources": [
+      {
+        "url": "https://store.steampowered.com/news/group/4218320/view/694273194214819228",
+        "title": "SteamOS 3.8.28 stable released with big improvements for Steam Deck, Steam Machine and more hardware support",
+        "publisher": "store.steampowered.com",
+        "role": "primary"
+      },
+      {
+        "url": "https://www.gamingonlinux.com/2026/09/steamos-3-8-28-stable-released-with-big-improvements-for-steam-deck-steam-machine-and-more-hardware-support/",
+        "title": "SteamOS 3.8.28 Stable Release",
+        "publisher": "gamingonlinux.com",
+        "role": "supporting"
+      }
+    ],
+    "heroImage": {
+      "src": "https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/steamos-3-8-28-stable-release/primary.webp",
+      "alt": "Close-up of two technicians adjusting a blue industrial valve indoors.",
+      "width": 1600,
+      "height": 900,
+      "ogSrc": "https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/steamos-3-8-28-stable-release/primary.webp",
+      "aiGenerated": false,
+      "kind": "stock",
+      "credit": {
+        "provider": "pexels",
+        "sourceUrl": "https://www.pexels.com/photo/technicians-working-on-industrial-valve-in-workshop-29226619/",
+        "photographer": "Sergei Starostin",
+        "photographerUrl": "https://www.pexels.com/@sejio402"
+      }
+    },
+    "author": "CodePlay Studios Editorial Team",
+    "authorRole": "CodePlay Insights Editorial Team",
+    "readingMinutes": 3,
+    "publishedAt": "2026-10-01T10:25:03.585+00:00",
+    "updatedAt": "2026-10-01T10:25:03.731821+00:00",
+    "seo": {
+      "title": "SteamOS 3.8.28 Stable Released With Broad Hardware Support",
+      "description": "Valve officially pushes SteamOS 3.8.28 to the stable channel, bringing targeted system updates and expanded hardware compatibility for Linux gaming.",
+      "canonicalUrl": "https://codeplaystudios.com/insights/steamos-3-8-28-stable-release"
+    },
+    "articleType": "gaming_news",
+    "featured": false,
+    "trending": false,
+    "breaking": false,
+    "viewCount": 0
+  },
+  {
+    "status": "published",
+    "id": "8ce7536b-6895-45f7-8e8e-6b0578439ca0",
+    "slug": "managing-legacy-asset-refreshes-pokemon-30th-anniversary",
+    "title": "Managing Legacy Asset Refreshes: Lessons from Pokémon's 30th Anniversary Rollout",
+    "dek": "Analyzing how long-running intellectual properties manage legacy asset refreshes and anniversary milestones across physical and digital ecosystems, using the Pokémon 30th anniversary rollout as a case study.",
+    "category": "open-source",
+    "categoryName": "Open Source",
+    "tags": [
+      {
+        "name": "Game Development",
+        "slug": "game-development"
+      },
+      {
+        "name": "Pokemon",
+        "slug": "pokemon"
+      },
+      {
+        "name": "Asset Management",
+        "slug": "asset-management"
+      },
+      {
+        "name": "Digital Ecosystems",
+        "slug": "digital-ecosystems"
+      },
+      {
+        "name": "Character Modeling",
+        "slug": "character-modeling"
+      }
+    ],
+    "body": "# Managing Legacy Asset Refreshes: Lessons from Pokémon's 30th Anniversary Rollout\n\n*Analyzing how long-running intellectual properties manage legacy asset refreshes and anniversary milestones across physical and digital ecosystems, using the Pokémon 30th anniversary rollout as a case study.*\n\n## Quick Summary\n\n- Pokémon is marking its 30th anniversary with a comprehensive rollout spanning physical merchandise, luxury display pieces, and a landmark trading card game expansion.\n- Confirmed releases feature iconic fan-favorites reimagined across all nine generations of the franchise.\n- Anniversary initiatives highlight the ongoing challenge of refreshing legacy character models for both digital and physical distribution channels.\n\n## What Happened?\n\nAs part of the [Pokémon 30th anniversary celebrations](https://store.steampowered.com/news/group/38666666/view/668377496357438979), the franchise has introduced distinct new releases that reimagine iconic characters from across all nine generations. Confirmed releases include the 30 Celebration TCG set, which integrates characters from the franchise's extensive history. Additionally, luxury display items have entered production, such as a gold-foil statue transforming Pikachu into a high-end collector's piece. Pikachu has also received multiple commemorative redesigns featured across new merchandise lines.\n\n## Key Details\n\nLong-running intellectual properties frequently utilize anniversary milestones to synchronize asset refreshes across merchandise, trading card games, and digital formats. While official announcements confirm major updates for Pikachu and the broader roster spanning nine generations, certain elements reported in initial media remain unverified. Specifically, while external headlines reference a new design for Scyther, the primary documentation and summary text available do not detail the exact nature, scope, or visual changes of that redesign. Developers and analysts must carefully distinguish between confirmed asset rollouts and unverified media claims when evaluating franchise pipelines.\n\n## Developer Perspective\n\nFrom a development perspective, updating assets that span three decades introduces significant pipeline challenges. Maintaining stylistic consistency across nine generations of creature design requires rigid style guides and careful asset management. When a franchise translates these legacy assets simultaneously into physical merchandise, trading card art, and digital game engines, version control becomes critical. Teams must ensure that updated commemorative designs align cleanly with existing canonical models without breaking backward compatibility or alienating long-time fans who expect fidelity to original silhouettes.\n\n## What Happens Next?\n\nA likely implication of this milestone rollout is that long-term intellectual property holders will increasingly rely on synchronized multi-format campaigns to bridge nostalgic audiences with newer generation releases. As franchises expand past their third decade, anniversary initiatives will likely serve as testing grounds for updated character proportions and art styles. Studios managing aging asset libraries will likely adopt similar phased update schedules to refresh legacy portfolios while minimizing disruption to active production pipelines.\n\n## CodePlay Verdict\n\nFor studios managing aging intellectual properties, the Pokémon 30th anniversary provides a clear case study in legacy asset management. Successful modernization requires balancing nostalgic reverence with necessary visual evolution across both digital and physical ecosystems. Teams should establish modular asset pipelines early to support multi-format rollouts without compromising stylistic integrity.\n\n## Sources & Further Reading\n\n- [Pokémon Gives Scyther A Wild New Design 30 Years After Debut](https://store.steampowered.com/news/group/38666666/view/668377496357438979) — primary source",
+    "keyTakeaways": [],
+    "take": {
+      "developerTake": "Maintaining stylistic consistency across nine generations of creature design requires strict asset version control and robust style guides when preparing multi-format anniversary releases.",
+      "businessImpact": "Anniversary milestones provide a structured commercial window to monetize legacy portfolios by synchronizing physical merchandise, luxury collectibles, and digital card sets.",
+      "developerImpact": "Engineers and artists must ensure that commemorative character updates integrate smoothly across distinct distribution channels, from physical card stock to interactive digital environments.",
+      "technicalExplanation": "",
+      "risksAndLimitations": "Relying on unverified media reports regarding specific character updates can misinform technical roadmaps; teams must verify primary documentation before adapting legacy pipelines.",
+      "whyItMatters": "Managing a 30-year-old intellectual property requires balancing fan nostalgia with systematic asset modernization to sustain engagement across multiple generations of users.",
+      "actionableRecommendations": "Establish modular asset pipelines and clear cross-media style guides early to streamline future anniversary rollouts and legacy character refreshes."
+    },
+    "sources": [
+      {
+        "url": "https://store.steampowered.com/news/group/38666666/view/668377496357438979",
+        "title": "Pokémon Gives Scyther A Wild New Design 30 Years After Debut",
+        "publisher": "store.steampowered.com",
+        "role": "primary"
+      }
+    ],
+    "heroImage": {
+      "src": "https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/managing-legacy-asset-refreshes-pokemon-30th-anniversary/primary.webp",
+      "alt": "A focused group meeting in an office setting with diverse team members and a laptop featuring tech stickers.",
+      "width": 1600,
+      "height": 900,
+      "ogSrc": "https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/managing-legacy-asset-refreshes-pokemon-30th-anniversary/primary.webp",
+      "aiGenerated": false,
+      "kind": "stock",
+      "credit": {
+        "provider": "pexels",
+        "sourceUrl": "https://www.pexels.com/photo/people-sitting-looking-at-a-laptop-7437491/",
+        "photographer": "cottonbro studio",
+        "photographerUrl": "https://www.pexels.com/@cottonbro"
+      }
+    },
+    "author": "CodePlay Studios Editorial Team",
+    "authorRole": "CodePlay Insights Editorial Team",
+    "readingMinutes": 3,
+    "publishedAt": "2026-10-01T10:24:38.687+00:00",
+    "updatedAt": "2026-10-01T10:24:38.82034+00:00",
+    "seo": {
+      "title": "Managing Legacy Asset Refreshes: Pokémon 30th Anniversary Case Study",
+      "description": "Explore how long-running intellectual properties handle legacy asset refreshes and multi-channel consistency across digital and physical ecosystems.",
+      "canonicalUrl": "https://codeplaystudios.com/insights/managing-legacy-asset-refreshes-pokemon-30th-anniversary"
+    },
+    "articleType": "gaming_news",
+    "featured": false,
+    "trending": false,
+    "breaking": false,
+    "viewCount": 0
+  },
+  {
+    "status": "published",
+    "id": "65614ea7-6333-4a28-8b45-4b6a91a99553",
+    "slug": "google-cloud-api-gateway-mcp-support-rest-apis",
+    "title": "Google Cloud API Gateway Adds Native Model Context Protocol Support for REST APIs",
+    "dek": "Google Cloud API Gateway now natively supports the Model Context Protocol, allowing teams to expose REST services to AI agents via OpenAPI annotations without custom middleware.",
+    "category": "emerging-technology",
+    "categoryName": "Emerging Technology",
+    "tags": [
+      {
+        "name": "Google Cloud",
+        "slug": "google-cloud"
+      },
+      {
+        "name": "AI Agents",
+        "slug": "ai-agents"
+      },
+      {
+        "name": "API Gateway",
+        "slug": "api-gateway"
+      },
+      {
+        "name": "OpenAPI",
+        "slug": "openapi"
+      },
+      {
+        "name": "Model Context Protocol",
+        "slug": "model-context-protocol"
+      },
+      {
+        "name": "MCP",
+        "slug": "mcp"
+      },
+      {
+        "name": "REST APIs",
+        "slug": "rest-apis"
+      }
+    ],
+    "body": "# Google Cloud API Gateway Adds Native Model Context Protocol Support for REST APIs\n\n*Google Cloud API Gateway now natively supports the Model Context Protocol, allowing teams to expose REST services to AI agents via OpenAPI annotations without custom middleware.*\n\n## Quick Summary\n\n- Google Cloud API Gateway functions as a native remote Model Context Protocol (MCP) server.\n- The update removes the requirement to build custom translation middleware for AI agent integrations.\n- Engineers use x-google-api-management.mcp annotations within OpenAPI 3.x definitions to map REST operations.\n- The gateway automatically handles incoming MCP JSON-RPC requests and transcodes them into standard REST calls.\n\n## What Changed?\n\nGoogle Cloud API Gateway now acts as a native remote Model Context Protocol server. Confirmed updates include automated protocol translation that transcodes incoming MCP JSON-RPC requests directly into backend REST calls. Central to this update is the introduction of specific configuration annotations, such as `x-google-api-management.mcp`, which are embedded into existing OpenAPI 3.x specifications to expose operations to AI clients.\n\n## Technical Impact\n\nFrom a technical standpoint, the Model Context Protocol enables AI agents to discover and interact with external systems. Traditionally, connecting an LLM agent to a REST backend required building a dedicated translation service to handle JSON-RPC messaging. Google Cloud API Gateway absorbs this responsibility at the infrastructure layer. By parsing OpenAPI 3.x definitions annotated for MCP, the gateway maps structured remote procedure calls to standard HTTP methods, routes the traffic to existing microservices, and formats the response back for the requesting agent.\n\n## Developer Impact\n\nFor backend engineering teams, this update targets a specific maintenance burden: writing and securing custom integration middleware. Instead of maintaining boilerplate translation code or maintaining separate agent-specific endpoints, developers can enrich their current API definitions. Adding the designated MCP annotations to an OpenAPI 3.x file allows the gateway to automatically handle agent discovery and payload mapping.\n\n## What This Means for Businesses\n\nA likely implication for businesses is a reduction in engineering overhead when incorporating LLM agents into cloud architectures. By shifting protocol translation responsibilities to an existing managed gateway product, organizations can decrease the surface area of custom code they must write, secure, and maintain. This streamlines the path from experimental agent workflows to production-ready integrations using established cloud infrastructure.\n\n## Limitations\n\nSeveral details remain unconfirmed or unspecified in current documentation. The exact release schedule and rollout timeline for the feature are not detailed in the primary source. Additionally, the full scope of supported OpenAPI 3.x features and any restrictions on MCP transcoding parameters have not been fully published. Regional availability and pricing structures are also absent. Teams should exercise caution regarding universal agent compatibility and verify end-to-end performance before deploying mission-critical agent tools.\n\n## CodePlay Developer Take\n\nFrom a development perspective, delegating protocol translation to the API gateway represents a sound architectural pattern. Forcing application code to understand agent-specific framing creates tight coupling and unnecessary maintenance overhead. Managing agent interoperability at the gateway boundary keeps backend services isolated from protocol shifts, preserving clean separation of concerns.\n\n## CodePlay Verdict\n\nNative MCP support in Google Cloud API Gateway offers a pragmatic solution for engineering teams looking to expose REST services to AI agents. While teams must verify compatibility and watch for comprehensive feature documentation, utilizing infrastructure-level annotations significantly lowers the barrier to entry for agentic workflows.\n\n## Sources & Further Reading\n\n- [Turn your REST APIs into MCP tools with Google Cloud API Gateway](https://developers.googleblog.com/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway/) — primary source",
+    "keyTakeaways": [],
+    "take": {
+      "developerTake": "Delegating protocol translation to the API gateway isolates backend microservices from agent-specific framing, preserving a clean separation of concerns.",
+      "businessImpact": "Reduces engineering overhead and maintenance costs by eliminating custom middleware development for LLM agent integration.",
+      "developerImpact": "Enables engineers to convert existing REST endpoints into discoverable agent tools simply by updating OpenAPI 3.x specifications.",
+      "technicalExplanation": "",
+      "risksAndLimitations": "Unspecified rollout timelines, unknown limits on OpenAPI feature support, and absent regional pricing details require careful verification before production use.",
+      "whyItMatters": "It moves AI agent integration out of custom application code and into managed cloud infrastructure.",
+      "actionableRecommendations": "Audit existing OpenAPI 3.x specifications, test small-scale tool discovery, and verify agent compatibility before wide deployment."
+    },
+    "sources": [
+      {
+        "url": "https://developers.googleblog.com/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway/",
+        "title": "Turn your REST APIs into MCP tools with Google Cloud API Gateway",
+        "publisher": "developers.googleblog.com",
+        "role": "primary"
+      }
+    ],
+    "heroImage": {
+      "src": "https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/google-cloud-api-gateway-mcp-support-rest-apis/primary.webp",
+      "alt": "Outdoor view of a red traditional gateway with decorative gate and mountain backdrop.",
+      "width": 1600,
+      "height": 900,
+      "ogSrc": "https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/google-cloud-api-gateway-mcp-support-rest-apis/primary.webp",
+      "aiGenerated": false,
+      "kind": "stock",
+      "credit": {
+        "provider": "pexels",
+        "sourceUrl": "https://www.pexels.com/photo/red-traditional-gateway-in-scenic-outdoor-setting-35918316/",
+        "photographer": "sagar sintan",
+        "photographerUrl": "https://www.pexels.com/@sagarsintan"
+      }
+    },
+    "author": "CodePlay Studios Editorial Team",
+    "authorRole": "CodePlay Insights Editorial Team",
+    "readingMinutes": 3,
+    "publishedAt": "2026-10-01T10:24:14.501+00:00",
+    "updatedAt": "2026-10-01T10:24:15.145942+00:00",
+    "seo": {
+      "title": "Google Cloud API Gateway Adds Native MCP Support for REST APIs",
+      "description": "Google Cloud API Gateway now natively supports the Model Context Protocol, enabling teams to expose REST services to AI agents using OpenAPI annotations.",
+      "canonicalUrl": "https://codeplaystudios.com/insights/google-cloud-api-gateway-mcp-support-rest-apis"
+    },
+    "articleType": "tech_analysis",
+    "featured": true,
+    "trending": false,
+    "breaking": false,
+    "viewCount": 0
+  },
+  {
+    "status": "published",
     "id": "ee1c1389-109e-40d0-853a-459d0d965884",
     "slug": "summer-eternal-player-ownership-equity-analysis",
     "title": "Summer Eternal Proposes 5% Player Ownership: Legal and Business Realities",
@@ -95,7 +349,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-25T09:03:39.085+00:00",
-    "updatedAt": "2026-09-25T13:16:16.482073+00:00",
+    "updatedAt": "2026-09-26T19:26:14.708164+00:00",
     "seo": {
       "title": "Summer Eternal's Player Equity Plan: Legal & Business Analysis",
       "description": "Analyzing the corporate governance and legal hurdles of Summer Eternal's experimental player equity initiative for indie game development studios.",
@@ -105,7 +359,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 1
+    "viewCount": 2
   },
   {
     "status": "published",
@@ -785,7 +1039,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 5,
     "publishedAt": "2026-09-19T08:16:32.79+00:00",
-    "updatedAt": "2026-09-19T13:10:54.393257+00:00",
+    "updatedAt": "2026-09-25T22:58:49.626645+00:00",
     "seo": {
       "title": "Cloudflare Saves 100TB RAM Using Rust and Mathematical Optimization",
       "description": "Discover how Cloudflare reduced edge network memory usage by 100TB using Rust and algorithmic efficiency, delivering massive infrastructure savings.",
@@ -795,7 +1049,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 1
+    "viewCount": 2
   },
   {
     "status": "published",
@@ -3043,7 +3297,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-02T15:49:04.704569+00:00",
-    "updatedAt": "2026-09-02T16:59:45.728301+00:00",
+    "updatedAt": "2026-09-28T12:39:37.282933+00:00",
     "seo": {
       "title": "Inside Cloudflare's 100TB RAM Savings: DNS Cache Optimization",
       "description": "Cloudflare reclaimed 100 terabytes of memory across its global 1.1.1.1 network by optimizing DNS cache data structures and byte padding.",
@@ -3053,7 +3307,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 1
+    "viewCount": 2
   }
 ];
 

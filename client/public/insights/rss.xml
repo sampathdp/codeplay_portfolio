@@ -6,8 +6,35 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 25 Sep 2026 21:51:36 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 11:12:45 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>Valve Releases SteamOS 3.8.28 Stable With Expanded Hardware Support</title>
+      <link>https://codeplaystudios.com/insights/steamos-3-8-28-stable-release</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/steamos-3-8-28-stable-release</guid>
+      <pubDate>Thu, 01 Oct 2026 10:25:03 GMT</pubDate>
+      <category>Gaming</category>
+      <description>Valve has officially pushed SteamOS 3.8.28 to the stable channel, bringing targeted enhancements to the Steam Deck, Steam Machine, and broader hardware ecosystems.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/steamos-3-8-28-stable-release/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Managing Legacy Asset Refreshes: Lessons from Pokémon&apos;s 30th Anniversary Rollout</title>
+      <link>https://codeplaystudios.com/insights/managing-legacy-asset-refreshes-pokemon-30th-anniversary</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/managing-legacy-asset-refreshes-pokemon-30th-anniversary</guid>
+      <pubDate>Thu, 01 Oct 2026 10:24:38 GMT</pubDate>
+      <category>Open Source</category>
+      <description>Analyzing how long-running intellectual properties manage legacy asset refreshes and anniversary milestones across physical and digital ecosystems, using the Pokémon 30th anniversary rollout as a case study.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/managing-legacy-asset-refreshes-pokemon-30th-anniversary/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Google Cloud API Gateway Adds Native Model Context Protocol Support for REST APIs</title>
+      <link>https://codeplaystudios.com/insights/google-cloud-api-gateway-mcp-support-rest-apis</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/google-cloud-api-gateway-mcp-support-rest-apis</guid>
+      <pubDate>Thu, 01 Oct 2026 10:24:14 GMT</pubDate>
+      <category>Emerging Technology</category>
+      <description>Google Cloud API Gateway now natively supports the Model Context Protocol, allowing teams to expose REST services to AI agents via OpenAPI annotations without custom middleware.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/google-cloud-api-gateway-mcp-support-rest-apis/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>Summer Eternal Proposes 5% Player Ownership: Legal and Business Realities</title>
       <link>https://codeplaystudios.com/insights/summer-eternal-player-ownership-equity-analysis</link>
