@@ -6,8 +6,26 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 01 Oct 2026 22:56:09 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 02 Oct 2026 10:45:18 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>How Sparse VideoGen and Splash Attention Speed Up Video Diffusion on TPUs</title>
+      <link>https://codeplaystudios.com/insights/accelerating-spatio-temporal-attention-video-diffusion-tpus</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/accelerating-spatio-temporal-attention-video-diffusion-tpus</guid>
+      <pubDate>Fri, 02 Oct 2026 10:00:46 GMT</pubDate>
+      <category>Developer Tools</category>
+      <description>An analysis of how Sparse VideoGen and optimized Splash Attention kernels address the quadratic latency bottleneck of video diffusion on Google TPUs through hardware-aware sparsity.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/accelerating-spatio-temporal-attention-video-diffusion-tpus/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Google Announces Gemini 4 Argon: What We Know So Far</title>
+      <link>https://codeplaystudios.com/insights/google-announces-gemini-4-argon</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/google-announces-gemini-4-argon</guid>
+      <pubDate>Fri, 02 Oct 2026 10:00:20 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>Google has announced the Gemini 4 Argon model on its official research blog, marking a new phase in its AI model family rollout.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/google-announces-gemini-4-argon/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>Valve Releases SteamOS 3.8.28 Stable With Expanded Hardware Support</title>
       <link>https://codeplaystudios.com/insights/steamos-3-8-28-stable-release</link>
