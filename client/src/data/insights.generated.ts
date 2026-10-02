@@ -83,7 +83,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 2,
     "publishedAt": "2026-10-02T16:20:51.393+00:00",
-    "updatedAt": "2026-10-02T16:20:51.533468+00:00",
+    "updatedAt": "2026-10-02T20:59:29.132412+00:00",
     "seo": {
       "title": "SteamVR Beta 2.18.2 Released: Runtime Stability Updates",
       "description": "Examine the technical implications of Valve's SteamVR Beta 2.18.2 release, focusing on targeted runtime stability patches and bug fixes.",
@@ -93,7 +93,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 0
+    "viewCount": 1
   },
   {
     "status": "published",
