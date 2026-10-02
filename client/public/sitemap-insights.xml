@@ -97,6 +97,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://codeplaystudios.com/insights/steamvr-beta-2-18-2-runtime-stability</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codeplaystudios.com/insights/accelerating-spatio-temporal-attention-video-diffusion-tpus</loc>
     <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -200,7 +206,7 @@
   </url>
   <url>
     <loc>https://codeplaystudios.com/insights/final-fantasy-vii-revelation-april-2027-release</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

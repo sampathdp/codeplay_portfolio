@@ -6,8 +6,17 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 02 Oct 2026 10:45:18 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 02 Oct 2026 16:50:34 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>SteamVR Beta 2.18.2 Focuses on Runtime Stability and Bug Fixes</title>
+      <link>https://codeplaystudios.com/insights/steamvr-beta-2-18-2-runtime-stability</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/steamvr-beta-2-18-2-runtime-stability</guid>
+      <pubDate>Fri, 02 Oct 2026 16:20:51 GMT</pubDate>
+      <category>Software Development</category>
+      <description>Examining the critical role of routine runtime updates in VR stability through the release of SteamVR Beta 2.18.2.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/steamvr-beta-2-18-2-runtime-stability/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>How Sparse VideoGen and Splash Attention Speed Up Video Diffusion on TPUs</title>
       <link>https://codeplaystudios.com/insights/accelerating-spatio-temporal-attention-video-diffusion-tpus</link>
