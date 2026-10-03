@@ -6,8 +6,35 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 02 Oct 2026 22:36:49 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 03 Oct 2026 10:05:24 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>Gears of War: E-Day Early Access Begins for Premium and Game Pass Players</title>
+      <link>https://codeplaystudios.com/insights/gears-of-war-e-day-early-access-launch</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/gears-of-war-e-day-early-access-launch</guid>
+      <pubDate>Sat, 03 Oct 2026 09:24:28 GMT</pubDate>
+      <category>Gaming</category>
+      <description>Analyzing the tactical rollout and platform implications of the Gears of War: E-Day early access launch.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/gears-of-war-e-day-early-access-launch/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Cloudflare Releases Clef: Open-Weight Decision Models and RL Fine-Tuning</title>
+      <link>https://codeplaystudios.com/insights/cloudflare-clef-open-weight-models-rl-fine-tuning</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/cloudflare-clef-open-weight-models-rl-fine-tuning</guid>
+      <pubDate>Sat, 03 Oct 2026 09:24:05 GMT</pubDate>
+      <category>Open Source</category>
+      <description>Cloudflare has introduced Clef, a new offering encompassing open-weight decision models and a reinforcement learning fine-tuning platform, opening up fresh architectural options for edge-adjacent automation.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/cloudflare-clef-open-weight-models-rl-fine-tuning/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Cloudflare Launches OHTTP Gateway for Privacy-Preserving Proxy Architecture</title>
+      <link>https://codeplaystudios.com/insights/cloudflare-launches-ohttp-gateway</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/cloudflare-launches-ohttp-gateway</guid>
+      <pubDate>Sat, 03 Oct 2026 09:23:41 GMT</pubDate>
+      <category>Emerging Technology</category>
+      <description>Analyzing the technical and architectural implications of Cloudflare&apos;s new OHTTP Gateway for engineering teams implementing privacy-preserving proxy infrastructure.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/cloudflare-launches-ohttp-gateway/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>SteamVR Beta 2.18.2 Focuses on Runtime Stability and Bug Fixes</title>
       <link>https://codeplaystudios.com/insights/steamvr-beta-2-18-2-runtime-stability</link>
