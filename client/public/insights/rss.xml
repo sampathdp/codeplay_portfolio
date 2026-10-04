@@ -6,8 +6,17 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 04 Oct 2026 10:46:47 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 04 Oct 2026 16:00:13 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>Quake Rooftops Jam Demonstrates Modern Community Level Design in Classic BSP Architecture</title>
+      <link>https://codeplaystudios.com/insights/quake-rooftops-jam-bsp-architecture-analysis</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/quake-rooftops-jam-bsp-architecture-analysis</guid>
+      <pubDate>Sun, 04 Oct 2026 15:29:16 GMT</pubDate>
+      <category>Emerging Technology</category>
+      <description>The release of the Quake Rooftops Jam highlights the ongoing durability of classic BSP architecture and the strength of modern community-driven level design.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/quake-rooftops-jam-bsp-architecture-analysis/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>Battlestar Galactica Update Shifts Franchise Leadership to New Captain</title>
       <link>https://codeplaystudios.com/insights/battlestar-galactica-update-new-captain</link>

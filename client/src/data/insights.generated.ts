@@ -11,6 +11,96 @@ import type { InsightsArticle } from "@/lib/insights/types";
 export const INSIGHTS_ARTICLES: InsightsArticle[] = [
   {
     "status": "published",
+    "id": "e850b18b-a933-42b3-8702-4ff86eda6859",
+    "slug": "quake-rooftops-jam-bsp-architecture-analysis",
+    "title": "Quake Rooftops Jam Demonstrates Modern Community Level Design in Classic BSP Architecture",
+    "dek": "The release of the Quake Rooftops Jam highlights the ongoing durability of classic BSP architecture and the strength of modern community-driven level design.",
+    "category": "emerging-technology",
+    "categoryName": "Emerging Technology",
+    "tags": [
+      {
+        "name": "Game Design",
+        "slug": "game-design"
+      },
+      {
+        "name": "Quake",
+        "slug": "quake"
+      },
+      {
+        "name": "id Software",
+        "slug": "id-software"
+      },
+      {
+        "name": "BSP Architecture",
+        "slug": "bsp-architecture"
+      },
+      {
+        "name": "Retro Gaming",
+        "slug": "retro-gaming"
+      },
+      {
+        "name": "Level Design",
+        "slug": "level-design"
+      }
+    ],
+    "body": "# Quake Rooftops Jam Demonstrates Modern Community Level Design in Classic BSP Architecture\n\n*The release of the Quake Rooftops Jam highlights the ongoing durability of classic BSP architecture and the strength of modern community-driven level design.*\n\n## Quick Summary\n\n- A free fan level pack titled Quake Rooftops Jam has been released for id Software's classic shooter.\n- The pack focuses on a bird's-eye view, rooftop-heavy design rarely emphasized in the original 1996 release.\n- The release arrives amid a wave of 2026 content marking Quake's 30th anniversary year.\n\n## What Happened?\n\nA confirmed fact from official distribution channels and independent reporting is the launch of *Quake Rooftops Jam*, a free fan-made level pack for *Quake*. Unlike standard corridor layouts, this pack focuses on a bird's-eye view and rooftop-oriented level design, a departure from id Software's original design philosophy. The release aligns with a broader surge of content for the 1996 title, coinciding with its 30th anniversary milestones.\n\n## Key Details\n\nThe year 2026 has brought multiple map packs and official updates to *Quake*. Confirmed releases include *Quake Brutalist Jam 3* and an official campaign titled *Dawn of the Machine*, alongside anniversary map packs. *Quake Rooftops Jam* distinguishes itself within this slate by pushing exterior layout exploration, forcing players to navigate elevated urban-style rooftops rather than traditional interior dungeons and tunnels.\n\n## Community Reaction\n\nCommunity signals indicate that players and mapping hobbyists are actively producing and playing death arenas and custom level packs throughout 2026. Rather than treating *Quake* as a static historical artifact, the community treats it as an active platform for experimental geometry and modern layout challenges.\n\n## Developer Perspective\n\nFrom a development perspective, classic 1990s first-person shooters rely on Binary Space Partitioning (BSP) map formats and static geometry engines. While BSP excels at partitioning indoor spaces with visible surface management, forcing verticality and rooftop-heavy exterior layouts stresses visibility culling and collision setups originally designed for enclosed rooms.\n\nA likely technical implication is that modern source port optimization handles these complex exterior visibility sets smoothly, allowing community mappers to subvert original engine constraints without performance penalties.\n\n## What Happens Next?\n\nA predictable trajectory for retro engine longevity is the continued integration of community content into curated digital storefronts. As platforms like Steam streamline the delivery of fan-made wads and map packs, the barrier between commercial legacy releases and community-driven expansion narrows further.\n\n## CodePlay Verdict\n\nThe *Quake Rooftops Jam* demonstrates that robust architectural foundations and open-ended developer pipelines outlast hardware generations. For game preservation advocates, this ongoing mapping renaissance proves that legacy engines maintain long-term utility when paired with accessible curation pipelines.\n\n## Sources & Further Reading\n\n- [Yet another free fan level pack for Quake has arrived, and this one's all about a feature rarely seen in id Software's classic shooter](https://store.steampowered.com/news/group/1850/view/699903325897754601) — primary source\n- [Yet another free fan level pack for Quake has arrived, and this one's all about a feature rarely seen in id Software's classic shooter](https://www.pcgamer.com/games/fps/yet-another-free-fan-level-pack-for-quake-has-arrived-and-this-ones-all-about-a-feature-rarely-seen-in-id-softwares-classic-shooter/)",
+    "keyTakeaways": [],
+    "take": {
+      "developerTake": "For teams building custom tools or retro-inspired engines, the adaptability of BSP architecture under vertical design constraints highlights the importance of flexible visibility and collision systems.",
+      "businessImpact": "Official digital distribution platforms benefit directly from supporting community-driven content pipelines, turning milestone anniversaries into sustained engagement events without requiring internal studio production overhead.",
+      "developerImpact": "Engine developers must recognize that modern player communities will test legacy geometry limits, making it valuable to ensure modern source ports support expansive exterior rendering.",
+      "technicalExplanation": "",
+      "risksAndLimitations": "Relying on legacy static geometry engines can introduce visibility and performance bottlenecks when creators attempt modern exterior scales without proper vis-blocking design.",
+      "whyItMatters": "It proves that thirty-year-old game engines remain viable, creative sandboxes for contemporary level designers when supported by modern distribution tools.",
+      "actionableRecommendations": "Studio teams working on retro-styled titles should expose robust map editors and modular architecture tools to encourage community longevity."
+    },
+    "sources": [
+      {
+        "url": "https://store.steampowered.com/news/group/1850/view/699903325897754601",
+        "title": "Yet another free fan level pack for Quake has arrived, and this one's all about a feature rarely seen in id Software's classic shooter",
+        "publisher": "store.steampowered.com",
+        "role": "primary"
+      },
+      {
+        "url": "https://www.pcgamer.com/games/fps/yet-another-free-fan-level-pack-for-quake-has-arrived-and-this-ones-all-about-a-feature-rarely-seen-in-id-softwares-classic-shooter/",
+        "title": "Yet another free fan level pack for Quake has arrived, and this one's all about a feature rarely seen in id Software's classic shooter",
+        "publisher": "pcgamer.com",
+        "role": "supporting"
+      }
+    ],
+    "heroImage": {
+      "src": "https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/quake-rooftops-jam-bsp-architecture-analysis/primary.webp",
+      "alt": "Bird's-eye view of a red-roofed building showcasing modern urban architecture, captured outdoors.",
+      "width": 1600,
+      "height": 900,
+      "ogSrc": "https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/quake-rooftops-jam-bsp-architecture-analysis/primary.webp",
+      "aiGenerated": false,
+      "kind": "stock",
+      "credit": {
+        "provider": "pexels",
+        "sourceUrl": "https://www.pexels.com/photo/aerial-view-of-urban-architecture-with-red-roof-39054934/",
+        "photographer": "Marc Espejo",
+        "photographerUrl": "https://www.pexels.com/@badkz777"
+      }
+    },
+    "author": "CodePlay Studios Editorial Team",
+    "authorRole": "CodePlay Insights Editorial Team",
+    "readingMinutes": 3,
+    "publishedAt": "2026-10-04T15:29:16.911+00:00",
+    "updatedAt": "2026-10-04T15:29:17.020215+00:00",
+    "seo": {
+      "title": "Quake Rooftops Jam Analyzes Classic BSP Level Design",
+      "description": "Explore how the Quake Rooftops Jam fan level pack pushes modern community design within 1996 engine constraints ahead of the game's 30th anniversary.",
+      "canonicalUrl": "https://codeplaystudios.com/insights/quake-rooftops-jam-bsp-architecture-analysis"
+    },
+    "articleType": "gaming_news",
+    "featured": true,
+    "trending": false,
+    "breaking": false,
+    "viewCount": 0
+  },
+  {
+    "status": "published",
     "id": "f058db89-c696-44e8-b150-1b3e9a4c5784",
     "slug": "battlestar-galactica-update-new-captain",
     "title": "Battlestar Galactica Update Shifts Franchise Leadership to New Captain",
