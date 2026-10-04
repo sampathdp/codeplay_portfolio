@@ -87,7 +87,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-04T15:29:16.911+00:00",
-    "updatedAt": "2026-10-04T15:29:17.020215+00:00",
+    "updatedAt": "2026-10-04T17:35:04.097441+00:00",
     "seo": {
       "title": "Quake Rooftops Jam Analyzes Classic BSP Level Design",
       "description": "Explore how the Quake Rooftops Jam fan level pack pushes modern community design within 1996 engine constraints ahead of the game's 30th anniversary.",
@@ -97,7 +97,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 0
+    "viewCount": 1
   },
   {
     "status": "published",
@@ -159,7 +159,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-04T10:01:49.247+00:00",
-    "updatedAt": "2026-10-04T10:01:49.381283+00:00",
+    "updatedAt": "2026-10-04T17:42:34.128675+00:00",
     "seo": {
       "title": "Battlestar Galactica Update Shifts Leadership to New Captain",
       "description": "The latest Battlestar Galactica release introduces a new commanding officer, moving franchise leadership past historical figures like William Adama.",
@@ -169,7 +169,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 0
+    "viewCount": 1
   },
   {
     "status": "published",
@@ -239,7 +239,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-04T10:01:22.895+00:00",
-    "updatedAt": "2026-10-04T10:01:23.037509+00:00",
+    "updatedAt": "2026-10-04T17:50:03.910295+00:00",
     "seo": {
       "title": "Apple Releases Apple Pass Designer for Wallet Assets",
       "description": "Apple has published the Apple Pass Designer resource on its developer portal, offering new official guidance for Apple Wallet asset creation.",
@@ -249,7 +249,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 0
+    "viewCount": 1
   },
   {
     "status": "published",
@@ -3111,7 +3111,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-13T08:31:27.347+00:00",
-    "updatedAt": "2026-09-13T08:31:27.483915+00:00",
+    "updatedAt": "2026-10-04T16:37:35.135418+00:00",
     "seo": {
       "title": "Genkit Go Agent Skills: Reducing Token Overhead",
       "description": "Discover how Genkit Go's new Agent Skills feature uses progressive disclosure and SKILL.md bundles to manage context window bloat in backend apps.",
@@ -3121,7 +3121,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 0
+    "viewCount": 1
   },
   {
     "status": "published",
@@ -3203,7 +3203,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-13T08:31:05.411+00:00",
-    "updatedAt": "2026-09-13T08:31:05.549263+00:00",
+    "updatedAt": "2026-10-04T19:20:28.035735+00:00",
     "seo": {
       "title": "Cloud TPU Native vLLM for Long-Context Embeddings",
       "description": "Explore Google Cloud's native vLLM integration on Cloud TPU for high-throughput, long-context embedding inference in enterprise RAG workflows.",
@@ -3213,7 +3213,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 0
+    "viewCount": 1
   },
   {
     "status": "published",
@@ -3291,7 +3291,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-12T13:41:42.625+00:00",
-    "updatedAt": "2026-09-12T16:27:36.622295+00:00",
+    "updatedAt": "2026-10-04T20:50:28.471089+00:00",
     "seo": {
       "title": "Google Cloud API Gateway Adds Native Model Routing",
       "description": "Google Cloud API Gateway now features native model routing in Public Preview, allowing declarative multi-LLM management using OpenAPI 3.x specs.",
@@ -3301,7 +3301,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 1
+    "viewCount": 2
   },
   {
     "status": "published",
