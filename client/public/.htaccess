@@ -21,6 +21,10 @@ Options -Indexes
   RewriteCond %{REQUEST_FILENAME} -l
   RewriteRule ^ - [L]
 
+  # App Privacy Policies (direct static serving for clean URLs)
+  RewriteRule ^colorbloom/privacy-policy/?$ colorbloom/privacy-policy/index.html [L]
+  RewriteRule ^colorbloom-privacy-policy/?$ colorbloom-privacy-policy.html [L]
+
   # Everything else — including paths that collide with a real directory
   # such as /insights and /insights/ — is handed to the SPA entry point.
   RewriteRule ^ /index.html [L]

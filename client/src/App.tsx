@@ -147,6 +147,18 @@ function Router() {
       <Route path="/contact" component={Contact} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/terms-and-conditions" component={TermsAndConditions} />
+      <Route path="/colorbloom/privacy-policy">
+        {() => {
+          window.location.replace("/colorbloom/privacy-policy/index.html");
+          return null;
+        }}
+      </Route>
+      <Route path="/colorbloom-privacy-policy">
+        {() => {
+          window.location.replace("/colorbloom-privacy-policy.html");
+          return null;
+        }}
+      </Route>
       <Route component={NotFound} />
     </Switch>
     </Suspense>
