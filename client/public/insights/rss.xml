@@ -6,8 +6,26 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 03 Oct 2026 21:49:37 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 04 Oct 2026 10:46:47 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>Battlestar Galactica Update Shifts Franchise Leadership to New Captain</title>
+      <link>https://codeplaystudios.com/insights/battlestar-galactica-update-new-captain</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/battlestar-galactica-update-new-captain</guid>
+      <pubDate>Sun, 04 Oct 2026 10:01:49 GMT</pubDate>
+      <category>Open Source</category>
+      <description>The latest Battlestar Galactica release introduces a new commanding officer, marking a distinct shift away from legacy franchise leadership.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/battlestar-galactica-update-new-captain/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Apple Releases Apple Pass Designer Resource for Wallet Assets</title>
+      <link>https://codeplaystudios.com/insights/apple-releases-apple-pass-designer-resource</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/apple-releases-apple-pass-designer-resource</guid>
+      <pubDate>Sun, 04 Oct 2026 10:01:22 GMT</pubDate>
+      <category>Big Tech</category>
+      <description>Apple&apos;s publication of the Apple Pass Designer on its developer portal offers a new official resource for exploring Apple Wallet asset creation.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/apple-releases-apple-pass-designer-resource/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>Gears of War: E-Day Early Access Begins for Premium and Game Pass Players</title>
       <link>https://codeplaystudios.com/insights/gears-of-war-e-day-early-access-launch</link>

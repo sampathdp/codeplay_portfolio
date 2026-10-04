@@ -11,6 +11,158 @@ import type { InsightsArticle } from "@/lib/insights/types";
 export const INSIGHTS_ARTICLES: InsightsArticle[] = [
   {
     "status": "published",
+    "id": "f058db89-c696-44e8-b150-1b3e9a4c5784",
+    "slug": "battlestar-galactica-update-new-captain",
+    "title": "Battlestar Galactica Update Shifts Franchise Leadership to New Captain",
+    "dek": "The latest Battlestar Galactica release introduces a new commanding officer, marking a distinct shift away from legacy franchise leadership.",
+    "category": "open-source",
+    "categoryName": "Open Source",
+    "tags": [
+      {
+        "name": "Open Source",
+        "slug": "open-source"
+      },
+      {
+        "name": "Battlestar Galactica",
+        "slug": "battlestar-galactica"
+      },
+      {
+        "name": "Franchise Leadership",
+        "slug": "franchise-leadership"
+      }
+    ],
+    "body": "# Battlestar Galactica Update Shifts Franchise Leadership to New Captain\n\n*The latest Battlestar Galactica release introduces a new commanding officer, marking a distinct shift away from legacy franchise leadership.*\n\n## Quick Summary\n\n- Confirmed fact: A recent release for Battlestar Galactica officially places a new captain in command.\n- Confirmed fact: The update moves franchise leadership past historical figures like William Adama.\n- Uncertainty: The exact identity of the new captain remains unspecified in official sources.\n- Uncertainty: The specific medium of the release—whether a game update, tabletop expansion, or other format—is currently unclear.\n\n## What Happened?\n\nAccording to the official [Steam announcement](https://store.steampowered.com/news/group/38666666/view/708910525152495426) on October 3, 2026, the Battlestar Galactica franchise has introduced a fresh command structure. This update steps away from established characters, placing an unfamiliar captain at the helm. Beyond this directive, details regarding the narrative catalyst or the format of the release are sparse.\n\n## Key Details\n\nHistorically, the franchise has relied on a well-defined roster of military leaders. William Adama stands as the most iconic figure, guiding the Galactica and humanity's remnants from commander to admiral through intense Cylon conflicts. Other prominent commanders include Lee 'Apollo' Adama and Helena Cain. Introducing a new captain marks a structural departure from these legacy figures who have anchored the universe's narrative for decades.\n\n## Developer Perspective\n\nFrom a development perspective, narrative expansions or updates in established properties require careful handling of state management systems. When integrating a new command hierarchy, teams must update player-facing assets, dialogue trees, and crew management loops. Ensuring backwards compatibility and maintaining consistency with existing lore databases are critical technical tasks when moving past foundational characters.\n\n## What Happens Next?\n\nA likely implication is that subsequent announcements will clarify the medium, platform, and gameplay mechanics of the release. As official details emerge, the community will learn whether this captain leads a digital strategy title, a tabletop expansion, or another media vertical. Teams building or expanding established intellectual properties will watch closely to see how audiences accept a leadership transition away from legacy protagonists.\n\n## CodePlay Verdict\n\nFor studios managing long-running franchises, transitioning away from legacy protagonists is a high-risk, high-reward strategy. While it opens fresh narrative avenues, maintaining structural integrity across existing state systems is vital. We advise development teams to clearly communicate medium shifts early to manage community expectations effectively.\n\n## Sources & Further Reading\n\n- [Battlestar Galactica Latest Release Officially Puts A New Captain In Charge](https://store.steampowered.com/news/group/38666666/view/708910525152495426) — primary source",
+    "keyTakeaways": [],
+    "take": {
+      "developerTake": "Introducing a new command structure requires robust state management updates to integrate fresh character assets and voice lines without breaking existing save data or lore consistency.",
+      "businessImpact": "Shifting away from legacy characters like William Adama tests the enduring strength of an intellectual property, opening doors to new audiences while challenging core fan retention.",
+      "developerImpact": "Engineers and designers must build flexible hierarchy systems that accommodate shifting command structures dynamically.",
+      "technicalExplanation": "",
+      "risksAndLimitations": "Ambiguity regarding the release medium and character identity makes it difficult to assess exact gameplay implications or performance overhead.",
+      "whyItMatters": "It demonstrates how mature science fiction properties attempt narrative renewal by breaking away from foundational leadership figures.",
+      "actionableRecommendations": "Studios expanding legacy universes should implement modular character frameworks and maintain clear communication channels when altering core franchise lore."
+    },
+    "sources": [
+      {
+        "url": "https://store.steampowered.com/news/group/38666666/view/708910525152495426",
+        "title": "Battlestar Galactica Latest Release Officially Puts A New Captain In Charge",
+        "publisher": "store.steampowered.com",
+        "role": "primary"
+      }
+    ],
+    "heroImage": {
+      "src": "https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/battlestar-galactica-update-new-captain/primary.webp",
+      "alt": "Couple coding together at a bar counter, drinks nearby, casual atmosphere.",
+      "width": 1600,
+      "height": 900,
+      "ogSrc": "https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/battlestar-galactica-update-new-captain/primary.webp",
+      "aiGenerated": false,
+      "kind": "stock",
+      "credit": {
+        "provider": "pexels",
+        "sourceUrl": "https://www.pexels.com/photo/couple-standing-together-in-a-bar-18512333/",
+        "photographer": "Khanh Hoang Minh 2",
+        "photographerUrl": "https://www.pexels.com/@khanh-hoang-minh-2-77752098"
+      }
+    },
+    "author": "CodePlay Studios Editorial Team",
+    "authorRole": "CodePlay Insights Editorial Team",
+    "readingMinutes": 3,
+    "publishedAt": "2026-10-04T10:01:49.247+00:00",
+    "updatedAt": "2026-10-04T10:01:49.381283+00:00",
+    "seo": {
+      "title": "Battlestar Galactica Update Shifts Leadership to New Captain",
+      "description": "The latest Battlestar Galactica release introduces a new commanding officer, moving franchise leadership past historical figures like William Adama.",
+      "canonicalUrl": "https://codeplaystudios.com/insights/battlestar-galactica-update-new-captain"
+    },
+    "articleType": "gaming_news",
+    "featured": false,
+    "trending": false,
+    "breaking": false,
+    "viewCount": 0
+  },
+  {
+    "status": "published",
+    "id": "05afb59c-bb3f-4553-b44e-2ad737014b22",
+    "slug": "apple-releases-apple-pass-designer-resource",
+    "title": "Apple Releases Apple Pass Designer Resource for Wallet Assets",
+    "dek": "Apple's publication of the Apple Pass Designer on its developer portal offers a new official resource for exploring Apple Wallet asset creation.",
+    "category": "big-tech",
+    "categoryName": "Big Tech",
+    "tags": [
+      {
+        "name": "Apple",
+        "slug": "apple"
+      },
+      {
+        "name": "Developer Tools",
+        "slug": "developer-tools"
+      },
+      {
+        "name": "Apple Wallet",
+        "slug": "apple-wallet"
+      },
+      {
+        "name": "iOS Development",
+        "slug": "ios-development"
+      },
+      {
+        "name": "pkpass",
+        "slug": "pkpass"
+      }
+    ],
+    "body": "# Apple Releases Apple Pass Designer Resource for Wallet Assets\n\n*Apple's publication of the Apple Pass Designer on its developer portal offers a new official resource for exploring Apple Wallet asset creation.*\n\n## Quick Summary\n\n- Apple published the Apple Pass Designer resource on developer.apple.com on October 2, 2026.\n- Apple Wallet passes historically rely on JSON dictionaries, visual assets, and cryptographic packaging into .pkpass files.\n- Unverified specifics remain regarding whether the tool is web-based, a desktop utility, or an API update.\n\n## What Happened?\n\nConfirmed fact establishes that Apple launched the Apple Pass Designer resource on its official developer portal on October 2, 2026. Historically, Apple maintains specialized tooling and documentation on developer.apple.com to support integration into ecosystem frameworks like Wallet. However, community claims or rumors regarding the utility's exact form factor—such as whether it functions as a web application, a native macOS app, or an automated pipeline tool—remain unverified at this stage.\n\n## Developer Impact\n\nFrom a development perspective, Apple Wallet passes are traditionally structured using JSON dictionaries packaged into .pkpass files. These packages require visual assets, localized strings, and cryptographic signatures. An official utility from Apple addresses a longstanding friction point in pass authoring by potentially streamlining asset validation and structuring. For teams building continuous integration pipelines for digital passes, understanding how this resource integrates with existing build scripts will dictate its adoption rate.\n\n## What This Means for Businesses\n\nFor businesses deploying loyalty programs, boarding passes, and event ticketing, standardized tooling reduces time-to-market for Wallet integration. A likely implication is improved visual consistency across pass variants. However, until the full scope of the Apple Pass Designer is documented, product teams should maintain current production workflows while evaluating how official tooling might eventually influence asset compliance.\n\n## Limitations\n\nSignificant ambiguities remain regarding the deployment model of the Apple Pass Designer. It is unclear if the utility operates as a web-based interface, a standalone desktop application, or an API update. Additionally, teams must exercise caution against assumptions of automated server-side generation capabilities until Apple provides comprehensive technical specifications for the resource.\n\n## CodePlay Developer Take\n\nFor teams building and maintaining automated pass generation systems, any official documentation or utility from Apple warrants careful review. While raw JSON authoring and programmatic .pkpass signing remain standard engineering practices, an official designer resource could offer valuable structural validation schemas. Engineering leads should monitor the developer portal for updates detailing integration parameters and command-line support.\n\n## CodePlay Verdict\n\nThe publication of the Apple Pass Designer represents a welcome addition to the Apple developer ecosystem. While concrete details on its interface and deployment are currently limited, engineering teams should keep the resource on their radar as official documentation matures.\n\n## Sources & Further Reading\n\n- [Apple Pass Designer](https://developer.apple.com/pass-designer/) — primary source",
+    "keyTakeaways": [],
+    "take": {
+      "developerTake": "Official resources for Apple Wallet assets assist with structural validation, though programmatic .pkpass generation via JSON dictionaries and cryptographic signing remains standard engineering practice.",
+      "businessImpact": "Standardized asset authoring tools help businesses maintain brand consistency and reduce time-to-market for loyalty cards and event tickets.",
+      "developerImpact": "Reduces manual friction in structuring pass dictionaries, visual assets, and localized strings for Apple Wallet deployment.",
+      "technicalExplanation": "",
+      "risksAndLimitations": "Uncertainty surrounds the deployment model—whether web, desktop, or API—preventing immediate integration into automated CI/CD pipelines.",
+      "whyItMatters": "Official tooling from Apple directly impacts how developers author and validate ecosystem-compliant assets.",
+      "actionableRecommendations": "Monitor developer.apple.com for updated documentation regarding Apple Pass Designer specifications while maintaining existing .pkpass build pipelines."
+    },
+    "sources": [
+      {
+        "url": "https://developer.apple.com/pass-designer/",
+        "title": "Apple Pass Designer",
+        "publisher": "developer.apple.com",
+        "role": "primary"
+      }
+    ],
+    "heroImage": {
+      "src": "https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/apple-releases-apple-pass-designer-resource/primary.webp",
+      "alt": "A striking artistic still life featuring three fresh red apples and one rotten apple on a wooden surface with dramatic shadows.",
+      "width": 1600,
+      "height": 900,
+      "ogSrc": "https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/apple-releases-apple-pass-designer-resource/primary.webp",
+      "aiGenerated": false,
+      "kind": "stock",
+      "credit": {
+        "provider": "pexels",
+        "sourceUrl": "https://www.pexels.com/photo/rotten-apple-surrounded-by-fresh-red-apples-on-a-wooden-6934553/",
+        "photographer": "Mizzu  Cho",
+        "photographerUrl": "https://www.pexels.com/@nicetomizzu"
+      }
+    },
+    "author": "CodePlay Studios Editorial Team",
+    "authorRole": "CodePlay Insights Editorial Team",
+    "readingMinutes": 3,
+    "publishedAt": "2026-10-04T10:01:22.895+00:00",
+    "updatedAt": "2026-10-04T10:01:23.037509+00:00",
+    "seo": {
+      "title": "Apple Releases Apple Pass Designer for Wallet Assets",
+      "description": "Apple has published the Apple Pass Designer resource on its developer portal, offering new official guidance for Apple Wallet asset creation.",
+      "canonicalUrl": "https://codeplaystudios.com/insights/apple-releases-apple-pass-designer-resource"
+    },
+    "articleType": "product_launch",
+    "featured": true,
+    "trending": false,
+    "breaking": false,
+    "viewCount": 0
+  },
+  {
+    "status": "published",
     "id": "bfdf9f0e-0656-4afe-88d0-c88b86e97fc5",
     "slug": "gears-of-war-e-day-early-access-launch",
     "title": "Gears of War: E-Day Early Access Begins for Premium and Game Pass Players",
