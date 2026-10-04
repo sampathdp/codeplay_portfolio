@@ -6,8 +6,323 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 12 Sep 2026 21:00:43 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 04 Oct 2026 10:46:47 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>Battlestar Galactica Update Shifts Franchise Leadership to New Captain</title>
+      <link>https://codeplaystudios.com/insights/battlestar-galactica-update-new-captain</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/battlestar-galactica-update-new-captain</guid>
+      <pubDate>Sun, 04 Oct 2026 10:01:49 GMT</pubDate>
+      <category>Open Source</category>
+      <description>The latest Battlestar Galactica release introduces a new commanding officer, marking a distinct shift away from legacy franchise leadership.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/battlestar-galactica-update-new-captain/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Apple Releases Apple Pass Designer Resource for Wallet Assets</title>
+      <link>https://codeplaystudios.com/insights/apple-releases-apple-pass-designer-resource</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/apple-releases-apple-pass-designer-resource</guid>
+      <pubDate>Sun, 04 Oct 2026 10:01:22 GMT</pubDate>
+      <category>Big Tech</category>
+      <description>Apple&apos;s publication of the Apple Pass Designer on its developer portal offers a new official resource for exploring Apple Wallet asset creation.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/apple-releases-apple-pass-designer-resource/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Gears of War: E-Day Early Access Begins for Premium and Game Pass Players</title>
+      <link>https://codeplaystudios.com/insights/gears-of-war-e-day-early-access-launch</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/gears-of-war-e-day-early-access-launch</guid>
+      <pubDate>Sat, 03 Oct 2026 09:24:28 GMT</pubDate>
+      <category>Gaming</category>
+      <description>Analyzing the tactical rollout and platform implications of the Gears of War: E-Day early access launch.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/gears-of-war-e-day-early-access-launch/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Cloudflare Releases Clef: Open-Weight Decision Models and RL Fine-Tuning</title>
+      <link>https://codeplaystudios.com/insights/cloudflare-clef-open-weight-models-rl-fine-tuning</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/cloudflare-clef-open-weight-models-rl-fine-tuning</guid>
+      <pubDate>Sat, 03 Oct 2026 09:24:05 GMT</pubDate>
+      <category>Open Source</category>
+      <description>Cloudflare has introduced Clef, a new offering encompassing open-weight decision models and a reinforcement learning fine-tuning platform, opening up fresh architectural options for edge-adjacent automation.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/cloudflare-clef-open-weight-models-rl-fine-tuning/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Cloudflare Launches OHTTP Gateway for Privacy-Preserving Proxy Architecture</title>
+      <link>https://codeplaystudios.com/insights/cloudflare-launches-ohttp-gateway</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/cloudflare-launches-ohttp-gateway</guid>
+      <pubDate>Sat, 03 Oct 2026 09:23:41 GMT</pubDate>
+      <category>Emerging Technology</category>
+      <description>Analyzing the technical and architectural implications of Cloudflare&apos;s new OHTTP Gateway for engineering teams implementing privacy-preserving proxy infrastructure.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/cloudflare-launches-ohttp-gateway/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>SteamVR Beta 2.18.2 Focuses on Runtime Stability and Bug Fixes</title>
+      <link>https://codeplaystudios.com/insights/steamvr-beta-2-18-2-runtime-stability</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/steamvr-beta-2-18-2-runtime-stability</guid>
+      <pubDate>Fri, 02 Oct 2026 16:20:51 GMT</pubDate>
+      <category>Software Development</category>
+      <description>Examining the critical role of routine runtime updates in VR stability through the release of SteamVR Beta 2.18.2.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/steamvr-beta-2-18-2-runtime-stability/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>How Sparse VideoGen and Splash Attention Speed Up Video Diffusion on TPUs</title>
+      <link>https://codeplaystudios.com/insights/accelerating-spatio-temporal-attention-video-diffusion-tpus</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/accelerating-spatio-temporal-attention-video-diffusion-tpus</guid>
+      <pubDate>Fri, 02 Oct 2026 10:00:46 GMT</pubDate>
+      <category>Developer Tools</category>
+      <description>An analysis of how Sparse VideoGen and optimized Splash Attention kernels address the quadratic latency bottleneck of video diffusion on Google TPUs through hardware-aware sparsity.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/accelerating-spatio-temporal-attention-video-diffusion-tpus/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Google Announces Gemini 4 Argon: What We Know So Far</title>
+      <link>https://codeplaystudios.com/insights/google-announces-gemini-4-argon</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/google-announces-gemini-4-argon</guid>
+      <pubDate>Fri, 02 Oct 2026 10:00:20 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>Google has announced the Gemini 4 Argon model on its official research blog, marking a new phase in its AI model family rollout.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/google-announces-gemini-4-argon/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Valve Releases SteamOS 3.8.28 Stable With Expanded Hardware Support</title>
+      <link>https://codeplaystudios.com/insights/steamos-3-8-28-stable-release</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/steamos-3-8-28-stable-release</guid>
+      <pubDate>Thu, 01 Oct 2026 10:25:03 GMT</pubDate>
+      <category>Gaming</category>
+      <description>Valve has officially pushed SteamOS 3.8.28 to the stable channel, bringing targeted enhancements to the Steam Deck, Steam Machine, and broader hardware ecosystems.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/steamos-3-8-28-stable-release/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Managing Legacy Asset Refreshes: Lessons from Pokémon&apos;s 30th Anniversary Rollout</title>
+      <link>https://codeplaystudios.com/insights/managing-legacy-asset-refreshes-pokemon-30th-anniversary</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/managing-legacy-asset-refreshes-pokemon-30th-anniversary</guid>
+      <pubDate>Thu, 01 Oct 2026 10:24:38 GMT</pubDate>
+      <category>Open Source</category>
+      <description>Analyzing how long-running intellectual properties manage legacy asset refreshes and anniversary milestones across physical and digital ecosystems, using the Pokémon 30th anniversary rollout as a case study.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/managing-legacy-asset-refreshes-pokemon-30th-anniversary/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Google Cloud API Gateway Adds Native Model Context Protocol Support for REST APIs</title>
+      <link>https://codeplaystudios.com/insights/google-cloud-api-gateway-mcp-support-rest-apis</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/google-cloud-api-gateway-mcp-support-rest-apis</guid>
+      <pubDate>Thu, 01 Oct 2026 10:24:14 GMT</pubDate>
+      <category>Emerging Technology</category>
+      <description>Google Cloud API Gateway now natively supports the Model Context Protocol, allowing teams to expose REST services to AI agents via OpenAPI annotations without custom middleware.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/google-cloud-api-gateway-mcp-support-rest-apis/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Summer Eternal Proposes 5% Player Ownership: Legal and Business Realities</title>
+      <link>https://codeplaystudios.com/insights/summer-eternal-player-ownership-equity-analysis</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/summer-eternal-player-ownership-equity-analysis</guid>
+      <pubDate>Fri, 25 Sep 2026 09:03:39 GMT</pubDate>
+      <category>Gaming</category>
+      <description>Analyzing the corporate governance and legal hurdles of Summer Eternal&apos;s experimental player equity initiative, moving past the marketing headline to evaluate feasibility for indie studios.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/summer-eternal-player-ownership-equity-analysis/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Path of Exile 2 Achieves Steam Deck Verified Status Ahead of December Release</title>
+      <link>https://codeplaystudios.com/insights/path-of-exile-2-steam-deck-verified</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/path-of-exile-2-steam-deck-verified</guid>
+      <pubDate>Fri, 25 Sep 2026 09:03:13 GMT</pubDate>
+      <category>Gaming</category>
+      <description>Grinding Gear Games has secured Steam Deck Verification for Path of Exile 2 ahead of its December 1.0 release, clearing prior UI hurdles.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/path-of-exile-2-steam-deck-verified/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Arc Raiders October Test Introduces Optional PvE Mode for Extraction Shooters</title>
+      <link>https://codeplaystudios.com/insights/arc-raiders-october-test-pve-mode</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/arc-raiders-october-test-pve-mode</guid>
+      <pubDate>Fri, 25 Sep 2026 09:02:48 GMT</pubDate>
+      <category>Developer Tools</category>
+      <description>Embark Studios announces a limited-time October test for Arc Raiders featuring a toggle-based PvE mode, opening up new structural and economic options for extraction shooters.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/arc-raiders-october-test-pve-mode/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Bungie Unvaults Destiny 2 Content: Engineering Analysis</title>
+      <link>https://codeplaystudios.com/insights/bungie-unvaults-destiny-2-content-engineering-analysis</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/bungie-unvaults-destiny-2-content-engineering-analysis</guid>
+      <pubDate>Tue, 22 Sep 2026 08:50:00 GMT</pubDate>
+      <category>Open Source</category>
+      <description>Evaluating Bungie&apos;s decision to unvault Destiny 2 content through the lens of technical legacy asset integration, engine updates, and live-service maintenance costs.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/bungie-unvaults-destiny-2-content-engineering-analysis/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Final Fantasy XIV Nintendo Switch 2 Port and December 2026 Roadmap Analysis</title>
+      <link>https://codeplaystudios.com/insights/final-fantasy-xiv-switch-2-december-2026-analysis</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/final-fantasy-xiv-switch-2-december-2026-analysis</guid>
+      <pubDate>Sun, 20 Sep 2026 08:49:51 GMT</pubDate>
+      <category>Developer Tools</category>
+      <description>Square Enix&apos;s expansion of Final Fantasy XIV to Nintendo Switch 2 has driven a significant player surge, setting up a critical multiplatform baseline ahead of a scheduled December 2026 release.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/final-fantasy-xiv-switch-2-december-2026-analysis/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Dungeon Crawler Carl Franchise Expansion: Final Two Novels and Peacock Series Announced</title>
+      <link>https://codeplaystudios.com/insights/dungeon-crawler-carl-franchise-expansion-peacock-novels</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/dungeon-crawler-carl-franchise-expansion-peacock-novels</guid>
+      <pubDate>Sun, 20 Sep 2026 08:49:26 GMT</pubDate>
+      <category>Developer Tools</category>
+      <description>The LitRPG hit Dungeon Crawler Carl prepares for a two-novel final chapter alongside a Peacock television adaptation from Seth MacFarlane&apos;s Fuzzy Door.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/dungeon-crawler-carl-franchise-expansion-peacock-novels/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>EA Sports FC 27 Early Review: Open-World Hubs and Persistent AI Issues</title>
+      <link>https://codeplaystudios.com/insights/ea-sports-fc-27-early-review-ai-hubs</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/ea-sports-fc-27-early-review-ai-hubs</guid>
+      <pubDate>Sun, 20 Sep 2026 08:49:02 GMT</pubDate>
+      <category>Emerging Technology</category>
+      <description>Early reviews for EA Sports FC 27 highlight structural shifts like &apos;The Grounds&apos; open-world hub and a revised Tactics system alongside persistent legacy AI pathing challenges.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/ea-sports-fc-27-early-review-ai-hubs/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>EA Sports FC 27 Launches 10-Hour EA Play Trial for Subscribers</title>
+      <link>https://codeplaystudios.com/insights/ea-sports-fc-27-ea-play-trial</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/ea-sports-fc-27-ea-play-trial</guid>
+      <pubDate>Sat, 19 Sep 2026 08:16:56 GMT</pubDate>
+      <category>Gaming</category>
+      <description>EA and Microsoft launch a 10-hour EA Sports FC 27 trial on Xbox and PC, utilizing cross-entitlement subscription models and progress persistence to drive conversion.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/ea-sports-fc-27-ea-play-trial/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>How Cloudflare Saved 100TB of RAM Using Rust and Mathematical Optimization</title>
+      <link>https://codeplaystudios.com/insights/cloudflare-memory-optimization-rust-math-100tb</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/cloudflare-memory-optimization-rust-math-100tb</guid>
+      <pubDate>Sat, 19 Sep 2026 08:16:32 GMT</pubDate>
+      <category>Cybersecurity</category>
+      <description>Cloudflare&apos;s engineering update demonstrates how combining mathematical optimization with Rust&apos;s low-level memory control unlocks massive infrastructure savings across global edge networks.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/cloudflare-memory-optimization-rust-math-100tb/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>War Thunder Steam Screenshot Competition Ties Community Engagement to Major Content Updates</title>
+      <link>https://codeplaystudios.com/insights/war-thunder-steam-screenshot-competition-sky-odyssey</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/war-thunder-steam-screenshot-competition-sky-odyssey</guid>
+      <pubDate>Sat, 19 Sep 2026 08:16:09 GMT</pubDate>
+      <category>Software Development</category>
+      <description>War Thunder&apos;s 242nd Steam Screenshot Competition demonstrates how low-overhead community loops amplify major content updates like Sky Odyssey.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/war-thunder-steam-screenshot-competition-sky-odyssey/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Decoding Cosmic Signals with Deep Learning and Keras</title>
+      <link>https://codeplaystudios.com/insights/decoding-cosmic-signals-deep-learning-keras</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/decoding-cosmic-signals-deep-learning-keras</guid>
+      <pubDate>Fri, 18 Sep 2026 08:30:02 GMT</pubDate>
+      <category>Emerging Technology</category>
+      <description>How applying high-level deep learning frameworks to astroparticle physics provides design blueprints for real-world enterprise telemetry and anomaly detection.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/decoding-cosmic-signals-deep-learning-keras/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Scaling Real-Time AI Agents with Session-Aware Load Balancing</title>
+      <link>https://codeplaystudios.com/insights/scaling-real-time-ai-agents-session-aware-load-balancing</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/scaling-real-time-ai-agents-session-aware-load-balancing</guid>
+      <pubDate>Fri, 18 Sep 2026 08:29:39 GMT</pubDate>
+      <category>Emerging Technology</category>
+      <description>Long-lived bidirectional AI streams obscure server capacity, requiring application-level session telemetry paired with hybrid routing algorithms to prevent server saturation.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/scaling-real-time-ai-agents-session-aware-load-balancing/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Square Enix Sets Final Fantasy VII Revelation for April 2027 Release</title>
+      <link>https://codeplaystudios.com/insights/final-fantasy-vii-revelation-april-2027-release</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/final-fantasy-vii-revelation-april-2027-release</guid>
+      <pubDate>Thu, 17 Sep 2026 15:14:53 GMT</pubDate>
+      <category>Gaming</category>
+      <description>Square Enix details the final entry in its remake trilogy at TGS 2026, setting an April 2027 release date while highlighting current engineering constraints on physical media distribution.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/final-fantasy-vii-revelation-april-2027-release/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Google Launches Agent Anomaly Detection in Private Preview for Gemini Enterprise</title>
+      <link>https://codeplaystudios.com/insights/google-agent-anomaly-detection-gemini-enterprise</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/google-agent-anomaly-detection-gemini-enterprise</guid>
+      <pubDate>Wed, 16 Sep 2026 20:21:50 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>Google introduces Agent Anomaly Detection in Private Preview for Gemini Enterprise Agent Platform, pairing asynchronous OpenTelemetry trace analysis with OWASP-aligned guardrails.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/google-agent-anomaly-detection-gemini-enterprise/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Sega and Netflix Partner for Multi-Title Transmedia Slate Including Crazy Taxi and Sonic</title>
+      <link>https://codeplaystudios.com/insights/sega-netflix-transmedia-partnership-crazy-taxi-sonic</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/sega-netflix-transmedia-partnership-crazy-taxi-sonic</guid>
+      <pubDate>Wed, 16 Sep 2026 08:53:13 GMT</pubDate>
+      <category>Software Development</category>
+      <description>Sega&apos;s expanded partnership with Netflix combines legacy arcade revivals and upcoming titles into a coordinated transmedia distribution strategy.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/sega-netflix-transmedia-partnership-crazy-taxi-sonic/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Cloudflare Introduces Account-Level Controls to Block AI Training While Maintaining Search Visibility</title>
+      <link>https://codeplaystudios.com/insights/cloudflare-account-level-ai-crawler-controls</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/cloudflare-account-level-ai-crawler-controls</guid>
+      <pubDate>Wed, 16 Sep 2026 08:52:49 GMT</pubDate>
+      <category>Big Tech</category>
+      <description>Cloudflare introduces account-level controls designed to help web operators maintain organic search visibility while restricting crawler ingestion for AI model training.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/cloudflare-account-level-ai-crawler-controls/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Google Announces Gemini 3.8 Live and Extended Thinking: What Developers Need to Know</title>
+      <link>https://codeplaystudios.com/insights/gemini-3-8-live-extended-thinking-developer-overview</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/gemini-3-8-live-extended-thinking-developer-overview</guid>
+      <pubDate>Tue, 15 Sep 2026 20:24:46 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>Google and DeepMind announce Gemini 3.8 Live and Gemini 3.8 Live Extended Thinking, establishing a clear operational divide between real-time streaming latency and deliberate background reasoning.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/gemini-3-8-live-extended-thinking-developer-overview/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Avatar The Last Airbender: The Living Typhoon Officially Revealed on Steam</title>
+      <link>https://codeplaystudios.com/insights/avatar-the-last-airbender-the-living-typhoon-announced</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/avatar-the-last-airbender-the-living-typhoon-announced</guid>
+      <pubDate>Tue, 15 Sep 2026 08:58:36 GMT</pubDate>
+      <category>Developer Tools</category>
+      <description>An official Steam announcement reveals &apos;Avatar The Last Airbender: The Living Typhoon&apos; as part of Paramount and Netflix&apos;s accelerating multimedia release strategy.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/avatar-the-last-airbender-the-living-typhoon-announced/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Valve Launches Steam Frame VR Headset at $1,059: What Developers Need to Know</title>
+      <link>https://codeplaystudios.com/insights/valve-steam-frame-vr-headset-launch-pricing-strategy</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/valve-steam-frame-vr-headset-launch-pricing-strategy</guid>
+      <pubDate>Mon, 14 Sep 2026 21:02:50 GMT</pubDate>
+      <category>Emerging Technology</category>
+      <description>Valve opts for uncompromised hardware and hybrid rendering over budget pricing, establishing a high-performance baseline for standalone VR engineering.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/valve-steam-frame-vr-headset-launch-pricing-strategy/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>BlizzCon 2026: Blizzard Announces Diablo 5, StarCraft Shooter, and Legacy Revivals</title>
+      <link>https://codeplaystudios.com/insights/blizzcon-2026-roadmap-diablo-5-starcraft</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/blizzcon-2026-roadmap-diablo-5-starcraft</guid>
+      <pubDate>Mon, 14 Sep 2026 09:13:29 GMT</pubDate>
+      <category>Web Development</category>
+      <description>Blizzard&apos;s BlizzCon 2026 roadmap pairs 2029 and 2030 release windows with legacy revivals, outlining a multi-year engineering and lifecycle strategy under Xbox.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/blizzcon-2026-roadmap-diablo-5-starcraft/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Using Apple Accessory Dimensional Drawings in Hardware CAD Workflows</title>
+      <link>https://codeplaystudios.com/insights/apple-accessory-dimensional-drawings-cad-workflows</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/apple-accessory-dimensional-drawings-cad-workflows</guid>
+      <pubDate>Mon, 14 Sep 2026 09:13:06 GMT</pubDate>
+      <category>Big Tech</category>
+      <description>A structured guide to leveraging Apple&apos;s official accessory dimensional drawings to ensure physical fit, clear sensor keepout zones, and streamline mechanical CAD workflows.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/apple-accessory-dimensional-drawings-cad-workflows/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Swapmeat 4-Player Roguelike Co-Op Goes Free on Steam for Limited Time</title>
+      <link>https://codeplaystudios.com/insights/swapmeat-free-steam-promotion</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/swapmeat-free-steam-promotion</guid>
+      <pubDate>Sun, 13 Sep 2026 14:34:21 GMT</pubDate>
+      <category>Software Development</category>
+      <description>A limited-time free distribution campaign on Steam provides 4-player roguelike co-op game Swapmeat with an injection of concurrent users to drive network effects.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/swapmeat-free-steam-promotion/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Genkit Go Introduces Agent Skills to Reduce Token Overhead</title>
+      <link>https://codeplaystudios.com/insights/genkit-go-agent-skills-token-overhead</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/genkit-go-agent-skills-token-overhead</guid>
+      <pubDate>Sun, 13 Sep 2026 08:31:27 GMT</pubDate>
+      <category>Web Development</category>
+      <description>Genkit Go introduces Agent Skills, leveraging progressive disclosure to reduce context window bloat and manage token consumption in Go backend applications.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/genkit-go-agent-skills-token-overhead/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Running Long-Context Multimodal Embeddings on Cloud TPU via Native vLLM</title>
+      <link>https://codeplaystudios.com/insights/long-context-multimodal-embeddings-cloud-tpu-vllm</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/long-context-multimodal-embeddings-cloud-tpu-vllm</guid>
+      <pubDate>Sun, 13 Sep 2026 08:31:05 GMT</pubDate>
+      <category>Cloud &amp; DevOps</category>
+      <description>Google Cloud&apos;s native vLLM integration on Cloud TPU provides an architectural path for high-throughput, long-context embedding inference without abandoning standard open-source developer workflows.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/long-context-multimodal-embeddings-cloud-tpu-vllm/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>Google Cloud API Gateway Introduces Native Model Routing for Multi-LLM Architectures</title>
       <link>https://codeplaystudios.com/insights/google-cloud-api-gateway-native-model-routing</link>

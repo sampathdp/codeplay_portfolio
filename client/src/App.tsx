@@ -43,6 +43,8 @@ const MobileDevelopment = lazy(() => import("@/pages/MobileDevelopment"));
 const AiDevelopment = lazy(() => import("@/pages/AiDevelopment"));
 const ErpSystems = lazy(() => import("@/pages/ErpSystems"));
 const UnityDevelopment = lazy(() => import("@/pages/UnityDevelopment"));
+const UnityAssets = lazy(() => import("@/pages/UnityAssets"));
+const UnityAssetDetail = lazy(() => import("@/pages/UnityAssetDetail"));
 const CaseStudies = lazy(() => import("@/pages/CaseStudies"));
 const About = lazy(() => import("@/pages/About"));
 const Contact = lazy(() => import("@/pages/Contact"));
@@ -80,6 +82,8 @@ function Router() {
       <Route path="/ai-development" component={AiDevelopment} />
       <Route path="/erp-systems" component={ErpSystems} />
       <Route path="/unity-game-development" component={UnityDevelopment} />
+      <Route path="/unity-assets" component={UnityAssets} />
+      <Route path="/unity-assets/:slug" component={UnityAssetDetail} />
       <Route path="/case-studies" component={CaseStudies} />
       <Route path="/case-studies/:slug" component={CaseStudyDetail} />
       <Route path="/tools"><ToolsGate><Tools /></ToolsGate></Route>

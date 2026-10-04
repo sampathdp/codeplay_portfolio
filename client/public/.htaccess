@@ -10,6 +10,15 @@ Options -Indexes
   RewriteEngine On
   RewriteBase /
 
+  # Scanner probes (/.env, /.git/config, /wp-login.php, *.php, …). This is a
+  # static SPA — none of these exist. Answer 404 immediately instead of
+  # falling through to the SPA shell (a 200 that invites more scanning).
+  # /.well-known/ stays reachable for ACME / verification files.
+  RewriteCond %{REQUEST_URI} !^/\.well-known/
+  RewriteRule (^|/)\.(?!well-known) - [R=404,L]
+  RewriteRule \.php$ - [R=404,L]
+  RewriteRule ^(wp-admin|wp-content|wp-includes|wp-json|wordpress|wp|cgi-bin|xmlrpc)(/|$) - [R=404,L]
+
   # /tools now lives at wipeclip.co (see client/src/lib/toolsLink.tsx). A
   # real 301 here means crawlers and no-JS clients get sent straight there
   # instead of hitting a 200 SPA shell that only redirects via JS.
@@ -21,9 +30,20 @@ Options -Indexes
   RewriteCond %{REQUEST_FILENAME} -l
   RewriteRule ^ - [L]
 
+<<<<<<< HEAD
   # App Privacy Policies (direct static serving for clean URLs)
   RewriteRule ^colorbloom/privacy-policy/?$ colorbloom/privacy-policy/index.html [L]
   RewriteRule ^colorbloom-privacy-policy/?$ colorbloom-privacy-policy.html [L]
+=======
+  # Published articles get a prerendered /insights/<slug>/index.html (see
+  # insights-engine/src/publish/prerender.ts) so crawlers/unfurlers that
+  # don't run JS still see real title/description/OG/JSON-LD tags. Only
+  # matches a single path segment after /insights/, so /insights/category/*,
+  # /insights/search, /insights/tag/*, and the hub itself are untouched and
+  # fall through to the SPA below as before.
+  RewriteCond %{DOCUMENT_ROOT}/insights/$1/index.html -f
+  RewriteRule ^insights/([^/]+)/?$ /insights/$1/index.html [L]
+>>>>>>> 4677fc377f13bbe7c34ad65a399e96e766d70de7
 
   # Everything else — including paths that collide with a real directory
   # such as /insights and /insights/ — is handed to the SPA entry point.
@@ -32,10 +52,21 @@ Options -Indexes
 
 # Long-cache the fingerprinted build assets.
 <IfModule mod_headers.c>
+  # Baseline security headers. No Content-Security-Policy on purpose: GA4,
+  # AdSense, Supabase and inline JSON-LD need a carefully tested policy.
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+
   <FilesMatch "\.(js|css|woff2?|png|jpe?g|gif|svg|webp|avif)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
+  # No CDN sits in front of this host yet — s-maxage/stale-while-revalidate
+  # are no-ops until one is added, but browsers do honor SWR, and the
+  # header is ready for a future Cloudflare/edge layer with no further change.
   <FilesMatch "\.(html|xml)$">
-    Header set Cache-Control "public, max-age=0, must-revalidate"
+    Header set Cache-Control "public, max-age=0, s-maxage=60, stale-while-revalidate=120"
   </FilesMatch>
 </IfModule>

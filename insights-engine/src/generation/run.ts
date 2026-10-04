@@ -188,6 +188,19 @@ async function runImageForArticle(
     ...new Set(((entRes.data as { source_name: string }[]) ?? []).map((r) => r.source_name)),
   ];
 
+  // Stock photos already used by other articles, so each post gets its own.
+  const usedRes = await sb
+    .from("insights_articles")
+    .select("featured_image_credit")
+    .neq("id", ctx.articleId)
+    .not("featured_image_credit", "is", null)
+    .limit(500);
+  const excludeStockUrls = ((usedRes.data ?? []) as Array<{
+    featured_image_credit: { sourceUrl?: string } | null;
+  }>)
+    .map((r) => r.featured_image_credit?.sourceUrl)
+    .filter((u): u is string => Boolean(u));
+
   const usage: UsageRecord[] = [];
   try {
     const outcome = await generateFeaturedImage(
@@ -206,6 +219,7 @@ async function runImageForArticle(
         summary: String(art.excerpt ?? ""),
         entities,
         visualConcept: (art.image_prompt as string) ?? undefined,
+        excludeStockUrls,
         promptOverride: ctx.promptOverride ?? null,
         aspectRatio: ctx.imageSettings.aspectRatio ?? "16:9",
         variants: ctx.imageSettings.variants,

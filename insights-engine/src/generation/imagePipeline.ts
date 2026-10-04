@@ -46,6 +46,8 @@ export interface ImagePipelineInput {
   summary: string;
   entities: string[];
   visualConcept?: string;
+  /** Stock photo pages already used elsewhere, to avoid repeats. */
+  excludeStockUrls?: string[];
   /** Admin-edited full prompt override. */
   promptOverride?: string | null;
   aspectRatio?: string;
@@ -326,6 +328,7 @@ async function tryStockImage(
       category: input.category,
       entities: input.entities,
       visualConcept: input.visualConcept,
+      excludeSourceUrls: input.excludeStockUrls,
     });
   } catch (err) {
     deps.onUsage?.({

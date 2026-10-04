@@ -170,7 +170,14 @@ const SEO = ({
       <title>{siteTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <meta name="robots" content={robots} />
+      <meta
+        name="robots"
+        content={
+          robots.includes("noindex")
+            ? robots
+            : `${robots}, max-image-preview:large`
+        }
+      />
       <meta name="theme-color" content={themeColor} />
       {GSC_VERIFICATION && (
         <meta name="google-site-verification" content={GSC_VERIFICATION} />

@@ -167,17 +167,19 @@ export interface GeminiModelConfig {
 // and the newest model always launches with a tiny free-tier quota —
 // `gemini-flash-latest` was resolving to `gemini-3.8-flash`, whose free
 // tier is ~20 requests/day (RESOURCE_EXHAUSTED before a single article
-// finishes). Pin one generation back from newest: mature enough for a
-// real free quota, still current. The 2.x line (`gemini-2.0-flash` …
-// `gemini-2.5-*`) is retired / off the free tier — stay on 3.x.
+// finishes). `gemini-3.6-flash` hit the same 20 RPD free-tier ceiling
+// (RESOURCE_EXHAUSTED on the outline step), so textModel is pinned to
+// `gemini-3.5-flash-lite` too — same generous free quota as fastModel
+// (~1000 RPD), still on the current 3.x line. The 2.x line
+// (`gemini-2.0-flash` … `gemini-2.5-*`) is retired / off the free tier —
+// stay on 3.x.
 //
 // Overrides (env or `insights_settings`):
-//   GEMINI_TEXT_MODEL=gemini-3.5-flash-lite  # fastest / highest free RPD
 //   GEMINI_TEXT_MODEL=gemini-3.7-flash       # newer, still has a real free quota
 //   GEMINI_TEXT_MODEL=gemini-3.1-pro-preview # best quality, needs billing
 //   GEMINI_IMAGE_MODEL=gemini-3-pro-image    # studio-quality hero images, needs billing
 export const DEFAULT_GEMINI_MODELS: GeminiModelConfig = {
-  textModel: "gemini-3.6-flash",
+  textModel: "gemini-3.5-flash-lite",
   fastModel: "gemini-3.5-flash-lite",
   imageModel: "gemini-3.1-flash-image",
 };

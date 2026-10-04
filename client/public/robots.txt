@@ -6,3 +6,4 @@ Disallow: /admin/
 Disallow: /insights/search
 
 Sitemap: https://codeplaystudios.com/sitemap.xml
+Sitemap: https://codeplaystudios.com/news-sitemap.xml
