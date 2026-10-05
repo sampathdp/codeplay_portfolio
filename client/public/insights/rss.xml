@@ -6,8 +6,26 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 04 Oct 2026 21:59:17 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 05 Oct 2026 11:52:29 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>Jagex Announces Fourth RuneScape MMORPG Under Working Title RS4</title>
+      <link>https://codeplaystudios.com/insights/jagex-announces-fourth-runescape-mmorpg-rs4</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/jagex-announces-fourth-runescape-mmorpg-rs4</guid>
+      <pubDate>Mon, 05 Oct 2026 10:47:05 GMT</pubDate>
+      <category>Developer Tools</category>
+      <description>Jagex announces a fourth-generation RuneScape MMO at RuneFest Birmingham, opting for a concurrent ecosystem strategy rather than a replacement sequel.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/jagex-announces-fourth-runescape-mmorpg-rs4/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Jagex Outlines RuneScape: Dragonwilds 2026 and 2027 Content Roadmaps</title>
+      <link>https://codeplaystudios.com/insights/runescape-dragonwilds-2026-2027-content-roadmap</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/runescape-dragonwilds-2026-2027-content-roadmap</guid>
+      <pubDate>Mon, 05 Oct 2026 10:46:40 GMT</pubDate>
+      <category>Open Source</category>
+      <description>Jagex has outlined its multi-year content roadmap for RuneScape: Dragonwilds, detailing structural plans for 2026 and 2027 following the survival game&apos;s 1.0 cross-platform launch.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/runescape-dragonwilds-2026-2027-content-roadmap/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>Quake Rooftops Jam Demonstrates Modern Community Level Design in Classic BSP Architecture</title>
       <link>https://codeplaystudios.com/insights/quake-rooftops-jam-bsp-architecture-analysis</link>
