@@ -6,8 +6,17 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 05 Oct 2026 11:52:29 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 06 Oct 2026 00:23:12 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>OpenAI Outlines EU Text Provenance Compliance Framework for Researchers</title>
+      <link>https://codeplaystudios.com/insights/openai-outlines-eu-text-provenance-framework</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/openai-outlines-eu-text-provenance-framework</guid>
+      <pubDate>Mon, 05 Oct 2026 23:17:44 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>OpenAI has published its initial framework for EU text provenance compliance, marking a phased rollout focused primarily on researchers.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/openai-outlines-eu-text-provenance-framework/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>Jagex Announces Fourth RuneScape MMORPG Under Working Title RS4</title>
       <link>https://codeplaystudios.com/insights/jagex-announces-fourth-runescape-mmorpg-rs4</link>
