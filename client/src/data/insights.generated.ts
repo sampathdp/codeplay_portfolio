@@ -79,7 +79,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-06T10:41:19.526+00:00",
-    "updatedAt": "2026-10-06T10:41:19.695775+00:00",
+    "updatedAt": "2026-10-06T15:20:42.271358+00:00",
     "seo": {
       "title": "Divine Frequency Launches Early Access in Indie Milestone",
       "description": "Divine Frequency arrives in early access at 70 percent completion, balancing independent game delivery against the loss of its lead writer.",
@@ -89,7 +89,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 0
+    "viewCount": 1
   },
   {
     "status": "published",
@@ -181,7 +181,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-06T10:40:55.359+00:00",
-    "updatedAt": "2026-10-06T10:40:55.517924+00:00",
+    "updatedAt": "2026-10-06T15:30:41.754518+00:00",
     "seo": {
       "title": "Arc Raiders and The Finals Head to Film and TV",
       "description": "Embark Studios partners with Chernin Entertainment to bring Arc Raiders and The Finals to film and television. Discover the latest adaptation details.",
@@ -191,7 +191,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 0
+    "viewCount": 1
   },
   {
     "status": "published",
@@ -271,7 +271,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-10-06T10:40:29.49+00:00",
-    "updatedAt": "2026-10-06T10:40:29.658268+00:00",
+    "updatedAt": "2026-10-06T15:10:42.143746+00:00",
     "seo": {
       "title": "Gears of War: E-Day Uses Xbox Series S SSD as Virtual Memory",
       "description": "An analysis of how The Coalition utilizes the Xbox Series S SSD as a virtual memory extension for Gears of War: E-Day, exploring engineering tradeoffs.",
@@ -281,7 +281,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 0
+    "viewCount": 1
   },
   {
     "status": "published",
