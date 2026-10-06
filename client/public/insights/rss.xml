@@ -6,8 +6,35 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 06 Oct 2026 00:23:12 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 06 Oct 2026 11:32:59 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>Indie Title Divine Frequency Launches Early Access Following Lead Writer&apos;s Death</title>
+      <link>https://codeplaystudios.com/insights/divine-frequency-early-access-launch</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/divine-frequency-early-access-launch</guid>
+      <pubDate>Tue, 06 Oct 2026 10:41:19 GMT</pubDate>
+      <category>Startups</category>
+      <description>Divine Frequency arrives in early access at 70 percent completion, balancing the realities of independent game delivery against the sobering loss of its lead writer.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/divine-frequency-early-access-launch/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Arc Raiders and The Finals Head to Film and TV via Chernin Entertainment</title>
+      <link>https://codeplaystudios.com/insights/arc-raiders-the-finals-film-tv-adaptations</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/arc-raiders-the-finals-film-tv-adaptations</guid>
+      <pubDate>Tue, 06 Oct 2026 10:40:55 GMT</pubDate>
+      <category>Developer Tools</category>
+      <description>Embark Studios is expanding its intellectual properties beyond interactive media, partnering with Chernin Entertainment to bring Arc Raiders and The Finals to film and television.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/arc-raiders-the-finals-film-tv-adaptations/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>How Gears of War: E-Day Uses the Xbox Series S SSD as Virtual Memory</title>
+      <link>https://codeplaystudios.com/insights/gears-of-war-e-day-xbox-series-s-ssd-virtual-memory</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/gears-of-war-e-day-xbox-series-s-ssd-virtual-memory</guid>
+      <pubDate>Tue, 06 Oct 2026 10:40:29 GMT</pubDate>
+      <category>Emerging Technology</category>
+      <description>An analysis of how The Coalition leverages the Xbox Series S NVMe storage as an extended memory pool for Gears of War: E-Day, exploring the engineering tradeoffs of SSD-as-RAM strategies.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/gears-of-war-e-day-xbox-series-s-ssd-virtual-memory/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>OpenAI Outlines EU Text Provenance Compliance Framework for Researchers</title>
       <link>https://codeplaystudios.com/insights/openai-outlines-eu-text-provenance-framework</link>
@@ -425,32 +452,6 @@
       <category>Developer Tools</category>
       <description>By shifting from slow end-to-end benchmarks to localized behavioral evaluations, software engineering teams can pinpoint root causes faster and reduce compute overhead when developing AI coding agents.</description>
       <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/anatomy-of-harness-engineering-ai-coding-agents/fallback.svg" type="image/svg+xml" />
-    </item>
-    <item>
-      <title>Apple Announces iPhone 18 Pro and iPhone Duo: What Mobile Developers Need to Know</title>
-      <link>https://codeplaystudios.com/insights/apple-iphone-18-pro-iphone-duo-developer-guide</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/apple-iphone-18-pro-iphone-duo-developer-guide</guid>
-      <pubDate>Thu, 10 Sep 2026 08:23:55 GMT</pubDate>
-      <category>Big Tech</category>
-      <description>Apple&apos;s September 2026 lineup introduces the iPhone 18 Pro, the new iPhone Duo, and updated Apple Watch models, creating new considerations for mobile software engineering teams.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/apple-iphone-18-pro-iphone-duo-developer-guide/fallback.svg" type="image/svg+xml" />
-    </item>
-    <item>
-      <title>How Cloudflare Saved 100 Terabytes of RAM Across Its 1.1.1.1 DNS Cache Infrastructure</title>
-      <link>https://codeplaystudios.com/insights/cloudflare-100tb-ram-dns-cache-optimization</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/cloudflare-100tb-ram-dns-cache-optimization</guid>
-      <pubDate>Thu, 03 Sep 2026 14:12:28 GMT</pubDate>
-      <category>Open Source</category>
-      <description>How micro-optimizations in Cloudflare&apos;s 1.1.1.1 DNS cache data structures yielded 100 terabytes of aggregate RAM savings across edge infrastructure.</description>
-    </item>
-    <item>
-      <title>Inside Cloudflare&apos;s 100TB RAM Savings: Lessons in In-Memory Data Structure Optimization</title>
-      <link>https://codeplaystudios.com/insights/cloudflare-100tb-ram-dns-cache-optimization-2</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/cloudflare-100tb-ram-dns-cache-optimization-2</guid>
-      <pubDate>Wed, 02 Sep 2026 15:49:04 GMT</pubDate>
-      <category>Open Source</category>
-      <description>Cloudflare&apos;s 1.1.1.1 DNS cache optimization reclaimed 100 terabytes of memory across its global fleet, demonstrating the compounded impact of low-level data structure tuning at scale.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/08/cloudflare-100tb-ram-dns-cache-optimization-2/fallback.svg" type="image/svg+xml" />
     </item>
   </channel>
 </rss>

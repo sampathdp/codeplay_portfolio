@@ -11,6 +11,280 @@ import type { InsightsArticle } from "@/lib/insights/types";
 export const INSIGHTS_ARTICLES: InsightsArticle[] = [
   {
     "status": "published",
+    "id": "f016d33a-10f9-42af-840f-25456d2f783b",
+    "slug": "divine-frequency-early-access-launch",
+    "title": "Indie Title Divine Frequency Launches Early Access Following Lead Writer's Death",
+    "dek": "Divine Frequency arrives in early access at 70 percent completion, balancing the realities of independent game delivery against the sobering loss of its lead writer.",
+    "category": "startups",
+    "categoryName": "Startups",
+    "tags": [
+      {
+        "name": "Game Development",
+        "slug": "game-development"
+      },
+      {
+        "name": "Divine Frequency",
+        "slug": "divine-frequency"
+      },
+      {
+        "name": "Early Access",
+        "slug": "early-access"
+      },
+      {
+        "name": "Indie Games",
+        "slug": "indie-games"
+      }
+    ],
+    "body": "# Indie Title Divine Frequency Launches Early Access Following Lead Writer's Death\n\n*Divine Frequency arrives in early access at 70 percent completion, balancing the realities of independent game delivery against the sobering loss of its lead writer.*\n\n## Quick Summary\n\n- Divine Frequency launches in early access on October 27, 2026.\n- The initial release features approximately 70 percent of the final game.\n- The launch occurs under the sobering context of the lead writer's tragic passing.\n\n## What Happened?\n\nConfirmed facts establish that *Divine Frequency* will debut in an early access state on October 27, 2026. According to the [Steam announcement](https://store.steampowered.com/news/group/1850/view/699903325897754922), the launch build will contain 70 percent of the final game. This milestone brings the project into the public sphere following preview coverage from outlets like [PC Gamer](https://www.pcgamer.com/games/fps/despite-the-tragic-death-of-its-lead-writer-one-of-the-scariest-games-i-have-ever-played-will-finally-come-out-later-this-month/), which previously examined the game's playable demo.\n\n## Key Details\n\nAt the time of its early access launch, players will be able to access 70 percent of the final game. Early access software releases of this nature allow developers to ship incomplete builds to gather player feedback and fund ongoing production. Specific details regarding how the lead writer's death impacted the final development stages or the overarching narrative structure are absent from the source material, and the exact studio behind the title remains unnamed in available public records.\n\n## Community Reaction\n\nCommunity signals indicate strong anticipation surrounding the title's arrival. A reviewer from [PC Gamer](https://www.pcgamer.com/games/fps/despite-the-tragic-death-of-its-lead-writer-one-of-the-scariest-games-i-have-ever-played-will-finally-come-out-later-this-month/) expressed long-standing personal anticipation for the game, comparing its absence to a lost ship. Preview coverage described the title's atmospheric blend of horror and action, praising it as a shooter that managed to evoke genuine fear while delivering a satisfying action experience. These subjective qualitative claims represent the perspective of a single reviewer and should be viewed as individual critical reception rather than universal consensus.\n\n## Developer Perspective\n\nFrom a development perspective, shipping a narrative-driven shooter at 70 percent completion introduces significant structural challenges, particularly when a core team member passes away. Maintaining narrative continuity and tone when a lead writer is lost requires careful documentation review, asset auditing, and potentially shifting the scope of remaining story beats. Early access releases inherently rely on iterative feedback, meaning teams must balance stabilizing existing mechanics against finishing unreleased narrative segments under emotionally demanding conditions.\n\n## What Happens Next?\n\nAs *Divine Frequency* enters early access, the development trajectory will depend heavily on gathering player telemetry and feedback on the initial 70 percent build. The team will likely use this data to refine core action loops and horror elements. Concurrently, the studio must navigate the internal production pipeline to complete the remaining 30 percent of the game, ensuring that any narrative arcs established by the late lead writer are handled with continuity and respect.\n\n## CodePlay Verdict\n\nThe arrival of *Divine Frequency* highlights the complex realities of independent game production, where technical milestones intersect with human tragedy. Releasing an incomplete build via early access provides a viable path for funding and feedback, but it also places a spotlight on how teams manage continuity after losing a pivotal creative voice. For observers and developers alike, the launch stands as a reminder of the fragility of development teams and the resilience required to bring a creative vision across the finish line.\n\n## Sources & Further Reading\n\n- [Despite the tragic death of its lead writer, one of the scariest games I have ever played will finally come out later this month](https://store.steampowered.com/news/group/1850/view/699903325897754922) — primary source\n- [Despite the tragic death of its lead writer, one of the scariest games I have ever played will finally come out later this month](https://www.pcgamer.com/games/fps/despite-the-tragic-death-of-its-lead-writer-one-of-the-scariest-games-i-have-ever-played-will-finally-come-out-later-this-month/)",
+    "keyTakeaways": [],
+    "take": {
+      "developerTake": "Shipping an early access build at 70 percent completion following the loss of a lead writer requires rigorous asset auditing, meticulous documentation review, and a clear strategy for narrative continuity.",
+      "businessImpact": "Early access deployment allows development teams to secure capital and actionable telemetry from an incomplete product, mitigating financial risks during prolonged production cycles.",
+      "developerImpact": "Development teams facing core personnel loss must adapt their pipelines to stabilize existing mechanics while reassessing how to execute remaining narrative deliverables without the original creative lead.",
+      "technicalExplanation": "",
+      "risksAndLimitations": "Unverified claims and missing production data—such as the unnamed studio identity and unknown impact details—mean that external analysis must rely strictly on confirmed release milestones and published previews.",
+      "whyItMatters": "This release underscores the delicate intersection of human loss and commercial game delivery in the independent development sector.",
+      "actionableRecommendations": "Teams operating under disrupted production conditions should establish transparent communication channels with their player base early access roadmaps to manage expectations regarding unreleased content."
+    },
+    "sources": [
+      {
+        "url": "https://store.steampowered.com/news/group/1850/view/699903325897754922",
+        "title": "Despite the tragic death of its lead writer, one of the scariest games I have ever played will finally come out later this month",
+        "publisher": "store.steampowered.com",
+        "role": "primary"
+      },
+      {
+        "url": "https://www.pcgamer.com/games/fps/despite-the-tragic-death-of-its-lead-writer-one-of-the-scariest-games-i-have-ever-played-will-finally-come-out-later-this-month/",
+        "title": "Despite the tragic death of its lead writer, one of the scariest games I have ever played will finally come out later this month",
+        "publisher": "pcgamer.com",
+        "role": "supporting"
+      }
+    ],
+    "heroImage": {
+      "src": "https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/divine-frequency-early-access-launch/primary.webp",
+      "alt": "Close-up of a vintage analog frequency generator with knobs and dials for precise control.",
+      "width": 1600,
+      "height": 900,
+      "ogSrc": "https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/divine-frequency-early-access-launch/primary.webp",
+      "aiGenerated": false,
+      "kind": "stock",
+      "credit": {
+        "provider": "pexels",
+        "sourceUrl": "https://www.pexels.com/photo/white-and-grey-vintage-appliance-2267638/",
+        "photographer": "Oussama Bergaoui",
+        "photographerUrl": "https://www.pexels.com/@cody-berg"
+      }
+    },
+    "author": "CodePlay Studios Editorial Team",
+    "authorRole": "CodePlay Insights Editorial Team",
+    "readingMinutes": 3,
+    "publishedAt": "2026-10-06T10:41:19.526+00:00",
+    "updatedAt": "2026-10-06T10:41:19.695775+00:00",
+    "seo": {
+      "title": "Divine Frequency Launches Early Access in Indie Milestone",
+      "description": "Divine Frequency arrives in early access at 70 percent completion, balancing independent game delivery against the loss of its lead writer.",
+      "canonicalUrl": "https://codeplaystudios.com/insights/divine-frequency-early-access-launch"
+    },
+    "articleType": "gaming_news",
+    "featured": false,
+    "trending": false,
+    "breaking": false,
+    "viewCount": 0
+  },
+  {
+    "status": "published",
+    "id": "e2e22953-8e25-4a6f-80fd-c1557e632388",
+    "slug": "arc-raiders-the-finals-film-tv-adaptations",
+    "title": "Arc Raiders and The Finals Head to Film and TV via Chernin Entertainment",
+    "dek": "Embark Studios is expanding its intellectual properties beyond interactive media, partnering with Chernin Entertainment to bring Arc Raiders and The Finals to film and television.",
+    "category": "developer-tools",
+    "categoryName": "Developer Tools",
+    "tags": [
+      {
+        "name": "Arc Raiders",
+        "slug": "arc-raiders"
+      },
+      {
+        "name": "Embark Studios",
+        "slug": "embark-studios"
+      },
+      {
+        "name": "The Finals",
+        "slug": "the-finals"
+      },
+      {
+        "name": "Chernin Entertainment",
+        "slug": "chernin-entertainment"
+      },
+      {
+        "name": "Film Adaptation",
+        "slug": "film-adaptation"
+      },
+      {
+        "name": "Television",
+        "slug": "television"
+      }
+    ],
+    "body": "# Arc Raiders and The Finals Head to Film and TV via Chernin Entertainment\n\n*Embark Studios is expanding its intellectual properties beyond interactive media, partnering with Chernin Entertainment to bring Arc Raiders and The Finals to film and television.*\n\n## Quick Summary\n\n- Embark Studios' titles Arc Raiders and The Finals are officially heading to film and television adaptations.\n- The production is being carried out in collaboration with entertainment company Chernin Entertainment.\n- Exact release dates, casting choices, and specific plot details remain unannounced as of October 2026.\n\n## What Happened?\n\nAccording to reports confirmed on October 5, 2026, Embark Studios entered into an agreement with Chernin Entertainment to develop screen adaptations based on Arc Raiders and The Finals. While Hollywood has increasingly turned to video game IPs for cinematic and episodic content, this partnership marks a strategic expansion for Embark's original universes beyond the traditional confines of live-service multiplayer loops.\n\n## Key Details\n\nThe adaptation initiative encompasses both of Embark's primary intellectual properties. On the gaming side, Arc Raiders continues to receive ongoing content updates and upcoming projects, while Steam community reports indicate a massive overhaul is planned for The Finals. Confirmed facts currently center on the existence of the production partnership; exact release timelines, showrunners, directors, and casting choices are not provided in the source material.\n\n## Community Reaction\n\nSteam community commentary highlights a mixed dialogue among players. Some community members express enthusiasm for exploring the lore and fictional universes of both titles in linear formats. At the same time, ongoing discussions point out that Arc Raiders' current player base represents a fraction of its peak popularity, prompting debates over how transmedia strategies interact with live-service player metrics.\n\n## Developer Perspective\n\nFrom a development perspective, translating dynamic, emergent multiplayer mechanics and arena-based shooter properties into linear narrative structures presents distinct hurdles. Live-service games rely heavily on player-driven chaos, environmental destruction, and session-based loops rather than traditional three-act storytelling. Writers and producers must extract cohesive narrative arcs from shooter frameworks that were originally built for competitive gameplay rather than cinematic exposition.\n\n## What Happens Next?\n\nA likely implication is that Chernin Entertainment and Embark Studios will spend considerable time establishing the foundational writers' rooms and visual bibles for both universes. For teams building games with transmedia ambitions, the critical milestone will be ensuring that narrative developments in film and television align or synchronize with ongoing game updates, such as the upcoming overhaul planned for The Finals.\n\n## CodePlay Verdict\n\nAdapting distinct shooter IPs into film and TV carries historical risks, particularly when translating abstract multiplayer gameplay into compelling drama. However, partnering with an experienced production house like Chernin Entertainment provides a structured pathway. For Embark, the success of these adaptations will depend heavily on whether the underlying lore of Arc Raiders and The Finals can sustain linear storytelling without losing the unique identity that attracted players in the first place.\n\n## Sources & Further Reading\n\n- [Arc Raiders And The Finals Are Getting Film Adaptations](https://store.steampowered.com/news/group/38458038/view/684140727200909308) — primary source\n- [Arc Raiders and The Finals Are Getting Adapted Into Films and TV Shows](https://www.ign.com/articles/arc-raiders-and-the-finals-are-getting-adapted-into-films-and-tv-shows)\n- [Arc Raiders and The Finals are getting film and TV adaptations in collaboration with the Backrooms production company](https://www.eurogamer.net/arc-raiders-the-finals-film-tv-show-backrooms)\n- [Arc Raiders and The Finals are getting TV series and film adaptations](https://www.gamesindustry.biz/arc-raiders-and-the-finals-are-getting-tv-series-and-film-adaptations)",
+    "keyTakeaways": [],
+    "take": {
+      "developerTake": "Translating dynamic, emergent multiplayer mechanics and live-service loops into linear narrative formats requires extracting coherent story elements from systems built primarily for competitive mechanics.",
+      "businessImpact": "Expanding Embark Studios' portfolio into film and television via Chernin Entertainment diversifies revenue streams and leverages Hollywood's ongoing demand for established gaming intellectual property.",
+      "developerImpact": "Development teams must balance ongoing live-service maintenance, such as upcoming overhauls for The Finals, with potential cross-media alignment and lore consistency.",
+      "technicalExplanation": "",
+      "risksAndLimitations": "Exact release dates, casting details, and specific plot directions are not yet confirmed, and live-service player metrics can fluctuate significantly during long-term production cycles.",
+      "whyItMatters": "This partnership illustrates the ongoing industry trend of game studios leveraging transmedia expansions to maintain brand visibility outside of traditional active player counts.",
+      "actionableRecommendations": "For studios exploring similar adaptations, establish a unified lore bible early and ensure tight communication between game development teams and external production partners."
+    },
+    "sources": [
+      {
+        "url": "https://store.steampowered.com/news/group/38458038/view/684140727200909308",
+        "title": "Arc Raiders And The Finals Are Getting Film Adaptations",
+        "publisher": "store.steampowered.com",
+        "role": "primary"
+      },
+      {
+        "url": "https://www.ign.com/articles/arc-raiders-and-the-finals-are-getting-adapted-into-films-and-tv-shows",
+        "title": "Arc Raiders and The Finals Are Getting Adapted Into Films and TV Shows",
+        "publisher": "ign.com",
+        "role": "supporting"
+      },
+      {
+        "url": "https://www.eurogamer.net/arc-raiders-the-finals-film-tv-show-backrooms",
+        "title": "Arc Raiders and The Finals are getting film and TV adaptations in collaboration with the Backrooms production company",
+        "publisher": "eurogamer.net",
+        "role": "supporting"
+      },
+      {
+        "url": "https://www.gamesindustry.biz/arc-raiders-and-the-finals-are-getting-tv-series-and-film-adaptations",
+        "title": "Arc Raiders and The Finals are getting TV series and film adaptations",
+        "publisher": "gamesindustry.biz",
+        "role": "supporting"
+      }
+    ],
+    "heroImage": {
+      "src": "https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/arc-raiders-the-finals-film-tv-adaptations/primary.webp",
+      "alt": "Close-up of a person coding on a laptop, showcasing web development and programming concepts.",
+      "width": 1600,
+      "height": 900,
+      "ogSrc": "https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/arc-raiders-the-finals-film-tv-adaptations/primary.webp",
+      "aiGenerated": false,
+      "kind": "stock",
+      "credit": {
+        "provider": "pexels",
+        "sourceUrl": "https://www.pexels.com/photo/laptop-computer-showing-c-application-574069/",
+        "photographer": "Lukas Blazek",
+        "photographerUrl": "https://www.pexels.com/@goumbik"
+      }
+    },
+    "author": "CodePlay Studios Editorial Team",
+    "authorRole": "CodePlay Insights Editorial Team",
+    "readingMinutes": 3,
+    "publishedAt": "2026-10-06T10:40:55.359+00:00",
+    "updatedAt": "2026-10-06T10:40:55.517924+00:00",
+    "seo": {
+      "title": "Arc Raiders and The Finals Head to Film and TV",
+      "description": "Embark Studios partners with Chernin Entertainment to bring Arc Raiders and The Finals to film and television. Discover the latest adaptation details.",
+      "canonicalUrl": "https://codeplaystudios.com/insights/arc-raiders-the-finals-film-tv-adaptations"
+    },
+    "articleType": "gaming_news",
+    "featured": false,
+    "trending": false,
+    "breaking": false,
+    "viewCount": 0
+  },
+  {
+    "status": "published",
+    "id": "1b3f22b8-406b-4d46-b145-c89e8f3c074d",
+    "slug": "gears-of-war-e-day-xbox-series-s-ssd-virtual-memory",
+    "title": "How Gears of War: E-Day Uses the Xbox Series S SSD as Virtual Memory",
+    "dek": "An analysis of how The Coalition leverages the Xbox Series S NVMe storage as an extended memory pool for Gears of War: E-Day, exploring the engineering tradeoffs of SSD-as-RAM strategies.",
+    "category": "emerging-technology",
+    "categoryName": "Emerging Technology",
+    "tags": [
+      {
+        "name": "Memory Management",
+        "slug": "memory-management"
+      },
+      {
+        "name": "Game Development",
+        "slug": "game-development"
+      },
+      {
+        "name": "Gears of War: E-Day",
+        "slug": "gears-of-war-e-day"
+      },
+      {
+        "name": "The Coalition",
+        "slug": "the-coalition"
+      },
+      {
+        "name": "Xbox Series S",
+        "slug": "xbox-series-s"
+      },
+      {
+        "name": "SSD",
+        "slug": "ssd"
+      }
+    ],
+    "body": "# How Gears of War: E-Day Uses the Xbox Series S SSD as Virtual Memory\n\n*An analysis of how The Coalition leverages the Xbox Series S NVMe storage as an extended memory pool for Gears of War: E-Day, exploring the engineering tradeoffs of SSD-as-RAM strategies.*\n\n## Quick Summary\n\n- The Coalition confirms Gears of War: E-Day utilizes the Xbox Series S solid-state drive as a virtual memory extension when physical RAM runs out.\n- The Xbox Series S features a constrained memory pool of 10GB, requiring aggressive optimization strategies for demanding titles.\n- Technical details regarding I/O pipeline management and frame-time consistency under heavy SSD-swapping conditions remain unquantified.\n\n## What Changed?\n\nThe confirmed fact is that The Coalition implemented a strategy where the Xbox Series S solid-state drive functions similarly to virtual RAM. Gears of War: E-Day is known to be a demanding title across all platforms, including the Xbox Series X and PC. Because the Xbox Series S is equipped with 10GB of system memory, developers must employ specialized asset streaming and memory management tactics to prevent out-of-memory crashes while maintaining visual fidelity close to its more powerful counterparts.\n\n## Technical Impact\n\nFrom a technical perspective, utilizing an NVMe SSD as an extension of physical RAM involves treating non-volatile storage as a page file. When physical memory is saturated, the operating system or game engine pages out inactive assets to the SSD and pulls in active data streams. While modern NVMe drives offer high throughput, their latency profile differs significantly from unified physical memory pools. Asset streaming pipelines must be tightly orchestrated to prevent pipeline stalls during high-intensity gameplay moments.\n\n## Developer Impact\n\nFor teams building large-scale titles across multiple hardware tiers, this strategy highlights the growing reliance on fast storage architectures to mitigate physical RAM limitations. Developers targeting platforms with constrained memory budgets must design asset chunking, compression, and priority streaming algorithms early in the development lifecycle. Relying on SSD-as-RAM techniques means engineering teams must account for background I/O overhead alongside traditional CPU and GPU rendering workloads.\n\n## Limitations\n\nIt is important to distinguish between confirmed facts and technical uncertainties regarding this approach. Specific implementation details on how The Coalition managed potential I/O bottlenecks and latency during heavy memory swapping are not fully detailed in available summaries. Furthermore, the exact performance impact on frame-time consistency under sustained high-frequency swapping remains unquantified, and claims regarding the long-term impact on hardware lifespan through aggressive SSD paging should be approached with caution.\n\n## CodePlay Developer Take\n\nFor engineering teams, offloading memory pressure to fast NVMe drives is a pragmatic solution, but it is not a direct substitute for true physical RAM. The primary engineering challenge lies in predicting asset demands accurately enough to hide I/O latency from the player. When engines rely on storage paging, micro-stutters can occur if background read requests miss their precise window. Studios utilizing this approach must invest heavily in custom profiling tools to monitor storage bandwidth utilization and ensure frame-rate stability under worst-case memory conditions.\n\n## CodePlay Verdict\n\nThe deployment of SSD-as-RAM strategies demonstrates the flexibility of modern console I/O architectures, but it underscores the ongoing challenge of multi-tier hardware development. While it enables visually demanding games to function on memory-constrained systems like the Xbox Series S, it places an extra burden on streaming pipeline architecture. Studios must balance memory budgets carefully, treating storage-based paging as an emergency overflow rather than a primary design pillar.\n\n## Sources & Further Reading\n\n- [Gears of War: E-Day Runs Smoothly on Xbox Series S By Using SSD as RAM](https://store.steampowered.com/news/group/9869/view/711162324968278229) — primary source\n- [Gears of War: E-Day Runs Smoothly on Xbox Series S By Using SSD as RAM](https://www.ign.com/articles/gears-of-war-e-day-runs-smoothly-on-xbox-series-s-by-using-ssd-as-ram)",
+    "keyTakeaways": [],
+    "take": {
+      "developerTake": "Using NVMe storage as virtual RAM is an effective mitigation strategy for tight memory limits, but it requires sophisticated predictive asset streaming to prevent storage latency from manifesting as visible frame drops.",
+      "businessImpact": "Successfully optimizing demanding titles for lower-tier hardware tiers expands the addressable market without requiring massive re-engineering of core assets, protecting return on investment for multi-platform projects.",
+      "developerImpact": "Engineers must design custom asset streaming pipelines that account for background I/O overhead, treating storage throughput as a finite resource shared between asset loading and virtual memory paging.",
+      "technicalExplanation": "",
+      "risksAndLimitations": "Uncertainties remain regarding sustained frame-time consistency during heavy swapping workloads, and excessive write cycles to console storage raise unquantified questions regarding long-term hardware wear.",
+      "whyItMatters": "It proves that next-generation I/O speeds can successfully mask hardware memory disparities, setting a precedent for how developers handle strict memory budgets on tiered console ecosystems.",
+      "actionableRecommendations": "Teams targeting constrained memory platforms should profile storage I/O pipelines continuously, implement aggressive asset compression, and design deterministic streaming logic to handle memory overflow gracefully."
+    },
+    "sources": [
+      {
+        "url": "https://store.steampowered.com/news/group/9869/view/711162324968278229",
+        "title": "Gears of War: E-Day Runs Smoothly on Xbox Series S By Using SSD as RAM",
+        "publisher": "store.steampowered.com",
+        "role": "primary"
+      },
+      {
+        "url": "https://www.ign.com/articles/gears-of-war-e-day-runs-smoothly-on-xbox-series-s-by-using-ssd-as-ram",
+        "title": "Gears of War: E-Day Runs Smoothly on Xbox Series S By Using SSD as RAM",
+        "publisher": "ign.com",
+        "role": "supporting"
+      }
+    ],
+    "heroImage": {
+      "src": "https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/gears-of-war-e-day-xbox-series-s-ssd-virtual-memory/primary.webp",
+      "alt": "Close-up of interlocking metal gears creating an industrial texture.",
+      "width": 1600,
+      "height": 900,
+      "ogSrc": "https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/gears-of-war-e-day-xbox-series-s-ssd-virtual-memory/primary.webp",
+      "aiGenerated": false,
+      "kind": "stock",
+      "credit": {
+        "provider": "pexels",
+        "sourceUrl": "https://www.pexels.com/photo/close-up-shot-of-metal-gears-4843915/",
+        "photographer": "Tim Mossholder",
+        "photographerUrl": "https://www.pexels.com/@timmossholder"
+      }
+    },
+    "author": "CodePlay Studios Editorial Team",
+    "authorRole": "CodePlay Insights Editorial Team",
+    "readingMinutes": 4,
+    "publishedAt": "2026-10-06T10:40:29.49+00:00",
+    "updatedAt": "2026-10-06T10:40:29.658268+00:00",
+    "seo": {
+      "title": "Gears of War: E-Day Uses Xbox Series S SSD as Virtual Memory",
+      "description": "An analysis of how The Coalition utilizes the Xbox Series S SSD as a virtual memory extension for Gears of War: E-Day, exploring engineering tradeoffs.",
+      "canonicalUrl": "https://codeplaystudios.com/insights/gears-of-war-e-day-xbox-series-s-ssd-virtual-memory"
+    },
+    "articleType": "tech_analysis",
+    "featured": true,
+    "trending": false,
+    "breaking": false,
+    "viewCount": 0
+  },
+  {
+    "status": "published",
     "id": "d130c9f3-05d2-4023-9245-2380262e159d",
     "slug": "openai-outlines-eu-text-provenance-framework",
     "title": "OpenAI Outlines EU Text Provenance Compliance Framework for Researchers",
@@ -77,7 +351,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-05T23:17:44.582+00:00",
-    "updatedAt": "2026-10-05T23:17:44.698042+00:00",
+    "updatedAt": "2026-10-06T02:31:55.411843+00:00",
     "seo": {
       "title": "OpenAI Outlines EU Text Provenance Framework for Researchers",
       "description": "OpenAI has published its initial framework for EU text provenance compliance, detailing watermarking approaches for researchers in a phased rollout.",
@@ -87,7 +361,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 0
+    "viewCount": 1
   },
   {
     "status": "published",
@@ -3183,7 +3457,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-14T09:13:06.83+00:00",
-    "updatedAt": "2026-09-14T09:13:06.936534+00:00",
+    "updatedAt": "2026-10-06T01:30:35.67337+00:00",
     "seo": {
       "title": "Using Apple Accessory Dimensional Drawings in CAD Workflows",
       "description": "Learn how to integrate Apple accessory dimensional drawings into CAD pipelines to ensure physical fit, clear sensors, and reduce prototype costs.",
@@ -3193,7 +3467,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 0
+    "viewCount": 1
   },
   {
     "status": "published",
