@@ -6,8 +6,35 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 06 Oct 2026 22:49:08 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2026 11:23:00 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>No Active Watch Dogs Games in Development, Confirms Ubisoft Leadership</title>
+      <link>https://codeplaystudios.com/insights/ubisoft-watch-dogs-franchise-development-status</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/ubisoft-watch-dogs-franchise-development-status</guid>
+      <pubDate>Wed, 07 Oct 2026 10:32:06 GMT</pubDate>
+      <category>Open Source</category>
+      <description>Ubisoft acknowledges the value of the Watch Dogs intellectual property, but confirms no active development is underway for the franchise.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/ubisoft-watch-dogs-franchise-development-status/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>PvPvE Extraction Shooter Beautiful Light Confirms 2026 Early Access</title>
+      <link>https://codeplaystudios.com/insights/beautiful-light-extraction-shooter-2026-release</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/beautiful-light-extraction-shooter-2026-release</guid>
+      <pubDate>Wed, 07 Oct 2026 10:31:41 GMT</pubDate>
+      <category>Developer Tools</category>
+      <description>Beautiful Light targets a December 2026 Steam early access release, bringing tactical objective-based PvPvE extraction gameplay into an increasingly crowded market.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/beautiful-light-extraction-shooter-2026-release/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>OpenAI Releases Lean Proof Formalizations for Advanced Mathematics</title>
+      <link>https://codeplaystudios.com/insights/openai-releases-lean-proof-formalizations</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/openai-releases-lean-proof-formalizations</guid>
+      <pubDate>Wed, 07 Oct 2026 10:31:15 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>OpenAI&apos;s recent release of Lean proof formalizations marks a notable step toward bridging generative AI with machine-checked mathematical rigor.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/openai-releases-lean-proof-formalizations/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>Indie Title Divine Frequency Launches Early Access Following Lead Writer&apos;s Death</title>
       <link>https://codeplaystudios.com/insights/divine-frequency-early-access-launch</link>
@@ -426,32 +453,6 @@
       <pubDate>Fri, 11 Sep 2026 08:16:38 GMT</pubDate>
       <category>Gaming</category>
       <description>In a dramatic shift for platform publishing, Microsoft Xbox steps in to publish Kojima Productions&apos; action-espionage title Physint following Sony&apos;s departure.</description>
-    </item>
-    <item>
-      <title>Google Releases Agent and Model Evaluation Tools for Gemini Enterprise Platform</title>
-      <link>https://codeplaystudios.com/insights/gemini-enterprise-agent-platform-evaluation-tools-ga</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/gemini-enterprise-agent-platform-evaluation-tools-ga</guid>
-      <pubDate>Fri, 11 Sep 2026 08:16:14 GMT</pubDate>
-      <category>Developer Tools</category>
-      <description>Google&apos;s General Availability release of evaluation tools for the Gemini Enterprise Agent Platform brings standardized, enterprise-grade validation to AI agent pipelines.</description>
-    </item>
-    <item>
-      <title>Kotlin ADK 1.0 Brings Multi-Agent AI to Multiplatform</title>
-      <link>https://codeplaystudios.com/insights/kotlin-adk-1-0-multi-agent-ai-multiplatform</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/kotlin-adk-1-0-multi-agent-ai-multiplatform</guid>
-      <pubDate>Thu, 10 Sep 2026 08:24:36 GMT</pubDate>
-      <category>Artificial Intelligence</category>
-      <description>Google releases Agent Development Kit for Kotlin 1.0, bringing multi-agent AI orchestration and KSP-driven function calling to Kotlin Multiplatform environments.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/kotlin-adk-1-0-multi-agent-ai-multiplatform/fallback.svg" type="image/svg+xml" />
-    </item>
-    <item>
-      <title>The Anatomy of Harness Engineering: How to Evaluate and Iterate AI Coding Agents</title>
-      <link>https://codeplaystudios.com/insights/anatomy-of-harness-engineering-ai-coding-agents</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/anatomy-of-harness-engineering-ai-coding-agents</guid>
-      <pubDate>Thu, 10 Sep 2026 08:24:16 GMT</pubDate>
-      <category>Developer Tools</category>
-      <description>By shifting from slow end-to-end benchmarks to localized behavioral evaluations, software engineering teams can pinpoint root causes faster and reduce compute overhead when developing AI coding agents.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/anatomy-of-harness-engineering-ai-coding-agents/fallback.svg" type="image/svg+xml" />
     </item>
   </channel>
 </rss>
