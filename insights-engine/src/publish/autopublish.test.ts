@@ -19,7 +19,8 @@ function cand(p: Partial<PublishCandidate> & { id: string }): PublishCandidate {
   };
 }
 
-const CFG = DEFAULT_AUTOPUBLISH_CONFIG;
+// Multi-pick ranking logic, exercised at 2–3/day (the default is 1/day).
+const CFG = { ...DEFAULT_AUTOPUBLISH_CONFIG, minPerDay: 2, maxPerDay: 3 };
 
 describe("rankForAutoPublish", () => {
   it("orders winners by weighted score, best first", () => {
@@ -116,5 +117,17 @@ describe("resolveAutoPublishConfig", () => {
     expect(cfg.maxPerDay).toBe(5);
     expect(cfg.weights.quality).toBe(0.8);
     expect(cfg.weights.viral).toBe(DEFAULT_AUTOPUBLISH_CONFIG.weights.viral);
+  });
+});
+
+describe("one post per day (defaults)", () => {
+  it("publishes only the single best draft by default", () => {
+    expect(DEFAULT_AUTOPUBLISH_CONFIG.maxPerDay).toBe(1);
+    const { winners } = rankForAutoPublish([
+      cand({ id: "ok", qualityScore: 70, viralScore: 50 }),
+      cand({ id: "best", qualityScore: 92, viralScore: 85 }),
+      cand({ id: "good", qualityScore: 85, viralScore: 60 }),
+    ]);
+    expect(winners.map((w) => w.id)).toEqual(["best"]);
   });
 });

@@ -34,8 +34,8 @@ export interface AutoPublishConfig {
 }
 
 export const DEFAULT_AUTOPUBLISH_CONFIG: AutoPublishConfig = {
-  minPerDay: 2,
-  maxPerDay: 3,
+  minPerDay: 1,
+  maxPerDay: 1,
   maxPerCategory: 2,
   weights: { quality: 0.6, viral: 0.35, breaking: 8 },
 };

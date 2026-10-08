@@ -97,8 +97,8 @@ function SaveRow({
 function PublishingCard({ bag, action, reload }: { bag: Bag; action: ReturnType<typeof useAction>; reload: () => void }) {
   const p = bag.publishing ?? {};
   const [autoPublish, setAutoPublish] = useState(Boolean(p.autoPublish));
-  const [min, setMin] = useState(String(num(p.minPerDay, 2)));
-  const [max, setMax] = useState(String(num(p.maxPerDay, 3)));
+  const [min, setMin] = useState(String(num(p.minPerDay, 1)));
+  const [max, setMax] = useState(String(num(p.maxPerDay, 1)));
 
   return (
     <Card title="Publishing">

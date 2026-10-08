@@ -95,8 +95,8 @@ export const DEFAULT_CONFIG: EngineConfig = {
   },
   selection: {
     timezone: "Asia/Colombo",
-    perDay: 3,
-    minPerDay: 2,
+    perDay: 1,
+    minPerDay: 1,
     minViralScore: 45,
     lookbackHours: 36,
     maxPerTheme: 1,
@@ -115,7 +115,7 @@ export const DEFAULT_CONFIG: EngineConfig = {
       note: "GitHub Actions cron is UTC.",
     },
     publishWindowsLocal: ["08:30", "15:30", "22:30"],
-    maxArticlesPerDay: 3,
+    maxArticlesPerDay: 1,
   },
   breaking: {
     maxAgeHours: 12,

@@ -3,7 +3,8 @@ import { selectDailyArticleCandidates, slotForCategory } from "./selection";
 import { DEFAULT_CONFIG } from "./config";
 import type { ScoredCluster } from "./types";
 
-const SEL = DEFAULT_CONFIG.selection;
+// Multi-pick selection logic, exercised at 2–3/day (the default is 1/day).
+const SEL = { ...DEFAULT_CONFIG.selection, perDay: 3, minPerDay: 2 };
 const NOW = new Date("2026-08-28T12:00:00Z");
 
 function sc(p: Partial<ScoredCluster> & { key: string }): ScoredCluster {

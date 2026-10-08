@@ -11,7 +11,7 @@
  */
 
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
-import { resolveGeminiModels } from "../config";
+import { DEFAULT_CONFIG, resolveGeminiModels } from "../config";
 import type { ArticleType } from "./schema";
 import { createGeminiClient } from "../gemini/client";
 import { isDailyQuotaError } from "../gemini/retry";
@@ -287,7 +287,7 @@ async function main() {
   const genConfig = resolveGenerationConfig(settings);
   const budget = resolveAiBudget(settings);
   const scheduler = (settings.scheduler ?? {}) as { maxArticlesPerDay?: number };
-  const maxPerDay = scheduler.maxArticlesPerDay ?? 3;
+  const maxPerDay = scheduler.maxArticlesPerDay ?? DEFAULT_CONFIG.scheduler.maxArticlesPerDay;
 
   const imageSettings: ImageSettings =
     ((settings.generation ?? {}) as { image?: ImageSettings }).image ?? {};
@@ -554,7 +554,7 @@ async function main() {
 }
 
 /**
- * Rank today's `review` drafts and flip the best `minPerDay..maxPerDay`
+ * Rank today's `review` drafts and flip the best `minPerDay..maxPerDay` (1 by default)
  * (diverse) ones to `published`. Fully autonomous: a `needs_review` flag
  * does not exclude a draft. Each winner is guaranteed a featured image
  * first. Never throws past its own try/catch in `main`.

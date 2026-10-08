@@ -212,8 +212,8 @@ export async function getTodayPublishPlan(
   }));
 
   return {
-    minPerDay: Number(cfg.minPerDay ?? 2),
-    maxPerDay: Number(cfg.maxPerDay ?? 3),
+    minPerDay: Number(cfg.minPerDay ?? 1),
+    maxPerDay: Number(cfg.maxPerDay ?? 1),
     publishedToday: rows.length,
     autoPublish: cfg.autoPublish === true,
     autoQueue: cfg.autoQueue === true,
