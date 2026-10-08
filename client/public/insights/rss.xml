@@ -6,8 +6,26 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 07 Oct 2026 23:20:42 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 08 Oct 2026 11:38:35 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>EmbeddingGemma 2 Integration Guide: Modularity and Matryoshka Truncation</title>
+      <link>https://codeplaystudios.com/insights/embeddinggemma-2-developer-guide-integration</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/embeddinggemma-2-developer-guide-integration</guid>
+      <pubDate>Thu, 08 Oct 2026 10:52:33 GMT</pubDate>
+      <category>Open Source</category>
+      <description>A practical implementation and optimization guide for integrating EmbeddingGemma 2 into multi-modal architectures using modular encoders and Matryoshka dimension truncation.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/embeddinggemma-2-developer-guide-integration/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Mistral Large 4 Available Now on Vercel AI Gateway</title>
+      <link>https://codeplaystudios.com/insights/mistral-large-4-vercel-ai-gateway</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/mistral-large-4-vercel-ai-gateway</guid>
+      <pubDate>Thu, 08 Oct 2026 10:52:09 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>Mistral Large 4 arrives on Vercel AI Gateway, offering teams unified API routing and infrastructure simplification.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/mistral-large-4-vercel-ai-gateway/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>No Active Watch Dogs Games in Development, Confirms Ubisoft Leadership</title>
       <link>https://codeplaystudios.com/insights/ubisoft-watch-dogs-franchise-development-status</link>
@@ -437,22 +455,6 @@
       <pubDate>Sat, 12 Sep 2026 08:13:42 GMT</pubDate>
       <category>Artificial Intelligence</category>
       <description>Perplexity adopts OpenAI&apos;s GPT-6 Astra for software maintenance, production monitoring, and internal communications with reduced human oversight.</description>
-    </item>
-    <item>
-      <title>Google Releases TPU Microbenchmarks for Granular Performance Tuning</title>
-      <link>https://codeplaystudios.com/insights/google-tpu-microbenchmarks-performance-tuning</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/google-tpu-microbenchmarks-performance-tuning</guid>
-      <pubDate>Fri, 11 Sep 2026 14:42:08 GMT</pubDate>
-      <category>Open Source</category>
-      <description>Google&apos;s open-source TPU microbenchmark suite allows machine learning engineers to isolate hardware subsystems, build empirical Roofline models, and target compiler-level optimizations.</description>
-    </item>
-    <item>
-      <title>Xbox Acquires Publishing Rights for Kojima&apos;s Physint After Sony Departs</title>
-      <link>https://codeplaystudios.com/insights/xbox-acquires-publishing-rights-for-kojimas-physint</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/xbox-acquires-publishing-rights-for-kojimas-physint</guid>
-      <pubDate>Fri, 11 Sep 2026 08:16:38 GMT</pubDate>
-      <category>Gaming</category>
-      <description>In a dramatic shift for platform publishing, Microsoft Xbox steps in to publish Kojima Productions&apos; action-espionage title Physint following Sony&apos;s departure.</description>
     </item>
   </channel>
 </rss>
