@@ -41,10 +41,12 @@ export interface DeveloperTake {
 
 /** Attribution for a stock (non-generated, non-manual) hero photo. */
 export interface ImageCredit {
-  provider: "pexels";
+  /** "source" = lead image of the source article; `photographer` is the
+   * publisher and `photographerUrl` the source article. */
+  provider: "pexels" | "source";
   photographer: string;
   photographerUrl: string;
-  /** The photo's page on the provider. */
+  /** The photo's page on the provider (or the image URL for "source"). */
   sourceUrl: string;
 }
 

@@ -165,6 +165,34 @@ image-column write is scoped `.eq("featured_image_is_manual", false)`.
 
 ---
 
+## 8b. Source lead image (first tier)
+
+Before any Gemini call, `generateFeaturedImage` tries the story's own
+lead image (`generation/sourceImage.ts`). The worker passes the article's
+`insights_article_sources` rows (the pages gathered at discovery time).
+**Only primary / official sources are used** (newsrooms, press releases,
+release notes — images published for press reuse). Third-party news-site
+images are never used: they are often agency-licensed (Getty / AP) and a
+copyright / AdSense risk. For each eligible source, primary first, it
+fetches the page head, reads
+`og:image` / `twitter:image` / `image_src`, and downloads the image. That
+image then goes through the same sharp pipeline as the other tiers.
+
+- Skipped: aggregator hosts (Reddit, HN, GitHub, X, YouTube), logo or
+  placeholder URLs, SVGs, downloads under 15 KB, sources under 600px wide,
+  and image URLs another article already uses.
+- Stored as `status: "stock"`, `model: "source"`, with credit
+  `{ provider: "source", photographer: <publisher>, photographerUrl:
+  <source article>, sourceUrl: <image url> }`. The article page shows an
+  **"Image: <publisher>"** caption linking to the source.
+- On a miss, the pipeline continues with Gemini, then Pexels, then the SVG.
+- Turn it off with `generation.image.preferSourceImage = false` in
+  settings, or `INSIGHTS_SOURCE_IMAGES=off`.
+
+Keep the credit link even for press images.
+
+---
+
 ## 9. Fallback (publish never crashes)
 
 If the Gemini image call fails (RAI filter, timeout, quota — note the
@@ -234,6 +262,7 @@ Server / CI only:
 GEMINI_API_KEY=            # required (shared with Phase 4)
 GEMINI_IMAGE_MODEL=        # optional — default gemini-3.1-flash-image (needs billing)
 PEXELS_API_KEY=            # optional — stock-photo fallback when generation fails
+INSIGHTS_SOURCE_IMAGES=    # optional — "off" disables the source lead-image tier
 INSIGHTS_MEDIA_BUCKET=     # optional — default insights-media
 SUPABASE_URL=
 SUPABASE_SERVICE_ROLE_KEY=

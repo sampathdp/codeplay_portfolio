@@ -51,6 +51,7 @@ const Contact = lazy(() => import("@/pages/Contact"));
 const CaseStudyDetail = lazy(() => import("@/pages/CaseStudyDetail"));
 const PrivacyPolicy = lazy(() => import("@/pages/PrivacyPolicy"));
 const TermsAndConditions = lazy(() => import("@/pages/TermsAndConditions"));
+const CookiePolicy = lazy(() => import("@/pages/CookiePolicy"));
 const Tools = lazy(() => import("@/pages/Tools"));
 const ImageEditorTool = lazy(() => import("@/pages/ImageEditorTool"));
 const ImageConverterTool = lazy(() => import("@/pages/ImageConverterTool"));
@@ -151,6 +152,7 @@ function Router() {
       <Route path="/contact" component={Contact} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/terms-and-conditions" component={TermsAndConditions} />
+      <Route path="/cookie-policy" component={CookiePolicy} />
       <Route path="/colorbloom/privacy-policy">
         {() => {
           window.location.replace("/colorbloom/privacy-policy/index.html");

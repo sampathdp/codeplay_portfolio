@@ -64,6 +64,15 @@ jobs:
         run: npm run insights:prerender
         continue-on-error: true
 
+      - name: 🖼️ Prerender full pages (real HTML per URL for crawlers)
+        # Renders every sitemap URL in headless Chrome and writes
+        # dist/public/<path>/index.html, so each page ships its own title,
+        # canonical, <h1> and body text instead of the shared SPA shell.
+        # Runs after the article head prerender and builds on it. Never
+        # fails the deploy.
+        run: npm run prerender:pages
+        continue-on-error: true
+
       - name: 📂 Sync files (FTPS)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:

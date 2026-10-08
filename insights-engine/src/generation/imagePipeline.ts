@@ -1,6 +1,8 @@
 /**
  * Featured-image generation pipeline.
  *
+ *   source article lead image (og:image of the pages the story came from)
+ *       └─ miss → continue
  *   prompt (deterministic + optional Gemini subject)
  *   → Gemini image call
  *       └─ failure → stock photo (Pexels), then category fallback SVG
@@ -26,6 +28,15 @@ import {
   type StockImageClient,
   type StockImageCredit,
 } from "./stockImage";
+import {
+  NullSourceImageClient,
+  type SourceImageClient,
+  type SourceImageCredit,
+  type SourceRef,
+} from "./sourceImage";
+
+/** Smallest source image width worth upscaling into a 1600px hero. */
+const MIN_SOURCE_WIDTH = 600;
 
 export interface ImagePipelineDeps {
   imageClient: GeminiImageClient;
@@ -33,6 +44,8 @@ export interface ImagePipelineDeps {
   store: ImageStore;
   /** Real-photo fallback source. Defaults to a no-op client. */
   stockClient?: StockImageClient;
+  /** Publisher lead-image source. Defaults to a no-op client. */
+  sourceClient?: SourceImageClient;
   /** Budgeted text client for the subject-refinement step (optional). */
   textClient?: GeminiClient;
   onUsage?: (r: UsageRecord) => void;
@@ -46,7 +59,11 @@ export interface ImagePipelineInput {
   summary: string;
   entities: string[];
   visualConcept?: string;
-  /** Stock photo pages already used elsewhere, to avoid repeats. */
+  /** Source pages the article was written from (lead-image tier). */
+  sources?: SourceRef[];
+  /** Try the source lead image before AI generation. Default true. */
+  preferSourceImage?: boolean;
+  /** Stock photo pages / source image URLs already used elsewhere. */
   excludeStockUrls?: string[];
   /** Admin-edited full prompt override. */
   promptOverride?: string | null;
@@ -85,8 +102,8 @@ export interface ImageOutcome {
   altText: string;
   model: string | null;
   aiGenerated: boolean;
-  /** Attribution for a stock photo; null for generated / SVG. */
-  credit: StockImageCredit | null;
+  /** Attribution for a stock / source photo; null for generated / SVG. */
+  credit: StockImageCredit | SourceImageCredit | null;
   primary: StoredVariant | null;
   variants: StoredVariant[];
   width: number | null;
@@ -163,6 +180,12 @@ export async function generateFeaturedImage(
 
   const specs = input.variants?.length ? input.variants : DEFAULT_VARIANTS;
   const quality = input.webpQuality ?? 82;
+
+  // 1b. the story's own lead image beats anything we could generate or search
+  if (input.preferSourceImage !== false && input.sources?.length) {
+    const fromSource = await trySourceImage(deps, input, now, generatedAt, prompt, negativePrompt);
+    if (fromSource) return fromSource;
+  }
 
   // 2. generate
   let bytes: Buffer;
@@ -388,6 +411,65 @@ async function tryStockImage(
       status: "error",
       error: `stock processing failed: ${err instanceof Error ? err.message : String(err)}`,
     });
+    return null;
+  }
+}
+
+/**
+ * Attempt the publisher lead-image tier. Returns null on any miss (no
+ * sources, no og:image, too small, download/processing error).
+ */
+async function trySourceImage(
+  deps: ImagePipelineDeps,
+  input: ImagePipelineInput,
+  now: Date,
+  generatedAt: string,
+  prompt: string,
+  negativePrompt: string,
+): Promise<ImageOutcome | null> {
+  const client = deps.sourceClient ?? new NullSourceImageClient();
+  const specs = input.variants?.length ? input.variants : DEFAULT_VARIANTS;
+  const quality = input.webpQuality ?? 82;
+
+  let photo;
+  try {
+    photo = await client.find({
+      sources: input.sources ?? [],
+      excludeImageUrls: input.excludeStockUrls,
+    });
+  } catch {
+    return null;
+  }
+  if (!photo) return null;
+
+  try {
+    const processed = await deps.processor.process(photo.bytes, photo.mimeType, specs, quality);
+    if (processed.sourceWidth < MIN_SOURCE_WIDTH) return null;
+    const stored: StoredVariant[] = [];
+    for (const v of processed.variants) {
+      const obj = await deps.store.put(input.slug, `${v.label}.webp`, v.bytes, v.contentType, now);
+      stored.push(toStoredVariant(v.label, obj, v, v.label === processed.primary.label));
+    }
+    const primary = stored.find((v) => v.isPrimary) ?? stored[0] ?? null;
+    const altText = (photo.description?.trim() || `Image for: ${input.title}`).slice(0, 180);
+
+    return {
+      status: "stock",
+      reason: `used lead image from ${photo.credit.photographer}`,
+      prompt,
+      negativePrompt,
+      altText,
+      model: "source",
+      aiGenerated: false,
+      credit: photo.credit,
+      primary,
+      variants: stored,
+      width: primary?.width ?? processed.sourceWidth,
+      height: primary?.height ?? processed.sourceHeight,
+      bytes: primary?.bytes ?? photo.bytes.length,
+      generatedAt,
+    };
+  } catch {
     return null;
   }
 }

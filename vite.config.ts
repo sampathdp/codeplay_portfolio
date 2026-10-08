@@ -33,8 +33,41 @@ function inlineCss(): Plugin {
   };
 }
 
+/**
+ * AdSense site ownership. When VITE_ADSENSE_CLIENT ("ca-pub-…") is set at
+ * build time this emits /ads.txt and adds the `google-adsense-account`
+ * meta tag Google uses to verify the site during review — independent of
+ * VITE_ADSENSE_ENABLED, which only switches ad units on after approval.
+ * Without it the host's SPA fallback serves index.html at /ads.txt, which
+ * AdSense reports as "ads.txt not found".
+ */
+function adsense(): Plugin {
+  const client = (process.env.VITE_ADSENSE_CLIENT ?? "").trim();
+  const pub = client.replace(/^ca-/, "");
+  const valid = /^pub-\d{10,20}$/.test(pub);
+  return {
+    name: "adsense-ownership",
+    apply: "build",
+    transformIndexHtml(html) {
+      if (!valid) return html;
+      return html.replace(
+        "</head>",
+        `<meta name="google-adsense-account" content="ca-${pub}" /></head>`,
+      );
+    },
+    generateBundle() {
+      if (!valid) return;
+      this.emitFile({
+        type: "asset",
+        fileName: "ads.txt",
+        source: `google.com, ${pub}, DIRECT, f08c47fec0942fa0\n`,
+      });
+    },
+  };
+}
+
 export default defineConfig({
-  plugins: [react(), inlineCss()],
+  plugins: [react(), inlineCss(), adsense()],
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),

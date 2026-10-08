@@ -38,6 +38,7 @@ import {
   verifySources,
   generateOutline,
   generateDraft,
+  editDraft,
   factCheckDraft,
   generateSeo,
   scoreQuality,
@@ -51,6 +52,8 @@ export interface GenerationConfig {
   thresholds: GenerationThresholds;
   bannedPhrases?: string[];
   forbiddenClaims?: string[];
+  /** Human-style editor rewrite after the draft. Default true. */
+  editorPass?: boolean;
 }
 
 export const DEFAULT_GENERATION_CONFIG: GenerationConfig = {
@@ -164,8 +167,14 @@ export async function generateArticle(
     );
     await emit("outline");
 
-    // 4. draft
-    const { draft } = await generateDraft(client, bundle, verification, outline);
+    // 4. draft, then the editor pass (reported under the same "draft" step
+    //    so the admin progress bar and job-step constraint are unchanged).
+    //    Fact-check below runs on the edited text.
+    const { draft: rawDraft } = await generateDraft(client, bundle, verification, outline);
+    const draft =
+      cfg.editorPass === false
+        ? rawDraft
+        : (await editDraft(client, bundle, rawDraft)).draft;
     await emit("draft");
 
     // 5. fact check

@@ -9,3 +9,8 @@ vite.config.ts.*
 __pycache__
 *.pyc
 Tools/backend/.venv
+# Local credentials — never commit
+pass.txt
+*.pem
+.env.*
+!.env.example

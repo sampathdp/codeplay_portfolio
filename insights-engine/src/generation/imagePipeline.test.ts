@@ -192,3 +192,46 @@ describe("generateFeaturedImage — manual protection & regeneration", () => {
     expect(client.calls[0].prompt).toContain("obsidian monolith bisected by a single beam");
   });
 });
+
+describe("generateFeaturedImage — source lead image", () => {
+  const sourceImage = {
+    bytes: Buffer.from(TINY_PNG_BASE64, "base64"),
+    mimeType: "image/png",
+    credit: {
+      provider: "source" as const,
+      photographer: "acme.ai",
+      photographerUrl: "https://acme.ai/blog/nimbus-3",
+      sourceUrl: "https://acme.ai/img/nimbus-3.png",
+    },
+  };
+  const sources = [{ name: "acme.ai", url: "https://acme.ai/blog/nimbus-3", primary: true }];
+
+  it("uses the source image before calling the image model", async () => {
+    const usage: UsageRecord[] = [];
+    const out = await generateFeaturedImage(
+      deps({ sourceClient: { find: async () => sourceImage }, onUsage: (r) => usage.push(r) }),
+      { ...input, sources },
+    );
+    expect(out.status).toBe("stock");
+    expect(out.model).toBe("source");
+    expect(out.aiGenerated).toBe(false);
+    expect(out.credit).toEqual(sourceImage.credit);
+    expect(usage.filter((u) => u.purpose === "image")).toHaveLength(0);
+  });
+
+  it("generates as before when the source has no image", async () => {
+    const out = await generateFeaturedImage(
+      deps({ sourceClient: { find: async () => null } }),
+      { ...input, sources },
+    );
+    expect(out.status).toBe("generated");
+  });
+
+  it("skips the source tier when preferSourceImage is false", async () => {
+    const out = await generateFeaturedImage(
+      deps({ sourceClient: { find: async () => sourceImage } }),
+      { ...input, sources, preferSourceImage: false },
+    );
+    expect(out.status).toBe("generated");
+  });
+});

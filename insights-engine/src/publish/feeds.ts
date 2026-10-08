@@ -13,7 +13,8 @@ export const INSIGHTS_BASE = "/insights";
 
 /** Attribution for a stock (non-generated, non-manual) hero photo. */
 export interface ImageCredit {
-  provider: "pexels";
+  /** "source" = the lead image of the article's source page. */
+  provider: "pexels" | "source";
   photographer: string;
   photographerUrl: string;
   sourceUrl: string;

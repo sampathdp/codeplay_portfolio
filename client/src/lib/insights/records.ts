@@ -110,7 +110,7 @@ export interface ArticleRow {
   featured_image_is_manual: boolean;
   featured_image_model: string | null;
   featured_image_credit: {
-    provider: "pexels";
+    provider: "pexels" | "source";
     photographer: string;
     photographerUrl: string;
     sourceUrl: string;

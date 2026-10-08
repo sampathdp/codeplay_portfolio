@@ -25,6 +25,7 @@ export interface GeminiGenerateOptions {
     | "source_verification"
     | "outline"
     | "draft"
+    | "edit"
     | "fact_check"
     | "seo"
     | "headlines"

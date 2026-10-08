@@ -21,11 +21,13 @@ describe("editorial pages", () => {
     }
   });
 
-  it("the AI policy states a human reviews every published article", () => {
+  it("the AI policy discloses automatic publishing and never claims per-article human review", () => {
     const ai = getEditorialPage("ai-policy")!;
     const flat = ai.body.replace(/\s+/g, " ").toLowerCase();
-    expect(flat).toContain("human editor");
-    expect(flat).toMatch(/accountable for \*\*every\*\* published article/);
+    expect(flat).toContain("published automatically");
+    expect(flat).toContain("held back and never auto-published");
+    expect(flat).not.toMatch(/human editor reviews/);
+    expect(flat).not.toContain("we do not auto-publish");
   });
 
   it("returns undefined for an unknown slug", () => {

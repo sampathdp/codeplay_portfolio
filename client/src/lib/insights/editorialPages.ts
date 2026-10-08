@@ -47,8 +47,9 @@ public. It is not a press-release feed and it is not sponsored coverage.
 - Confirmed facts are separated from analysis, prediction and opinion.
 - Community rumours are labelled as rumours, never reported as fact.
 - Sources are linked. Original reporting belongs to its publishers.
-- AI tools may assist the workflow; a human editor is responsible for
-  every published article. See our [AI Usage Policy](${INSIGHTS_BASE}/ai-policy).
+- Articles are produced with an AI-assisted workflow and automated
+  fact and quality checks. CodePlay's team monitors what is published and
+  corrects it. See our [AI Usage Policy](${INSIGHTS_BASE}/ai-policy).
 
 ## Contact
 
@@ -76,7 +77,8 @@ attribution.
 
 ## Writing
 
-Every article is written by CodePlay's editorial team. Articles must:
+Articles are produced by CodePlay's AI-assisted editorial workflow, to
+standards set by our team. Articles must:
 
 - lead with the confirmed facts and cite where they come from;
 - clearly separate reporting from CodePlay's analysis and predictions;
@@ -86,7 +88,7 @@ Every article is written by CodePlay's editorial team. Articles must:
 
 ## Review
 
-Before an article is published, an editor checks that:
+Before an article is published, automated checks confirm that:
 
 - claims are supported by the linked sources;
 - confidence is represented honestly (confirmed / likely / rumour);
@@ -115,7 +117,7 @@ See the [Corrections Policy](${INSIGHTS_BASE}/corrections).`,
     slug: "ai-policy",
     title: "AI Usage Policy",
     description:
-      "How and where AI tools assist the CodePlay Insights editorial workflow — and where human editors remain responsible.",
+      "How AI tools are used in the CodePlay Insights editorial workflow, how articles are checked, and how publishing works.",
     body: `CodePlay Studios builds AI software, and we use AI tools in this editorial
 workflow. This page explains exactly where.
 
@@ -123,34 +125,37 @@ workflow. This page explains exactly where.
 
 - **Discovery.** Automated systems collect and cluster technology and
   gaming news from approved sources and score how significant each story
-  is. Editors choose what to cover.
-- **Research support.** AI tools help summarise primary sources and
-  surface open questions. Every fact is checked against the source before
-  it appears in an article.
-- **Drafting support.** AI tools help produce a first structured draft
-  from verified research notes. Drafts are not published as generated.
-- **Checks.** Automated checks flag unsupported claims, missing sources,
-  weak headlines and quality issues for an editor to resolve.
+  is.
+- **Research.** AI tools summarise the primary sources into structured
+  research notes and check that a story has enough independent sourcing.
+- **Drafting and editing.** AI tools write a structured draft from those
+  notes, then a separate editing pass tightens it, removes filler and
+  sharpens the developer and business analysis. Neither pass may add facts
+  or sources that are not in the research notes.
+- **Checks.** Automated checks then verify every claim against the
+  sources and score quality, readability and sensationalism.
 
-## Where humans are responsible
+## How publishing works
 
-A human editor reviews and is accountable for **every** published
-article. Editors verify the sources, correct the analysis, write or
-rewrite the CodePlay take, and make the decision to publish. Articles
-that fail our quality or fact-confidence checks are held for review
-regardless of how they were drafted.
+Articles that pass every check can be published automatically, up to a
+few per day. Articles that fail a quality or fact-confidence check are
+held back and never auto-published. CodePlay's team monitors published
+articles, and fixes or removes them when something is wrong (see our
+[Corrections Policy](${INSIGHTS_BASE}/corrections)).
 
 ## What we don't do
 
-- We do not auto-publish AI-generated text.
 - We do not present AI predictions or community rumours as confirmed fact.
 - We do not fabricate quotes, sources, dates, authors or credentials.
+- We do not claim hands-on testing we did not do.
 
 ## Images
 
-Featured images are AI-generated editorial illustrations unless noted
-otherwise. They are labelled as such on the article and are never
-presented as photographs of real events, people or products.
+Featured images are AI-generated editorial illustrations, licensed stock
+photos, or official press images from the company in the story. The
+article labels which one, credits photographers and publishers, and never
+presents an illustration as a photograph of a real event, person or
+product.
 
 ## Transparency
 

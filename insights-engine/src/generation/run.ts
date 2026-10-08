@@ -35,6 +35,7 @@ import { SharpImageProcessor, type VariantSpec } from "../storage/processor";
 import { SupabaseImageStore } from "../storage/images";
 import { generateFeaturedImage } from "./imagePipeline";
 import { createStockImageClient } from "./stockImage";
+import { createSourceImageClient } from "./sourceImage";
 import { persistImageOutcome } from "./persistImage";
 
 const env = process.env as Record<string, string | undefined>;
@@ -144,6 +145,8 @@ interface ImageSettings {
   aspectRatio?: string;
   variants?: VariantSpec[];
   webpQuality?: number;
+  /** Use the source article's lead image before AI / stock. Default true. */
+  preferSourceImage?: boolean;
 }
 
 /** Generate + store ONE featured image for an article. Never throws. */
@@ -181,12 +184,22 @@ async function runImageForArticle(
 
   const entRes = await sb
     .from("insights_article_sources")
-    .select("source_name")
+    .select("source_name,source_url,source_type,primary_source")
     .eq("article_id", ctx.articleId)
-    .limit(6);
-  const entities = [
-    ...new Set(((entRes.data as { source_name: string }[]) ?? []).map((r) => r.source_name)),
-  ];
+    .limit(8);
+  const sourceRows = (entRes.data ?? []) as Array<{
+    source_name: string;
+    source_url: string;
+    source_type: string | null;
+    primary_source: boolean | null;
+  }>;
+  const entities = [...new Set(sourceRows.map((r) => r.source_name))];
+  const sources = sourceRows.map((r) => ({
+    name: r.source_name,
+    url: r.source_url,
+    primary: Boolean(r.primary_source),
+    official: ["official_blog", "press_release", "release_notes"].includes(r.source_type ?? ""),
+  }));
 
   // Stock photos already used by other articles, so each post gets its own.
   const usedRes = await sb
@@ -207,6 +220,7 @@ async function runImageForArticle(
       {
         imageClient: createGeminiImageClient(env, ctx.imageModel),
         stockClient: createStockImageClient(env),
+        sourceClient: createSourceImageClient(env),
         processor: new SharpImageProcessor(),
         store: new SupabaseImageStore(sb, env.INSIGHTS_MEDIA_BUCKET || "insights-media"),
         textClient: ctx.textClient,
@@ -220,6 +234,8 @@ async function runImageForArticle(
         entities,
         visualConcept: (art.image_prompt as string) ?? undefined,
         excludeStockUrls,
+        sources,
+        preferSourceImage: ctx.imageSettings.preferSourceImage,
         promptOverride: ctx.promptOverride ?? null,
         aspectRatio: ctx.imageSettings.aspectRatio ?? "16:9",
         variants: ctx.imageSettings.variants,

@@ -76,7 +76,8 @@ export default function Footer() {
                 { label: "Free Tools", href: TOOLS_HREF },
                 { label: "Discovery", href: "/contact" },
                 { label: "Privacy Policy", href: "/privacy-policy" },
-                { label: "Terms & Conditions", href: "/terms-and-conditions" }
+                { label: "Terms & Conditions", href: "/terms-and-conditions" },
+                { label: "Cookie Policy", href: "/cookie-policy" }
               ].map((link, i) => (
                 <li key={i}>
                   {link.href.startsWith("http") ? (

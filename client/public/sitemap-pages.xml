@@ -182,7 +182,13 @@
   </url>
   <url>
     <loc>https://codeplaystudios.com/privacy-policy</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://codeplaystudios.com/cookie-policy</loc>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

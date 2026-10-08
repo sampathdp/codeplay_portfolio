@@ -239,7 +239,20 @@ export default function InsightsArticle() {
               priority
               className="w-full object-cover"
             />
-            {article.heroImage.kind === "stock" && article.heroImage.credit ? (
+            {article.heroImage.kind === "stock" &&
+            article.heroImage.credit?.provider === "source" ? (
+              <figcaption className="bg-black/50 px-4 py-2 text-xs text-slate-400">
+                Image:{" "}
+                <a
+                  href={article.heroImage.credit.photographerUrl}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="underline hover:text-white"
+                >
+                  {article.heroImage.credit.photographer}
+                </a>
+              </figcaption>
+            ) : article.heroImage.kind === "stock" && article.heroImage.credit ? (
               <figcaption className="bg-black/50 px-4 py-2 text-xs text-slate-400">
                 Photo:{" "}
                 <a

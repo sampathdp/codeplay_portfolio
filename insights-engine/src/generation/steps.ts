@@ -6,6 +6,7 @@
 
 import type { GeminiClient } from "../gemini/types";
 import { generateJson } from "../gemini/json";
+import { BudgetExceededError } from "../gemini/budget";
 import { isOfficialDomain } from "../classify";
 import {
   researchBundleSchema,
@@ -29,6 +30,7 @@ import {
   sourceVerificationPrompt,
   outlinePrompt,
   draftPrompt,
+  editPrompt,
   factCheckPrompt,
   seoPrompt,
   qualityPrompt,
@@ -210,4 +212,75 @@ export async function scoreQuality(
     { purpose: "quality", system: HOUSE_STYLE, temperature: 0.2 },
   );
   return { quality: res.data as QualityScores, usage: res.usage, model: res.model };
+}
+
+const LINK_RE = /\]\((https?:\/\/[^)\s]+)\)/g;
+
+function draftLinks(d: Draft): Set<string> {
+  const text = [
+    ...d.sections.map((s) => s.content),
+    ...Object.values(d.originalValue),
+  ].join("\n");
+  return new Set([...text.matchAll(LINK_RE)].map((m) => m[1]));
+}
+
+function bodyWords(d: Draft): number {
+  return d.sections
+    .map((s) => s.content)
+    .join(" ")
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean).length;
+}
+
+/**
+ * Why an edited draft must be thrown away, or null when it is safe to use.
+ * The editor may rewrite prose freely but must not change structure, drop
+ * sourcing, or introduce links that are not in the draft or the bundle.
+ */
+export function editRejection(
+  original: Draft,
+  edited: Draft,
+  bundle: ResearchBundle,
+): string | null {
+  const keysA = original.sections.map((s) => s.key).join(",");
+  const keysB = edited.sections.map((s) => s.key).join(",");
+  if (keysA !== keysB) return "section keys changed";
+
+  const before = draftLinks(original);
+  const after = draftLinks(edited);
+  for (const url of before) if (!after.has(url)) return `dropped link ${url}`;
+  const allowed = new Set([...before, ...bundle.primarySources, ...bundle.secondarySources]);
+  for (const url of after) if (!allowed.has(url)) return `new unsourced link ${url}`;
+
+  if (bodyWords(edited) < bodyWords(original) * 0.75) return "edit cut too much content";
+  return null;
+}
+
+/**
+ * Editor pass: rewrite the draft the way a human desk editor would —
+ * news-first, varied rhythm, no machine-sounding filler, a stronger
+ * CodePlay angle. Never fatal: on any failure, or if the edit breaks a
+ * guard, the original draft is kept and the fact-check runs on it.
+ */
+export async function editDraft(
+  client: GeminiClient,
+  bundle: ResearchBundle,
+  draft: Draft,
+): Promise<{ draft: Draft; edited: boolean; reason?: string }> {
+  try {
+    const res = await generateJson(client, editPrompt({ bundle, draft }), draftSchema, {
+      purpose: "edit",
+      system: HOUSE_STYLE,
+      temperature: 0.7,
+      maxOutputTokens: 12_000,
+    });
+    const edited = res.data as Draft;
+    const why = editRejection(draft, edited, bundle);
+    if (why) return { draft, edited: false, reason: why };
+    return { draft: { ...edited, wordCount: bodyWords(edited) }, edited: true };
+  } catch (err) {
+    if (err instanceof BudgetExceededError) throw err;
+    return { draft, edited: false, reason: err instanceof Error ? err.message : String(err) };
+  }
 }

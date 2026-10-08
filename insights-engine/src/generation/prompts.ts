@@ -149,6 +149,49 @@ Return JSON:
 The section keys must match the outline. Each originalValue field must contain specific, non-generic analysis grounded in the bundle.`;
 }
 
+/**
+ * Phrases and patterns that make a draft read as machine-written. The
+ * editor pass removes them; they are not a detector-evasion list, they
+ * are the habits a human desk editor would cut anyway.
+ */
+export const AI_TELLS = [
+  "it's worth noting", "it is worth noting", "it's important to note",
+  "in conclusion", "in summary", "to sum up", "overall,",
+  "moreover", "furthermore", "additionally", "notably",
+  "navigate the", "navigating", "landscape", "realm", "tapestry",
+  "robust", "seamless", "seamlessly", "leverage", "unlock", "unleash",
+  "empower", "elevate", "harness", "cutting-edge", "state-of-the-art",
+  "crucial", "pivotal", "vital role", "plays a key role",
+  "in an era of", "as technology continues to", "only time will tell",
+  "here's the thing", "the bottom line", "let's dive in", "let's explore",
+];
+
+export function editPrompt(input: { bundle: ResearchBundle; draft: Draft }): string {
+  return `You are the senior desk editor at CodePlay Insights. A staff writer filed the draft below. Edit it so it reads like it was written and edited by an experienced human tech journalist with a developer background, and so it gives readers something they cannot get from the source articles.
+
+Edit for:
+- Lead with the news and the concrete detail that matters most. Cut warm-up sentences and generic scene-setting.
+- Vary rhythm: mix short and longer sentences; paragraphs of uneven length; not every section built the same way. Avoid lists of three by default.
+- Plain, specific language. Replace vague claims with the concrete facts, names, versions, dates and numbers already in the research bundle.
+- Remove these machine-sounding habits entirely: ${AI_TELLS.map((t) => `"${t}"`).join(", ")}; also stacked transition words, em-dash overuse, rhetorical questions as filler, and closing paragraphs that just repeat the summary.
+- Strengthen the CodePlay angle: what this practically changes for developers, game studios and small businesses (including teams in Sri Lanka and South Asia where it is genuinely relevant), what to do next, and honest limitations. Keep it grounded in the bundle — opinion must be clearly framed as analysis.
+- Keep a confident, direct editorial voice. Use "we" only for CodePlay's view or analysis — never to claim hands-on testing or use.
+
+Hard constraints (an edit that breaks these is rejected):
+- Do NOT add any fact, number, quote, benchmark, date or source that is not in the research bundle. Do NOT remove material facts or sourcing.
+- Keep every markdown link URL from the draft. Keep section "key" values identical and in the same order.
+- Keep fact / analysis / prediction / rumor clearly distinguished.
+- Same JSON shape as the draft. "wordCount" = your edited body word count.
+
+Research bundle:
+${bundleBlock(input.bundle)}
+
+Draft (JSON):
+${JSON.stringify(input.draft, null, 2)}
+
+Return the edited draft as a single JSON object with the same fields: standfirst, quickSummary, sections[{key, heading, content}], originalValue{...}, wordCount.`;
+}
+
 export function factCheckPrompt(input: { bundle: ResearchBundle; draft: Draft }): string {
   const body = input.draft.sections.map((s) => `## ${s.heading}\n${s.content}`).join("\n\n");
   return `Fact-check this draft against the research bundle ONLY. For each material claim, classify it and say whether the bundle supports it. Flag any factual claim with no support, and any rumor/community opinion written as if it were established fact.
