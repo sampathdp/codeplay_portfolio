@@ -6,8 +6,116 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 04 Oct 2026 10:46:47 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 08 Oct 2026 11:38:35 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>EmbeddingGemma 2 Integration Guide: Modularity and Matryoshka Truncation</title>
+      <link>https://codeplaystudios.com/insights/embeddinggemma-2-developer-guide-integration</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/embeddinggemma-2-developer-guide-integration</guid>
+      <pubDate>Thu, 08 Oct 2026 10:52:33 GMT</pubDate>
+      <category>Open Source</category>
+      <description>A practical implementation and optimization guide for integrating EmbeddingGemma 2 into multi-modal architectures using modular encoders and Matryoshka dimension truncation.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/embeddinggemma-2-developer-guide-integration/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Mistral Large 4 Available Now on Vercel AI Gateway</title>
+      <link>https://codeplaystudios.com/insights/mistral-large-4-vercel-ai-gateway</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/mistral-large-4-vercel-ai-gateway</guid>
+      <pubDate>Thu, 08 Oct 2026 10:52:09 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>Mistral Large 4 arrives on Vercel AI Gateway, offering teams unified API routing and infrastructure simplification.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/mistral-large-4-vercel-ai-gateway/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>No Active Watch Dogs Games in Development, Confirms Ubisoft Leadership</title>
+      <link>https://codeplaystudios.com/insights/ubisoft-watch-dogs-franchise-development-status</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/ubisoft-watch-dogs-franchise-development-status</guid>
+      <pubDate>Wed, 07 Oct 2026 10:32:06 GMT</pubDate>
+      <category>Open Source</category>
+      <description>Ubisoft acknowledges the value of the Watch Dogs intellectual property, but confirms no active development is underway for the franchise.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/ubisoft-watch-dogs-franchise-development-status/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>PvPvE Extraction Shooter Beautiful Light Confirms 2026 Early Access</title>
+      <link>https://codeplaystudios.com/insights/beautiful-light-extraction-shooter-2026-release</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/beautiful-light-extraction-shooter-2026-release</guid>
+      <pubDate>Wed, 07 Oct 2026 10:31:41 GMT</pubDate>
+      <category>Developer Tools</category>
+      <description>Beautiful Light targets a December 2026 Steam early access release, bringing tactical objective-based PvPvE extraction gameplay into an increasingly crowded market.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/beautiful-light-extraction-shooter-2026-release/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>OpenAI Releases Lean Proof Formalizations for Advanced Mathematics</title>
+      <link>https://codeplaystudios.com/insights/openai-releases-lean-proof-formalizations</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/openai-releases-lean-proof-formalizations</guid>
+      <pubDate>Wed, 07 Oct 2026 10:31:15 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>OpenAI&apos;s recent release of Lean proof formalizations marks a notable step toward bridging generative AI with machine-checked mathematical rigor.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/openai-releases-lean-proof-formalizations/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Indie Title Divine Frequency Launches Early Access Following Lead Writer&apos;s Death</title>
+      <link>https://codeplaystudios.com/insights/divine-frequency-early-access-launch</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/divine-frequency-early-access-launch</guid>
+      <pubDate>Tue, 06 Oct 2026 10:41:19 GMT</pubDate>
+      <category>Startups</category>
+      <description>Divine Frequency arrives in early access at 70 percent completion, balancing the realities of independent game delivery against the sobering loss of its lead writer.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/divine-frequency-early-access-launch/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Arc Raiders and The Finals Head to Film and TV via Chernin Entertainment</title>
+      <link>https://codeplaystudios.com/insights/arc-raiders-the-finals-film-tv-adaptations</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/arc-raiders-the-finals-film-tv-adaptations</guid>
+      <pubDate>Tue, 06 Oct 2026 10:40:55 GMT</pubDate>
+      <category>Developer Tools</category>
+      <description>Embark Studios is expanding its intellectual properties beyond interactive media, partnering with Chernin Entertainment to bring Arc Raiders and The Finals to film and television.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/arc-raiders-the-finals-film-tv-adaptations/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>How Gears of War: E-Day Uses the Xbox Series S SSD as Virtual Memory</title>
+      <link>https://codeplaystudios.com/insights/gears-of-war-e-day-xbox-series-s-ssd-virtual-memory</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/gears-of-war-e-day-xbox-series-s-ssd-virtual-memory</guid>
+      <pubDate>Tue, 06 Oct 2026 10:40:29 GMT</pubDate>
+      <category>Emerging Technology</category>
+      <description>An analysis of how The Coalition leverages the Xbox Series S NVMe storage as an extended memory pool for Gears of War: E-Day, exploring the engineering tradeoffs of SSD-as-RAM strategies.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/gears-of-war-e-day-xbox-series-s-ssd-virtual-memory/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>OpenAI Outlines EU Text Provenance Compliance Framework for Researchers</title>
+      <link>https://codeplaystudios.com/insights/openai-outlines-eu-text-provenance-framework</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/openai-outlines-eu-text-provenance-framework</guid>
+      <pubDate>Mon, 05 Oct 2026 23:17:44 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>OpenAI has published its initial framework for EU text provenance compliance, marking a phased rollout focused primarily on researchers.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/openai-outlines-eu-text-provenance-framework/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Jagex Announces Fourth RuneScape MMORPG Under Working Title RS4</title>
+      <link>https://codeplaystudios.com/insights/jagex-announces-fourth-runescape-mmorpg-rs4</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/jagex-announces-fourth-runescape-mmorpg-rs4</guid>
+      <pubDate>Mon, 05 Oct 2026 10:47:05 GMT</pubDate>
+      <category>Developer Tools</category>
+      <description>Jagex announces a fourth-generation RuneScape MMO at RuneFest Birmingham, opting for a concurrent ecosystem strategy rather than a replacement sequel.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/jagex-announces-fourth-runescape-mmorpg-rs4/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Jagex Outlines RuneScape: Dragonwilds 2026 and 2027 Content Roadmaps</title>
+      <link>https://codeplaystudios.com/insights/runescape-dragonwilds-2026-2027-content-roadmap</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/runescape-dragonwilds-2026-2027-content-roadmap</guid>
+      <pubDate>Mon, 05 Oct 2026 10:46:40 GMT</pubDate>
+      <category>Open Source</category>
+      <description>Jagex has outlined its multi-year content roadmap for RuneScape: Dragonwilds, detailing structural plans for 2026 and 2027 following the survival game&apos;s 1.0 cross-platform launch.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/runescape-dragonwilds-2026-2027-content-roadmap/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Quake Rooftops Jam Demonstrates Modern Community Level Design in Classic BSP Architecture</title>
+      <link>https://codeplaystudios.com/insights/quake-rooftops-jam-bsp-architecture-analysis</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/quake-rooftops-jam-bsp-architecture-analysis</guid>
+      <pubDate>Sun, 04 Oct 2026 15:29:16 GMT</pubDate>
+      <category>Emerging Technology</category>
+      <description>The release of the Quake Rooftops Jam highlights the ongoing durability of classic BSP architecture and the strength of modern community-driven level design.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/quake-rooftops-jam-bsp-architecture-analysis/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>Battlestar Galactica Update Shifts Franchise Leadership to New Captain</title>
       <link>https://codeplaystudios.com/insights/battlestar-galactica-update-new-captain</link>
@@ -347,74 +455,6 @@
       <pubDate>Sat, 12 Sep 2026 08:13:42 GMT</pubDate>
       <category>Artificial Intelligence</category>
       <description>Perplexity adopts OpenAI&apos;s GPT-6 Astra for software maintenance, production monitoring, and internal communications with reduced human oversight.</description>
-    </item>
-    <item>
-      <title>Google Releases TPU Microbenchmarks for Granular Performance Tuning</title>
-      <link>https://codeplaystudios.com/insights/google-tpu-microbenchmarks-performance-tuning</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/google-tpu-microbenchmarks-performance-tuning</guid>
-      <pubDate>Fri, 11 Sep 2026 14:42:08 GMT</pubDate>
-      <category>Open Source</category>
-      <description>Google&apos;s open-source TPU microbenchmark suite allows machine learning engineers to isolate hardware subsystems, build empirical Roofline models, and target compiler-level optimizations.</description>
-    </item>
-    <item>
-      <title>Xbox Acquires Publishing Rights for Kojima&apos;s Physint After Sony Departs</title>
-      <link>https://codeplaystudios.com/insights/xbox-acquires-publishing-rights-for-kojimas-physint</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/xbox-acquires-publishing-rights-for-kojimas-physint</guid>
-      <pubDate>Fri, 11 Sep 2026 08:16:38 GMT</pubDate>
-      <category>Gaming</category>
-      <description>In a dramatic shift for platform publishing, Microsoft Xbox steps in to publish Kojima Productions&apos; action-espionage title Physint following Sony&apos;s departure.</description>
-    </item>
-    <item>
-      <title>Google Releases Agent and Model Evaluation Tools for Gemini Enterprise Platform</title>
-      <link>https://codeplaystudios.com/insights/gemini-enterprise-agent-platform-evaluation-tools-ga</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/gemini-enterprise-agent-platform-evaluation-tools-ga</guid>
-      <pubDate>Fri, 11 Sep 2026 08:16:14 GMT</pubDate>
-      <category>Developer Tools</category>
-      <description>Google&apos;s General Availability release of evaluation tools for the Gemini Enterprise Agent Platform brings standardized, enterprise-grade validation to AI agent pipelines.</description>
-    </item>
-    <item>
-      <title>Kotlin ADK 1.0 Brings Multi-Agent AI to Multiplatform</title>
-      <link>https://codeplaystudios.com/insights/kotlin-adk-1-0-multi-agent-ai-multiplatform</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/kotlin-adk-1-0-multi-agent-ai-multiplatform</guid>
-      <pubDate>Thu, 10 Sep 2026 08:24:36 GMT</pubDate>
-      <category>Artificial Intelligence</category>
-      <description>Google releases Agent Development Kit for Kotlin 1.0, bringing multi-agent AI orchestration and KSP-driven function calling to Kotlin Multiplatform environments.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/kotlin-adk-1-0-multi-agent-ai-multiplatform/fallback.svg" type="image/svg+xml" />
-    </item>
-    <item>
-      <title>The Anatomy of Harness Engineering: How to Evaluate and Iterate AI Coding Agents</title>
-      <link>https://codeplaystudios.com/insights/anatomy-of-harness-engineering-ai-coding-agents</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/anatomy-of-harness-engineering-ai-coding-agents</guid>
-      <pubDate>Thu, 10 Sep 2026 08:24:16 GMT</pubDate>
-      <category>Developer Tools</category>
-      <description>By shifting from slow end-to-end benchmarks to localized behavioral evaluations, software engineering teams can pinpoint root causes faster and reduce compute overhead when developing AI coding agents.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/anatomy-of-harness-engineering-ai-coding-agents/fallback.svg" type="image/svg+xml" />
-    </item>
-    <item>
-      <title>Apple Announces iPhone 18 Pro and iPhone Duo: What Mobile Developers Need to Know</title>
-      <link>https://codeplaystudios.com/insights/apple-iphone-18-pro-iphone-duo-developer-guide</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/apple-iphone-18-pro-iphone-duo-developer-guide</guid>
-      <pubDate>Thu, 10 Sep 2026 08:23:55 GMT</pubDate>
-      <category>Big Tech</category>
-      <description>Apple&apos;s September 2026 lineup introduces the iPhone 18 Pro, the new iPhone Duo, and updated Apple Watch models, creating new considerations for mobile software engineering teams.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/apple-iphone-18-pro-iphone-duo-developer-guide/fallback.svg" type="image/svg+xml" />
-    </item>
-    <item>
-      <title>How Cloudflare Saved 100 Terabytes of RAM Across Its 1.1.1.1 DNS Cache Infrastructure</title>
-      <link>https://codeplaystudios.com/insights/cloudflare-100tb-ram-dns-cache-optimization</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/cloudflare-100tb-ram-dns-cache-optimization</guid>
-      <pubDate>Thu, 03 Sep 2026 14:12:28 GMT</pubDate>
-      <category>Open Source</category>
-      <description>How micro-optimizations in Cloudflare&apos;s 1.1.1.1 DNS cache data structures yielded 100 terabytes of aggregate RAM savings across edge infrastructure.</description>
-    </item>
-    <item>
-      <title>Inside Cloudflare&apos;s 100TB RAM Savings: Lessons in In-Memory Data Structure Optimization</title>
-      <link>https://codeplaystudios.com/insights/cloudflare-100tb-ram-dns-cache-optimization-2</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/cloudflare-100tb-ram-dns-cache-optimization-2</guid>
-      <pubDate>Wed, 02 Sep 2026 15:49:04 GMT</pubDate>
-      <category>Open Source</category>
-      <description>Cloudflare&apos;s 1.1.1.1 DNS cache optimization reclaimed 100 terabytes of memory across its global fleet, demonstrating the compounded impact of low-level data structure tuning at scale.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/08/cloudflare-100tb-ram-dns-cache-optimization-2/fallback.svg" type="image/svg+xml" />
     </item>
   </channel>
 </rss>
