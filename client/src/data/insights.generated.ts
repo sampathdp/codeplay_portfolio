@@ -11,6 +11,170 @@ import type { InsightsArticle } from "@/lib/insights/types";
 export const INSIGHTS_ARTICLES: InsightsArticle[] = [
   {
     "status": "published",
+    "id": "b2d6a1eb-8f5b-497f-bdfa-45bf52fd3ec3",
+    "slug": "bit-reactor-recalls-furloughed-staff-star-wars-zero-company",
+    "title": "Bit Reactor Recalls Furloughed Staff Following Star Wars Zero Company Sales",
+    "dek": "Bit Reactor's recall of furloughed developers following Star Wars Zero Company highlights the precarious financial architecture of independent game development.",
+    "category": "web-development",
+    "categoryName": "Web Development",
+    "tags": [
+      {
+        "name": "Steam",
+        "slug": "steam"
+      },
+      {
+        "name": "Game Development",
+        "slug": "game-development"
+      },
+      {
+        "name": "Bit Reactor",
+        "slug": "bit-reactor"
+      },
+      {
+        "name": "Star Wars Zero Company",
+        "slug": "star-wars-zero-company"
+      },
+      {
+        "name": "Industry Trends",
+        "slug": "industry-trends"
+      }
+    ],
+    "body": "# Bit Reactor Recalls Furloughed Staff Following Star Wars Zero Company Sales\n\n*Bit Reactor's recall of furloughed developers following Star Wars Zero Company highlights the precarious financial architecture of independent game development.*\n\n## Quick Summary\n\n- Bit Reactor recalled more than half of its furloughed workforce following the commercial performance of its debut title.\n- The studio temporarily suspended most staff without pay ahead of the launch due to financial risk concerns.\n- Industry analysts estimate the Clone Wars tactics game surpassed 1 million copies sold, primarily via Steam.\n- The situation underscores the heavy reliance of mid-sized studios on day-one commercial viability.\n\n## What Happened?\n\nOn August 27, 2026, Bit Reactor launched Star Wars Zero Company, a Clone Wars-themed turn-based tactics game available on platforms including Xbox Series X|S as detailed on [Xbox News](https://news.xbox.com/en-us/2026/08/26/star-wars-zero-company-tips/). Ahead of this release, concerns over how the debut title would perform led the studio to temporarily suspend most of its staff without pay.\n\nFollowing the launch, industry analyst firm Alinea Analytics estimated that Star Wars Zero Company sold more than 1 million copies, with nearly 70 percent of those sales originating on Steam. Studio head Greg Foertsch asserted that Bit Reactor has started bringing back developers, successfully restoring more than half of its previous headcount to the payroll with hopes of bringing as many people back as possible.\n\nTechnical issues accompanied the release. The studio released a first patch on September 10, 2026, addressing issues like crashing and bugs where shots with a 100% chance to hit would still miss. The title subsequently received its first discount at Amazon ahead of Prime Big Deal Days in early October 2026.\n\n## Why It Matters\n\nThe situation at Bit Reactor exposes financial vulnerability within independent game development. When a newly formed studio stakes its existence on a single debut project, cash reserves often evaporate before the software reaches the market. Utilizing pre-launch furloughs as a risk mitigation strategy illustrates the operational measures leadership teams take when capital runways expire at the release window.\n\nThis incident shows that teams with pedigrees—such as veterans who built their reputations on tactical titles—are exposed to industry volatility. The reliance on day-one commercial viability forces studios into operational loops where a delay, a technical stumble, or a sluggish opening week affects the core engineering team.\n\n## What This Means for Businesses\n\nFor studio executives and publisher relations teams, Bit Reactor's trajectory serves as a case study in cash-flow management and burn-rate forecasting. When a debut title carries financial weight, development pipelines become rigid. Publishers and independent studios must re-evaluate milestone funding structures to prevent scenarios where payroll cannot bridge the gap between gold master status and commercial revenue realization.\n\nReliance on third-party analytical estimates—such as Alinea Analytics' figures placing sales above 1 million units—demonstrates the opacity of digital storefront metrics. Businesses cannot project post-launch stability on speculative data alone. Sustainable studio growth requires diversified revenue streams, publisher agreements with safety nets, and capital buffers that do not treat human capital as a short-term balancing variable.\n\n## Developer Impact\n\nThe human and operational toll of employment instability in game development is significant. Engineering and design talent face uncertainty when their livelihoods are tethered directly to storefront performance and probability-based tactical bugs. While Bit Reactor has brought back over half of its team, the interim period of unpaid furloughs extracts a psychological and professional tax.\n\nFor technical teams working under such pressure, maintaining morale while executing day-one patch cycles—such as fixing line-of-sight and hit-chance calculation errors—creates an environment prone to burnout. When developers worry about job security concurrently with bug triage, code quality and studio retention suffer.\n\n## CodePlay Developer Take\n\nFrom a development perspective, turn-based tactics games inherit complex state management for grid-based movement, line-of-sight calculations, and probabilistic combat systems such as hit-chance percentages. When a bug allows a 100 percent hit-chance attack to miss, it points to underlying state-validation issues or floating-point precision discrepancies within the combat resolution loop. For teams building complex systems under production constraints, automated testing suites for probability engines are useful. Organizational survival relies on isolating core gameplay loops early so that emergency post-launch patches do not compound the stress of an exhausted workforce.\n\n## CodePlay Verdict\n\nThe outlook for boutique strategy studios navigating licensed development remains uncertain. While Bit Reactor's tactical expertise has translated into commercial momentum and a partial workforce recall, relying on crisis-level operational pivots is not a blueprint for the sector. Industry leaders must prioritize structural financial resilience over high-risk launch strategies to protect creative talent and long-term viability.\n\n## Sources & Further Reading\n\n- [Star Wars Zero Company Tips for Tactics Padawans](https://news.xbox.com/en-us/2026/08/26/star-wars-zero-company-tips/) — primary source\n- [Star Wars Zero Company understands that Star Wars games should feel less like the movies and more like the toys](https://www.eurogamer.net/star-wars-zero-company-impressions-toys-movies)\n- [Star Wars Zero Company studio furloughed workers ahead of launch](https://www.gamedeveloper.com/business/star-wars-zero-company-studio-furloughed-workers-ahead-of-launch)\n- [Star Wars Zero Company Estimated to Have Sold 1 Million, With Nearly 70% on Steam](https://www.ign.com/articles/star-wars-zero-company-estimated-to-have-sold-1-million-with-nearly-70-on-steam)\n- [Star Wars Zero Company gets much-needed first patch so you won't miss shots with a 100% chance to hit any more](https://www.pcgamer.com/games/strategy/star-wars-zero-company-gets-much-needed-first-patch-so-you-wont-miss-shots-with-a-100-percent-chance-to-hit-any-more/)\n- [Star Wars Zero Company developer Bit Reactor begins bringing furloughed staff back](https://www.gamesindustry.biz/star-wars-zero-company-developer-bit-reactor-begins-bringing-furloughed-staff-back)\n- [Star Wars Zero Company finds success in passing 1m sales, so can the furloughed development team be reinstated and paid now?](https://www.eurogamer.net/star-wars-zero-company-xcom-sales-furloughed-staff)\n- [Star Wars Zero Company Gets Its First Big Discount at Amazon Ahead of Prime Big Deal Days](https://www.ign.com/articles/star-wars-zero-company-gets-its-first-big-discount-at-amazon-ahead-of-prime-big-deal-days)\n- [Star Wars Zero Company developer Bit Reactor brings back 'over half' of furloughed staff](https://www.gamedeveloper.com/business/star-wars-zero-company-developer-bit-reactor-brings-back-over-half-of-furloughed-staff)\n- [Star Wars: Zero Company studio is bringing \"as many people back as possible\" after furloughing \"most\" of its developers](https://www.eurogamer.net/star-wars-zero-company-bringing-back-furloughed-staff)\n- [Star Wars Zero Company studio start to bring back devs furloughed prior to launch, with \"more than half\" of previous headcount reportedly returning to payroll](https://www.rockpapershotgun.com/star-wars-zero-company-studio-start-to-bring-back-devs-furloughed-prior-to-launch-with-more-than-half-of-previous-headcount-reportedly-returning-to-payroll)\n- [Star Wars Zero Company Success Allows Dev to Bring Back Staff](https://www.pushsquare.com/news/2026/10/star-wars-zero-company-success-allows-dev-to-bring-back-staff)\n- [Bit Reactor bringing back over half of furloughed staff following the launch and sales success of Star Wars Zero Company](https://www.pcgamer.com/games/strategy/star-wars-zero-company-gets-much-needed-first-patch-so-wont-miss-shots-with-a-100-percent-chance-to-hit-any-more)\n- [Bit Reactor bringing back over half of furloughed staff following the launch and sales success of Star Wars Zero Company](https://www.ign.com/articles/star-wars-zero-company-gets-its-first-big-discount-at-amazon-amazon-ahead-of-prime-big-deal-days)\n- [Bit Reactor bringing back over half of furloughed staff following the launch and sales success of Star Wars Zero Company](https://www.gamedeveloper.com/business/star-wars-zero-company-developer-bit-reactor-bring-back-over-half-of-furloughed-staff)",
+    "keyTakeaways": [],
+    "take": {
+      "developerTake": "Turn-based strategy frameworks demand rigorous state validation; addressing edge cases like 100 percent hit-chance failures under extreme schedule pressure highlights the friction between rapid deployment and deterministic math systems.",
+      "businessImpact": "Debut studios remain vulnerable to severe cash-flow cliffs, exposing how reliance on day-one sales figures and opaque digital storefront metrics can force abrupt, destabilizing workforce furloughs.",
+      "developerImpact": "Engineers and designers face immense psychological strain when employment stability is directly coupled to launch-window performance and high-stress emergency patching cycles.",
+      "technicalExplanation": "",
+      "risksAndLimitations": "Exact financial terms, precise headcount figures beyond broad percentages, and exact publisher revenue splits remain undisclosed, limiting complete visibility into the studio's long-term balance sheet.",
+      "whyItMatters": "It demonstrates how even seasoned industry veterans with proven genre expertise remain susceptible to systemic financial instability during the critical transition from development to commercial release.",
+      "actionableRecommendations": "Independent studios should advocate for diversified milestone funding, establish capital buffers to avoid emergency furloughs, and implement automated probability testing to mitigate post-launch technical debt."
+    },
+    "sources": [
+      {
+        "url": "https://news.xbox.com/en-us/2026/08/26/star-wars-zero-company-tips/",
+        "title": "Star Wars Zero Company Tips for Tactics Padawans",
+        "publisher": "news.xbox.com",
+        "role": "primary"
+      },
+      {
+        "url": "https://www.eurogamer.net/star-wars-zero-company-impressions-toys-movies",
+        "title": "Star Wars Zero Company understands that Star Wars games should feel less like the movies and more like the toys",
+        "publisher": "eurogamer.net",
+        "role": "supporting"
+      },
+      {
+        "url": "https://www.gamedeveloper.com/business/star-wars-zero-company-studio-furloughed-workers-ahead-of-launch",
+        "title": "Star Wars Zero Company studio furloughed workers ahead of launch",
+        "publisher": "gamedeveloper.com",
+        "role": "supporting"
+      },
+      {
+        "url": "https://www.ign.com/articles/star-wars-zero-company-estimated-to-have-sold-1-million-with-nearly-70-on-steam",
+        "title": "Star Wars Zero Company Estimated to Have Sold 1 Million, With Nearly 70% on Steam",
+        "publisher": "ign.com",
+        "role": "supporting"
+      },
+      {
+        "url": "https://www.pcgamer.com/games/strategy/star-wars-zero-company-gets-much-needed-first-patch-so-you-wont-miss-shots-with-a-100-percent-chance-to-hit-any-more/",
+        "title": "Star Wars Zero Company gets much-needed first patch so you won't miss shots with a 100% chance to hit any more",
+        "publisher": "pcgamer.com",
+        "role": "supporting"
+      },
+      {
+        "url": "https://www.gamesindustry.biz/star-wars-zero-company-developer-bit-reactor-begins-bringing-furloughed-staff-back",
+        "title": "Star Wars Zero Company developer Bit Reactor begins bringing furloughed staff back",
+        "publisher": "gamesindustry.biz",
+        "role": "supporting"
+      },
+      {
+        "url": "https://www.eurogamer.net/star-wars-zero-company-xcom-sales-furloughed-staff",
+        "title": "Star Wars Zero Company finds success in passing 1m sales, so can the furloughed development team be reinstated and paid now?",
+        "publisher": "eurogamer.net",
+        "role": "supporting"
+      },
+      {
+        "url": "https://www.ign.com/articles/star-wars-zero-company-gets-its-first-big-discount-at-amazon-ahead-of-prime-big-deal-days",
+        "title": "Star Wars Zero Company Gets Its First Big Discount at Amazon Ahead of Prime Big Deal Days",
+        "publisher": "ign.com",
+        "role": "supporting"
+      },
+      {
+        "url": "https://www.gamedeveloper.com/business/star-wars-zero-company-developer-bit-reactor-brings-back-over-half-of-furloughed-staff",
+        "title": "Star Wars Zero Company developer Bit Reactor brings back 'over half' of furloughed staff",
+        "publisher": "gamedeveloper.com",
+        "role": "supporting"
+      },
+      {
+        "url": "https://www.eurogamer.net/star-wars-zero-company-bringing-back-furloughed-staff",
+        "title": "Star Wars: Zero Company studio is bringing \"as many people back as possible\" after furloughing \"most\" of its developers",
+        "publisher": "eurogamer.net",
+        "role": "supporting"
+      },
+      {
+        "url": "https://www.rockpapershotgun.com/star-wars-zero-company-studio-start-to-bring-back-devs-furloughed-prior-to-launch-with-more-than-half-of-previous-headcount-reportedly-returning-to-payroll",
+        "title": "Star Wars Zero Company studio start to bring back devs furloughed prior to launch, with \"more than half\" of previous headcount reportedly returning to payroll",
+        "publisher": "rockpapershotgun.com",
+        "role": "supporting"
+      },
+      {
+        "url": "https://www.pushsquare.com/news/2026/10/star-wars-zero-company-success-allows-dev-to-bring-back-staff",
+        "title": "Star Wars Zero Company Success Allows Dev to Bring Back Staff",
+        "publisher": "pushsquare.com",
+        "role": "supporting"
+      },
+      {
+        "url": "https://www.pcgamer.com/games/strategy/star-wars-zero-company-gets-much-needed-first-patch-so-wont-miss-shots-with-a-100-percent-chance-to-hit-any-more",
+        "title": "Bit Reactor bringing back over half of furloughed staff following the launch and sales success of Star Wars Zero Company",
+        "publisher": "pcgamer.com",
+        "role": "supporting"
+      },
+      {
+        "url": "https://www.ign.com/articles/star-wars-zero-company-gets-its-first-big-discount-at-amazon-amazon-ahead-of-prime-big-deal-days",
+        "title": "Bit Reactor bringing back over half of furloughed staff following the launch and sales success of Star Wars Zero Company",
+        "publisher": "ign.com",
+        "role": "supporting"
+      },
+      {
+        "url": "https://www.gamedeveloper.com/business/star-wars-zero-company-developer-bit-reactor-bring-back-over-half-of-furloughed-staff",
+        "title": "Bit Reactor bringing back over half of furloughed staff following the launch and sales success of Star Wars Zero Company",
+        "publisher": "gamedeveloper.com",
+        "role": "supporting"
+      }
+    ],
+    "heroImage": {
+      "src": "https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/bit-reactor-recalls-furloughed-staff-star-wars-zero-company/primary.webp",
+      "alt": "Image for: Bit Reactor Recalls Furloughed Staff Following Star Wars Zero Company Sales",
+      "width": 1600,
+      "height": 900,
+      "ogSrc": "https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/bit-reactor-recalls-furloughed-staff-star-wars-zero-company/primary.webp",
+      "aiGenerated": false,
+      "kind": "stock",
+      "credit": {
+        "provider": "source",
+        "sourceUrl": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/08/SWZC_HD_Choose-Your-Path-To-Victory-d034114bf2d2429b72c7.jpg",
+        "photographer": "news.xbox.com",
+        "photographerUrl": "https://news.xbox.com/en-us/2026/08/26/star-wars-zero-company-tips/"
+      }
+    },
+    "author": "CodePlay Studios Editorial Team",
+    "authorRole": "CodePlay Insights Editorial Team",
+    "readingMinutes": 6,
+    "publishedAt": "2026-10-09T10:49:53.523+00:00",
+    "updatedAt": "2026-10-09T10:49:53.64153+00:00",
+    "seo": {
+      "title": "Bit Reactor Recalls Furloughed Staff After Star Wars Sales",
+      "description": "Bit Reactor has recalled over half of its furloughed workforce following the commercial success of Star Wars Zero Company, highlighting studio financial risks.",
+      "canonicalUrl": "https://codeplaystudios.com/insights/bit-reactor-recalls-furloughed-staff-star-wars-zero-company"
+    },
+    "articleType": "industry_analysis",
+    "featured": true,
+    "trending": false,
+    "breaking": false,
+    "viewCount": 0
+  },
+  {
+    "status": "published",
     "id": "7a8c1f81-abdf-4673-bb80-744f23607d33",
     "slug": "embeddinggemma-2-developer-guide-integration",
     "title": "EmbeddingGemma 2 Integration Guide: Modularity and Matryoshka Truncation",
@@ -81,7 +245,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-10-08T10:52:33.888+00:00",
-    "updatedAt": "2026-10-08T18:04:08.714069+00:00",
+    "updatedAt": "2026-10-08T23:37:08.791984+00:00",
     "seo": {
       "title": "EmbeddingGemma 2 Developer Guide: Modularity & Truncation",
       "description": "A technical implementation guide for Google's EmbeddingGemma 2, covering modular modality encoders and Matryoshka dimension truncation.",
@@ -91,7 +255,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -173,7 +337,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-08T10:52:09.06+00:00",
-    "updatedAt": "2026-10-08T18:04:12.710713+00:00",
+    "updatedAt": "2026-10-08T23:37:11.790439+00:00",
     "seo": {
       "title": "Mistral Large 4 Now Available on Vercel AI Gateway",
       "description": "Mistral Large 4 is now available on Vercel AI Gateway. Learn how engineering teams can utilize unified API routing for the new model.",
@@ -183,7 +347,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -259,7 +423,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-07T10:32:06.223+00:00",
-    "updatedAt": "2026-10-08T18:04:16.199147+00:00",
+    "updatedAt": "2026-10-08T23:37:15.152206+00:00",
     "seo": {
       "title": "Ubisoft Confirms No Active Watch Dogs Games in Development",
       "description": "Ubisoft addresses the future of the Watch Dogs franchise, confirming the IP holds brand value but has no active games currently in development.",
@@ -269,7 +433,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -339,7 +503,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 2,
     "publishedAt": "2026-10-07T10:31:41.588+00:00",
-    "updatedAt": "2026-10-08T18:04:19.778588+00:00",
+    "updatedAt": "2026-10-08T23:37:18.181773+00:00",
     "seo": {
       "title": "Beautiful Light PvPvE Extraction Shooter Targets 2026 Release",
       "description": "Tactical PvPvE extraction shooter Beautiful Light confirms a December 2026 Steam early access release date. Read the timeline and analysis.",
@@ -349,7 +513,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -429,7 +593,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-10-07T10:31:15.271+00:00",
-    "updatedAt": "2026-10-08T18:04:24.029935+00:00",
+    "updatedAt": "2026-10-08T23:37:21.18074+00:00",
     "seo": {
       "title": "OpenAI Releases Lean Proof Formalizations for Mathematics",
       "description": "OpenAI publishes new research utilizing frontier models and the Lean proof assistant to formalize solutions for open mathematical problems.",
@@ -439,7 +603,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -511,7 +675,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-06T10:41:19.526+00:00",
-    "updatedAt": "2026-10-08T18:04:27.594481+00:00",
+    "updatedAt": "2026-10-08T23:37:24.138309+00:00",
     "seo": {
       "title": "Divine Frequency Launches Early Access in Indie Milestone",
       "description": "Divine Frequency arrives in early access at 70 percent completion, balancing independent game delivery against the loss of its lead writer.",
@@ -521,7 +685,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -613,7 +777,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-06T10:40:55.359+00:00",
-    "updatedAt": "2026-10-08T18:04:31.208849+00:00",
+    "updatedAt": "2026-10-08T23:37:26.833056+00:00",
     "seo": {
       "title": "Arc Raiders and The Finals Head to Film and TV",
       "description": "Embark Studios partners with Chernin Entertainment to bring Arc Raiders and The Finals to film and television. Discover the latest adaptation details.",
@@ -623,7 +787,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -703,7 +867,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-10-06T10:40:29.49+00:00",
-    "updatedAt": "2026-10-08T18:04:34.739917+00:00",
+    "updatedAt": "2026-10-08T23:37:29.791058+00:00",
     "seo": {
       "title": "Gears of War: E-Day Uses Xbox Series S SSD as Virtual Memory",
       "description": "An analysis of how The Coalition utilizes the Xbox Series S SSD as a virtual memory extension for Gears of War: E-Day, exploring engineering tradeoffs.",
@@ -713,7 +877,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -783,7 +947,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-05T23:17:44.582+00:00",
-    "updatedAt": "2026-10-08T18:04:38.370244+00:00",
+    "updatedAt": "2026-10-08T23:37:32.751098+00:00",
     "seo": {
       "title": "OpenAI Outlines EU Text Provenance Framework for Researchers",
       "description": "OpenAI has published its initial framework for EU text provenance compliance, detailing watermarking approaches for researchers in a phased rollout.",
@@ -793,7 +957,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -867,7 +1031,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-05T10:47:05.799+00:00",
-    "updatedAt": "2026-10-08T18:04:42.01838+00:00",
+    "updatedAt": "2026-10-08T23:37:35.971254+00:00",
     "seo": {
       "title": "Jagex Announces Fourth RuneScape MMORPG Under Working Title RS4",
       "description": "Jagex has announced a fourth-generation RuneScape MMO under the working title RS4 at RuneFest, confirming a concurrent live-service strategy.",
@@ -877,7 +1041,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -947,7 +1111,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-05T10:46:40.286+00:00",
-    "updatedAt": "2026-10-08T18:04:46.351279+00:00",
+    "updatedAt": "2026-10-08T23:37:38.956569+00:00",
     "seo": {
       "title": "RuneScape: Dragonwilds 2026-2027 Content Roadmap Announced",
       "description": "Jagex has detailed its multi-year content roadmap for RuneScape: Dragonwilds, outlining structural plans for 2026 and 2027 following the 1.0 release.",
@@ -957,7 +1121,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -1037,7 +1201,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-04T15:29:16.911+00:00",
-    "updatedAt": "2026-10-08T18:04:49.962912+00:00",
+    "updatedAt": "2026-10-08T23:37:42.219735+00:00",
     "seo": {
       "title": "Quake Rooftops Jam Analyzes Classic BSP Level Design",
       "description": "Explore how the Quake Rooftops Jam fan level pack pushes modern community design within 1996 engine constraints ahead of the game's 30th anniversary.",
@@ -1047,7 +1211,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -1109,7 +1273,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-04T10:01:49.247+00:00",
-    "updatedAt": "2026-10-08T18:04:53.683045+00:00",
+    "updatedAt": "2026-10-08T23:37:45.259667+00:00",
     "seo": {
       "title": "Battlestar Galactica Update Shifts Leadership to New Captain",
       "description": "The latest Battlestar Galactica release introduces a new commanding officer, moving franchise leadership past historical figures like William Adama.",
@@ -1119,7 +1283,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -1189,7 +1353,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-04T10:01:22.895+00:00",
-    "updatedAt": "2026-10-08T18:04:57.313872+00:00",
+    "updatedAt": "2026-10-08T23:37:47.488843+00:00",
     "seo": {
       "title": "Apple Releases Apple Pass Designer for Wallet Assets",
       "description": "Apple has published the Apple Pass Designer resource on its developer portal, offering new official guidance for Apple Wallet asset creation.",
@@ -1199,7 +1363,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -1275,7 +1439,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-03T09:24:28.244+00:00",
-    "updatedAt": "2026-10-08T18:05:00.845937+00:00",
+    "updatedAt": "2026-10-08T23:37:49.670052+00:00",
     "seo": {
       "title": "Gears of War: E-Day Early Access Launch & Platform Details",
       "description": "Explore the Gears of War: E-Day early access launch details, including Game Pass integration, Premium Edition availability, and platform strategy.",
@@ -1285,7 +1449,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -1359,7 +1523,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-10-03T09:24:05.636+00:00",
-    "updatedAt": "2026-10-08T18:05:04.338972+00:00",
+    "updatedAt": "2026-10-08T23:37:51.934293+00:00",
     "seo": {
       "title": "Cloudflare Releases Clef: Open-Weight Models & RL Fine-Tuning",
       "description": "Cloudflare introduces Clef, a new platform featuring open-weight decision models and reinforcement learning fine-tuning for edge automation tasks.",
@@ -1369,7 +1533,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -1447,7 +1611,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-03T09:23:41.188+00:00",
-    "updatedAt": "2026-10-08T18:05:07.805408+00:00",
+    "updatedAt": "2026-10-08T23:37:54.969369+00:00",
     "seo": {
       "title": "Cloudflare OHTTP Gateway: Privacy-Preserving Proxy Architecture",
       "description": "Analyze the technical architecture of Cloudflare's new OHTTP Gateway. Learn how engineering teams implement privacy-preserving proxy infrastructure.",
@@ -1457,7 +1621,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -1533,7 +1697,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 2,
     "publishedAt": "2026-10-02T16:20:51.393+00:00",
-    "updatedAt": "2026-10-08T18:05:11.207582+00:00",
+    "updatedAt": "2026-10-08T23:37:58.29183+00:00",
     "seo": {
       "title": "SteamVR Beta 2.18.2 Released: Runtime Stability Updates",
       "description": "Examine the technical implications of Valve's SteamVR Beta 2.18.2 release, focusing on targeted runtime stability patches and bug fixes.",
@@ -1543,7 +1707,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -1617,7 +1781,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-10-02T10:00:46.926+00:00",
-    "updatedAt": "2026-10-08T18:05:15.371697+00:00",
+    "updatedAt": "2026-10-08T23:38:01.623992+00:00",
     "seo": {
       "title": "Accelerating Video Diffusion on TPUs with Splash Attention",
       "description": "Explore how Sparse VideoGen and optimized Splash Attention kernels resolve quadratic latency bottlenecks for video diffusion models on Google TPUs.",
@@ -1627,7 +1791,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -1697,7 +1861,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-02T10:00:20.021+00:00",
-    "updatedAt": "2026-10-08T18:05:18.834651+00:00",
+    "updatedAt": "2026-10-08T23:38:04.641185+00:00",
     "seo": {
       "title": "Google Announces Gemini 4 Argon: What We Know So Far",
       "description": "Google has announced the Gemini 4 Argon model on its official research blog. Review what is currently known and what technical details are missing.",
@@ -1707,7 +1871,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -1783,7 +1947,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-01T10:25:03.585+00:00",
-    "updatedAt": "2026-10-08T18:05:22.366173+00:00",
+    "updatedAt": "2026-10-08T23:38:07.608348+00:00",
     "seo": {
       "title": "SteamOS 3.8.28 Stable Released With Broad Hardware Support",
       "description": "Valve officially pushes SteamOS 3.8.28 to the stable channel, bringing targeted system updates and expanded hardware compatibility for Linux gaming.",
@@ -1793,7 +1957,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -1863,7 +2027,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-01T10:24:38.687+00:00",
-    "updatedAt": "2026-10-08T18:05:25.86899+00:00",
+    "updatedAt": "2026-10-08T23:38:11.475608+00:00",
     "seo": {
       "title": "Managing Legacy Asset Refreshes: Pokémon 30th Anniversary Case Study",
       "description": "Explore how long-running intellectual properties handle legacy asset refreshes and multi-channel consistency across digital and physical ecosystems.",
@@ -1873,7 +2037,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -1951,7 +2115,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-01T10:24:14.501+00:00",
-    "updatedAt": "2026-10-08T18:05:29.420613+00:00",
+    "updatedAt": "2026-10-08T23:38:14.413171+00:00",
     "seo": {
       "title": "Google Cloud API Gateway Adds Native MCP Support for REST APIs",
       "description": "Google Cloud API Gateway now natively supports the Model Context Protocol, enabling teams to expose REST services to AI agents using OpenAPI annotations.",
@@ -1961,7 +2125,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -2049,7 +2213,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-25T09:03:39.085+00:00",
-    "updatedAt": "2026-10-08T18:05:32.887206+00:00",
+    "updatedAt": "2026-10-09T03:07:49.637073+00:00",
     "seo": {
       "title": "Summer Eternal's Player Equity Plan: Legal & Business Analysis",
       "description": "Analyzing the corporate governance and legal hurdles of Summer Eternal's experimental player equity initiative for indie game development studios.",
@@ -2059,7 +2223,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 4
+    "viewCount": 7
   },
   {
     "status": "published",
@@ -2133,7 +2297,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-09-25T09:03:13.356+00:00",
-    "updatedAt": "2026-10-08T18:05:35.383578+00:00",
+    "updatedAt": "2026-10-08T23:38:20.203984+00:00",
     "seo": {
       "title": "Path of Exile 2 Achieves Steam Deck Verified Status",
       "description": "Grinding Gear Games has secured Steam Deck Verification for Path of Exile 2 ahead of its December release, overcoming prior UI text hurdles.",
@@ -2143,7 +2307,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -2223,7 +2387,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-09-25T09:02:48.299+00:00",
-    "updatedAt": "2026-10-08T18:05:38.906226+00:00",
+    "updatedAt": "2026-10-08T23:38:23.170071+00:00",
     "seo": {
       "title": "Arc Raiders October Test Introduces Optional PvE Mode",
       "description": "Embark Studios announces an October test for Arc Raiders featuring a toggle-based PvE mode and adjusted loot economies for extraction shooters.",
@@ -2233,7 +2397,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 4
+    "viewCount": 5
   },
   {
     "status": "published",
@@ -2313,7 +2477,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-22T08:50:00.951+00:00",
-    "updatedAt": "2026-10-08T18:05:42.621036+00:00",
+    "updatedAt": "2026-10-08T23:38:26.150464+00:00",
     "seo": {
       "title": "Bungie Unvaults Destiny 2 Content: Engineering Analysis",
       "description": "Evaluating Bungie's decision to unvault Destiny 2 content through the lens of technical legacy asset integration, engine updates, and maintenance.",
@@ -2323,7 +2487,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 4
+    "viewCount": 5
   },
   {
     "status": "published",
@@ -2397,7 +2561,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-09-20T08:49:51.223+00:00",
-    "updatedAt": "2026-10-08T18:05:46.033428+00:00",
+    "updatedAt": "2026-10-08T23:38:29.051185+00:00",
     "seo": {
       "title": "FFXIV Switch 2 Port & December 2026 Roadmap: Developer Analysis",
       "description": "Explore the engineering and live-service strategy behind Final Fantasy XIV expanding to Nintendo Switch 2 ahead of the December 2026 milestone.",
@@ -2407,7 +2571,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 4
+    "viewCount": 5
   },
   {
     "status": "published",
@@ -2485,7 +2649,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-09-20T08:49:26.335+00:00",
-    "updatedAt": "2026-10-08T18:05:49.529132+00:00",
+    "updatedAt": "2026-10-08T23:38:31.30737+00:00",
     "seo": {
       "title": "Dungeon Crawler Carl Expansion: Peacock Series & Final Novels",
       "description": "The LitRPG hit Dungeon Crawler Carl expands with a Peacock TV adaptation by Fuzzy Door and a two-novel final chapter for the book series.",
@@ -2495,7 +2659,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -2571,7 +2735,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-09-20T08:49:02.088+00:00",
-    "updatedAt": "2026-10-08T18:05:53.138816+00:00",
+    "updatedAt": "2026-10-08T23:38:33.463054+00:00",
     "seo": {
       "title": "EA Sports FC 27 Early Review: Hubs, Tactics & AI",
       "description": "Early reviews for EA Sports FC 27 analyze structural shifts like open-world hubs and revised tactics, alongside persistent legacy AI pathing challenges.",
@@ -2581,7 +2745,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 4
+    "viewCount": 5
   },
   {
     "status": "published",
@@ -2655,7 +2819,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-09-19T08:16:56.869+00:00",
-    "updatedAt": "2026-10-08T18:05:56.65738+00:00",
+    "updatedAt": "2026-10-08T23:38:36.364461+00:00",
     "seo": {
       "title": "EA Sports FC 27 10-Hour EA Play Trial Available Now",
       "description": "EA Sports FC 27 launches a 10-hour EA Play trial on Xbox and PC, offering progress carryover for Xbox Game Pass Ultimate and PC Game Pass subscribers.",
@@ -2665,7 +2829,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -2739,7 +2903,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 5,
     "publishedAt": "2026-09-19T08:16:32.79+00:00",
-    "updatedAt": "2026-10-08T18:06:00.160722+00:00",
+    "updatedAt": "2026-10-08T23:38:38.542604+00:00",
     "seo": {
       "title": "Cloudflare Saves 100TB RAM Using Rust and Mathematical Optimization",
       "description": "Discover how Cloudflare reduced edge network memory usage by 100TB using Rust and algorithmic efficiency, delivering massive infrastructure savings.",
@@ -2749,7 +2913,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 4
+    "viewCount": 5
   },
   {
     "status": "published",
@@ -2823,7 +2987,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-09-19T08:16:09.335+00:00",
-    "updatedAt": "2026-10-08T18:06:03.601041+00:00",
+    "updatedAt": "2026-10-08T23:38:41.482791+00:00",
     "seo": {
       "title": "War Thunder Screenshot Competition & Sky Odyssey Update Analysis",
       "description": "Examine how Gaijin Entertainment uses low-overhead community loops and screenshot competitions to sustain engagement following major game updates.",
@@ -2833,7 +2997,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 4
+    "viewCount": 5
   },
   {
     "status": "published",
@@ -2915,7 +3079,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-18T08:30:02.561+00:00",
-    "updatedAt": "2026-10-08T18:06:07.111472+00:00",
+    "updatedAt": "2026-10-08T23:38:44.404249+00:00",
     "seo": {
       "title": "Decoding Cosmic Signals with Deep Learning and Keras",
       "description": "Explore how Keras and deep learning decode cosmic signals in astroparticle physics, offering blueprints for enterprise telemetry and anomaly detection.",
@@ -2925,7 +3089,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -3001,7 +3165,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-18T08:29:39.555+00:00",
-    "updatedAt": "2026-10-08T18:06:10.610768+00:00",
+    "updatedAt": "2026-10-08T23:38:47.371172+00:00",
     "seo": {
       "title": "Scaling Real-Time AI Agents with Session Load Balancing",
       "description": "Discover how session-aware load balancing and hybrid routing algorithms prevent server saturation when scaling stateful, real-time AI agent workloads.",
@@ -3011,7 +3175,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -3103,7 +3267,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-17T15:14:53.618+00:00",
-    "updatedAt": "2026-10-08T18:06:14.139117+00:00",
+    "updatedAt": "2026-10-09T05:30:26.419445+00:00",
     "seo": {
       "title": "Final Fantasy VII Revelation Set for April 2027 Release",
       "description": "Square Enix announces Final Fantasy VII Revelation for April 2027, detailing the trilogy conclusion and physical media constraints at TGS 2026.",
@@ -3113,7 +3277,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 4
+    "viewCount": 6
   },
   {
     "status": "published",
@@ -3187,7 +3351,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-09-16T20:21:50.015+00:00",
-    "updatedAt": "2026-10-08T18:06:17.631993+00:00",
+    "updatedAt": "2026-10-08T23:38:53.535861+00:00",
     "seo": {
       "title": "Google Introduces Agent Anomaly Detection for Gemini Enterprise",
       "description": "Google announces Agent Anomaly Detection in Private Preview for Gemini Enterprise, featuring asynchronous OpenTelemetry trace analysis and OWASP guardrails.",
@@ -3197,7 +3361,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 4
+    "viewCount": 5
   },
   {
     "status": "published",
@@ -3295,7 +3459,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-16T08:53:13.971+00:00",
-    "updatedAt": "2026-10-08T18:06:21.155873+00:00",
+    "updatedAt": "2026-10-08T23:38:56.521368+00:00",
     "seo": {
       "title": "Sega and Netflix Partner for Multi-Title Adaptation Slate",
       "description": "Sega and Netflix announce a multi-title adaptation partnership, bringing Crazy Taxi, Sonic the Hedgehog, and Stranger Than Heaven to film and TV.",
@@ -3305,7 +3469,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 4
+    "viewCount": 5
   },
   {
     "status": "published",
@@ -3379,7 +3543,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-16T08:52:49.84+00:00",
-    "updatedAt": "2026-10-08T18:06:24.574755+00:00",
+    "updatedAt": "2026-10-08T23:38:59.450395+00:00",
     "seo": {
       "title": "Cloudflare New Controls Block AI Training Keep Search Visibility",
       "description": "Cloudflare launches account-level edge controls to help web operators allow search indexing while blocking dual-purpose bots from AI training ingestion.",
@@ -3389,7 +3553,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 5
+    "viewCount": 6
   },
   {
     "status": "published",
@@ -3465,7 +3629,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 5,
     "publishedAt": "2026-09-15T20:24:46.264+00:00",
-    "updatedAt": "2026-10-08T18:06:28.075055+00:00",
+    "updatedAt": "2026-10-08T23:39:02.391376+00:00",
     "seo": {
       "title": "Gemini 3.8 Live & Extended Thinking: Developer Overview",
       "description": "Google announces Gemini 3.8 Live and Extended Thinking. Explore the technical divide between real-time streaming latency and reasoning loops.",
@@ -3475,7 +3639,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 4
+    "viewCount": 5
   },
   {
     "status": "published",
@@ -3549,7 +3713,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-09-15T08:58:36.194+00:00",
-    "updatedAt": "2026-10-08T18:06:31.650451+00:00",
+    "updatedAt": "2026-10-08T23:39:05.390061+00:00",
     "seo": {
       "title": "Avatar The Last Airbender: The Living Typhoon Announced on Steam",
       "description": "An official Steam store page reveals Avatar The Last Airbender: The Living Typhoon, highlighting new cross-media production strategies.",
@@ -3559,7 +3723,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 4
+    "viewCount": 5
   },
   {
     "status": "published",
@@ -3703,7 +3867,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 5,
     "publishedAt": "2026-09-14T21:02:50.725+00:00",
-    "updatedAt": "2026-10-08T18:06:35.182764+00:00",
+    "updatedAt": "2026-10-08T23:39:08.303579+00:00",
     "seo": {
       "title": "Valve Steam Frame VR Headset: Pricing & Developer Strategy",
       "description": "Explore Valve's Steam Frame VR headset launch, 1,059 USD pricing, hybrid rendering, and hardware specifications for software engineers.",
@@ -3713,7 +3877,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 4
+    "viewCount": 5
   },
   {
     "status": "published",
@@ -3809,7 +3973,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-09-14T09:13:29.537+00:00",
-    "updatedAt": "2026-10-08T18:06:38.660602+00:00",
+    "updatedAt": "2026-10-08T23:39:11.582636+00:00",
     "seo": {
       "title": "BlizzCon 2026: Diablo 5, StarCraft Shooter & Legacy Remasters",
       "description": "Blizzard's BlizzCon 2026 roadmap outlines long-term release windows, including Diablo 5 in 2029, a new StarCraft shooter, and legacy Warcraft revivals.",
@@ -3819,7 +3983,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -3889,7 +4053,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-14T09:13:06.83+00:00",
-    "updatedAt": "2026-10-08T18:06:42.126999+00:00",
+    "updatedAt": "2026-10-08T23:39:14.505162+00:00",
     "seo": {
       "title": "Using Apple Accessory Dimensional Drawings in CAD Workflows",
       "description": "Learn how to integrate Apple accessory dimensional drawings into CAD pipelines to ensure physical fit, clear sensors, and reduce prototype costs.",
@@ -3899,7 +4063,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -3977,7 +4141,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-13T14:34:21.273+00:00",
-    "updatedAt": "2026-10-08T18:06:45.589415+00:00",
+    "updatedAt": "2026-10-08T23:39:17.793435+00:00",
     "seo": {
       "title": "Swapmeat 4-Player Roguelike Co-Op Free on Steam",
       "description": "Discover the limited-time free Steam promotion for 4-player roguelike co-op game Swapmeat, analyzing its user acquisition strategy and mechanics.",
@@ -3987,7 +4151,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -4061,7 +4225,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-13T08:31:27.347+00:00",
-    "updatedAt": "2026-10-08T18:06:49.095249+00:00",
+    "updatedAt": "2026-10-08T23:39:20.785228+00:00",
     "seo": {
       "title": "Genkit Go Agent Skills: Reducing Token Overhead",
       "description": "Discover how Genkit Go's new Agent Skills feature uses progressive disclosure and SKILL.md bundles to manage context window bloat in backend apps.",
@@ -4071,7 +4235,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -4153,7 +4317,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-13T08:31:05.411+00:00",
-    "updatedAt": "2026-10-08T18:06:52.604425+00:00",
+    "updatedAt": "2026-10-08T23:39:23.615398+00:00",
     "seo": {
       "title": "Cloud TPU Native vLLM for Long-Context Embeddings",
       "description": "Explore Google Cloud's native vLLM integration on Cloud TPU for high-throughput, long-context embedding inference in enterprise RAG workflows.",
@@ -4163,7 +4327,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -4241,7 +4405,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-12T13:41:42.625+00:00",
-    "updatedAt": "2026-10-08T18:06:56.046615+00:00",
+    "updatedAt": "2026-10-08T23:39:26.568253+00:00",
     "seo": {
       "title": "Google Cloud API Gateway Adds Native Model Routing",
       "description": "Google Cloud API Gateway now features native model routing in Public Preview, allowing declarative multi-LLM management using OpenAPI 3.x specs.",
@@ -4251,7 +4415,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 4
+    "viewCount": 5
   },
   {
     "status": "published",
@@ -4306,7 +4470,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 5,
     "publishedAt": "2026-09-12T08:14:05.291+00:00",
-    "updatedAt": "2026-10-08T18:06:59.40256+00:00",
+    "updatedAt": "2026-10-08T23:39:29.620753+00:00",
     "seo": {
       "title": "Building Zero-Trust AI Agents with Google ADK",
       "description": "Learn how to secure Google Agent Development Kit deployments using gVisor sandboxing, semantic gateways, and cryptographic verification.",
@@ -4316,7 +4480,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -4375,7 +4539,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-09-12T08:13:42.429+00:00",
-    "updatedAt": "2026-10-08T18:07:02.906498+00:00",
+    "updatedAt": "2026-10-08T23:39:32.577804+00:00",
     "seo": {
       "title": "Perplexity Adopts OpenAI GPT-6 Astra for Systems Management",
       "description": "Perplexity integrates OpenAI's GPT-6 Astra for software maintenance, monitoring, and operations, signaling a shift toward autonomous management.",
@@ -4385,7 +4549,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 4
+    "viewCount": 5
   },
   {
     "status": "published",
@@ -4444,7 +4608,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 5,
     "publishedAt": "2026-09-11T14:42:08.758+00:00",
-    "updatedAt": "2026-10-08T18:07:06.49642+00:00",
+    "updatedAt": "2026-10-08T23:39:35.548671+00:00",
     "seo": {
       "title": "Google TPU Microbenchmarks: Guide for ML Performance Tuning",
       "description": "Explore Google's open-source TPU microbenchmark suite. Learn how ML engineers isolate subsystems, build Roofline models, and optimize XLA kernels.",
@@ -4454,7 +4618,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -4519,7 +4683,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-09-11T08:16:38.308+00:00",
-    "updatedAt": "2026-10-08T18:07:10.159002+00:00",
+    "updatedAt": "2026-10-08T23:39:38.441923+00:00",
     "seo": {
       "title": "Xbox Picks Up Kojima's Physint After Sony Cancels Development",
       "description": "Microsoft Xbox steps in to publish Hideo Kojima's tactical project Physint following Sony's departure. Read the business and development analysis.",
@@ -4529,7 +4693,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -4584,7 +4748,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-11T08:16:14.307+00:00",
-    "updatedAt": "2026-10-08T18:07:13.639058+00:00",
+    "updatedAt": "2026-10-08T23:39:41.516064+00:00",
     "seo": {
       "title": "Gemini Enterprise Agent Platform Adds Evaluation Tools",
       "description": "Google's GA release of evaluation tools for the Gemini Enterprise Agent Platform brings standardized validation and custom metrics to AI agent pipelines.",
@@ -4594,7 +4758,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -4663,7 +4827,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 5,
     "publishedAt": "2026-09-10T08:24:36.716+00:00",
-    "updatedAt": "2026-10-08T18:07:17.157436+00:00",
+    "updatedAt": "2026-10-08T23:39:44.124742+00:00",
     "seo": {
       "title": "Google Releases Agent Development Kit for Kotlin 1.0",
       "description": "Google launches Agent Development Kit for Kotlin 1.0, bringing multi-agent orchestration, KMP support, and reflection-free function calling.",
@@ -4673,7 +4837,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 2
+    "viewCount": 3
   },
   {
     "status": "published",
@@ -4742,7 +4906,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 5,
     "publishedAt": "2026-09-10T08:24:16.264+00:00",
-    "updatedAt": "2026-10-08T18:07:20.639898+00:00",
+    "updatedAt": "2026-10-08T23:39:47.225075+00:00",
     "seo": {
       "title": "Harness Engineering for AI Coding Agents: Evaluation & Iteration",
       "description": "Learn how harness engineering replaces slow end-to-end benchmarks with localized behavioral evaluations, accelerating AI coding agent iteration.",
@@ -4752,7 +4916,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -4849,7 +5013,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-10T08:23:55.626+00:00",
-    "updatedAt": "2026-10-08T18:07:24.101929+00:00",
+    "updatedAt": "2026-10-08T23:39:50.216354+00:00",
     "seo": {
       "title": "Apple iPhone 18 Pro and iPhone Duo: Mobile Developer Guide",
       "description": "Apple's September 2026 lineup introduces the iPhone 18 Pro and iPhone Duo. Learn what mobile engineering teams need to know about new hardware.",
@@ -4859,7 +5023,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -4918,7 +5082,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 5,
     "publishedAt": "2026-09-03T14:12:28.322506+00:00",
-    "updatedAt": "2026-10-08T18:07:27.533391+00:00",
+    "updatedAt": "2026-10-08T23:39:53.138075+00:00",
     "seo": {
       "title": "How Cloudflare Saved 100 Terabytes of RAM in 1.1.1.1 DNS Cache",
       "description": "Cloudflare reduced memory usage by 100 terabytes across its global 1.1.1.1 DNS infrastructure through struct layout tuning and allocator optimization.",
@@ -4928,7 +5092,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 8
+    "viewCount": 9
   },
   {
     "status": "published",
@@ -4997,7 +5161,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-02T15:49:04.704569+00:00",
-    "updatedAt": "2026-10-08T18:07:31.149172+00:00",
+    "updatedAt": "2026-10-08T23:39:56.065238+00:00",
     "seo": {
       "title": "Inside Cloudflare's 100TB RAM Savings: DNS Cache Optimization",
       "description": "Cloudflare reclaimed 100 terabytes of memory across its global 1.1.1.1 network by optimizing DNS cache data structures and byte padding.",
@@ -5007,7 +5171,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 5
+    "viewCount": 6
   }
 ];
 

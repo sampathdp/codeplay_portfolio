@@ -6,8 +6,17 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 08 Oct 2026 23:34:43 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 11:32:12 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>Bit Reactor Recalls Furloughed Staff Following Star Wars Zero Company Sales</title>
+      <link>https://codeplaystudios.com/insights/bit-reactor-recalls-furloughed-staff-star-wars-zero-company</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/bit-reactor-recalls-furloughed-staff-star-wars-zero-company</guid>
+      <pubDate>Fri, 09 Oct 2026 10:49:53 GMT</pubDate>
+      <category>Web Development</category>
+      <description>Bit Reactor&apos;s recall of furloughed developers following Star Wars Zero Company highlights the precarious financial architecture of independent game development.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/bit-reactor-recalls-furloughed-staff-star-wars-zero-company/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>EmbeddingGemma 2 Integration Guide: Modularity and Matryoshka Truncation</title>
       <link>https://codeplaystudios.com/insights/embeddinggemma-2-developer-guide-integration</link>
@@ -447,14 +456,6 @@
       <pubDate>Sat, 12 Sep 2026 08:14:05 GMT</pubDate>
       <category>Artificial Intelligence</category>
       <description>To safely allow autonomous AI agents built with Google&apos;s Agent Development Kit to mutate production state, software teams must replace soft system prompts with hard security boundaries like gVisor sandboxing and cryptographic verification.</description>
-    </item>
-    <item>
-      <title>Perplexity Adopts OpenAI GPT-6 Astra for Autonomous Systems Management</title>
-      <link>https://codeplaystudios.com/insights/perplexity-adopts-openai-gpt-6-astra</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/perplexity-adopts-openai-gpt-6-astra</guid>
-      <pubDate>Sat, 12 Sep 2026 08:13:42 GMT</pubDate>
-      <category>Artificial Intelligence</category>
-      <description>Perplexity adopts OpenAI&apos;s GPT-6 Astra for software maintenance, production monitoring, and internal communications with reduced human oversight.</description>
     </item>
   </channel>
 </rss>
