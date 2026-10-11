@@ -6,8 +6,17 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 10 Oct 2026 22:01:32 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 11 Oct 2026 11:02:48 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>Google Open-Sources AQuA: Diagnosing Production AI Agent Failures</title>
+      <link>https://codeplaystudios.com/insights/google-open-sources-aqua-ai-agent-diagnosis</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/google-open-sources-aqua-ai-agent-diagnosis</guid>
+      <pubDate>Sun, 11 Oct 2026 10:14:50 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>Google has open-sourced AQuA, a reference implementation addressing silent production failures in AI agents through automated outer-loop diagnosis.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/google-open-sources-aqua-ai-agent-diagnosis/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>OpenAI Releases GPT-6 and Intelligent UI: What Developers Need to Know</title>
       <link>https://codeplaystudios.com/insights/openai-gpt-6-intelligent-ui-developer-guide</link>
@@ -448,15 +457,6 @@
       <category>Cloud &amp; DevOps</category>
       <description>Google Cloud&apos;s native vLLM integration on Cloud TPU provides an architectural path for high-throughput, long-context embedding inference without abandoning standard open-source developer workflows.</description>
       <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/long-context-multimodal-embeddings-cloud-tpu-vllm/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>Google Cloud API Gateway Introduces Native Model Routing for Multi-LLM Architectures</title>
-      <link>https://codeplaystudios.com/insights/google-cloud-api-gateway-native-model-routing</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/google-cloud-api-gateway-native-model-routing</guid>
-      <pubDate>Sat, 12 Sep 2026 13:41:42 GMT</pubDate>
-      <category>Artificial Intelligence</category>
-      <description>Google Cloud API Gateway introduces native model routing in Public Preview, enabling declarative multi-LLM management via OpenAPI 3.x specifications.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/google-cloud-api-gateway-native-model-routing/primary.webp" type="image/webp" />
     </item>
   </channel>
 </rss>
