@@ -6,8 +6,17 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 11 Oct 2026 22:31:18 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2026 12:31:18 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>Google Releases Developer Knowledge API and MCP Server to Ground AI Agents in Live Docs</title>
+      <link>https://codeplaystudios.com/insights/google-developer-knowledge-api-mcp-server-public-preview</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/google-developer-knowledge-api-mcp-server-public-preview</guid>
+      <pubDate>Mon, 12 Oct 2026 11:14:10 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>Google has launched its Developer Knowledge API and official MCP Server in public preview, providing AI agents with direct, canonical access to Google Cloud, Firebase, and Android documentation.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/google-developer-knowledge-api-mcp-server-public-preview/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>Google Open-Sources AQuA: Diagnosing Production AI Agent Failures</title>
       <link>https://codeplaystudios.com/insights/google-open-sources-aqua-ai-agent-diagnosis</link>
@@ -448,15 +457,6 @@
       <category>Web Development</category>
       <description>Genkit Go introduces Agent Skills, leveraging progressive disclosure to reduce context window bloat and manage token consumption in Go backend applications.</description>
       <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/genkit-go-agent-skills-token-overhead/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>Running Long-Context Multimodal Embeddings on Cloud TPU via Native vLLM</title>
-      <link>https://codeplaystudios.com/insights/long-context-multimodal-embeddings-cloud-tpu-vllm</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/long-context-multimodal-embeddings-cloud-tpu-vllm</guid>
-      <pubDate>Sun, 13 Sep 2026 08:31:05 GMT</pubDate>
-      <category>Cloud &amp; DevOps</category>
-      <description>Google Cloud&apos;s native vLLM integration on Cloud TPU provides an architectural path for high-throughput, long-context embedding inference without abandoning standard open-source developer workflows.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/long-context-multimodal-embeddings-cloud-tpu-vllm/primary.webp" type="image/webp" />
     </item>
   </channel>
 </rss>
