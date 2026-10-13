@@ -6,8 +6,17 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 13 Oct 2026 01:00:03 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2026 12:13:45 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>Weekend Retail Review: Doom: The Dark Ages Premium Edition Discounted to $30.09</title>
+      <link>https://codeplaystudios.com/insights/weekend-retail-review-doom-the-dark-ages-discount</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/weekend-retail-review-doom-the-dark-ages-discount</guid>
+      <pubDate>Tue, 13 Oct 2026 10:55:12 GMT</pubDate>
+      <category>Emerging Technology</category>
+      <description>An analysis of Fanatical&apos;s $30.09 offer for Doom: The Dark Ages - Premium Edition and broader weekend digital retail discount configurations.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/weekend-retail-review-doom-the-dark-ages-discount/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>Google Releases Developer Knowledge API and MCP Server to Ground AI Agents in Live Docs</title>
       <link>https://codeplaystudios.com/insights/google-developer-knowledge-api-mcp-server-public-preview</link>
@@ -448,15 +457,6 @@
       <category>Software Development</category>
       <description>A limited-time free distribution campaign on Steam provides 4-player roguelike co-op game Swapmeat with an injection of concurrent users to drive network effects.</description>
       <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/swapmeat-free-steam-promotion/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>Genkit Go Introduces Agent Skills to Reduce Token Overhead</title>
-      <link>https://codeplaystudios.com/insights/genkit-go-agent-skills-token-overhead</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/genkit-go-agent-skills-token-overhead</guid>
-      <pubDate>Sun, 13 Sep 2026 08:31:27 GMT</pubDate>
-      <category>Web Development</category>
-      <description>Genkit Go introduces Agent Skills, leveraging progressive disclosure to reduce context window bloat and manage token consumption in Go backend applications.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/genkit-go-agent-skills-token-overhead/primary.webp" type="image/webp" />
     </item>
   </channel>
 </rss>
