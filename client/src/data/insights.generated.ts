@@ -11,6 +11,92 @@ import type { InsightsArticle } from "@/lib/insights/types";
 export const INSIGHTS_ARTICLES: InsightsArticle[] = [
   {
     "status": "published",
+    "id": "cf05ef98-d165-4ec3-b254-71139501f51d",
+    "slug": "yuji-horii-ai-generated-game-30-minutes",
+    "title": "Dragon Quest Co-Creator Yuji Horii Releases AI-Generated Game Built in 30 Minutes",
+    "dek": "Dragon Quest co-creator Yuji Horii has released a game built with generative AI, stating the project took about 30 minutes to prompt.",
+    "category": "software-development",
+    "categoryName": "Software Development",
+    "tags": [
+      {
+        "name": "Game Development",
+        "slug": "game-development"
+      },
+      {
+        "name": "Yuji Horii",
+        "slug": "yuji-horii"
+      },
+      {
+        "name": "Dragon Quest",
+        "slug": "dragon-quest"
+      },
+      {
+        "name": "Generative AI",
+        "slug": "generative-ai"
+      },
+      {
+        "name": "AI Tools",
+        "slug": "ai-tools"
+      }
+    ],
+    "body": "# Dragon Quest Co-Creator Yuji Horii Releases AI-Generated Game Built in 30 Minutes\n\n*Dragon Quest co-creator Yuji Horii has released a game built with generative AI, stating the project took about 30 minutes to prompt.*\n\n## Quick Summary\n\n- Dragon Quest co-creator Yuji Horii has publicly released a game created using generative AI tools.\n- Horii stated that the title took approximately 30 minutes to make or prompt.\n- Specific technical details, including the underlying models, game engines, and exact scope, remain unverified.\n- Industry observers note that '30 minutes' reflects prompt generation time rather than a complete production pipeline.\n\n## What Happened?\n\nYuji Horii, known for foundational work on the [Dragon Quest](https://www.eurogamer.net/dragon-quest-yuji-horii-new-game-ai-30-minutes) franchise, announced the release of a game generated primarily using AI. Coverage from Eurogamer points to a development timeline of about 30 minutes. This places an industry veteran directly into discussions regarding generative tooling and creative automation.\n\n## Key Details\n\nHorii stated as fact that the game was assembled in approximately half an hour using generative AI. Significant uncertainties remain. Public reports do not specify which generative models, code generation frameworks, or target engines were utilized. The exact genre, platform availability, and functional scope have not been detailed. It remains ambiguous whether the 30-minute timeframe refers strictly to active prompt entry or includes background curation and iteration.\n\n## Developer Perspective\n\nA 30-minute generation cycle demonstrates the capability of modern AI tools to rapidly surface functional concepts and basic mechanics. Generative models can synthesize boilerplate code and rudimentary assets in a fraction of traditional timelines. Teams building production-grade software must distinguish between quick proof-of-concept prototyping and scalable pipelines. Rapid generation does not account for architectural integrity, long-term maintenance, deep balancing, or quality assurance.\n\n## What Happens Next?\n\nA likely implication of industry veterans experimenting with prompt-driven development is a shift in how studios validate early design pillars. Rather than investing weeks in manual paper prototypes or rough greyboxing, designers may lean on generative tools to test gameplay hooks instantaneously. While high-level creators will continue exploring these workflows for rapid ideation, commercial production will still require engineering oversight to handle complex dependencies and systemic bugs.\n\n## CodePlay Verdict\n\nYuji Horii's experiment reads as executive prototyping rather than an immediate disruption to traditional game craft. For development studios and business leaders, the event signals that AI-driven ideation is becoming accessible for high-level creative direction. Bridging the gap between a 30-minute prompt-based prototype and a market-ready release remains a substantial engineering challenge.\n\n## Sources & Further Reading\n\n- [Dragon Quest creator Yuji Horii releases game he says he made with AI in about 30 minutes](https://www.gamesindustry.biz/dragon-quest-creator-yuji-horii-releases-game-he-says-he-made-with-ai-in-about-30-minutes)\n- [Dragon Quest co-creator Yuji Horii releases new AI-generated game, and he says it took 30 minutes to make](https://www.eurogamer.net/dragon-quest-yuji-horii-new-game-ai-30-minutes)",
+    "keyTakeaways": [],
+    "take": {
+      "developerTake": "Prompt-based generation offers utility for quick proof-of-concept testing, but it bypasses architectural planning, technical debt management, and optimization phases required for production pipelines.",
+      "businessImpact": "Executive experimentation with rapid prototyping tools could accelerate early-stage greenlighting processes, though commercial risk management still demands traditional software engineering oversight.",
+      "developerImpact": "Engineers and designers should view rapid generation milestones as exploratory prototyping aids rather than viable substitutes for core production workflows.",
+      "technicalExplanation": "",
+      "risksAndLimitations": "Unverified scopes, lack of transparency regarding underlying models, and the absence of established benchmarks mean that 30-minute development claims represent outliers rather than predictable production standards.",
+      "whyItMatters": "The involvement of a veteran creator like Yuji Horii brings mainstream attention to generative AI's capacity for rapid concept visualization, shifting dialogue from theoretical capability to practical execution.",
+      "actionableRecommendations": "Teams should explore generative AI strictly for rapid brainstorming and asset greyboxing, maintaining manual engineering standards for scalable production code."
+    },
+    "sources": [
+      {
+        "url": "https://www.gamesindustry.biz/dragon-quest-creator-yuji-horii-releases-game-he-says-he-made-with-ai-in-about-30-minutes",
+        "title": "Dragon Quest creator Yuji Horii releases game he says he made with AI in about 30 minutes",
+        "publisher": "gamesindustry.biz",
+        "role": "supporting"
+      },
+      {
+        "url": "https://www.eurogamer.net/dragon-quest-yuji-horii-new-game-ai-30-minutes",
+        "title": "Dragon Quest co-creator Yuji Horii releases new AI-generated game, and he says it took 30 minutes to make",
+        "publisher": "eurogamer.net",
+        "role": "supporting"
+      }
+    ],
+    "heroImage": {
+      "src": "https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/yuji-horii-ai-generated-game-30-minutes/primary.webp",
+      "alt": "Elegant dragon statue at a traditional Japanese water fountain in Miyazu, Kyoto.",
+      "width": 1600,
+      "height": 900,
+      "ogSrc": "https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/yuji-horii-ai-generated-game-30-minutes/primary.webp",
+      "aiGenerated": false,
+      "kind": "stock",
+      "credit": {
+        "provider": "pexels",
+        "sourceUrl": "https://www.pexels.com/photo/dragon-faucet-in-fountain-18023189/",
+        "photographer": "Tien Nguyen",
+        "photographerUrl": "https://www.pexels.com/@tiennguyen"
+      }
+    },
+    "author": "CodePlay Studios Editorial Team",
+    "authorRole": "CodePlay Insights Editorial Team",
+    "readingMinutes": 3,
+    "publishedAt": "2026-10-14T08:57:40.364+00:00",
+    "updatedAt": "2026-10-14T08:57:40.51142+00:00",
+    "seo": {
+      "title": "Dragon Quest Creator Yuji Horii Releases 30-Minute AI Game",
+      "description": "Dragon Quest co-creator Yuji Horii has released a game built using generative AI tools. Industry observers analyze the 30-minute prompt process.",
+      "canonicalUrl": "https://codeplaystudios.com/insights/yuji-horii-ai-generated-game-30-minutes"
+    },
+    "articleType": "gaming_news",
+    "featured": true,
+    "trending": false,
+    "breaking": false,
+    "viewCount": 0
+  },
+  {
+    "status": "published",
     "id": "688e0b64-f798-455c-b801-2be516a1a256",
     "slug": "weekend-retail-review-doom-the-dark-ages-discount",
     "title": "Weekend Retail Review: Doom: The Dark Ages Premium Edition Discounted to $30.09",
@@ -83,7 +169,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-13T10:55:12.175+00:00",
-    "updatedAt": "2026-10-13T21:23:57.219642+00:00",
+    "updatedAt": "2026-10-13T23:10:34.889835+00:00",
     "seo": {
       "title": "Doom: The Dark Ages Premium Edition Discounted to $30.09",
       "description": "An analysis of Fanatical's weekend digital retail promotion featuring Doom: The Dark Ages - Premium Edition at $30.09 alongside other titles.",
@@ -93,7 +179,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 3
+    "viewCount": 4
   },
   {
     "status": "published",
@@ -171,7 +257,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-10-12T11:14:10.155+00:00",
-    "updatedAt": "2026-10-13T21:23:55.855976+00:00",
+    "updatedAt": "2026-10-13T23:10:38.237877+00:00",
     "seo": {
       "title": "Google Launches Developer Knowledge API & MCP Server in Preview",
       "description": "Google's new Developer Knowledge API and official MCP Server give AI agents direct access to real-time Cloud, Firebase, and Android documentation.",
@@ -181,7 +267,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 5
+    "viewCount": 6
   },
   {
     "status": "published",
@@ -259,7 +345,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-10-11T10:14:50.363+00:00",
-    "updatedAt": "2026-10-13T12:16:09.007385+00:00",
+    "updatedAt": "2026-10-13T23:10:41.659061+00:00",
     "seo": {
       "title": "Google Open-Sources AQuA for Production AI Agent Diagnosis",
       "description": "Discover how Google's open-source AQuA reference implementation helps engineering teams detect and diagnose silent quality failures in production AI agents.",
@@ -269,7 +355,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 7
+    "viewCount": 8
   },
   {
     "status": "published",
@@ -353,7 +439,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-10T10:04:38.733+00:00",
-    "updatedAt": "2026-10-13T21:23:52.845832+00:00",
+    "updatedAt": "2026-10-13T23:10:44.701897+00:00",
     "seo": {
       "title": "OpenAI GPT-6 & Intelligent UI: Developer Guide",
       "description": "Explore OpenAI's GPT-6 rollout and Intelligent UI feature. Learn how dynamic, interactive components are replacing static text responses in AI chat.",
@@ -363,7 +449,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 11
+    "viewCount": 12
   },
   {
     "status": "published",
@@ -517,7 +603,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 6,
     "publishedAt": "2026-10-09T10:49:53.523+00:00",
-    "updatedAt": "2026-10-13T21:23:51.813216+00:00",
+    "updatedAt": "2026-10-13T23:10:48.252769+00:00",
     "seo": {
       "title": "Bit Reactor Recalls Furloughed Staff After Star Wars Sales",
       "description": "Bit Reactor has recalled over half of its furloughed workforce following the commercial success of Star Wars Zero Company, highlighting studio financial risks.",
@@ -527,7 +613,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 14
+    "viewCount": 15
   },
   {
     "status": "published",
@@ -601,7 +687,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-10-08T10:52:33.888+00:00",
-    "updatedAt": "2026-10-13T21:23:50.626665+00:00",
+    "updatedAt": "2026-10-13T23:10:51.139986+00:00",
     "seo": {
       "title": "EmbeddingGemma 2 Developer Guide: Modularity & Truncation",
       "description": "A technical implementation guide for Google's EmbeddingGemma 2, covering modular modality encoders and Matryoshka dimension truncation.",
@@ -611,7 +697,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -693,7 +779,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-08T10:52:09.06+00:00",
-    "updatedAt": "2026-10-13T21:23:49.350556+00:00",
+    "updatedAt": "2026-10-13T23:10:54.720274+00:00",
     "seo": {
       "title": "Mistral Large 4 Now Available on Vercel AI Gateway",
       "description": "Mistral Large 4 is now available on Vercel AI Gateway. Learn how engineering teams can utilize unified API routing for the new model.",
@@ -703,7 +789,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -779,7 +865,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-07T10:32:06.223+00:00",
-    "updatedAt": "2026-10-13T21:23:47.870096+00:00",
+    "updatedAt": "2026-10-13T23:10:57.092106+00:00",
     "seo": {
       "title": "Ubisoft Confirms No Active Watch Dogs Games in Development",
       "description": "Ubisoft addresses the future of the Watch Dogs franchise, confirming the IP holds brand value but has no active games currently in development.",
@@ -789,7 +875,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -859,7 +945,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 2,
     "publishedAt": "2026-10-07T10:31:41.588+00:00",
-    "updatedAt": "2026-10-13T21:23:46.615158+00:00",
+    "updatedAt": "2026-10-13T23:11:00.329885+00:00",
     "seo": {
       "title": "Beautiful Light PvPvE Extraction Shooter Targets 2026 Release",
       "description": "Tactical PvPvE extraction shooter Beautiful Light confirms a December 2026 Steam early access release date. Read the timeline and analysis.",
@@ -869,7 +955,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -949,7 +1035,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-10-07T10:31:15.271+00:00",
-    "updatedAt": "2026-10-13T21:23:45.074587+00:00",
+    "updatedAt": "2026-10-13T23:11:02.491123+00:00",
     "seo": {
       "title": "OpenAI Releases Lean Proof Formalizations for Mathematics",
       "description": "OpenAI publishes new research utilizing frontier models and the Lean proof assistant to formalize solutions for open mathematical problems.",
@@ -959,7 +1045,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -1031,7 +1117,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-06T10:41:19.526+00:00",
-    "updatedAt": "2026-10-13T21:23:44.215735+00:00",
+    "updatedAt": "2026-10-13T23:11:05.693379+00:00",
     "seo": {
       "title": "Divine Frequency Launches Early Access in Indie Milestone",
       "description": "Divine Frequency arrives in early access at 70 percent completion, balancing independent game delivery against the loss of its lead writer.",
@@ -1041,7 +1127,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -1133,7 +1219,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-06T10:40:55.359+00:00",
-    "updatedAt": "2026-10-13T21:23:42.807441+00:00",
+    "updatedAt": "2026-10-13T23:11:08.64239+00:00",
     "seo": {
       "title": "Arc Raiders and The Finals Head to Film and TV",
       "description": "Embark Studios partners with Chernin Entertainment to bring Arc Raiders and The Finals to film and television. Discover the latest adaptation details.",
@@ -1143,7 +1229,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -1223,7 +1309,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-10-06T10:40:29.49+00:00",
-    "updatedAt": "2026-10-13T21:23:41.481625+00:00",
+    "updatedAt": "2026-10-13T23:11:10.847728+00:00",
     "seo": {
       "title": "Gears of War: E-Day Uses Xbox Series S SSD as Virtual Memory",
       "description": "An analysis of how The Coalition utilizes the Xbox Series S SSD as a virtual memory extension for Gears of War: E-Day, exploring engineering tradeoffs.",
@@ -1233,7 +1319,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -1303,7 +1389,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-05T23:17:44.582+00:00",
-    "updatedAt": "2026-10-13T21:23:40.501357+00:00",
+    "updatedAt": "2026-10-13T23:11:13.116056+00:00",
     "seo": {
       "title": "OpenAI Outlines EU Text Provenance Framework for Researchers",
       "description": "OpenAI has published its initial framework for EU text provenance compliance, detailing watermarking approaches for researchers in a phased rollout.",
@@ -1313,7 +1399,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -1387,7 +1473,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-05T10:47:05.799+00:00",
-    "updatedAt": "2026-10-13T21:23:39.222942+00:00",
+    "updatedAt": "2026-10-13T23:11:15.991852+00:00",
     "seo": {
       "title": "Jagex Announces Fourth RuneScape MMORPG Under Working Title RS4",
       "description": "Jagex has announced a fourth-generation RuneScape MMO under the working title RS4 at RuneFest, confirming a concurrent live-service strategy.",
@@ -1397,7 +1483,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -1467,7 +1553,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-05T10:46:40.286+00:00",
-    "updatedAt": "2026-10-13T21:23:37.950076+00:00",
+    "updatedAt": "2026-10-13T23:11:19.021452+00:00",
     "seo": {
       "title": "RuneScape: Dragonwilds 2026-2027 Content Roadmap Announced",
       "description": "Jagex has detailed its multi-year content roadmap for RuneScape: Dragonwilds, outlining structural plans for 2026 and 2027 following the 1.0 release.",
@@ -1477,7 +1563,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -1557,7 +1643,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-04T15:29:16.911+00:00",
-    "updatedAt": "2026-10-13T21:23:37.104507+00:00",
+    "updatedAt": "2026-10-13T23:11:22.494063+00:00",
     "seo": {
       "title": "Quake Rooftops Jam Analyzes Classic BSP Level Design",
       "description": "Explore how the Quake Rooftops Jam fan level pack pushes modern community design within 1996 engine constraints ahead of the game's 30th anniversary.",
@@ -1567,7 +1653,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -1629,7 +1715,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-04T10:01:49.247+00:00",
-    "updatedAt": "2026-10-13T21:23:35.817293+00:00",
+    "updatedAt": "2026-10-13T23:11:25.08437+00:00",
     "seo": {
       "title": "Battlestar Galactica Update Shifts Leadership to New Captain",
       "description": "The latest Battlestar Galactica release introduces a new commanding officer, moving franchise leadership past historical figures like William Adama.",
@@ -1639,7 +1725,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -1709,7 +1795,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-04T10:01:22.895+00:00",
-    "updatedAt": "2026-10-13T21:23:34.519814+00:00",
+    "updatedAt": "2026-10-13T23:11:28.585921+00:00",
     "seo": {
       "title": "Apple Releases Apple Pass Designer for Wallet Assets",
       "description": "Apple has published the Apple Pass Designer resource on its developer portal, offering new official guidance for Apple Wallet asset creation.",
@@ -1719,7 +1805,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -1795,7 +1881,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-03T09:24:28.244+00:00",
-    "updatedAt": "2026-10-13T21:23:33.024533+00:00",
+    "updatedAt": "2026-10-13T23:11:31.549904+00:00",
     "seo": {
       "title": "Gears of War: E-Day Early Access Launch & Platform Details",
       "description": "Explore the Gears of War: E-Day early access launch details, including Game Pass integration, Premium Edition availability, and platform strategy.",
@@ -1805,7 +1891,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -1879,7 +1965,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-10-03T09:24:05.636+00:00",
-    "updatedAt": "2026-10-13T21:23:31.585565+00:00",
+    "updatedAt": "2026-10-13T23:11:34.755369+00:00",
     "seo": {
       "title": "Cloudflare Releases Clef: Open-Weight Models & RL Fine-Tuning",
       "description": "Cloudflare introduces Clef, a new platform featuring open-weight decision models and reinforcement learning fine-tuning for edge automation tasks.",
@@ -1889,7 +1975,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 18
+    "viewCount": 19
   },
   {
     "status": "published",
@@ -1967,7 +2053,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-03T09:23:41.188+00:00",
-    "updatedAt": "2026-10-13T21:23:30.052297+00:00",
+    "updatedAt": "2026-10-13T23:11:37.642288+00:00",
     "seo": {
       "title": "Cloudflare OHTTP Gateway: Privacy-Preserving Proxy Architecture",
       "description": "Analyze the technical architecture of Cloudflare's new OHTTP Gateway. Learn how engineering teams implement privacy-preserving proxy infrastructure.",
@@ -1977,7 +2063,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -2053,7 +2139,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 2,
     "publishedAt": "2026-10-02T16:20:51.393+00:00",
-    "updatedAt": "2026-10-13T21:23:28.677441+00:00",
+    "updatedAt": "2026-10-13T23:11:40.579185+00:00",
     "seo": {
       "title": "SteamVR Beta 2.18.2 Released: Runtime Stability Updates",
       "description": "Examine the technical implications of Valve's SteamVR Beta 2.18.2 release, focusing on targeted runtime stability patches and bug fixes.",
@@ -2063,7 +2149,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -2137,7 +2223,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-10-02T10:00:46.926+00:00",
-    "updatedAt": "2026-10-13T21:23:27.42204+00:00",
+    "updatedAt": "2026-10-13T23:11:43.549836+00:00",
     "seo": {
       "title": "Accelerating Video Diffusion on TPUs with Splash Attention",
       "description": "Explore how Sparse VideoGen and optimized Splash Attention kernels resolve quadratic latency bottlenecks for video diffusion models on Google TPUs.",
@@ -2147,7 +2233,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -2217,7 +2303,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-02T10:00:20.021+00:00",
-    "updatedAt": "2026-10-13T21:23:25.922415+00:00",
+    "updatedAt": "2026-10-13T23:11:46.489791+00:00",
     "seo": {
       "title": "Google Announces Gemini 4 Argon: What We Know So Far",
       "description": "Google has announced the Gemini 4 Argon model on its official research blog. Review what is currently known and what technical details are missing.",
@@ -2227,7 +2313,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -2303,7 +2389,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-01T10:25:03.585+00:00",
-    "updatedAt": "2026-10-13T21:23:24.941679+00:00",
+    "updatedAt": "2026-10-13T23:11:49.336862+00:00",
     "seo": {
       "title": "SteamOS 3.8.28 Stable Released With Broad Hardware Support",
       "description": "Valve officially pushes SteamOS 3.8.28 to the stable channel, bringing targeted system updates and expanded hardware compatibility for Linux gaming.",
@@ -2313,7 +2399,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -2383,7 +2469,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-01T10:24:38.687+00:00",
-    "updatedAt": "2026-10-13T21:23:23.727962+00:00",
+    "updatedAt": "2026-10-13T23:11:52.36277+00:00",
     "seo": {
       "title": "Managing Legacy Asset Refreshes: Pokémon 30th Anniversary Case Study",
       "description": "Explore how long-running intellectual properties handle legacy asset refreshes and multi-channel consistency across digital and physical ecosystems.",
@@ -2393,7 +2479,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -2471,7 +2557,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-10-01T10:24:14.501+00:00",
-    "updatedAt": "2026-10-13T21:23:22.707163+00:00",
+    "updatedAt": "2026-10-13T23:11:55.329707+00:00",
     "seo": {
       "title": "Google Cloud API Gateway Adds Native MCP Support for REST APIs",
       "description": "Google Cloud API Gateway now natively supports the Model Context Protocol, enabling teams to expose REST services to AI agents using OpenAPI annotations.",
@@ -2481,7 +2567,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -2569,7 +2655,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-25T09:03:39.085+00:00",
-    "updatedAt": "2026-10-13T21:23:22.325275+00:00",
+    "updatedAt": "2026-10-13T23:11:58.216928+00:00",
     "seo": {
       "title": "Summer Eternal's Player Equity Plan: Legal & Business Analysis",
       "description": "Analyzing the corporate governance and legal hurdles of Summer Eternal's experimental player equity initiative for indie game development studios.",
@@ -2579,7 +2665,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 20
+    "viewCount": 21
   },
   {
     "status": "published",
@@ -2653,7 +2739,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-09-25T09:03:13.356+00:00",
-    "updatedAt": "2026-10-13T21:23:20.170214+00:00",
+    "updatedAt": "2026-10-13T23:12:01.113636+00:00",
     "seo": {
       "title": "Path of Exile 2 Achieves Steam Deck Verified Status",
       "description": "Grinding Gear Games has secured Steam Deck Verification for Path of Exile 2 ahead of its December release, overcoming prior UI text hurdles.",
@@ -2663,7 +2749,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -2743,7 +2829,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-09-25T09:02:48.299+00:00",
-    "updatedAt": "2026-10-13T21:23:19.704776+00:00",
+    "updatedAt": "2026-10-13T23:12:03.983251+00:00",
     "seo": {
       "title": "Arc Raiders October Test Introduces Optional PvE Mode",
       "description": "Embark Studios announces an October test for Arc Raiders featuring a toggle-based PvE mode and adjusted loot economies for extraction shooters.",
@@ -2753,7 +2839,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 18
+    "viewCount": 19
   },
   {
     "status": "published",
@@ -2833,7 +2919,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-22T08:50:00.951+00:00",
-    "updatedAt": "2026-10-13T21:23:17.935353+00:00",
+    "updatedAt": "2026-10-13T23:12:06.954364+00:00",
     "seo": {
       "title": "Bungie Unvaults Destiny 2 Content: Engineering Analysis",
       "description": "Evaluating Bungie's decision to unvault Destiny 2 content through the lens of technical legacy asset integration, engine updates, and maintenance.",
@@ -2843,7 +2929,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 19
+    "viewCount": 20
   },
   {
     "status": "published",
@@ -2917,7 +3003,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-09-20T08:49:51.223+00:00",
-    "updatedAt": "2026-10-13T21:23:17.230341+00:00",
+    "updatedAt": "2026-10-13T23:12:09.969644+00:00",
     "seo": {
       "title": "FFXIV Switch 2 Port & December 2026 Roadmap: Developer Analysis",
       "description": "Explore the engineering and live-service strategy behind Final Fantasy XIV expanding to Nintendo Switch 2 ahead of the December 2026 milestone.",
@@ -2927,7 +3013,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 20
+    "viewCount": 21
   },
   {
     "status": "published",
@@ -3005,7 +3091,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-09-20T08:49:26.335+00:00",
-    "updatedAt": "2026-10-13T21:23:15.662535+00:00",
+    "updatedAt": "2026-10-13T23:12:12.102984+00:00",
     "seo": {
       "title": "Dungeon Crawler Carl Expansion: Peacock Series & Final Novels",
       "description": "The LitRPG hit Dungeon Crawler Carl expands with a Peacock TV adaptation by Fuzzy Door and a two-novel final chapter for the book series.",
@@ -3015,7 +3101,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 18
+    "viewCount": 19
   },
   {
     "status": "published",
@@ -3091,7 +3177,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-09-20T08:49:02.088+00:00",
-    "updatedAt": "2026-10-13T21:23:14.198698+00:00",
+    "updatedAt": "2026-10-13T23:12:14.874793+00:00",
     "seo": {
       "title": "EA Sports FC 27 Early Review: Hubs, Tactics & AI",
       "description": "Early reviews for EA Sports FC 27 analyze structural shifts like open-world hubs and revised tactics, alongside persistent legacy AI pathing challenges.",
@@ -3101,7 +3187,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 19
+    "viewCount": 20
   },
   {
     "status": "published",
@@ -3175,7 +3261,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-09-19T08:16:56.869+00:00",
-    "updatedAt": "2026-10-13T21:23:13.475909+00:00",
+    "updatedAt": "2026-10-13T23:12:17.857468+00:00",
     "seo": {
       "title": "EA Sports FC 27 10-Hour EA Play Trial Available Now",
       "description": "EA Sports FC 27 launches a 10-hour EA Play trial on Xbox and PC, offering progress carryover for Xbox Game Pass Ultimate and PC Game Pass subscribers.",
@@ -3185,7 +3271,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 19
+    "viewCount": 20
   },
   {
     "status": "published",
@@ -3259,7 +3345,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 5,
     "publishedAt": "2026-09-19T08:16:32.79+00:00",
-    "updatedAt": "2026-10-13T21:23:12.097595+00:00",
+    "updatedAt": "2026-10-13T23:12:20.741388+00:00",
     "seo": {
       "title": "Cloudflare Saves 100TB RAM Using Rust and Mathematical Optimization",
       "description": "Discover how Cloudflare reduced edge network memory usage by 100TB using Rust and algorithmic efficiency, delivering massive infrastructure savings.",
@@ -3269,7 +3355,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 19
+    "viewCount": 20
   },
   {
     "status": "published",
@@ -3343,7 +3429,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-09-19T08:16:09.335+00:00",
-    "updatedAt": "2026-10-13T21:23:10.791364+00:00",
+    "updatedAt": "2026-10-13T23:12:23.699417+00:00",
     "seo": {
       "title": "War Thunder Screenshot Competition & Sky Odyssey Update Analysis",
       "description": "Examine how Gaijin Entertainment uses low-overhead community loops and screenshot competitions to sustain engagement following major game updates.",
@@ -3353,7 +3439,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 19
+    "viewCount": 20
   },
   {
     "status": "published",
@@ -3435,7 +3521,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-18T08:30:02.561+00:00",
-    "updatedAt": "2026-10-13T21:23:09.498788+00:00",
+    "updatedAt": "2026-10-13T23:12:26.682515+00:00",
     "seo": {
       "title": "Decoding Cosmic Signals with Deep Learning and Keras",
       "description": "Explore how Keras and deep learning decode cosmic signals in astroparticle physics, offering blueprints for enterprise telemetry and anomaly detection.",
@@ -3445,7 +3531,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 18
+    "viewCount": 19
   },
   {
     "status": "published",
@@ -3521,7 +3607,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-18T08:29:39.555+00:00",
-    "updatedAt": "2026-10-13T21:23:08.237948+00:00",
+    "updatedAt": "2026-10-13T23:12:29.731163+00:00",
     "seo": {
       "title": "Scaling Real-Time AI Agents with Session Load Balancing",
       "description": "Discover how session-aware load balancing and hybrid routing algorithms prevent server saturation when scaling stateful, real-time AI agent workloads.",
@@ -3531,7 +3617,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 19
+    "viewCount": 20
   },
   {
     "status": "published",
@@ -3623,7 +3709,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-17T15:14:53.618+00:00",
-    "updatedAt": "2026-10-13T21:23:06.954735+00:00",
+    "updatedAt": "2026-10-13T23:12:32.731253+00:00",
     "seo": {
       "title": "Final Fantasy VII Revelation Set for April 2027 Release",
       "description": "Square Enix announces Final Fantasy VII Revelation for April 2027, detailing the trilogy conclusion and physical media constraints at TGS 2026.",
@@ -3633,7 +3719,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 20
+    "viewCount": 21
   },
   {
     "status": "published",
@@ -3707,7 +3793,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-09-16T20:21:50.015+00:00",
-    "updatedAt": "2026-10-13T21:23:05.533381+00:00",
+    "updatedAt": "2026-10-13T23:12:35.818077+00:00",
     "seo": {
       "title": "Google Introduces Agent Anomaly Detection for Gemini Enterprise",
       "description": "Google announces Agent Anomaly Detection in Private Preview for Gemini Enterprise, featuring asynchronous OpenTelemetry trace analysis and OWASP guardrails.",
@@ -3717,7 +3803,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 18
+    "viewCount": 19
   },
   {
     "status": "published",
@@ -3815,7 +3901,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-16T08:53:13.971+00:00",
-    "updatedAt": "2026-10-13T21:23:05.018634+00:00",
+    "updatedAt": "2026-10-13T23:12:38.860188+00:00",
     "seo": {
       "title": "Sega and Netflix Partner for Multi-Title Adaptation Slate",
       "description": "Sega and Netflix announce a multi-title adaptation partnership, bringing Crazy Taxi, Sonic the Hedgehog, and Stranger Than Heaven to film and TV.",
@@ -3825,7 +3911,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 18
+    "viewCount": 19
   },
   {
     "status": "published",
@@ -3899,7 +3985,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-16T08:52:49.84+00:00",
-    "updatedAt": "2026-10-13T21:23:03.54008+00:00",
+    "updatedAt": "2026-10-13T23:12:41.732378+00:00",
     "seo": {
       "title": "Cloudflare New Controls Block AI Training Keep Search Visibility",
       "description": "Cloudflare launches account-level edge controls to help web operators allow search indexing while blocking dual-purpose bots from AI training ingestion.",
@@ -3909,7 +3995,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 19
+    "viewCount": 20
   },
   {
     "status": "published",
@@ -3985,7 +4071,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 5,
     "publishedAt": "2026-09-15T20:24:46.264+00:00",
-    "updatedAt": "2026-10-13T21:23:02.091802+00:00",
+    "updatedAt": "2026-10-13T23:12:44.780083+00:00",
     "seo": {
       "title": "Gemini 3.8 Live & Extended Thinking: Developer Overview",
       "description": "Google announces Gemini 3.8 Live and Extended Thinking. Explore the technical divide between real-time streaming latency and reasoning loops.",
@@ -3995,7 +4081,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 18
+    "viewCount": 19
   },
   {
     "status": "published",
@@ -4069,7 +4155,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-09-15T08:58:36.194+00:00",
-    "updatedAt": "2026-10-13T21:23:00.569246+00:00",
+    "updatedAt": "2026-10-13T23:12:47.013448+00:00",
     "seo": {
       "title": "Avatar The Last Airbender: The Living Typhoon Announced on Steam",
       "description": "An official Steam store page reveals Avatar The Last Airbender: The Living Typhoon, highlighting new cross-media production strategies.",
@@ -4079,7 +4165,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 18
+    "viewCount": 19
   },
   {
     "status": "published",
@@ -4223,7 +4309,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 5,
     "publishedAt": "2026-09-14T21:02:50.725+00:00",
-    "updatedAt": "2026-10-13T21:22:59.753778+00:00",
+    "updatedAt": "2026-10-13T23:12:50.120872+00:00",
     "seo": {
       "title": "Valve Steam Frame VR Headset: Pricing & Developer Strategy",
       "description": "Explore Valve's Steam Frame VR headset launch, 1,059 USD pricing, hybrid rendering, and hardware specifications for software engineers.",
@@ -4233,7 +4319,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 18
+    "viewCount": 19
   },
   {
     "status": "published",
@@ -4329,7 +4415,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-09-14T09:13:29.537+00:00",
-    "updatedAt": "2026-10-13T21:22:58.300214+00:00",
+    "updatedAt": "2026-10-13T23:12:52.944637+00:00",
     "seo": {
       "title": "BlizzCon 2026: Diablo 5, StarCraft Shooter & Legacy Remasters",
       "description": "Blizzard's BlizzCon 2026 roadmap outlines long-term release windows, including Diablo 5 in 2029, a new StarCraft shooter, and legacy Warcraft revivals.",
@@ -4339,7 +4425,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -4409,7 +4495,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-14T09:13:06.83+00:00",
-    "updatedAt": "2026-10-13T21:22:57.577144+00:00",
+    "updatedAt": "2026-10-13T23:12:55.984567+00:00",
     "seo": {
       "title": "Using Apple Accessory Dimensional Drawings in CAD Workflows",
       "description": "Learn how to integrate Apple accessory dimensional drawings into CAD pipelines to ensure physical fit, clear sensors, and reduce prototype costs.",
@@ -4419,7 +4505,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -4497,7 +4583,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-13T14:34:21.273+00:00",
-    "updatedAt": "2026-10-13T21:22:55.872138+00:00",
+    "updatedAt": "2026-10-13T23:12:58.964128+00:00",
     "seo": {
       "title": "Swapmeat 4-Player Roguelike Co-Op Free on Steam",
       "description": "Discover the limited-time free Steam promotion for 4-player roguelike co-op game Swapmeat, analyzing its user acquisition strategy and mechanics.",
@@ -4507,7 +4593,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -4581,7 +4667,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-13T08:31:27.347+00:00",
-    "updatedAt": "2026-10-13T21:22:54.521853+00:00",
+    "updatedAt": "2026-10-13T23:13:01.967064+00:00",
     "seo": {
       "title": "Genkit Go Agent Skills: Reducing Token Overhead",
       "description": "Discover how Genkit Go's new Agent Skills feature uses progressive disclosure and SKILL.md bundles to manage context window bloat in backend apps.",
@@ -4591,7 +4677,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -4673,7 +4759,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-13T08:31:05.411+00:00",
-    "updatedAt": "2026-10-13T21:22:53.755261+00:00",
+    "updatedAt": "2026-10-13T23:13:04.197201+00:00",
     "seo": {
       "title": "Cloud TPU Native vLLM for Long-Context Embeddings",
       "description": "Explore Google Cloud's native vLLM integration on Cloud TPU for high-throughput, long-context embedding inference in enterprise RAG workflows.",
@@ -4683,7 +4769,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -4761,7 +4847,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-12T13:41:42.625+00:00",
-    "updatedAt": "2026-10-13T21:22:51.983252+00:00",
+    "updatedAt": "2026-10-13T23:13:07.196925+00:00",
     "seo": {
       "title": "Google Cloud API Gateway Adds Native Model Routing",
       "description": "Google Cloud API Gateway now features native model routing in Public Preview, allowing declarative multi-LLM management using OpenAPI 3.x specs.",
@@ -4771,7 +4857,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 18
+    "viewCount": 19
   },
   {
     "status": "published",
@@ -4826,7 +4912,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 5,
     "publishedAt": "2026-09-12T08:14:05.291+00:00",
-    "updatedAt": "2026-10-13T21:22:50.830993+00:00",
+    "updatedAt": "2026-10-13T23:13:09.291267+00:00",
     "seo": {
       "title": "Building Zero-Trust AI Agents with Google ADK",
       "description": "Learn how to secure Google Agent Development Kit deployments using gVisor sandboxing, semantic gateways, and cryptographic verification.",
@@ -4836,7 +4922,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -4895,7 +4981,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-09-12T08:13:42.429+00:00",
-    "updatedAt": "2026-10-13T21:22:49.315971+00:00",
+    "updatedAt": "2026-10-13T23:13:12.145596+00:00",
     "seo": {
       "title": "Perplexity Adopts OpenAI GPT-6 Astra for Systems Management",
       "description": "Perplexity integrates OpenAI's GPT-6 Astra for software maintenance, monitoring, and operations, signaling a shift toward autonomous management.",
@@ -4905,7 +4991,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 18
+    "viewCount": 19
   },
   {
     "status": "published",
@@ -4964,7 +5050,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 5,
     "publishedAt": "2026-09-11T14:42:08.758+00:00",
-    "updatedAt": "2026-10-13T21:22:48.205984+00:00",
+    "updatedAt": "2026-10-13T23:13:15.093862+00:00",
     "seo": {
       "title": "Google TPU Microbenchmarks: Guide for ML Performance Tuning",
       "description": "Explore Google's open-source TPU microbenchmark suite. Learn how ML engineers isolate subsystems, build Roofline models, and optimize XLA kernels.",
@@ -4974,7 +5060,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 18
+    "viewCount": 19
   },
   {
     "status": "published",
@@ -5039,7 +5125,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 3,
     "publishedAt": "2026-09-11T08:16:38.308+00:00",
-    "updatedAt": "2026-10-13T21:22:47.286246+00:00",
+    "updatedAt": "2026-10-13T23:13:18.013758+00:00",
     "seo": {
       "title": "Xbox Picks Up Kojima's Physint After Sony Cancels Development",
       "description": "Microsoft Xbox steps in to publish Hideo Kojima's tactical project Physint following Sony's departure. Read the business and development analysis.",
@@ -5049,7 +5135,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -5104,7 +5190,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-11T08:16:14.307+00:00",
-    "updatedAt": "2026-10-13T21:22:46.417354+00:00",
+    "updatedAt": "2026-10-13T23:13:21.013194+00:00",
     "seo": {
       "title": "Gemini Enterprise Agent Platform Adds Evaluation Tools",
       "description": "Google's GA release of evaluation tools for the Gemini Enterprise Agent Platform brings standardized validation and custom metrics to AI agent pipelines.",
@@ -5114,7 +5200,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -5183,7 +5269,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 5,
     "publishedAt": "2026-09-10T08:24:36.716+00:00",
-    "updatedAt": "2026-10-13T21:22:45.150975+00:00",
+    "updatedAt": "2026-10-13T23:13:24.313555+00:00",
     "seo": {
       "title": "Google Releases Agent Development Kit for Kotlin 1.0",
       "description": "Google launches Agent Development Kit for Kotlin 1.0, bringing multi-agent orchestration, KMP support, and reflection-free function calling.",
@@ -5193,7 +5279,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -5262,7 +5348,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 5,
     "publishedAt": "2026-09-10T08:24:16.264+00:00",
-    "updatedAt": "2026-10-13T21:22:43.064192+00:00",
+    "updatedAt": "2026-10-13T23:13:27.332941+00:00",
     "seo": {
       "title": "Harness Engineering for AI Coding Agents: Evaluation & Iteration",
       "description": "Learn how harness engineering replaces slow end-to-end benchmarks with localized behavioral evaluations, accelerating AI coding agent iteration.",
@@ -5272,7 +5358,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -5369,7 +5455,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-10T08:23:55.626+00:00",
-    "updatedAt": "2026-10-13T21:22:41.783455+00:00",
+    "updatedAt": "2026-10-13T23:13:30.227827+00:00",
     "seo": {
       "title": "Apple iPhone 18 Pro and iPhone Duo: Mobile Developer Guide",
       "description": "Apple's September 2026 lineup introduces the iPhone 18 Pro and iPhone Duo. Learn what mobile engineering teams need to know about new hardware.",
@@ -5379,7 +5465,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": true,
     "trending": false,
     "breaking": false,
-    "viewCount": 17
+    "viewCount": 18
   },
   {
     "status": "published",
@@ -5438,7 +5524,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 5,
     "publishedAt": "2026-09-03T14:12:28.322506+00:00",
-    "updatedAt": "2026-10-13T21:22:40.392068+00:00",
+    "updatedAt": "2026-10-13T23:13:33.19365+00:00",
     "seo": {
       "title": "How Cloudflare Saved 100 Terabytes of RAM in 1.1.1.1 DNS Cache",
       "description": "Cloudflare reduced memory usage by 100 terabytes across its global 1.1.1.1 DNS infrastructure through struct layout tuning and allocator optimization.",
@@ -5448,7 +5534,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 22
+    "viewCount": 23
   },
   {
     "status": "published",
@@ -5517,7 +5603,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "authorRole": "CodePlay Insights Editorial Team",
     "readingMinutes": 4,
     "publishedAt": "2026-09-02T15:49:04.704569+00:00",
-    "updatedAt": "2026-10-13T21:22:39.777508+00:00",
+    "updatedAt": "2026-10-13T23:13:36.15495+00:00",
     "seo": {
       "title": "Inside Cloudflare's 100TB RAM Savings: DNS Cache Optimization",
       "description": "Cloudflare reclaimed 100 terabytes of memory across its global 1.1.1.1 network by optimizing DNS cache data structures and byte padding.",
@@ -5527,7 +5613,7 @@ export const INSIGHTS_ARTICLES: InsightsArticle[] = [
     "featured": false,
     "trending": false,
     "breaking": false,
-    "viewCount": 19
+    "viewCount": 20
   }
 ];
 

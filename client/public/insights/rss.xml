@@ -6,8 +6,17 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 13 Oct 2026 23:08:11 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 09:46:20 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>Dragon Quest Co-Creator Yuji Horii Releases AI-Generated Game Built in 30 Minutes</title>
+      <link>https://codeplaystudios.com/insights/yuji-horii-ai-generated-game-30-minutes</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/yuji-horii-ai-generated-game-30-minutes</guid>
+      <pubDate>Wed, 14 Oct 2026 08:57:40 GMT</pubDate>
+      <category>Software Development</category>
+      <description>Dragon Quest co-creator Yuji Horii has released a game built with generative AI, stating the project took about 30 minutes to prompt.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/yuji-horii-ai-generated-game-30-minutes/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>Weekend Retail Review: Doom: The Dark Ages Premium Edition Discounted to $30.09</title>
       <link>https://codeplaystudios.com/insights/weekend-retail-review-doom-the-dark-ages-discount</link>
@@ -448,15 +457,6 @@
       <category>Big Tech</category>
       <description>A structured guide to leveraging Apple&apos;s official accessory dimensional drawings to ensure physical fit, clear sensor keepout zones, and streamline mechanical CAD workflows.</description>
       <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/apple-accessory-dimensional-drawings-cad-workflows/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>Swapmeat 4-Player Roguelike Co-Op Goes Free on Steam for Limited Time</title>
-      <link>https://codeplaystudios.com/insights/swapmeat-free-steam-promotion</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/swapmeat-free-steam-promotion</guid>
-      <pubDate>Sun, 13 Sep 2026 14:34:21 GMT</pubDate>
-      <category>Software Development</category>
-      <description>A limited-time free distribution campaign on Steam provides 4-player roguelike co-op game Swapmeat with an injection of concurrent users to drive network effects.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/swapmeat-free-steam-promotion/primary.webp" type="image/webp" />
     </item>
   </channel>
 </rss>
