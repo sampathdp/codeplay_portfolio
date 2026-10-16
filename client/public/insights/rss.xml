@@ -6,8 +6,17 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 15 Oct 2026 21:50:32 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2026 09:20:07 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>Apigee Hybrid 1.17.0 Adds Native Model Context Protocol Support for Enterprise AI</title>
+      <link>https://codeplaystudios.com/insights/apigee-hybrid-1-17-model-context-protocol-mcp</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/apigee-hybrid-1-17-model-context-protocol-mcp</guid>
+      <pubDate>Fri, 16 Oct 2026 08:26:28 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>Apigee hybrid 1.17.0 introduces native Model Context Protocol support, allowing enterprises to run MCP data planes inside their own Kubernetes clusters while securing agentic workflows.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/apigee-hybrid-1-17-model-context-protocol-mcp/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>Apple Unveils New Apple TV 4K with Siri AI and HomeView</title>
       <link>https://codeplaystudios.com/insights/apple-unveils-new-apple-tv-4k-siri-ai</link>
@@ -448,15 +457,6 @@
       <category>Emerging Technology</category>
       <description>Valve opts for uncompromised hardware and hybrid rendering over budget pricing, establishing a high-performance baseline for standalone VR engineering.</description>
       <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/valve-steam-frame-vr-headset-launch-pricing-strategy/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>BlizzCon 2026: Blizzard Announces Diablo 5, StarCraft Shooter, and Legacy Revivals</title>
-      <link>https://codeplaystudios.com/insights/blizzcon-2026-roadmap-diablo-5-starcraft</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/blizzcon-2026-roadmap-diablo-5-starcraft</guid>
-      <pubDate>Mon, 14 Sep 2026 09:13:29 GMT</pubDate>
-      <category>Web Development</category>
-      <description>Blizzard&apos;s BlizzCon 2026 roadmap pairs 2029 and 2030 release windows with legacy revivals, outlining a multi-year engineering and lifecycle strategy under Xbox.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/blizzcon-2026-roadmap-diablo-5-starcraft/primary.webp" type="image/webp" />
     </item>
   </channel>
 </rss>
