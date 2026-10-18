@@ -6,8 +6,17 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 17 Oct 2026 21:01:44 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2026 09:09:28 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>Anthropic Publishes Claude Research on ECDSA Curve Origins</title>
+      <link>https://codeplaystudios.com/insights/anthropic-claude-ecdsa-curve-origins</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/anthropic-claude-ecdsa-curve-origins</guid>
+      <pubDate>Sun, 18 Oct 2026 08:15:02 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>Anthropic published research on October 16, 2026, examining the origins of ECDSA curves using Claude, raising questions for engineering teams evaluating AI in security contexts.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/anthropic-claude-ecdsa-curve-origins/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>Google OAuth Adds DPoP Support for Cryptographically Binding Refresh Tokens</title>
       <link>https://codeplaystudios.com/insights/google-oauth-dpop-refresh-tokens</link>
@@ -448,15 +457,6 @@
       <category>Artificial Intelligence</category>
       <description>Google and DeepMind announce Gemini 3.8 Live and Gemini 3.8 Live Extended Thinking, establishing a clear operational divide between real-time streaming latency and deliberate background reasoning.</description>
       <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/gemini-3-8-live-extended-thinking-developer-overview/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>Avatar The Last Airbender: The Living Typhoon Officially Revealed on Steam</title>
-      <link>https://codeplaystudios.com/insights/avatar-the-last-airbender-the-living-typhoon-announced</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/avatar-the-last-airbender-the-living-typhoon-announced</guid>
-      <pubDate>Tue, 15 Sep 2026 08:58:36 GMT</pubDate>
-      <category>Developer Tools</category>
-      <description>An official Steam announcement reveals &apos;Avatar The Last Airbender: The Living Typhoon&apos; as part of Paramount and Netflix&apos;s accelerating multimedia release strategy.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/avatar-the-last-airbender-the-living-typhoon-announced/primary.webp" type="image/webp" />
     </item>
   </channel>
 </rss>
