@@ -6,8 +6,17 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 19 Oct 2026 22:39:31 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 09:40:36 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>Evaluating AI Agents: Moving Beyond the Vibe Check with Systematic Testing</title>
+      <link>https://codeplaystudios.com/insights/evaluating-ai-agents-systematic-testing-pipelines</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/evaluating-ai-agents-systematic-testing-pipelines</guid>
+      <pubDate>Tue, 20 Oct 2026 08:48:21 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>Moving from subjective evaluation to systematic, continuous automated testing pipelines for multi-turn AI agents using Google&apos;s reference architecture.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/evaluating-ai-agents-systematic-testing-pipelines/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>Google&apos;s adk-recipes Repository: A Guide to the Three-Layered ADK Architecture</title>
       <link>https://codeplaystudios.com/insights/googles-adk-recipes-repository-three-layered-adk-architecture</link>
@@ -448,15 +457,6 @@
       <category>Software Development</category>
       <description>Sega&apos;s expanded partnership with Netflix combines legacy arcade revivals and upcoming titles into a coordinated transmedia distribution strategy.</description>
       <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/sega-netflix-transmedia-partnership-crazy-taxi-sonic/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>Cloudflare Introduces Account-Level Controls to Block AI Training While Maintaining Search Visibility</title>
-      <link>https://codeplaystudios.com/insights/cloudflare-account-level-ai-crawler-controls</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/cloudflare-account-level-ai-crawler-controls</guid>
-      <pubDate>Wed, 16 Sep 2026 08:52:49 GMT</pubDate>
-      <category>Big Tech</category>
-      <description>Cloudflare introduces account-level controls designed to help web operators maintain organic search visibility while restricting crawler ingestion for AI model training.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/cloudflare-account-level-ai-crawler-controls/primary.webp" type="image/webp" />
     </item>
   </channel>
 </rss>
