@@ -7,7 +7,7 @@ name: Insights — Refresh Published Snapshot
 # any of them actually changed — commits and pushes, which fires the
 # existing "Deploy to Shared Hosting" workflow (main.yml).
 #
-# Runs ~20 min after each generation run (UTC). Asia/Colombo +5:30.
+# Runs ~20 min after the generation run (UTC). Asia/Colombo +5:30.
 #
 # REQUIRES repo secret INSIGHTS_DEPLOY_PAT — a PAT with `contents: write`
 # on this repo. A push made with the default GITHUB_TOKEN does NOT trigger
@@ -15,7 +15,7 @@ name: Insights — Refresh Published Snapshot
 
 on:
   schedule:
-    - cron: "50 4,11,18 * * *"
+    - cron: "50 4 * * *"
   workflow_dispatch: {}
 
 concurrency:
@@ -26,7 +26,7 @@ jobs:
   refresh:
     name: Refresh
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
         with:

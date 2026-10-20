@@ -8,6 +8,7 @@ on:
 
 jobs:
   web-deploy:
+    timeout-minutes: 15
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:

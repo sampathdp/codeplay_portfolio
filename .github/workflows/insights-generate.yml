@@ -13,8 +13,8 @@ name: Insights — Generate Draft Articles
 
 on:
   schedule:
-    # ~30 min after each discovery run (UTC)
-    - cron: "30 3,10,17 * * *"
+    # ~30 min after the discovery run (UTC)
+    - cron: "30 3 * * *"
   workflow_dispatch:
     inputs:
       cluster_id:
@@ -34,7 +34,7 @@ jobs:
   generate:
     name: Generate
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
