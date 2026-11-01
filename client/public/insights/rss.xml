@@ -6,8 +6,17 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 20 Oct 2026 09:40:36 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 11:31:59 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>GE-Proton 11-11 Released as Targeted Hotfix for Linux and SteamOS</title>
+      <link>https://codeplaystudios.com/insights/ge-proton-11-11-released-hotfix-linux-steamos</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/ge-proton-11-11-released-hotfix-linux-steamos</guid>
+      <pubDate>Sun, 01 Nov 2026 10:44:46 GMT</pubDate>
+      <category>Software Development</category>
+      <description>GE-Proton 11-11 arrives as a targeted hotfix for Linux and SteamOS gaming, prioritizing technical stability and regression management over new feature expansion.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/11/ge-proton-11-11-released-hotfix-linux-steamos/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>Evaluating AI Agents: Moving Beyond the Vibe Check with Systematic Testing</title>
       <link>https://codeplaystudios.com/insights/evaluating-ai-agents-systematic-testing-pipelines</link>
@@ -448,15 +457,6 @@
       <category>Artificial Intelligence</category>
       <description>Google introduces Agent Anomaly Detection in Private Preview for Gemini Enterprise Agent Platform, pairing asynchronous OpenTelemetry trace analysis with OWASP-aligned guardrails.</description>
       <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/google-agent-anomaly-detection-gemini-enterprise/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>Sega and Netflix Partner for Multi-Title Transmedia Slate Including Crazy Taxi and Sonic</title>
-      <link>https://codeplaystudios.com/insights/sega-netflix-transmedia-partnership-crazy-taxi-sonic</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/sega-netflix-transmedia-partnership-crazy-taxi-sonic</guid>
-      <pubDate>Wed, 16 Sep 2026 08:53:13 GMT</pubDate>
-      <category>Software Development</category>
-      <description>Sega&apos;s expanded partnership with Netflix combines legacy arcade revivals and upcoming titles into a coordinated transmedia distribution strategy.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/sega-netflix-transmedia-partnership-crazy-taxi-sonic/primary.webp" type="image/webp" />
     </item>
   </channel>
 </rss>
