@@ -6,8 +6,17 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 01 Nov 2026 11:31:59 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 12:54:13 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>Building Conversational Commerce with Multi-Agent Swarms on GCP</title>
+      <link>https://codeplaystudios.com/insights/building-conversational-commerce-multi-agent-swarms-gcp</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/building-conversational-commerce-multi-agent-swarms-gcp</guid>
+      <pubDate>Mon, 02 Nov 2026 11:35:03 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>An architectural blueprint for implementing multi-agent conversational commerce systems on Google Cloud Platform using Google Developer Studio frameworks.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/11/building-conversational-commerce-multi-agent-swarms-gcp/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>GE-Proton 11-11 Released as Targeted Hotfix for Linux and SteamOS</title>
       <link>https://codeplaystudios.com/insights/ge-proton-11-11-released-hotfix-linux-steamos</link>
@@ -448,15 +457,6 @@
       <category>Gaming</category>
       <description>Square Enix details the final entry in its remake trilogy at TGS 2026, setting an April 2027 release date while highlighting current engineering constraints on physical media distribution.</description>
       <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/final-fantasy-vii-revelation-april-2027-release/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>Google Launches Agent Anomaly Detection in Private Preview for Gemini Enterprise</title>
-      <link>https://codeplaystudios.com/insights/google-agent-anomaly-detection-gemini-enterprise</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/google-agent-anomaly-detection-gemini-enterprise</guid>
-      <pubDate>Wed, 16 Sep 2026 20:21:50 GMT</pubDate>
-      <category>Artificial Intelligence</category>
-      <description>Google introduces Agent Anomaly Detection in Private Preview for Gemini Enterprise Agent Platform, pairing asynchronous OpenTelemetry trace analysis with OWASP-aligned guardrails.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/google-agent-anomaly-detection-gemini-enterprise/primary.webp" type="image/webp" />
     </item>
   </channel>
 </rss>
