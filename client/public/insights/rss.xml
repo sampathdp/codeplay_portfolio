@@ -6,8 +6,17 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Nov 2026 12:54:13 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 12:25:31 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>Scaling Git at OpenAI: How Pando Handles High-Throughput AI Code Generation</title>
+      <link>https://codeplaystudios.com/insights/scaling-git-openai-pando-ai-code-generation</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/scaling-git-openai-pando-ai-code-generation</guid>
+      <pubDate>Tue, 03 Nov 2026 11:14:35 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>Examining OpenAI&apos;s introduction of Pando, a Git-compatible backend designed to support AI-generated code scale, and analyzing its architectural implications for enterprise version control.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/11/scaling-git-openai-pando-ai-code-generation/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>Building Conversational Commerce with Multi-Agent Swarms on GCP</title>
       <link>https://codeplaystudios.com/insights/building-conversational-commerce-multi-agent-swarms-gcp</link>
@@ -448,15 +457,6 @@
       <category>Emerging Technology</category>
       <description>Long-lived bidirectional AI streams obscure server capacity, requiring application-level session telemetry paired with hybrid routing algorithms to prevent server saturation.</description>
       <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/scaling-real-time-ai-agents-session-aware-load-balancing/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>Square Enix Sets Final Fantasy VII Revelation for April 2027 Release</title>
-      <link>https://codeplaystudios.com/insights/final-fantasy-vii-revelation-april-2027-release</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/final-fantasy-vii-revelation-april-2027-release</guid>
-      <pubDate>Thu, 17 Sep 2026 15:14:53 GMT</pubDate>
-      <category>Gaming</category>
-      <description>Square Enix details the final entry in its remake trilogy at TGS 2026, setting an April 2027 release date while highlighting current engineering constraints on physical media distribution.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/final-fantasy-vii-revelation-april-2027-release/primary.webp" type="image/webp" />
     </item>
   </channel>
 </rss>
