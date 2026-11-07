@@ -6,8 +6,17 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 06 Nov 2026 12:31:54 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 11:22:25 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>Architecting Governed, Self-Evolving AI Agents on Google Cloud</title>
+      <link>https://codeplaystudios.com/insights/architecting-governed-self-evolving-ai-agents-google-cloud</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/architecting-governed-self-evolving-ai-agents-google-cloud</guid>
+      <pubDate>Sat, 07 Nov 2026 10:36:28 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>An architectural breakdown of Project Chrysalis on Google Cloud, analyzing how combining autonomous feedback loops with a four-gate security stack transforms high-speed incident remediation.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/11/architecting-governed-self-evolving-ai-agents-google-cloud/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>Routing Tasks Across Gemini Models With Lightweight Classifiers</title>
       <link>https://codeplaystudios.com/insights/routing-tasks-gemini-models-lightweight-classifiers</link>
@@ -448,15 +457,6 @@
       <category>Software Development</category>
       <description>War Thunder&apos;s 242nd Steam Screenshot Competition demonstrates how low-overhead community loops amplify major content updates like Sky Odyssey.</description>
       <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/war-thunder-steam-screenshot-competition-sky-odyssey/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>Decoding Cosmic Signals with Deep Learning and Keras</title>
-      <link>https://codeplaystudios.com/insights/decoding-cosmic-signals-deep-learning-keras</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/decoding-cosmic-signals-deep-learning-keras</guid>
-      <pubDate>Fri, 18 Sep 2026 08:30:02 GMT</pubDate>
-      <category>Emerging Technology</category>
-      <description>How applying high-level deep learning frameworks to astroparticle physics provides design blueprints for real-world enterprise telemetry and anomaly detection.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/decoding-cosmic-signals-deep-learning-keras/primary.webp" type="image/webp" />
     </item>
   </channel>
 </rss>
