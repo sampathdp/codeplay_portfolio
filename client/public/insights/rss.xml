@@ -6,8 +6,170 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 08 Oct 2026 11:38:35 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2026 11:33:40 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>Google Introduces LiteRT Tensor API for Native Edge Model Authoring</title>
+      <link>https://codeplaystudios.com/insights/litert-tensor-api-native-edge-model-authoring</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/litert-tensor-api-native-edge-model-authoring</guid>
+      <pubDate>Sun, 08 Nov 2026 10:41:10 GMT</pubDate>
+      <category>Emerging Technology</category>
+      <description>Google&apos;s new LiteRT Tensor API shifts edge machine learning toward native C++ graph control for heterogeneous hardware.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/11/litert-tensor-api-native-edge-model-authoring/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Architecting Governed, Self-Evolving AI Agents on Google Cloud</title>
+      <link>https://codeplaystudios.com/insights/architecting-governed-self-evolving-ai-agents-google-cloud</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/architecting-governed-self-evolving-ai-agents-google-cloud</guid>
+      <pubDate>Sat, 07 Nov 2026 10:36:28 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>An architectural breakdown of Project Chrysalis on Google Cloud, analyzing how combining autonomous feedback loops with a four-gate security stack transforms high-speed incident remediation.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/11/architecting-governed-self-evolving-ai-agents-google-cloud/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Routing Tasks Across Gemini Models With Lightweight Classifiers</title>
+      <link>https://codeplaystudios.com/insights/routing-tasks-gemini-models-lightweight-classifiers</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/routing-tasks-gemini-models-lightweight-classifiers</guid>
+      <pubDate>Wed, 04 Nov 2026 11:25:20 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>Engineering teams scaling autonomous coding workflows can utilize lightweight classifiers to intelligently route tasks across Gemini models and thinking levels, balancing cost efficiency against execution performance.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/11/routing-tasks-gemini-models-lightweight-classifiers/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Scaling Git at OpenAI: How Pando Handles High-Throughput AI Code Generation</title>
+      <link>https://codeplaystudios.com/insights/scaling-git-openai-pando-ai-code-generation</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/scaling-git-openai-pando-ai-code-generation</guid>
+      <pubDate>Tue, 03 Nov 2026 11:14:35 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>Examining OpenAI&apos;s introduction of Pando, a Git-compatible backend designed to support AI-generated code scale, and analyzing its architectural implications for enterprise version control.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/11/scaling-git-openai-pando-ai-code-generation/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Building Conversational Commerce with Multi-Agent Swarms on GCP</title>
+      <link>https://codeplaystudios.com/insights/building-conversational-commerce-multi-agent-swarms-gcp</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/building-conversational-commerce-multi-agent-swarms-gcp</guid>
+      <pubDate>Mon, 02 Nov 2026 11:35:03 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>An architectural blueprint for implementing multi-agent conversational commerce systems on Google Cloud Platform using Google Developer Studio frameworks.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/11/building-conversational-commerce-multi-agent-swarms-gcp/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>GE-Proton 11-11 Released as Targeted Hotfix for Linux and SteamOS</title>
+      <link>https://codeplaystudios.com/insights/ge-proton-11-11-released-hotfix-linux-steamos</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/ge-proton-11-11-released-hotfix-linux-steamos</guid>
+      <pubDate>Sun, 01 Nov 2026 10:44:46 GMT</pubDate>
+      <category>Software Development</category>
+      <description>GE-Proton 11-11 arrives as a targeted hotfix for Linux and SteamOS gaming, prioritizing technical stability and regression management over new feature expansion.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/11/ge-proton-11-11-released-hotfix-linux-steamos/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Evaluating AI Agents: Moving Beyond the Vibe Check with Systematic Testing</title>
+      <link>https://codeplaystudios.com/insights/evaluating-ai-agents-systematic-testing-pipelines</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/evaluating-ai-agents-systematic-testing-pipelines</guid>
+      <pubDate>Tue, 20 Oct 2026 08:48:21 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>Moving from subjective evaluation to systematic, continuous automated testing pipelines for multi-turn AI agents using Google&apos;s reference architecture.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/evaluating-ai-agents-systematic-testing-pipelines/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Google&apos;s adk-recipes Repository: A Guide to the Three-Layered ADK Architecture</title>
+      <link>https://codeplaystudios.com/insights/googles-adk-recipes-repository-three-layered-adk-architecture</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/googles-adk-recipes-repository-three-layered-adk-architecture</guid>
+      <pubDate>Mon, 19 Oct 2026 09:12:49 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>Google&apos;s adk-recipes repository introduces a three-layered architectural approach to standardizing Agent Development Kit resources.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/googles-adk-recipes-repository-three-layered-adk-architecture/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Anthropic Publishes Claude Research on ECDSA Curve Origins</title>
+      <link>https://codeplaystudios.com/insights/anthropic-claude-ecdsa-curve-origins</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/anthropic-claude-ecdsa-curve-origins</guid>
+      <pubDate>Sun, 18 Oct 2026 08:15:02 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>Anthropic published research on October 16, 2026, examining the origins of ECDSA curves using Claude, raising questions for engineering teams evaluating AI in security contexts.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/anthropic-claude-ecdsa-curve-origins/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Google OAuth Adds DPoP Support for Cryptographically Binding Refresh Tokens</title>
+      <link>https://codeplaystudios.com/insights/google-oauth-dpop-refresh-tokens</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/google-oauth-dpop-refresh-tokens</guid>
+      <pubDate>Sat, 17 Oct 2026 07:58:45 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>Google OAuth platform support for Demonstrating Proof-of-Possession adds cryptographic key binding to refresh tokens, aiming to blunt infostealer malware and adversary-in-the-middle attacks.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/google-oauth-dpop-refresh-tokens/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Apigee Hybrid 1.17.0 Adds Native Model Context Protocol Support for Enterprise AI</title>
+      <link>https://codeplaystudios.com/insights/apigee-hybrid-1-17-model-context-protocol-mcp</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/apigee-hybrid-1-17-model-context-protocol-mcp</guid>
+      <pubDate>Fri, 16 Oct 2026 08:26:28 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>Apigee hybrid 1.17.0 introduces native Model Context Protocol support, allowing enterprises to run MCP data planes inside their own Kubernetes clusters while securing agentic workflows.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/apigee-hybrid-1-17-model-context-protocol-mcp/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Apple Unveils New Apple TV 4K with Siri AI and HomeView</title>
+      <link>https://codeplaystudios.com/insights/apple-unveils-new-apple-tv-4k-siri-ai</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/apple-unveils-new-apple-tv-4k-siri-ai</guid>
+      <pubDate>Thu, 15 Oct 2026 08:31:54 GMT</pubDate>
+      <category>Big Tech</category>
+      <description>Apple&apos;s October 13, 2026 announcement of the new Apple TV 4K powered by Siri AI and Apple HomeView introduces new considerations for living room software engineering.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/apple-unveils-new-apple-tv-4k-siri-ai/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Dragon Quest Co-Creator Yuji Horii Releases AI-Generated Game Built in 30 Minutes</title>
+      <link>https://codeplaystudios.com/insights/yuji-horii-ai-generated-game-30-minutes</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/yuji-horii-ai-generated-game-30-minutes</guid>
+      <pubDate>Wed, 14 Oct 2026 08:57:40 GMT</pubDate>
+      <category>Software Development</category>
+      <description>Dragon Quest co-creator Yuji Horii has released a game built with generative AI, stating the project took about 30 minutes to prompt.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/yuji-horii-ai-generated-game-30-minutes/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Weekend Retail Review: Doom: The Dark Ages Premium Edition Discounted to $30.09</title>
+      <link>https://codeplaystudios.com/insights/weekend-retail-review-doom-the-dark-ages-discount</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/weekend-retail-review-doom-the-dark-ages-discount</guid>
+      <pubDate>Tue, 13 Oct 2026 10:55:12 GMT</pubDate>
+      <category>Emerging Technology</category>
+      <description>An analysis of Fanatical&apos;s $30.09 offer for Doom: The Dark Ages - Premium Edition and broader weekend digital retail discount configurations.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/weekend-retail-review-doom-the-dark-ages-discount/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Google Releases Developer Knowledge API and MCP Server to Ground AI Agents in Live Docs</title>
+      <link>https://codeplaystudios.com/insights/google-developer-knowledge-api-mcp-server-public-preview</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/google-developer-knowledge-api-mcp-server-public-preview</guid>
+      <pubDate>Mon, 12 Oct 2026 11:14:10 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>Google has launched its Developer Knowledge API and official MCP Server in public preview, providing AI agents with direct, canonical access to Google Cloud, Firebase, and Android documentation.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/google-developer-knowledge-api-mcp-server-public-preview/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Google Open-Sources AQuA: Diagnosing Production AI Agent Failures</title>
+      <link>https://codeplaystudios.com/insights/google-open-sources-aqua-ai-agent-diagnosis</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/google-open-sources-aqua-ai-agent-diagnosis</guid>
+      <pubDate>Sun, 11 Oct 2026 10:14:50 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>Google has open-sourced AQuA, a reference implementation addressing silent production failures in AI agents through automated outer-loop diagnosis.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/google-open-sources-aqua-ai-agent-diagnosis/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>OpenAI Releases GPT-6 and Intelligent UI: What Developers Need to Know</title>
+      <link>https://codeplaystudios.com/insights/openai-gpt-6-intelligent-ui-developer-guide</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/openai-gpt-6-intelligent-ui-developer-guide</guid>
+      <pubDate>Sat, 10 Oct 2026 10:04:38 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>OpenAI&apos;s GPT-6 rollout and Intelligent UI feature introduce generative interfaces to ChatGPT, signaling a structural shift from static text responses to dynamic, interactive components.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/openai-gpt-6-intelligent-ui-developer-guide/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Bit Reactor Recalls Furloughed Staff Following Star Wars Zero Company Sales</title>
+      <link>https://codeplaystudios.com/insights/bit-reactor-recalls-furloughed-staff-star-wars-zero-company</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/bit-reactor-recalls-furloughed-staff-star-wars-zero-company</guid>
+      <pubDate>Fri, 09 Oct 2026 10:49:53 GMT</pubDate>
+      <category>Web Development</category>
+      <description>Bit Reactor&apos;s recall of furloughed developers following Star Wars Zero Company highlights the precarious financial architecture of independent game development.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/10/bit-reactor-recalls-furloughed-staff-star-wars-zero-company/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>EmbeddingGemma 2 Integration Guide: Modularity and Matryoshka Truncation</title>
       <link>https://codeplaystudios.com/insights/embeddinggemma-2-developer-guide-integration</link>
@@ -295,166 +457,6 @@
       <category>Cybersecurity</category>
       <description>Cloudflare&apos;s engineering update demonstrates how combining mathematical optimization with Rust&apos;s low-level memory control unlocks massive infrastructure savings across global edge networks.</description>
       <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/cloudflare-memory-optimization-rust-math-100tb/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>War Thunder Steam Screenshot Competition Ties Community Engagement to Major Content Updates</title>
-      <link>https://codeplaystudios.com/insights/war-thunder-steam-screenshot-competition-sky-odyssey</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/war-thunder-steam-screenshot-competition-sky-odyssey</guid>
-      <pubDate>Sat, 19 Sep 2026 08:16:09 GMT</pubDate>
-      <category>Software Development</category>
-      <description>War Thunder&apos;s 242nd Steam Screenshot Competition demonstrates how low-overhead community loops amplify major content updates like Sky Odyssey.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/war-thunder-steam-screenshot-competition-sky-odyssey/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>Decoding Cosmic Signals with Deep Learning and Keras</title>
-      <link>https://codeplaystudios.com/insights/decoding-cosmic-signals-deep-learning-keras</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/decoding-cosmic-signals-deep-learning-keras</guid>
-      <pubDate>Fri, 18 Sep 2026 08:30:02 GMT</pubDate>
-      <category>Emerging Technology</category>
-      <description>How applying high-level deep learning frameworks to astroparticle physics provides design blueprints for real-world enterprise telemetry and anomaly detection.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/decoding-cosmic-signals-deep-learning-keras/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>Scaling Real-Time AI Agents with Session-Aware Load Balancing</title>
-      <link>https://codeplaystudios.com/insights/scaling-real-time-ai-agents-session-aware-load-balancing</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/scaling-real-time-ai-agents-session-aware-load-balancing</guid>
-      <pubDate>Fri, 18 Sep 2026 08:29:39 GMT</pubDate>
-      <category>Emerging Technology</category>
-      <description>Long-lived bidirectional AI streams obscure server capacity, requiring application-level session telemetry paired with hybrid routing algorithms to prevent server saturation.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/scaling-real-time-ai-agents-session-aware-load-balancing/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>Square Enix Sets Final Fantasy VII Revelation for April 2027 Release</title>
-      <link>https://codeplaystudios.com/insights/final-fantasy-vii-revelation-april-2027-release</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/final-fantasy-vii-revelation-april-2027-release</guid>
-      <pubDate>Thu, 17 Sep 2026 15:14:53 GMT</pubDate>
-      <category>Gaming</category>
-      <description>Square Enix details the final entry in its remake trilogy at TGS 2026, setting an April 2027 release date while highlighting current engineering constraints on physical media distribution.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/final-fantasy-vii-revelation-april-2027-release/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>Google Launches Agent Anomaly Detection in Private Preview for Gemini Enterprise</title>
-      <link>https://codeplaystudios.com/insights/google-agent-anomaly-detection-gemini-enterprise</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/google-agent-anomaly-detection-gemini-enterprise</guid>
-      <pubDate>Wed, 16 Sep 2026 20:21:50 GMT</pubDate>
-      <category>Artificial Intelligence</category>
-      <description>Google introduces Agent Anomaly Detection in Private Preview for Gemini Enterprise Agent Platform, pairing asynchronous OpenTelemetry trace analysis with OWASP-aligned guardrails.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/google-agent-anomaly-detection-gemini-enterprise/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>Sega and Netflix Partner for Multi-Title Transmedia Slate Including Crazy Taxi and Sonic</title>
-      <link>https://codeplaystudios.com/insights/sega-netflix-transmedia-partnership-crazy-taxi-sonic</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/sega-netflix-transmedia-partnership-crazy-taxi-sonic</guid>
-      <pubDate>Wed, 16 Sep 2026 08:53:13 GMT</pubDate>
-      <category>Software Development</category>
-      <description>Sega&apos;s expanded partnership with Netflix combines legacy arcade revivals and upcoming titles into a coordinated transmedia distribution strategy.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/sega-netflix-transmedia-partnership-crazy-taxi-sonic/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>Cloudflare Introduces Account-Level Controls to Block AI Training While Maintaining Search Visibility</title>
-      <link>https://codeplaystudios.com/insights/cloudflare-account-level-ai-crawler-controls</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/cloudflare-account-level-ai-crawler-controls</guid>
-      <pubDate>Wed, 16 Sep 2026 08:52:49 GMT</pubDate>
-      <category>Big Tech</category>
-      <description>Cloudflare introduces account-level controls designed to help web operators maintain organic search visibility while restricting crawler ingestion for AI model training.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/cloudflare-account-level-ai-crawler-controls/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>Google Announces Gemini 3.8 Live and Extended Thinking: What Developers Need to Know</title>
-      <link>https://codeplaystudios.com/insights/gemini-3-8-live-extended-thinking-developer-overview</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/gemini-3-8-live-extended-thinking-developer-overview</guid>
-      <pubDate>Tue, 15 Sep 2026 20:24:46 GMT</pubDate>
-      <category>Artificial Intelligence</category>
-      <description>Google and DeepMind announce Gemini 3.8 Live and Gemini 3.8 Live Extended Thinking, establishing a clear operational divide between real-time streaming latency and deliberate background reasoning.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/gemini-3-8-live-extended-thinking-developer-overview/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>Avatar The Last Airbender: The Living Typhoon Officially Revealed on Steam</title>
-      <link>https://codeplaystudios.com/insights/avatar-the-last-airbender-the-living-typhoon-announced</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/avatar-the-last-airbender-the-living-typhoon-announced</guid>
-      <pubDate>Tue, 15 Sep 2026 08:58:36 GMT</pubDate>
-      <category>Developer Tools</category>
-      <description>An official Steam announcement reveals &apos;Avatar The Last Airbender: The Living Typhoon&apos; as part of Paramount and Netflix&apos;s accelerating multimedia release strategy.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/avatar-the-last-airbender-the-living-typhoon-announced/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>Valve Launches Steam Frame VR Headset at $1,059: What Developers Need to Know</title>
-      <link>https://codeplaystudios.com/insights/valve-steam-frame-vr-headset-launch-pricing-strategy</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/valve-steam-frame-vr-headset-launch-pricing-strategy</guid>
-      <pubDate>Mon, 14 Sep 2026 21:02:50 GMT</pubDate>
-      <category>Emerging Technology</category>
-      <description>Valve opts for uncompromised hardware and hybrid rendering over budget pricing, establishing a high-performance baseline for standalone VR engineering.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/valve-steam-frame-vr-headset-launch-pricing-strategy/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>BlizzCon 2026: Blizzard Announces Diablo 5, StarCraft Shooter, and Legacy Revivals</title>
-      <link>https://codeplaystudios.com/insights/blizzcon-2026-roadmap-diablo-5-starcraft</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/blizzcon-2026-roadmap-diablo-5-starcraft</guid>
-      <pubDate>Mon, 14 Sep 2026 09:13:29 GMT</pubDate>
-      <category>Web Development</category>
-      <description>Blizzard&apos;s BlizzCon 2026 roadmap pairs 2029 and 2030 release windows with legacy revivals, outlining a multi-year engineering and lifecycle strategy under Xbox.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/blizzcon-2026-roadmap-diablo-5-starcraft/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>Using Apple Accessory Dimensional Drawings in Hardware CAD Workflows</title>
-      <link>https://codeplaystudios.com/insights/apple-accessory-dimensional-drawings-cad-workflows</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/apple-accessory-dimensional-drawings-cad-workflows</guid>
-      <pubDate>Mon, 14 Sep 2026 09:13:06 GMT</pubDate>
-      <category>Big Tech</category>
-      <description>A structured guide to leveraging Apple&apos;s official accessory dimensional drawings to ensure physical fit, clear sensor keepout zones, and streamline mechanical CAD workflows.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/apple-accessory-dimensional-drawings-cad-workflows/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>Swapmeat 4-Player Roguelike Co-Op Goes Free on Steam for Limited Time</title>
-      <link>https://codeplaystudios.com/insights/swapmeat-free-steam-promotion</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/swapmeat-free-steam-promotion</guid>
-      <pubDate>Sun, 13 Sep 2026 14:34:21 GMT</pubDate>
-      <category>Software Development</category>
-      <description>A limited-time free distribution campaign on Steam provides 4-player roguelike co-op game Swapmeat with an injection of concurrent users to drive network effects.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/swapmeat-free-steam-promotion/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>Genkit Go Introduces Agent Skills to Reduce Token Overhead</title>
-      <link>https://codeplaystudios.com/insights/genkit-go-agent-skills-token-overhead</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/genkit-go-agent-skills-token-overhead</guid>
-      <pubDate>Sun, 13 Sep 2026 08:31:27 GMT</pubDate>
-      <category>Web Development</category>
-      <description>Genkit Go introduces Agent Skills, leveraging progressive disclosure to reduce context window bloat and manage token consumption in Go backend applications.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/genkit-go-agent-skills-token-overhead/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>Running Long-Context Multimodal Embeddings on Cloud TPU via Native vLLM</title>
-      <link>https://codeplaystudios.com/insights/long-context-multimodal-embeddings-cloud-tpu-vllm</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/long-context-multimodal-embeddings-cloud-tpu-vllm</guid>
-      <pubDate>Sun, 13 Sep 2026 08:31:05 GMT</pubDate>
-      <category>Cloud &amp; DevOps</category>
-      <description>Google Cloud&apos;s native vLLM integration on Cloud TPU provides an architectural path for high-throughput, long-context embedding inference without abandoning standard open-source developer workflows.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/long-context-multimodal-embeddings-cloud-tpu-vllm/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>Google Cloud API Gateway Introduces Native Model Routing for Multi-LLM Architectures</title>
-      <link>https://codeplaystudios.com/insights/google-cloud-api-gateway-native-model-routing</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/google-cloud-api-gateway-native-model-routing</guid>
-      <pubDate>Sat, 12 Sep 2026 13:41:42 GMT</pubDate>
-      <category>Artificial Intelligence</category>
-      <description>Google Cloud API Gateway introduces native model routing in Public Preview, enabling declarative multi-LLM management via OpenAPI 3.x specifications.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/google-cloud-api-gateway-native-model-routing/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>Building Zero-Trust AI Agents with Google&apos;s Agent Development Kit</title>
-      <link>https://codeplaystudios.com/insights/building-zero-trust-ai-agents-google-agent-development-kit</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/building-zero-trust-ai-agents-google-agent-development-kit</guid>
-      <pubDate>Sat, 12 Sep 2026 08:14:05 GMT</pubDate>
-      <category>Artificial Intelligence</category>
-      <description>To safely allow autonomous AI agents built with Google&apos;s Agent Development Kit to mutate production state, software teams must replace soft system prompts with hard security boundaries like gVisor sandboxing and cryptographic verification.</description>
-    </item>
-    <item>
-      <title>Perplexity Adopts OpenAI GPT-6 Astra for Autonomous Systems Management</title>
-      <link>https://codeplaystudios.com/insights/perplexity-adopts-openai-gpt-6-astra</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/perplexity-adopts-openai-gpt-6-astra</guid>
-      <pubDate>Sat, 12 Sep 2026 08:13:42 GMT</pubDate>
-      <category>Artificial Intelligence</category>
-      <description>Perplexity adopts OpenAI&apos;s GPT-6 Astra for software maintenance, production monitoring, and internal communications with reduced human oversight.</description>
     </item>
   </channel>
 </rss>

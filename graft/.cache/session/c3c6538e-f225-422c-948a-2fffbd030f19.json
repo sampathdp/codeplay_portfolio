@@ -1,0 +1,13 @@
+{
+  "lastQuery": "all times end because my other project use balance",
+  "perAgentQuery": {},
+  "graftReads": 0,
+  "sourceReads": 1,
+  "savedTokens": 0,
+  "injectedPointers": [],
+  "nudges": 0,
+  "host": "claude-code",
+  "inputCostMicros": 147022,
+  "inputTokensBilled": 443406,
+  "lastBillingUuid": "cdfee485-dc4d-4ac9-9969-b8d64602e350"
+}
