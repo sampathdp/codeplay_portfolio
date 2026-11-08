@@ -30,11 +30,10 @@ Options -Indexes
   RewriteCond %{REQUEST_FILENAME} -l
   RewriteRule ^ - [L]
 
-<<<<<<< HEAD
   # App Privacy Policies (direct static serving for clean URLs)
   RewriteRule ^colorbloom/privacy-policy/?$ colorbloom/privacy-policy/index.html [L]
   RewriteRule ^colorbloom-privacy-policy/?$ colorbloom-privacy-policy.html [L]
-=======
+
   # Published articles get a prerendered /insights/<slug>/index.html (see
   # insights-engine/src/publish/prerender.ts) so crawlers/unfurlers that
   # don't run JS still see real title/description/OG/JSON-LD tags. Only
@@ -43,7 +42,6 @@ Options -Indexes
   # fall through to the SPA below as before.
   RewriteCond %{DOCUMENT_ROOT}/insights/$1/index.html -f
   RewriteRule ^insights/([^/]+)/?$ /insights/$1/index.html [L]
->>>>>>> 4677fc377f13bbe7c34ad65a399e96e766d70de7
 
   # Everything else — including paths that collide with a real directory
   # such as /insights and /insights/ — is handed to the SPA entry point.
