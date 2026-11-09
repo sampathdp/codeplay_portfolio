@@ -6,8 +6,17 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 08 Nov 2026 11:33:40 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 13:25:31 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>How to Build Generative UI Apps Using A2UI and CopilotKit</title>
+      <link>https://codeplaystudios.com/insights/build-generative-ui-apps-a2ui-copilotkit</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/build-generative-ui-apps-a2ui-copilotkit</guid>
+      <pubDate>Mon, 09 Nov 2026 11:58:48 GMT</pubDate>
+      <category>Developer Tools</category>
+      <description>Google has detailed an approach to building generative user interfaces using A2UI and CopilotKit agents across backend frameworks including LangChain and Microsoft agents.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/11/build-generative-ui-apps-a2ui-copilotkit/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>Google Introduces LiteRT Tensor API for Native Edge Model Authoring</title>
       <link>https://codeplaystudios.com/insights/litert-tensor-api-native-edge-model-authoring</link>
@@ -448,15 +457,6 @@
       <category>Gaming</category>
       <description>EA and Microsoft launch a 10-hour EA Sports FC 27 trial on Xbox and PC, utilizing cross-entitlement subscription models and progress persistence to drive conversion.</description>
       <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/ea-sports-fc-27-ea-play-trial/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>How Cloudflare Saved 100TB of RAM Using Rust and Mathematical Optimization</title>
-      <link>https://codeplaystudios.com/insights/cloudflare-memory-optimization-rust-math-100tb</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/cloudflare-memory-optimization-rust-math-100tb</guid>
-      <pubDate>Sat, 19 Sep 2026 08:16:32 GMT</pubDate>
-      <category>Cybersecurity</category>
-      <description>Cloudflare&apos;s engineering update demonstrates how combining mathematical optimization with Rust&apos;s low-level memory control unlocks massive infrastructure savings across global edge networks.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/cloudflare-memory-optimization-rust-math-100tb/primary.webp" type="image/webp" />
     </item>
   </channel>
 </rss>
