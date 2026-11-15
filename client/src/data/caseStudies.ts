@@ -49,6 +49,17 @@ import nutCorner3 from "@/assets/screenshots/premium-nut-corner_3.webp";
 import darshana1 from "@/assets/screenshots/darshana-travels_1.webp";
 import darshana2 from "@/assets/screenshots/darshana-travels_2.webp";
 import darshana3 from "@/assets/screenshots/darshana-travels_3.webp";
+import crosa1 from "@/assets/screenshots/crosa-wellness_1.webp";
+import crosa2 from "@/assets/screenshots/crosa-wellness_2.webp";
+import crosa3 from "@/assets/screenshots/crosa-wellness_3.webp";
+import eminence1 from "@/assets/screenshots/eminence-ceylon-exports_1.webp";
+import eminence2 from "@/assets/screenshots/eminence-ceylon-exports_2.webp";
+import eminence3 from "@/assets/screenshots/eminence-ceylon-exports_3.webp";
+import dsMaths1 from "@/assets/screenshots/dsmaths-kingdom_1.webp";
+import dsMaths2 from "@/assets/screenshots/dsmaths-kingdom_2.webp";
+import mctronic1 from "@/assets/screenshots/mctronic-service_1.webp";
+import mctronic2 from "@/assets/screenshots/mctronic-service_2.webp";
+import mctronic3 from "@/assets/screenshots/mctronic-service_3.webp";
 
 export interface CaseStudy {
   id: string;
@@ -445,86 +456,48 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
     images: [anarga1, anarga2, anarga3]
   },
   {
-    id: "29",
-    slug: "eschool-platform",
-    title: "eSchool: School Management Platform",
-    tag: "Admin",
-    tagColor: "blue",
-    description: "A school management platform for handling students, classes and administration in one place.",
-    challenge: "Schools often juggle manual records and disconnected tools for student and staff administration.",
-    solution: "We built a centralized web platform to organize school data and day-to-day administration.",
-    results: "A working platform delivered on our studio infrastructure.",
-    metric: "Unified",
-    metricLabel: "School Administration",
-    metric2: "Web",
-    metric2Label: "Cloud Based",
-    metric3: "Live",
-    metric3Label: "Deployed",
-    techStack: ["React", "Node.js", "PostgreSQL"],
-    gradient: "from-blue-900 to-indigo-950",
-    featured: false
-  },
-  {
-    id: "30",
-    slug: "soba-law",
-    title: "Soba Law",
-    tag: "Web",
-    tagColor: "slate",
-    description: "A professional website for a law practice, built to communicate expertise and make contact easy.",
-    challenge: "A legal practice needed a credible, professional online presence.",
-    solution: "We designed a clean, trustworthy site presenting practice areas and clear ways to get in touch.",
-    results: "A polished site that supports client trust and enquiries.",
-    metric: "Live",
-    metricLabel: "Deployed",
-    metric2: "100%",
-    metric2Label: "Responsive",
-    metric3: "Clean",
-    metric3Label: "Professional Design",
-    techStack: ["React", "Tailwind CSS", "SEO"],
-    gradient: "from-slate-800 to-gray-950",
-    featured: false
-  },
-  {
     id: "31",
     slug: "eminence-ceylon-exports",
     title: "Eminence Ceylon Exports",
     tag: "Web",
     tagColor: "teal",
-    description: "A corporate export website presenting Ceylon products to international buyers.",
-    challenge: "The exporter needed a professional site to build credibility with overseas buyers.",
-    solution: "We built a clear, business-focused site presenting the company, products and enquiry flow.",
-    results: "A live site supporting international B2B enquiries.",
-    metric: "Global",
-    metricLabel: "Buyer Audience",
-    metric2: "Live",
-    metric2Label: "In Production",
-    metric3: "100%",
-    metric3Label: "Mobile Optimized",
-    techStack: ["React", "Tailwind CSS", "Vercel"],
-    gradient: "from-teal-900 to-cyan-950",
+    description: "A B2B export website for a Sri Lankan Ceylon cinnamon exporter supplying international markets.",
+    challenge: "The exporter needed to present grades, packaging and quality credentials clearly to overseas buyers and capture quotation requests.",
+    solution: "We built a product-led site covering C5, C4 and H grade quills, cut sticks, packaging options, key export markets (USA, Europe, Middle East), quality standards (SLS 81 / ISO 6539) and a quotation request form.",
+    results: "A live B2B site supporting international buyer enquiries.",
+    metric: "C5 / C4",
+    metricLabel: "Export Grades",
+    metric2: "SLS 81",
+    metric2Label: "Quality Standard",
+    metric3: "Global",
+    metric3Label: "Export Markets",
+    techStack: ["React", "Tailwind CSS", "SEO"],
+    gradient: "from-teal-900 to-green-950",
     featured: false,
-    liveUrl: "https://eminence-ceylon-exports.vercel.app/"
+    liveUrl: "https://eminenceceylonexports.com/",
+    images: [eminence1, eminence2, eminence3]
   },
   {
     id: "32",
     slug: "crosa-wellness",
-    title: "Crosa Wellness",
+    title: "CROSA: Pain Management & Wellness Clinic",
     tag: "Web",
-    tagColor: "pink",
-    description: "A wellness brand website with a soft, modern look and clear service presentation.",
-    challenge: "The brand needed a welcoming web presence that reflects a wellness-focused identity.",
-    solution: "We designed a calm, modern site with clear sections and easy contact.",
-    results: "A live site that presents the brand cleanly on any device.",
-    metric: "Live",
-    metricLabel: "In Production",
-    metric2: "100%",
-    metric2Label: "Mobile Optimized",
-    metric3: "Fast",
-    metric3Label: "Load Performance",
-    techStack: ["React", "Tailwind CSS", "Vercel"],
-    gradient: "from-pink-900 to-rose-950",
+    tagColor: "blue",
+    description: "A modern website for CROSA, a pain management, rehabilitation, fitness and therapeutic massage centre in Colombo.",
+    challenge: "The clinic needed a site that felt clinical and trustworthy while making it easy to enquire about specific conditions and treatments.",
+    solution: "We built a cinematic, calm site with condition-by-condition pages (back, neck, shoulder, knee pain, sports injuries, post-injury rehab), a diabetes and cholesterol management package, reviews, FAQ and one-tap WhatsApp consultation.",
+    results: "A live site that turns visitors into consultation enquiries.",
+    metric: "Open 24/7",
+    metricLabel: "Consultations",
+    metric2: "6+",
+    metric2Label: "Conditions Treated",
+    metric3: "WhatsApp",
+    metric3Label: "Booking",
+    techStack: ["React", "Tailwind CSS", "SEO", "WhatsApp"],
+    gradient: "from-blue-900 to-slate-950",
     featured: false,
-    liveUrl: "https://crosa-wellness.vercel.app/"
+    liveUrl: "https://crosaclinic.com/",
+    images: [crosa1, crosa2, crosa3]
   },
   {
     id: "33",
@@ -637,6 +610,50 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
     featured: false,
     liveUrl: "https://darshana-travels.salonflow.cloud/",
     images: [darshana1, darshana2, darshana3]
+  },
+  {
+    id: "38",
+    slug: "dsmaths-kingdom",
+    title: "DS Maths Kingdom: Student Portal",
+    tag: "Admin",
+    tagColor: "violet",
+    description: "A student portal for DS Maths Kingdom, a mathematics tuition institute, with registration, login, announcements and class schedules.",
+    challenge: "The institute needed one place for students to register, log in, follow announcements and check class schedules.",
+    solution: "We built a mobile-friendly portal with a photo-led landing, student registration and login, class announcements (including Sinhala content) and live class schedules.",
+    results: "A live portal students use to stay connected with their classes.",
+    metric: "Portal",
+    metricLabel: "Student Access",
+    metric2: "Live",
+    metric2Label: "Announcements",
+    metric3: "Schedules",
+    metric3Label: "Class Timetables",
+    techStack: ["React", "Node.js", "PostgreSQL"],
+    gradient: "from-violet-900 to-indigo-950",
+    featured: false,
+    liveUrl: "http://dsmathskingdom.lk/",
+    images: [dsMaths1, dsMaths2]
+  },
+  {
+    id: "39",
+    slug: "mctronic-service",
+    title: "mctronic: Electronic & Appliance Repair",
+    tag: "Web",
+    tagColor: "red",
+    description: "A website for mctronic, a repair workshop for electronic and household appliances, with repair status checking and easy enquiries.",
+    challenge: "The workshop needed a trustworthy web presence that makes booking a repair and following its progress simple.",
+    solution: "We built a clear service site covering TV and display, JBL and party box, sound system and other repairs, a four-step repair process, repair status checking and call or WhatsApp booking.",
+    results: "A live site that turns visitors into repair bookings.",
+    metric: "4-Step",
+    metricLabel: "Repair Process",
+    metric2: "Status",
+    metric2Label: "Online Repair Check",
+    metric3: "WhatsApp",
+    metric3Label: "Booking",
+    techStack: ["React", "Tailwind CSS", "WhatsApp"],
+    gradient: "from-red-900 to-rose-950",
+    featured: false,
+    liveUrl: "https://mctronicservice.com/",
+    images: [mctronic1, mctronic2, mctronic3]
   },
   {
     id: "6",

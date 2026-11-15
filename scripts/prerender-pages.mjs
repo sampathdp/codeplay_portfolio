@@ -104,7 +104,10 @@ function finalize(html, path) {
     // opacity 0 — make their text visible in the static copy.
     .replace(/ style="[^"]*opacity:\s*0(?=[;"])[^"]*"/g, "")
     // Third-party scripts injected at runtime re-inject themselves.
-    .replace(/<script[^>]+(googletagmanager|googlesyndication|google-analytics)[^>]*><\/script>/g, "");
+    .replace(/<script[^>]+(googletagmanager|googlesyndication|google-analytics)[^>]*><\/script>/g, "")
+    // SEO.tsx reads window.location.href for og:url / twitter:url, which is
+    // the throwaway local server here — rewrite to the production origin.
+    .replace(/http:\/\/127\.0\.0\.1:\d+/g, "https://codeplaystudios.com");
   // Helmet adds its own description (data-rh); drop the shell's copy so
   // each page has exactly one.
   if (HELMET_DESCRIPTION.test(out)) {
