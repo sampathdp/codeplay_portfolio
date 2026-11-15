@@ -25,6 +25,30 @@ import swarnaImg from "@/assets/screenshots/swarna-communication.webp";
 import hewundeImg from "@/assets/screenshots/hewunde-catering.webp";
 import ryeTeaFactory1 from "@/assets/screenshots/rye-tea-factory_1.webp";
 import ryeTeaFactory2 from "@/assets/screenshots/rye-tea-factory_2.webp";
+import asilAuto1 from "@/assets/screenshots/asil-auto-parts_1.webp";
+import asilAuto2 from "@/assets/screenshots/asil-auto-parts_2.webp";
+import asilAuto3 from "@/assets/screenshots/asil-auto-parts_3.webp";
+import glamoria1 from "@/assets/screenshots/glamorias-gems_1.webp";
+import glamoria2 from "@/assets/screenshots/glamorias-gems_2.webp";
+import glamoria3 from "@/assets/screenshots/glamorias-gems_3.webp";
+import anarga1 from "@/assets/screenshots/anarga-ayurveda_1.webp";
+import anarga2 from "@/assets/screenshots/anarga-ayurveda_2.webp";
+import anarga3 from "@/assets/screenshots/anarga-ayurveda_3.webp";
+import charithra1 from "@/assets/screenshots/charithra-weddings_1.webp";
+import charithra2 from "@/assets/screenshots/charithra-weddings_2.webp";
+import charithra3 from "@/assets/screenshots/charithra-weddings_3.webp";
+import goSafe1 from "@/assets/screenshots/go-safe-home-drivers_1.webp";
+import goSafe2 from "@/assets/screenshots/go-safe-home-drivers_2.webp";
+import goSafe3 from "@/assets/screenshots/go-safe-home-drivers_3.webp";
+import lankaNiki1 from "@/assets/screenshots/lanka-niki-tours_1.webp";
+import lankaNiki2 from "@/assets/screenshots/lanka-niki-tours_2.webp";
+import lankaNiki3 from "@/assets/screenshots/lanka-niki-tours_3.webp";
+import nutCorner1 from "@/assets/screenshots/premium-nut-corner_1.webp";
+import nutCorner2 from "@/assets/screenshots/premium-nut-corner_2.webp";
+import nutCorner3 from "@/assets/screenshots/premium-nut-corner_3.webp";
+import darshana1 from "@/assets/screenshots/darshana-travels_1.webp";
+import darshana2 from "@/assets/screenshots/darshana-travels_2.webp";
+import darshana3 from "@/assets/screenshots/darshana-travels_3.webp";
 
 export interface CaseStudy {
   id: string;
@@ -46,10 +70,11 @@ export interface CaseStudy {
   gradient: string;
   featured: boolean;
   liveUrl?: string;
+  hidden?: boolean;
   images?: string[];
 }
 
-export const CASE_STUDIES: CaseStudy[] = [
+const ALL_CASE_STUDIES: CaseStudy[] = [
   {
     id: "12",
     slug: "zemilam-holdings",
@@ -354,6 +379,266 @@ export const CASE_STUDIES: CaseStudy[] = [
     images: [hewundeImg]
   },
   {
+    id: "26",
+    slug: "asil-auto-parts",
+    title: "ASIL Auto Parts Hub",
+    tag: "Web",
+    tagColor: "orange",
+    description: "An online auto parts store in Dubai selling genuine, OEM and aftermarket car parts across the UAE.",
+    challenge: "Customers needed a trusted way to find the right part for their vehicle and order without visiting a shop.",
+    solution: "We built a bilingual (English/Arabic) storefront with a year/make/model part finder, OEM and genuine part catalog, WhatsApp fitment checks by VIN or part photo, and clear delivery and returns policies.",
+    results: "A live store serving UAE customers with simple, confident ordering.",
+    metric: "UAE-Wide",
+    metricLabel: "Next-Day Delivery",
+    metric2: "15-Day",
+    metric2Label: "Return Window",
+    metric3: "WhatsApp",
+    metric3Label: "Fitment Support",
+    techStack: ["React", "Tailwind CSS", "E-commerce", "WhatsApp"],
+    gradient: "from-orange-900 to-red-950",
+    featured: false,
+    liveUrl: "https://www.asilautoparts.ae/",
+    images: [asilAuto1, asilAuto2, asilAuto3]
+  },
+  {
+    id: "27",
+    slug: "glamorias-gems",
+    title: "Glamoria's Gems",
+    tag: "Web",
+    tagColor: "amber",
+    description: "A luxury jewellery website for a fine jewellery house with boutiques in Sri Lanka and Dubai.",
+    challenge: "A high-end jeweller needed an online presence that matched the quality of its handcrafted pieces.",
+    solution: "We designed an elegant storefront with high jewellery and category browsing, curated looks, LKR/AED/EUR regional pricing, a client-care flow, and trust signals like ethically sourced diamonds and a lifetime warranty.",
+    results: "A live, premium storefront that reflects the brand across both markets.",
+    metric: "2",
+    metricLabel: "Boutiques (LK & UAE)",
+    metric2: "Lifetime",
+    metric2Label: "Warranty & Aftercare",
+    metric3: "Live",
+    metric3Label: "In Production",
+    techStack: ["React", "Tailwind CSS", "E-commerce"],
+    gradient: "from-amber-900 to-yellow-950",
+    featured: false,
+    liveUrl: "https://glamoriasgems.com/",
+    images: [glamoria1, glamoria2, glamoria3]
+  },
+  {
+    id: "28",
+    slug: "anarga-ayurveda",
+    title: "Anarga: Ayurvedic Sanctuary",
+    tag: "Web",
+    tagColor: "emerald",
+    description: "A calm, brand-led website for Anarga, a ladies-only Ayurvedic massage sanctuary in Normandale, Lower Hutt, New Zealand.",
+    challenge: "The sanctuary needed a website that conveyed tranquility and authenticity from the first scroll.",
+    solution: "We built a serene, immersive site with a forest-backed hero, ritual-led storytelling, a massage menu, and ambient calm audio, all aimed at making women feel at ease before they arrive.",
+    results: "A live site giving Anarga a credible digital presence.",
+    metric: "Live",
+    metricLabel: "In Production",
+    metric2: "100%",
+    metric2Label: "Responsive",
+    metric3: "Fast",
+    metric3Label: "Load Performance",
+    techStack: ["React", "Tailwind CSS", "SEO"],
+    gradient: "from-emerald-900 to-green-950",
+    featured: false,
+    liveUrl: "https://anarga.co.nz",
+    images: [anarga1, anarga2, anarga3]
+  },
+  {
+    id: "29",
+    slug: "eschool-platform",
+    title: "eSchool: School Management Platform",
+    tag: "Admin",
+    tagColor: "blue",
+    description: "A school management platform for handling students, classes and administration in one place.",
+    challenge: "Schools often juggle manual records and disconnected tools for student and staff administration.",
+    solution: "We built a centralized web platform to organize school data and day-to-day administration.",
+    results: "A working platform delivered on our studio infrastructure.",
+    metric: "Unified",
+    metricLabel: "School Administration",
+    metric2: "Web",
+    metric2Label: "Cloud Based",
+    metric3: "Live",
+    metric3Label: "Deployed",
+    techStack: ["React", "Node.js", "PostgreSQL"],
+    gradient: "from-blue-900 to-indigo-950",
+    featured: false
+  },
+  {
+    id: "30",
+    slug: "soba-law",
+    title: "Soba Law",
+    tag: "Web",
+    tagColor: "slate",
+    description: "A professional website for a law practice, built to communicate expertise and make contact easy.",
+    challenge: "A legal practice needed a credible, professional online presence.",
+    solution: "We designed a clean, trustworthy site presenting practice areas and clear ways to get in touch.",
+    results: "A polished site that supports client trust and enquiries.",
+    metric: "Live",
+    metricLabel: "Deployed",
+    metric2: "100%",
+    metric2Label: "Responsive",
+    metric3: "Clean",
+    metric3Label: "Professional Design",
+    techStack: ["React", "Tailwind CSS", "SEO"],
+    gradient: "from-slate-800 to-gray-950",
+    featured: false
+  },
+  {
+    id: "31",
+    slug: "eminence-ceylon-exports",
+    title: "Eminence Ceylon Exports",
+    tag: "Web",
+    tagColor: "teal",
+    description: "A corporate export website presenting Ceylon products to international buyers.",
+    challenge: "The exporter needed a professional site to build credibility with overseas buyers.",
+    solution: "We built a clear, business-focused site presenting the company, products and enquiry flow.",
+    results: "A live site supporting international B2B enquiries.",
+    metric: "Global",
+    metricLabel: "Buyer Audience",
+    metric2: "Live",
+    metric2Label: "In Production",
+    metric3: "100%",
+    metric3Label: "Mobile Optimized",
+    techStack: ["React", "Tailwind CSS", "Vercel"],
+    gradient: "from-teal-900 to-cyan-950",
+    featured: false,
+    liveUrl: "https://eminence-ceylon-exports.vercel.app/"
+  },
+  {
+    id: "32",
+    slug: "crosa-wellness",
+    title: "Crosa Wellness",
+    tag: "Web",
+    tagColor: "pink",
+    description: "A wellness brand website with a soft, modern look and clear service presentation.",
+    challenge: "The brand needed a welcoming web presence that reflects a wellness-focused identity.",
+    solution: "We designed a calm, modern site with clear sections and easy contact.",
+    results: "A live site that presents the brand cleanly on any device.",
+    metric: "Live",
+    metricLabel: "In Production",
+    metric2: "100%",
+    metric2Label: "Mobile Optimized",
+    metric3: "Fast",
+    metric3Label: "Load Performance",
+    techStack: ["React", "Tailwind CSS", "Vercel"],
+    gradient: "from-pink-900 to-rose-950",
+    featured: false,
+    liveUrl: "https://crosa-wellness.vercel.app/"
+  },
+  {
+    id: "33",
+    slug: "charithra-weddings",
+    title: "Charithra: Wedding Coordination",
+    tag: "Web",
+    tagColor: "rose",
+    description: "A website for Charithra, the wedding day coordination arm of CCCEvents in Sri Lanka.",
+    challenge: "Couples needed to understand quickly how day-of coordination works and trust the team behind it.",
+    solution: "We built a regal, story-led site with packages, gallery, reviews and FAQ, presenting the on-site team, vendor sync, minute-by-minute run sheets and Poruwa ritual management, with WhatsApp booking.",
+    results: "A live site that explains the offering and drives enquiries.",
+    metric: "500+",
+    metricLabel: "Celebrations Coordinated",
+    metric2: "10+ Yrs",
+    metric2Label: "Experience",
+    metric3: "WhatsApp",
+    metric3Label: "Booking",
+    techStack: ["React", "Tailwind CSS", "SEO"],
+    gradient: "from-rose-900 to-pink-950",
+    featured: false,
+    liveUrl: "https://charithra.lk/",
+    images: [charithra1, charithra2, charithra3]
+  },
+  {
+    id: "34",
+    slug: "go-safe-home-drivers",
+    title: "Go Safe Home Drivers",
+    tag: "Web",
+    tagColor: "indigo",
+    description: "A booking-focused site for a designated driver service that takes customers home safely in their own vehicle.",
+    challenge: "The service needed a fast way for customers to trust and book at any hour.",
+    solution: "We built a mobile-first site with 24/7 phone and WhatsApp booking and clear pages for night, VIP and corporate driving.",
+    results: "A live site making booking one tap away.",
+    metric: "24/7",
+    metricLabel: "Booking",
+    metric2: "Islandwide",
+    metric2Label: "Coverage",
+    metric3: "Live",
+    metric3Label: "In Production",
+    techStack: ["React", "Tailwind CSS", "WhatsApp", "Vercel"],
+    gradient: "from-indigo-900 to-slate-950",
+    featured: false,
+    liveUrl: "https://drink-drive-taxi.vercel.app/",
+    images: [goSafe1, goSafe2, goSafe3]
+  },
+  {
+    id: "35",
+    slug: "lanka-niki-tours",
+    title: "Lanka Niki Tours",
+    tag: "Web",
+    tagColor: "green",
+    description: "A travel website for private custom tours and wildlife safaris across Sri Lanka.",
+    challenge: "The tour company needed to showcase itineraries and make enquiring effortless.",
+    solution: "We built an immersive site with destination guides (Yala, Sigiriya, Ella, Galle, Mirissa), multi-day tours like the 8-day Wild Sri Lanka Safari, a TripAdvisor presence, and direct WhatsApp planning.",
+    results: "A live site presenting tours and capturing enquiries.",
+    metric: "Private",
+    metricLabel: "Tours",
+    metric2: "24/7",
+    metric2Label: "WhatsApp Contact",
+    metric3: "Live",
+    metric3Label: "In Production",
+    techStack: ["React", "Tailwind CSS", "Framer Motion", "Vercel"],
+    gradient: "from-green-900 to-emerald-950",
+    featured: false,
+    hidden: true,
+    liveUrl: "https://lanka-niki-tour.vercel.app/",
+    images: [lankaNiki1, lankaNiki2, lankaNiki3]
+  },
+  {
+    id: "36",
+    slug: "premium-nut-corner",
+    title: "Premium Nut Corner",
+    tag: "Web",
+    tagColor: "yellow",
+    description: "An online storefront for premium nut, seed and dried-fruit mixes with WhatsApp ordering.",
+    challenge: "A food brand needed a simple way to present its mixes and take orders without a heavy checkout.",
+    solution: "We built a clean product site with Classic, Premium and Signature mixes in multiple sizes and WhatsApp ordering.",
+    results: "A live store with frictionless ordering.",
+    metric: "3",
+    metricLabel: "Signature Mixes",
+    metric2: "3 Sizes",
+    metric2Label: "200g / 500g / 1kg",
+    metric3: "WhatsApp",
+    metric3Label: "Ordering",
+    techStack: ["React", "Tailwind CSS", "WhatsApp", "Vercel"],
+    gradient: "from-yellow-900 to-amber-950",
+    featured: false,
+    hidden: true,
+    liveUrl: "https://premium-nut-corner.vercel.app/",
+    images: [nutCorner1, nutCorner2, nutCorner3]
+  },
+  {
+    id: "37",
+    slug: "darshana-travels",
+    title: "Darshana Travels: Bus Booking",
+    tag: "Web",
+    tagColor: "sky",
+    description: "An online intercity bus ticket booking site for Sri Lanka, running on the SalonFlow cloud platform.",
+    challenge: "Passengers needed to book bus seats online without creating accounts or calling counters.",
+    solution: "We delivered route and date search, a live seat map, guest card checkout with no account needed, and instant SMS e-tickets, backed by FAQs and support details.",
+    results: "A live booking experience for passengers.",
+    metric: "Live",
+    metricLabel: "Seat Map",
+    metric2: "SMS",
+    metric2Label: "Instant E-Tickets",
+    metric3: "No Signup",
+    metric3Label: "Checkout",
+    techStack: ["React", "Node.js", "Payments", "SMS"],
+    gradient: "from-sky-900 to-blue-950",
+    featured: false,
+    liveUrl: "https://darshana-travels.salonflow.cloud/",
+    images: [darshana1, darshana2, darshana3]
+  },
+  {
     id: "6",
     slug: "service-center-system",
     title: "Vehicle Service Center System",
@@ -415,3 +700,6 @@ export const CASE_STUDIES: CaseStudy[] = [
     featured: false
   }
 ];
+
+// Entries with `hidden: true` are kept here but not shown on the site.
+export const CASE_STUDIES: CaseStudy[] = ALL_CASE_STUDIES.filter((c) => !c.hidden);
