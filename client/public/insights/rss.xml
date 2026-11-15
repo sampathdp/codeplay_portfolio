@@ -6,8 +6,71 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 20 Oct 2026 09:40:36 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 13:25:31 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>How to Build Generative UI Apps Using A2UI and CopilotKit</title>
+      <link>https://codeplaystudios.com/insights/build-generative-ui-apps-a2ui-copilotkit</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/build-generative-ui-apps-a2ui-copilotkit</guid>
+      <pubDate>Mon, 09 Nov 2026 11:58:48 GMT</pubDate>
+      <category>Developer Tools</category>
+      <description>Google has detailed an approach to building generative user interfaces using A2UI and CopilotKit agents across backend frameworks including LangChain and Microsoft agents.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/11/build-generative-ui-apps-a2ui-copilotkit/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Google Introduces LiteRT Tensor API for Native Edge Model Authoring</title>
+      <link>https://codeplaystudios.com/insights/litert-tensor-api-native-edge-model-authoring</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/litert-tensor-api-native-edge-model-authoring</guid>
+      <pubDate>Sun, 08 Nov 2026 10:41:10 GMT</pubDate>
+      <category>Emerging Technology</category>
+      <description>Google&apos;s new LiteRT Tensor API shifts edge machine learning toward native C++ graph control for heterogeneous hardware.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/11/litert-tensor-api-native-edge-model-authoring/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Architecting Governed, Self-Evolving AI Agents on Google Cloud</title>
+      <link>https://codeplaystudios.com/insights/architecting-governed-self-evolving-ai-agents-google-cloud</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/architecting-governed-self-evolving-ai-agents-google-cloud</guid>
+      <pubDate>Sat, 07 Nov 2026 10:36:28 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>An architectural breakdown of Project Chrysalis on Google Cloud, analyzing how combining autonomous feedback loops with a four-gate security stack transforms high-speed incident remediation.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/11/architecting-governed-self-evolving-ai-agents-google-cloud/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Routing Tasks Across Gemini Models With Lightweight Classifiers</title>
+      <link>https://codeplaystudios.com/insights/routing-tasks-gemini-models-lightweight-classifiers</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/routing-tasks-gemini-models-lightweight-classifiers</guid>
+      <pubDate>Wed, 04 Nov 2026 11:25:20 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>Engineering teams scaling autonomous coding workflows can utilize lightweight classifiers to intelligently route tasks across Gemini models and thinking levels, balancing cost efficiency against execution performance.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/11/routing-tasks-gemini-models-lightweight-classifiers/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Scaling Git at OpenAI: How Pando Handles High-Throughput AI Code Generation</title>
+      <link>https://codeplaystudios.com/insights/scaling-git-openai-pando-ai-code-generation</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/scaling-git-openai-pando-ai-code-generation</guid>
+      <pubDate>Tue, 03 Nov 2026 11:14:35 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>Examining OpenAI&apos;s introduction of Pando, a Git-compatible backend designed to support AI-generated code scale, and analyzing its architectural implications for enterprise version control.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/11/scaling-git-openai-pando-ai-code-generation/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>Building Conversational Commerce with Multi-Agent Swarms on GCP</title>
+      <link>https://codeplaystudios.com/insights/building-conversational-commerce-multi-agent-swarms-gcp</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/building-conversational-commerce-multi-agent-swarms-gcp</guid>
+      <pubDate>Mon, 02 Nov 2026 11:35:03 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>An architectural blueprint for implementing multi-agent conversational commerce systems on Google Cloud Platform using Google Developer Studio frameworks.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/11/building-conversational-commerce-multi-agent-swarms-gcp/primary.webp" type="image/webp" />
+    </item>
+    <item>
+      <title>GE-Proton 11-11 Released as Targeted Hotfix for Linux and SteamOS</title>
+      <link>https://codeplaystudios.com/insights/ge-proton-11-11-released-hotfix-linux-steamos</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/ge-proton-11-11-released-hotfix-linux-steamos</guid>
+      <pubDate>Sun, 01 Nov 2026 10:44:46 GMT</pubDate>
+      <category>Software Development</category>
+      <description>GE-Proton 11-11 arrives as a targeted hotfix for Linux and SteamOS gaming, prioritizing technical stability and regression management over new feature expansion.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/11/ge-proton-11-11-released-hotfix-linux-steamos/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>Evaluating AI Agents: Moving Beyond the Vibe Check with Systematic Testing</title>
       <link>https://codeplaystudios.com/insights/evaluating-ai-agents-systematic-testing-pipelines</link>
@@ -394,69 +457,6 @@
       <category>Gaming</category>
       <description>EA and Microsoft launch a 10-hour EA Sports FC 27 trial on Xbox and PC, utilizing cross-entitlement subscription models and progress persistence to drive conversion.</description>
       <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/ea-sports-fc-27-ea-play-trial/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>How Cloudflare Saved 100TB of RAM Using Rust and Mathematical Optimization</title>
-      <link>https://codeplaystudios.com/insights/cloudflare-memory-optimization-rust-math-100tb</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/cloudflare-memory-optimization-rust-math-100tb</guid>
-      <pubDate>Sat, 19 Sep 2026 08:16:32 GMT</pubDate>
-      <category>Cybersecurity</category>
-      <description>Cloudflare&apos;s engineering update demonstrates how combining mathematical optimization with Rust&apos;s low-level memory control unlocks massive infrastructure savings across global edge networks.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/cloudflare-memory-optimization-rust-math-100tb/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>War Thunder Steam Screenshot Competition Ties Community Engagement to Major Content Updates</title>
-      <link>https://codeplaystudios.com/insights/war-thunder-steam-screenshot-competition-sky-odyssey</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/war-thunder-steam-screenshot-competition-sky-odyssey</guid>
-      <pubDate>Sat, 19 Sep 2026 08:16:09 GMT</pubDate>
-      <category>Software Development</category>
-      <description>War Thunder&apos;s 242nd Steam Screenshot Competition demonstrates how low-overhead community loops amplify major content updates like Sky Odyssey.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/war-thunder-steam-screenshot-competition-sky-odyssey/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>Decoding Cosmic Signals with Deep Learning and Keras</title>
-      <link>https://codeplaystudios.com/insights/decoding-cosmic-signals-deep-learning-keras</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/decoding-cosmic-signals-deep-learning-keras</guid>
-      <pubDate>Fri, 18 Sep 2026 08:30:02 GMT</pubDate>
-      <category>Emerging Technology</category>
-      <description>How applying high-level deep learning frameworks to astroparticle physics provides design blueprints for real-world enterprise telemetry and anomaly detection.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/decoding-cosmic-signals-deep-learning-keras/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>Scaling Real-Time AI Agents with Session-Aware Load Balancing</title>
-      <link>https://codeplaystudios.com/insights/scaling-real-time-ai-agents-session-aware-load-balancing</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/scaling-real-time-ai-agents-session-aware-load-balancing</guid>
-      <pubDate>Fri, 18 Sep 2026 08:29:39 GMT</pubDate>
-      <category>Emerging Technology</category>
-      <description>Long-lived bidirectional AI streams obscure server capacity, requiring application-level session telemetry paired with hybrid routing algorithms to prevent server saturation.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/scaling-real-time-ai-agents-session-aware-load-balancing/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>Square Enix Sets Final Fantasy VII Revelation for April 2027 Release</title>
-      <link>https://codeplaystudios.com/insights/final-fantasy-vii-revelation-april-2027-release</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/final-fantasy-vii-revelation-april-2027-release</guid>
-      <pubDate>Thu, 17 Sep 2026 15:14:53 GMT</pubDate>
-      <category>Gaming</category>
-      <description>Square Enix details the final entry in its remake trilogy at TGS 2026, setting an April 2027 release date while highlighting current engineering constraints on physical media distribution.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/final-fantasy-vii-revelation-april-2027-release/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>Google Launches Agent Anomaly Detection in Private Preview for Gemini Enterprise</title>
-      <link>https://codeplaystudios.com/insights/google-agent-anomaly-detection-gemini-enterprise</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/google-agent-anomaly-detection-gemini-enterprise</guid>
-      <pubDate>Wed, 16 Sep 2026 20:21:50 GMT</pubDate>
-      <category>Artificial Intelligence</category>
-      <description>Google introduces Agent Anomaly Detection in Private Preview for Gemini Enterprise Agent Platform, pairing asynchronous OpenTelemetry trace analysis with OWASP-aligned guardrails.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/google-agent-anomaly-detection-gemini-enterprise/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>Sega and Netflix Partner for Multi-Title Transmedia Slate Including Crazy Taxi and Sonic</title>
-      <link>https://codeplaystudios.com/insights/sega-netflix-transmedia-partnership-crazy-taxi-sonic</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/sega-netflix-transmedia-partnership-crazy-taxi-sonic</guid>
-      <pubDate>Wed, 16 Sep 2026 08:53:13 GMT</pubDate>
-      <category>Software Development</category>
-      <description>Sega&apos;s expanded partnership with Netflix combines legacy arcade revivals and upcoming titles into a coordinated transmedia distribution strategy.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/sega-netflix-transmedia-partnership-crazy-taxi-sonic/primary.webp" type="image/webp" />
     </item>
   </channel>
 </rss>

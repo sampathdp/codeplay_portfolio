@@ -37,6 +37,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://codeplaystudios.com/colorbloom</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codeplaystudios.com/unity-assets/mountainous-terrain-with-lakeside-view</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>

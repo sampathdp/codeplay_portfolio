@@ -1,0 +1,17 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.codeplaystudio.colorbloom",
+      "sha256_cert_fingerprints": [
+        "89:48:A4:C4:75:66:02:11:61:26:19:35:F0:B5:BE:D3:C3:F3:1C:54:17:B1:90:98:4A:46:87:03:EB:9B:44:1C",
+        "4F:EB:1D:69:3A:65:20:8F:1F:19:05:D0:AF:05:F9:48:CC:CE:BD:6A:9F:12:50:FF:10:51:0B:64:5A:A8:53:64",
+        "53:43:CD:3F:04:36:AE:CA:C0:9A:33:78:CF:27:78:A9:D4:CC:16:50:56:BD:F1:8E:61:74:D5:0C:2B:4E:E1:88"
+      ]
+    }
+  }
+]

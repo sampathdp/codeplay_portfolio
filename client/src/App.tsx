@@ -16,6 +16,7 @@ const Toaster = lazy(() =>
   import("@/components/ui/toaster").then((m) => ({ default: m.Toaster })),
 );
 const WhatsAppWidget = lazy(() => import("@/components/WhatsAppWidget"));
+const ColorBloomPopup = lazy(() => import("@/components/ColorBloomPopup"));
 
 /** Renders children only after the first idle window (or a 2s fallback). */
 function DeferredChrome({ children }: { children: React.ReactNode }) {
@@ -58,6 +59,7 @@ const ImageConverterTool = lazy(() => import("@/pages/ImageConverterTool"));
 const VideoWatermarkTool = lazy(() => import("@/pages/VideoWatermarkTool"));
 const ImageWatermarkTool = lazy(() => import("@/pages/ImageWatermarkTool"));
 const PdfTemplateTool = lazy(() => import("@/pages/PdfTemplateTool"));
+const ColorBloom = lazy(() => import("@/pages/ColorBloom"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 
 // Insights pulls in @supabase/supabase-js on the admin path — lazy-load
@@ -153,6 +155,7 @@ function Router() {
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/terms-and-conditions" component={TermsAndConditions} />
       <Route path="/cookie-policy" component={CookiePolicy} />
+      <Route path="/colorbloom" component={ColorBloom} />
       <Route path="/colorbloom/privacy-policy">
         {() => {
           window.location.replace("/colorbloom/privacy-policy/index.html");
@@ -210,6 +213,7 @@ function App() {
             <Router />
             <DeferredChrome>
               <WhatsAppWidget />
+              <ColorBloomPopup />
               <Toaster />
             </DeferredChrome>
           </TooltipProvider>
