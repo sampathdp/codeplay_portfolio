@@ -6,8 +6,17 @@
     <atom:link href="https://codeplaystudios.com/insights/rss.xml" rel="self" type="application/rss+xml" />
     <description>Original technology, AI and gaming analysis with the CodePlay developer take — for developers, gamers and businesses.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 20 Nov 2026 13:39:37 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 13:04:22 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <item>
+      <title>Architecting Multi-Layered Authentication for Custom Gemini Enterprise UIs</title>
+      <link>https://codeplaystudios.com/insights/architecting-multi-layered-auth-gemini-enterprise-uis</link>
+      <guid isPermaLink="true">https://codeplaystudios.com/insights/architecting-multi-layered-auth-gemini-enterprise-uis</guid>
+      <pubDate>Sat, 21 Nov 2026 11:38:16 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <description>An architectural roadmap for implementing multi-layered authentication when building custom enterprise user interfaces on Gemini Enterprise&apos;s :streamAssist API.</description>
+      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/11/architecting-multi-layered-auth-gemini-enterprise-uis/primary.webp" type="image/webp" />
+    </item>
     <item>
       <title>How to Build Generative UI Apps Using A2UI and CopilotKit</title>
       <link>https://codeplaystudios.com/insights/build-generative-ui-apps-a2ui-copilotkit</link>
@@ -448,15 +457,6 @@
       <category>Emerging Technology</category>
       <description>Early reviews for EA Sports FC 27 highlight structural shifts like &apos;The Grounds&apos; open-world hub and a revised Tactics system alongside persistent legacy AI pathing challenges.</description>
       <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/ea-sports-fc-27-early-review-ai-hubs/primary.webp" type="image/webp" />
-    </item>
-    <item>
-      <title>EA Sports FC 27 Launches 10-Hour EA Play Trial for Subscribers</title>
-      <link>https://codeplaystudios.com/insights/ea-sports-fc-27-ea-play-trial</link>
-      <guid isPermaLink="true">https://codeplaystudios.com/insights/ea-sports-fc-27-ea-play-trial</guid>
-      <pubDate>Sat, 19 Sep 2026 08:16:56 GMT</pubDate>
-      <category>Gaming</category>
-      <description>EA and Microsoft launch a 10-hour EA Sports FC 27 trial on Xbox and PC, utilizing cross-entitlement subscription models and progress persistence to drive conversion.</description>
-      <enclosure url="https://dsbiodbztcijckjlkmnq.supabase.co/storage/v1/object/public/insights-media/insights/2026/09/ea-sports-fc-27-ea-play-trial/primary.webp" type="image/webp" />
     </item>
   </channel>
 </rss>
